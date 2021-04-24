@@ -1,0 +1,4 @@
+* Start docker
+
+* Docker Commands
+  - docker ps -a

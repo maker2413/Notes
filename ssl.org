@@ -1,19 +1,26 @@
 * OpenSSL commands
+This guide will describe how to generate various ssl certs. We will be using the ~openssl~ command, it is used to
+generate ssl certs of many kinds.
 
 ** Generate an RSA private key with aes256 encryption
+Here is an example of how to generate an RSA private key:
+
 #+BEGIN_SRC fish
 openssl genrsa -aes256 -out private.pem
 #+END_SRC
 
-The ~openssl~ command is used to generate ssl certs of many kinds. Here we use the ~genrsa~ option to make sure we
-are generating an ssl key of RSA type. We also passsed  the ~-aes256~ flag to specify we wanted it to have aes256
-encryption on the key. Finally we specified the ~-out~ flag to give openssl the destination of where we want the
-private key.
+Here we use the ~genrsa~ option to make sure we are generating an ssl key of RSA type. We also passsed the ~-aes256~
+flag to specify we wanted it to have aes256 encryption on the key. Finally we specified the ~-out~ flag to give
+openssl the destination of where we want the private key.
 
 ** Generate an RSA public key from a private key
+Here is an example of how to generate an RSA public key using the private key we made:
 
-This is a test
 #+BEGIN_SRC fish
-openssl genrsa -aes256 -out private.pem
+openssl rsa -in private.pem -outform PEM -pubout -out public.pem
 #+END_SRC
-of how org mode works
+
+Here we are using the ~rsa~ option to specify we are working with an rsa file. We then provide the ~-in~ flag and
+give a path to our private key. We are going to use the ~-outform~ flag to specify that we want the output of
+~openssl~ to be of PEM format. We use the ~-pubout~ flag to specify we want to output a public key from this command.
+Finally we give the ~-out~ flag and list a destination for our public key.

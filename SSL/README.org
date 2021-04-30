@@ -1,10 +1,10 @@
 * Hashing
 #+CAPTION: This is a diagram of how hashing is used
-[[./Hashing.png]]
+[[./Hashing.jpg]]
 
 * Asymmetric Keys
 #+CAPTION: This is a diagram of how asymmetric keys are used
-[[./Asymmetric.png]]
+[[./Asymmetric.jpg]]
 
 * OpenSSL commands
 This guide will describe how to generate various ssl certs. We will be using the ~openssl~ command, it is used to

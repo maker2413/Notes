@@ -1,0 +1,32 @@
+#+Title: Go Card Program
+#+PROPERTY: header-args :tangle main.go
+
+* Simple Card game in Go
+  super short
+#+BEGIN_SRC go
+package main
+#+END_SRC
+
+* IMPORTS
+#+BEGIN_SRC go
+import "fmt"
+#+END_SRC
+
+* Main
+#+BEGIN_SRC go
+func main() {
+	cards := []string{"Ace of Diamonds", newCard()}
+	cards = append(cards, "Six of Spade")
+
+	for index, card := range cards {
+		fmt.Println(index, card)
+	}
+}
+#+END_SRC
+
+* newCard
+#+BEGIN_SRC go
+func newCard() string {
+	return "Five of Diamonds"
+}
+#+END_SRC

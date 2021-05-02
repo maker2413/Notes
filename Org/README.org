@@ -1,2 +1,14 @@
 * What is Org Mode?
-  Org mode is one of the many text editing modes in emacs.
+  Org mode is one of the many text editing modes in emacs. On a surface level it is used to write READMEs and to
+  make to do lists. Once you get deeper into org mode you will find that org mode can be used in many aspects of
+  your life. These are just some notes I have on the neat features I use in org mode however the full org mode guide
+  can be find on their [[https://orgmode.org/][website]].
+
+* Headlines
+  Headlines are what org mode refers to as the headers you see in this document. Headlines in org mode are simply
+  started with an =*=:
+  #+BEGIN_EXAMPLE org
+  * This is a headline
+  ** This is also a headline
+  *** We can keep making them smaller
+  #+END_EXAMPLE

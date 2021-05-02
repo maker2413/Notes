@@ -9,6 +9,6 @@
   started with an =*=:
   #+BEGIN_SRC org
   * This is a headline
-  ** This is smaller a sub headline
+  ** This is a smaller sub headline
   *** We can keep making them smaller
   #+END_SRC

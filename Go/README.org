@@ -84,9 +84,9 @@
 * Loops
   Go gives us the ability to loop using for loops. Unlike most other programming languages the for loop in go is
   used for all forms of loops. For loops in go have components to them:
-  - the init statement: executed before the first iteration
-  - the condition expression: evaluated before every iteration
-  - the post statement: executed at the end of every iteration
+  - the init statement :: executed before the first iteration
+  - the condition expression :: evaluated before every iteration
+  - the post statement :: executed at the end of every iteration
   #+BEGIN_EXAMPLE go
   // will run 100 times (0-99)
   for i := 0; i < 100; i++ {

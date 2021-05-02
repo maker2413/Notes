@@ -60,7 +60,7 @@
   var tablelist [5]int
 
   // Slice for our deck
-  var dark []string
+  var card []string
   #+END_SRC
 
 * Functions
@@ -81,6 +81,39 @@
   Take note of the return line. In this example we will be returning a string with a card's name so we specify
   string right after the name of the function: ~newCard() string~.
 
+* Loops
+  Go gives us the ability to loop using for loops. Unlike most other programming languages the for loop in go is
+  used for all forms of loops. For loops in go have components to them:
+  - the init statement: executed before the first iteration
+  - the condition expression: evaluated before every iteration
+  - the post statement: executed at the end of every iteration
+  #+BEGIN_EXAMPLE go
+  // will run 100 times (0-99)
+  for i := 0; i < 100; i++ {
+	  fmt.Println(i)
+  }
+  #+END_EXAMPLE
+
+  It is possible in go to leave off the init and the post statement:
+  #+BEGIN_EXAMPLE go
+  i := 1
+
+  // will run 99 times (1-99)
+  for i < 100 {
+	  fmt.Println(i)
+	  i++
+  }
+  #+END_EXAMPLE
+  This is comparable to a while loop in most other programming languages.
+
+  You can also ommit the condition statement and this will create a loop that runs forever:
+  #+BEGIN_EXAMPLE go
+  // will run till the heat death of the universe
+  for {
+	  fmt.Println("This will never end!")
+  }
+  #+END_EXAMPLE
+
 * Custom data types
   Similar to how some programming languages have object oriented go has custom data types. With custom data types
   we can essentially...
@@ -92,7 +125,7 @@
   func main() {
 	  fmt.Println("deck")
   }
-  #+END_SRC  
+  #+END_SRC
 
 * Lets put it all together
   Now that we have covered most of the basic of go lets put together our ~main~:

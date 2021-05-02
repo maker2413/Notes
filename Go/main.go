@@ -9,7 +9,7 @@ var game string
 var tablelist [5]int
 
 // Slice for our deck
-var dark []string
+var card []string
 
 func newCard() string {
 	// return a new card name

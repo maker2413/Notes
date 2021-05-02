@@ -11,6 +11,11 @@ var tablelist [5]int
 // Slice for our deck
 var dark []string
 
+func newCard() string {
+	// return a new card name
+	return "Five of Diamonds"
+}
+
 func main() {
 	cards := []string{"Ace of Diamonds", newCard()}
 	cards = append(cards, "Six of Spade")
@@ -27,8 +32,4 @@ func main() {
 	}
 
 	fmt.Println(tablelist)
-}
-
-func newCard() string {
-	return "Five of Diamonds"
 }

@@ -27,17 +27,6 @@
   In this simple program we will only be needing the fmt library. The fmt library is a builtin library to go and is
   used for formatted I/O, or more simply put it is used to print out and take input.
 
-* Test
-  #+BEGIN_SRC go :tangle deck.go
-  package main
-
-  import "fmt"
-
-  func main() {
-	  fmt.Println("Hey this is a test")
-  }
-  #+END_SRC
-
 * Variables
   After the imports block we get to our actual code. Normally this is where you will see functions defined and we
   will get to that, but variables can also be defined in this section of the file. Variables CAN NOT have a value
@@ -91,6 +80,19 @@
   #+END_SRC
   Take note of the return line. In this example we will be returning a string with a card's name so we specify
   string right after the name of the function: ~newCard() string~.
+
+* Custom data types
+  Similar to how some programming languages have object oriented go has custom data types. With custom data types
+  we can essentially...
+  #+BEGIN_SRC go :tangle deck.go
+  package main
+
+  import "fmt"
+
+  func main() {
+	  fmt.Println("deck")
+  }
+  #+END_SRC  
 
 * Lets put it all together
   Now that we have covered most of the basic of go lets put together our ~main~:

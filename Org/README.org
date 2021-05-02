@@ -7,8 +7,8 @@
 * Headlines
   Headlines are what org mode refers to as the headers you see in this document. Headlines in org mode are simply
   started with an =*=:
-  #+BEGIN_EXAMPLE org
+  #+BEGIN_SRC org
   * This is a headline
-  ** This is also a headline
+  ** This is smaller a sub headline
   *** We can keep making them smaller
-  #+END_EXAMPLE
+  #+END_SRC

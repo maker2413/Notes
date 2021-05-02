@@ -1,0 +1,2 @@
+* What is Org Mode?
+  Org mode is one of the many text editing modes in emacs.

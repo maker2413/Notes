@@ -14,8 +14,18 @@
   ** This is a smaller sub headline
   *** We can keep making them smaller
   #+END_EXAMPLE
+  One of the many features of headlines in org mode is that headlines can be folded. What I mean by this is pressing
+  ~tab~ on any headline will collapse it out of view. These folded headlines can be reexpanded by pressing ~tab~
+  again. You also can press ~shift-tab~ to fold every headline in your current buffer. Similar to a single fold you
+  can reopen every headline in your current buffer by pressing twice: ~shift-tab shift-tab~.
 
-** =TODO Items=
-  One of the interesting things about org mode is that in Headline can easily be turned into a TODO item by typing
+** Tasks
+  One of the interesting things about org mode is that Headlines can easily be turned into a TODO item by typing
   ~C-c C-t~. If you are sure what this notation means please refer to the emacs manual for how emacs key notation
-  is written: [[https://www.emacswiki.org/emacs/EmacsKeyNotation][Emacs wiki]]
+  is written: [[https://www.emacswiki.org/emacs/EmacsKeyNotation][Emacs wiki]]. By default this will mark you Headline as ~TODO~ and pressing it again will mark your
+  headline as ~DONE~. So a simple TODO list could look like this:
+  #+BEGIN_EXAMPLE org
+  * DONE Start Document on Org mode
+  * TODO Finish document on org mode
+  #+END_EXAMPLE
+  Combining a TODO list with folding is a great way to keep track of a lot of things without information overload.

@@ -2,13 +2,20 @@
   Org mode is one of the many text editing modes in emacs. On a surface level it is used to write READMEs and to
   make to do lists. Once you get deeper into org mode you will find that org mode can be used in many aspects of
   your life. These are just some notes I have on the neat features I use in org mode however the full org mode guide
-  can be find on their [[https://orgmode.org/][website]].
+  can be find on their [[https://orgmode.org/][website]]. Org is actually way too complex for me cover in this simple Notes repo and the full
+  guide should definitely be referenced to full take advantage of org mode. This guide simple exists for me to show
+  some of the simple features I find useful in org mode.
 
 * Headlines
   Headlines are what org mode refers to as the headers you see in this document. Headlines in org mode are simply
   started with an =*=:
-  #+BEGIN_SRC org
+  #+BEGIN_EXAMPLE
   * This is a headline
   ** This is a smaller sub headline
   *** We can keep making them smaller
-  #+END_SRC
+  #+END_EXAMPLE
+
+** =TODO Items=
+  One of the interesting things about org mode is that in Headline can easily be turned into a TODO item by typing
+  ~C-c C-t~. If you are sure what this notation means please refer to the emacs manual for how emacs key notation
+  is written: [[https://www.emacswiki.org/emacs/EmacsKeyNotation][Emacs wiki]]

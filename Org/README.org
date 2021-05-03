@@ -26,6 +26,10 @@
   headline as ~DONE~. So a simple TODO list could look like this:
   #+BEGIN_EXAMPLE org
   * DONE Start Document on Org mode
-  * TODO Finish document on org mode
+  * TODO Finish document on Org mode
   #+END_EXAMPLE
   Combining a TODO list with folding is a great way to keep track of a lot of things without information overload.
+
+* Lists
+  Org mode supports many types of lists and these can also be useful to keep track of your work progress or tasks
+  in life.

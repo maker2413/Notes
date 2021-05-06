@@ -7,11 +7,13 @@
   multiple. For any aditional documentation not described in this README you can consult the [[https://spinnaker.io/concepts][Spinnaker docs]].
 
 * Spinnaker Terminology
-  - Halyard :: Halyard is the command line tool used to manage and configure your spinnaker instance. Think kubectl
-	for your spinnaker server or instance.
+  - Halyard :: Halyard is the command line tool used to manage, update, and configure your spinnaker instance.
+	Think kubectl for your spinnaker server or instance.
   - Instance :: In the spinnaker world instance is used to describe a server or pod that is hosting our application.
 	This can be an EC2 instance in AWS, a compute engine in GCP, a kubernetes pod in a cluster we manage, or any
 	number of supported providers. These providers can be found [[https://spinnaker.io/setup/install/providers][here]]. 
   - Server Group :: In the spinnaker world a server group is a group of our spinnaker instances. This can be
 	visualized similar to a kubernetes deployment but in this case it is just grouping of our spinnaker instances
 	which could be any number of or combination of vms, servers, and pods.
+
+* Spinnaker Installation

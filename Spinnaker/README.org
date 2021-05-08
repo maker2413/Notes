@@ -11,7 +11,8 @@
   on the [[https://spinnaker.io/reference/architecture/][Spinnaker docs]], but I am going to list some of the important ones to know:
   - [[https://github.com/spinnaker/deck][Desk]] :: Deck is the broswer-based UI of spinnaker.
   - [[https://github.com/spinnaker/gate][Gate]] :: Is the API Gateway for spinnaker; all API callers communicate with the Spinnaker Gate.
-  - [[https://github.com/spinnaker/][Orca]] :: Orca is the orchestration engine of spinnaker. It handles all ad-hoc operations and pipelines. [[https://spinnaker.io/guides/developer/service-overviews/orca][Orca docs]]
+  - [[https://github.com/spinnaker/][Orca]] :: Orca is the orchestration engine of spinnaker. It handles all ad-hoc operations and pipelines. Here are
+	the [[https://spinnaker.io/guides/developer/service-overviews/orca][Orca docs]].
   - [[https://github.com/spinnaker/deck][Clouddriver]] :: The clouddriver is responsible for calls to the cloud providers and for indexing and caching of
 	all deployed resources
   - [[https://github.com/spinnaker/font50][Font50]] :: Is used to persist the metadata of applications, pipelines, projects, and notifications.
@@ -37,6 +38,7 @@
   If you just want to play around with Spinnaker or develop a pipeline or plugin for spinnaker maybe [[https://github.com/armory/minnaker][minnaker]] is for
   you. Minnaker is a lightweight deployment of spinnaker on a kubernets cluster in [[https://k3d.io/][k3d]] (a portable and lightweight
   kubernets cluster made by rancher). If this does interest you feel free to check out some of my minnaker notes in
-  the [[./MINNAKER.org][MINNAKER.org]] file.
+  the [[./MINNAKER.org][MINNAKER.org]] file. I use minnaker to not only learn more about Spinnaker but to develop plugins and tools for
+  Spinnaker.
 
 * Using Halyard

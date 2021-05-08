@@ -1,4 +1,60 @@
+#+TITLE: Java Hello World
+#+PROPERTY: header-args
+
+* What is Java
+  Java is a class based, object oriented programming language written by Oracle. This guide will simple cover some of
+  the basics of Java and help you build a hello world program to get started.
+
 * Java Terminology
   - Classes :: All Java programs are made of at least one class. The class name must match the file. Each Class
 	represents one real world idea.
   - Statements :: A statement performs a single task. Statements always conclude with a semicolon.
+
+* Hello World
+  Just to quickly kick things off, comments in java are written with ~//~ and  a block of comments can be written
+  like this:
+  #+BEGIN_SRC java :tangle HelloWorld.java
+  // This is a single line comment
+
+  /* This is a block of comments
+  Three
+  Two
+  One*/
+  #+END_SRC
+  With that out of the way lets move on to some real information.
+
+  Any Program in Java has to have at least one class and this class has be have a name matching the file it is in. In
+  our case for this program we are going to create a file named: =HelloWorld.java=. Therefore we need to create a
+  class in this file also called =HelloWorld=:
+  #+BEGIN_SRC java :tangle no
+  public class HelloWorld {
+    
+  }
+  #+END_SRC
+
+  We can't just leave our class like that and expect it to work because every Java program also needs at least one
+  method named =main()=. Lets add our main method to our class:
+  #+BEGIN_SRC java :tangle no
+  public class HelloWorld {
+	  public static void main(Strings[] args) {
+	
+	  }
+  }
+  #+END_SRC
+
+** TODO describe why the main method is written like this
+
+  Now lets add a print statement to print hello world:
+  #+BEGIN_SRC java :tangle HelloWorld.java
+  public class HelloWorld {
+	  public static void main(String[] args) {
+		  System.out.println("Hello World!");
+	  }
+  }
+  #+END_SRC
+
+  This program can then be complied by running ~javac HelloWorld.java~ to complile the code. Java is a programming
+  language that requires compling before the code can be run. Using ~javac~ compiles our code into a
+  =HelloWorld.class= file. This file can be run with the following command: ~java HelloWorld~. Note we didn't even
+  have to include the ~.class~ to our command but we can if we want to. This program should output =Hello World= to
+  your screen when it is run.

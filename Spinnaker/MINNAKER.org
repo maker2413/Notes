@@ -47,5 +47,5 @@
 	multipass shell minnaker-vm
 	#+END_SRC
 
-	This will give you a shell in the vm. I like to copy over my ssh public key to ~~/.ssh/authorized_keys~ That
-	way I can ssh to the vm and not have to use ~multipass shell~ again.
+	This will give you a shell in the vm. I like to copy over my ssh public key to ~/home/ubuntu/.ssh/authorized_keys~
+	That way I can ssh to the vm and not have to use ~multipass shell~ again.

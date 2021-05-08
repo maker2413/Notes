@@ -1,0 +1,4 @@
+* Java Terminology
+  - Classes :: All Java programs are made of at least one class. The class name must match the file. Each Class
+	represents one real world idea.
+  - Statements :: A statement performs a single task. Statements always conclude with a semicolon.

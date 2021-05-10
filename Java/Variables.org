@@ -78,7 +78,7 @@
   - Greater than or equal to :: ~>=~
   - Less than or equal to :: ~<=~
   - Comparing Strings and other objects :: ~.equals()~
-  - Concatenate Strings :: ~"Hey " + name + "!"~
+  - Concatenate Strings :: ="Hey " + name + "!"=
   - Static variables :: ~final~
 
   It is also important to note Java's order of operations:

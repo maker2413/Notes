@@ -53,20 +53,15 @@
   }
   #+END_SRC
 
-  Variables in Java work much like any programming language, here are the most common types:
-  | Type   | Description          | Examples                     |
-  |--------+----------------------+------------------------------|
-  | bool   | true or false        | (true, false, 1, 0)          |
-  | char   | letter               | ('C', 'w', '!', '7')         |
-  | double | decimal numbers      | (2.82734105, -0.45, 1.1)     |
-  | int    | whole numbers        | (1, 6782341, -84256689)      |
-  | String | string of characters | ("abcd", "Hi", "Hey There!") |
-  Variables can be declared outside of a class but they can not have any values assigned to them outside of a class.
-  Variable names can start with any valide letter, =$=, or =_=. It is worth noting that Java does support ~++~ and
-  ~--~ notation for adding and subtracting =1= respectively.
-
   This program can then be complied by running ~javac HelloWorld.java~ to complile the code. Java is a programming
   language that requires compling before the code can be run. Using ~javac~ compiles our code into a
   =HelloWorld.class= file. This file can be run with the following command: ~java HelloWorld~. Note we didn't even
   have to include the ~.class~ to our command but we can if we want to. This program should output =Hello World= to
   your screen when it is run.
+
+  This concludes the very basics of Java from here I will break out into a couple of different org files. The
+  information in these guides will build on each other mind you so this is the order I would view them, but feel
+  free to skip around:
+  - [[./Variables.org][Variables]] :: Guide on variables and some example
+  - [[./ObjectOriented.org][Object Oriented Design]] :: The guide on Java's object oriented way of programming. Probably the most important
+	guide for someone that knows other programming languages but are new to Java.

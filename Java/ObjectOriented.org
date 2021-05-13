@@ -1,2 +1,20 @@
 #+TITLE: Object Oriented Design Tutorial
 #+PROPERTY: header-args
+
+* Obejct Oriented
+  sdfljadslfjslfj
+  #+BEGIN_SRC java
+  public class SOMETHING {
+	  public static void main(Strings[] args) {
+		  // Calling constructor to make use a Car
+		  Car jeep = new Car();
+		  // Prints address of jeep
+		  System.out.println(jeep);
+
+		  // We can set it to null
+		  jeep = null;
+		  // Prints null
+		  System.out.println(jeep);
+	  }
+  }
+  #+END_SRC

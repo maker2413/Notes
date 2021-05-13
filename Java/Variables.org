@@ -22,8 +22,8 @@
 	  }
   }
   #+END_SRC
-  One more thing to note about variables is if we want our variables to be static we can declare the variable with
-  ~final~. A final variable can not be changed and we will error out when we try to run our code.
+  One more thing to note about variables is if we want our variables to be unchangeable we can declare the variable
+  with ~final~. A final variable can not be changed and we will error out when we try to run our code if we do so.
 
 * Number manipulator
   This is just a simple example of different forms of variable manipulation in Java. This a magic input/output
@@ -33,11 +33,11 @@
   #+BEGIN_SRC java :tangle NumberManipulator.java
   public class NumberManipulator {
 	  public static void main(String[] args) {
-		  // This is our original number so we are making it static
+		  // This is our original number so we are making it final
 		  final int inputNumber = 6;
 
 		  // This is the variable we are going to end with
-		  // Lets make this static as well to prove we aren't cheating
+		  // Lets make this final as well to prove we aren't cheating
 		  final int outputNumber = 3;
 
 		  // Print out numbers
@@ -79,7 +79,7 @@
   - Less than or equal to :: ~<=~
   - Comparing Strings and other objects :: ~.equals()~
   - Concatenate Strings :: ="Hey " + name + "!"=
-  - Static variables :: ~final~
+  - Final variables :: ~final~
 
   It is also important to note Java's order of operations:
   - parentheses

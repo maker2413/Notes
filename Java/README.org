@@ -51,14 +51,16 @@
   - ~static~ :: Our method is also set to static. TODO: Explain this
   - ~void~  :: Means that this method will not return anything when it is finished running. You can also specify a
 	return type in this spot if our method is a going to return data when it is run. For more information on what
-	types we can list here refer to the [[Variables/Variables.org][Variables]] section.
+	types we can list here refer to the [[./Variables/README.org][Variables]] section.
   - ~main~ :: Finally we specify that this is our main method. This section is just the name of the method followed
 	immediately by an open parenthesis and a closing parenthesis. Inside these parenthesis we list an data types we
 	accept as inputs for this method. We will see more examples in other programs
   - ~Strings[] args~ :: This is the data type(s) we are taking as input for this method. The main method in particular
 	we have to define an array of ~Strings~ named ~args~. For more examples of inputs to methods refer to the
-	[[./ObjectOriented/README.org][Object Oriented]] section, for more information on data types refer to the [[Variables/README.org][Variables]] section, and for more
+	[[./ObjectOriented/README.org][Object Oriented]] section, for more information on data types refer to the [[./Variables/README.org][Variables]] section, and for more
 	information on arrays refer to the [[./Arrays/README.org][Arrays]] section.
+  Methods, like classes, are wrapped in curl braces ~{}~ and anything inside of them will be executed when they are
+  called. Since main is executed when our program is run this is the starting point of our program.
 
   Now lets add a print statement to print hello world:
   #+BEGIN_SRC java :tangle HelloWorld.java
@@ -80,4 +82,5 @@
   free to skip around:
   - [[./Variables/README.org][Variables]] :: Guide on variables and some example
   - [[./ObjectOriented/README.org][Object Oriented]] :: The guide on Java's object oriented way of programming. Probably the most important
-	guide for someone that knows other programming languages but are new to Java.
+	guide for someone that knows other programming languages but is new to Java.
+  - [[./Arrays/README.org][Arrays]] :: The guide on Arrays and ArrayLists in Java.

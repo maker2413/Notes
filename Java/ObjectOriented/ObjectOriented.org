@@ -4,7 +4,11 @@
 * Obejct Oriented
   sdfljadslfjslfj
   #+BEGIN_SRC java
-  public class SOMETHING {
+  public class Store {
+	  public Car() {
+		  // instuctions for creating a Car instance
+	  }
+
 	  public static void main(Strings[] args) {
 		  // Calling constructor to make use a Car
 		  Car jeep = new Car();

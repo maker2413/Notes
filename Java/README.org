@@ -62,6 +62,6 @@
   This concludes the very basics of Java from here I will break out into a couple of different org files. The
   information in these guides will build on each other mind you so this is the order I would view them, but feel
   free to skip around:
-  - [[./Variables.org][Variables]] :: Guide on variables and some example
-  - [[./ObjectOriented.org][Object Oriented Design]] :: The guide on Java's object oriented way of programming. Probably the most important
+  - [[./Variables/Variables.org][Variables]] :: Guide on variables and some example
+  - [[./ObjectOriented/ObjectOriented.org][Object Oriented Design]] :: The guide on Java's object oriented way of programming. Probably the most important
 	guide for someone that knows other programming languages but are new to Java.

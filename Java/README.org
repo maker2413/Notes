@@ -80,7 +80,8 @@
   This concludes the very basics of Java from here I will break out into a couple of different org files. The
   information in these guides will build on each other mind you so this is the order I would view them, but feel
   free to skip around:
-  - [[./Variables/README.org][Variables]] :: Guide on variables and some example
+  - [[./Variables/README.org][Variables]] :: The guide on variables in Java with some examples.
   - [[./ObjectOriented/README.org][Object Oriented]] :: The guide on Java's object oriented way of programming. Probably the most important
 	guide for someone that knows other programming languages but is new to Java.
   - [[./Arrays/README.org][Arrays]] :: The guide on Arrays and ArrayLists in Java.
+  - [[./Loops/README.org][Loops]] :: The guide on Loops in Java.

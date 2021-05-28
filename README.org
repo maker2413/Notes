@@ -5,3 +5,7 @@
   or there are converters available online to convert it to md, html, pdf, and many other formats. Also it is
   important to note that any code found in this repo has been exported from the org README files so it will be a
   duplicate of what the README has, but all code in this repo is runnable and exists for anyone to copy from.
+
+* Topics
+  Here is a list of the "books" of various topics I have covered:
+  - [[./Java/README.org][Java]] :: This starts at an absolute begineer level and just gets you on your feet with Java.

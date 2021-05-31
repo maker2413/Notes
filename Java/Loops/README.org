@@ -2,4 +2,107 @@
 #+PROPERTY: header-args
 
 * Loops
+** While Loops
+** For Loops
+** Break and continue
+If we ever want to exit a loop before it finishes all its iterations or want to skip one of the iterations, we can use the break and continue keywords.
+
+The break keyword is used to exit, or break, a loop. Once break is executed, the loop will stop iterating. For example:
+
+#+BEGIN_SRC java
+for (int i = 0; i < 10; i++) {
+  System.out.println(i);
+  if (i == 4) {
+    break;
+  }
+}
+#+END_SRC
+Even though the loop was set to iterate until the condition i < 10 is false, the above code will output the following because we used break:
+
+#+BEGIN_SRC bash
+0
+1
+2
+3
+4
+#+END_SRC
+The continue keyword can be placed inside of a loop if we want to skip an iteration. If continue is executed, the current loop iteration will immediately end, and the next iteration will begin. We can use the continue keyword to skip any even valued iteration:
+
+#+BEGIN_SRC java
+int[] numbers = {1, 2, 3, 4, 5};
  
+for (int i = 0; i < numbers.length; i++) {
+  if (numbers[i] % 2 == 0) {
+    continue;
+  }
+  System.out.println(numbers[i]);
+}
+#+END_SRC
+This program would output the following:
+
+#+BEGIN_SRC bash
+1
+3
+5
+#+END_SRC
+In this case, if a number is even, we hit a continue statement, which skips the rest of that iteration, so the print statement is skipped. As a result, we only see odd numbers print.
+
+Loops can exist all throughout our code - including inside a method. If the return keyword was executed inside a loop contained in a method, then the loop iteration would be stopped and the method/constructor would be exited.
+For example, we have a method called checkForJacket() that takes in an array of Strings. If any of the elements are equivalent to the String value "jacket", the method will return true:
+
+#+BEGIN_SRC java
+public static boolean checkForJacket(String[] lst) {
+  for (int i = 0; i < lst.length; i++) {
+    System.out.println(lst[i]);
+    if (lst[i] == "jacket") {
+      return true;
+    }
+  }
+  return false;
+} 
+ 
+public static void main(String[] args) {
+  String[] suitcase = {"shirt", "jacket", "pants", "socks"};   
+  System.out.println(checkForJacket(suitcase));
+}
+#+END_SRC
+As soon as an element equals "jacket", return true; is executed. This causes the loop to stop and the compiler to exit checkForJacket(). Running this code would output the following:
+
+,#+BEGIN_SRC java
+shirt
+jacket
+true
+#+END_SRC
+
+** For each
+Sometimes we need access to the elements’ indices or we only want to iterate through a portion of a list. If that’s the case, a regular for loop or while loop is a great choice.
+For example, we can use a for loop to print out each element in an array called inventoryItems:
+
+#+BEGIN_SRC java
+for (int inventoryItem = 0; inventoryItem < inventoryItems.length; inventoryItem++) {
+  // Print element at current index
+  System.out.println(inventoryItems[inventoryItem]);
+}
+#+END_SRC
+But sometimes we couldn’t care less about the indices; we only care about the element itself.
+
+At times like this, for-each loops come in handy.
+
+For-each loops, which are also referred to as enhanced loops, allow us to directly loop through each item in a list of items (like an array or ArrayList) and perform some action with each item.
+
+If we want to use a for-each loop to rewrite our program above, the syntax looks like this:
+
+#+BEGIN_SRC java
+for (String inventoryItem : inventoryItems) {
+  // Print element value
+  System.out.println(inventoryItem);
+ 
+}
+#+END_SRC
+Our enhanced loop contains two items: an enhanced for loop variable (inventoryItem) and a list to traverse through (inventoryItems).
+
+We can read the : as “in” like this: for each inventoryItem (which should be a String) in inventoryItems, print inventoryItem.
+
+If we try to assign a new value to the enhanced for loop variable, the value stored in the array or ArrayList will not change. This is because, for every iteration in the enhanced loop, the loop variable is assigned a copy of the list element.
+
+Note: We can name the enhanced for loop variable whatever we want; using the singular of a plural is just a convention. We may also encounter conventions like String word : sentence.

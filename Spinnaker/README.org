@@ -38,7 +38,7 @@
   If you just want to play around with Spinnaker or develop a pipeline or plugin for spinnaker maybe [[https://github.com/armory/minnaker][minnaker]] is for
   you. Minnaker is a lightweight deployment of spinnaker on a kubernets cluster in [[https://k3d.io/][k3d]] (a portable and lightweight
   kubernets cluster made by rancher). If this does interest you feel free to check out some of my minnaker notes in
-  the [[./MINNAKER.org][MINNAKER.org]] file. I use minnaker to not only learn more about Spinnaker but to develop plugins and tools for
+  the [[./Minnaker/README.org][MINNAKER]] guide. I use minnaker to not only learn more about Spinnaker but to develop plugins and tools for
   Spinnaker.
 
 * Using Halyard

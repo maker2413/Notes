@@ -96,7 +96,6 @@ If we want to use a for-each loop to rewrite our program above, the syntax looks
 for (String inventoryItem : inventoryItems) {
   // Print element value
   System.out.println(inventoryItem);
- 
 }
 #+END_SRC
 Our enhanced loop contains two items: an enhanced for loop variable (inventoryItem) and a list to traverse through (inventoryItems).

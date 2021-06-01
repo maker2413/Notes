@@ -85,3 +85,5 @@
 	guide for someone that knows other programming languages but is new to Java.
   - [[./Arrays/README.org][Arrays]] :: The guide on Arrays and ArrayLists in Java.
   - [[./Loops/README.org][Loops]] :: The guide on Loops in Java.
+  - [[./StringMethods/README.org][String Methods]] :: The guide of various methods that come with the String object in Java.
+  - [[./AccessScope/README.org][Access and Scope]] :: The guide on access, encapsalation, and static methods.

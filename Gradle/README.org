@@ -18,7 +18,7 @@
   developed by you or other members of the community so its uses are nearly endless.
   Gradle build instructions can either be written in Groovy or Kotlin.
 
-* Okay I'm sold how do I start
+* Okay I'm sold how do I start?
   Gradle can be installed on any machine with a JDK installed. You could build it yourself
   from source or you can install a package for your OS. In my case (arch linux) I just have
   to run ~pacman -S gradle~.

@@ -1,0 +1,30 @@
+* What is Gradle?
+  Gradle is an open source tool used to automate builds. It is versatile enough to build
+  almost any software. Gradle uses Java so having a JDK installed is the only prerequiste
+  to using gradle in your repo.
+
+* What is special about Gradle?
+  There are many other build tools out there like Maven or Ant to name a few so why would
+  you use Gradle. Gradle doesn't really add anything to the software engineer world that
+  one of those tools already does but rather is more of an amalgamation of the two.
+
+* What does Gradle do for me?
+  Gradle can just build and package your code but it does so much more than that. Gradle
+  can also manage dependencies for your code. Gradle is also highly configurable which
+  gives it the power to integrate with almost any code or software you can make. Gradle
+  is also super fast because it support incremental releases. This means that it runs a
+  daemon on your machine which caches built dependencies and keeps track of changes
+  between builds so it only has to recompile affected code. Gradle also supports plugins
+  developed by you or other members of the community so its uses are nearly endless.
+  Gradle build instructions can either be written in Groovy or Kotlin.
+
+* Okay I'm sold how do I start
+  Gradle can be installed on any machine with a JDK installed. You could build it yourself
+  from source or you can install a package for your OS. In my case (arch linux) I just have
+  to run ~pacman -S gradle~.
+
+  Next we will go over some of the Gradle commands and give a description of what they do:
+  | Command | Description                                              |
+  |---------+----------------------------------------------------------|
+  | init    | Used to initialize current directory as a gradle project |
+  | tasks   | Used to list the tasks specified in build.gradle         |

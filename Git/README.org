@@ -1,0 +1,8 @@
+#+TITLE: Git Guide
+#+PROPERTY: header-args
+
+* Subtree Commands
+  - ~git remote add -f <repoAlias> <repoURL> [--squash]~
+  - ~git subtree add --prefix <subtreePath> <repoAlias> <branch> [--squash]~
+  - ~git subtree push --prefix <subtreePath> <repoAlias> <branch>~
+  - ~git subtree pull --prefix <subtreePath> <repoAlias> <branch>~

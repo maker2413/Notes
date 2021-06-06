@@ -1,0 +1,4 @@
+#+TITLE: Static
+#+PROPERTY: header-args
+
+* Static Variables

@@ -1,3 +1,6 @@
+#+TITLE: Spinnaker
+#+PROPERTY: header-args
+
 * What is Spinnaker?
   Spinnaker is a Continuous Deployment tool. The thing that makes Spinnaker different than most deployment tools is
   that Spinnaker has multi cloud support. Multi cloud support on its own isn't that unique of a concept but

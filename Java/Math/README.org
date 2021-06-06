@@ -1,3 +1,6 @@
+#+TITLE: Math
+#+PROPERTY: header-args
+
 * The Math Class
   Math can play a major role in our programs. It can become tedious to write out every equation we need in our code. Luckily, a lot of this work can be truncated using the Math class. The Java Math class is part of the java.lang package; it contains a variety of methods that can be used to perform numerical calculations in our programs. In this article, we’ll discuss the different types of Math methods available to us and how to implement them in our Java programs.
 

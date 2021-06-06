@@ -13,6 +13,5 @@ public class Bank{
     bankOfGods.accountOne.setBalance(5000);
     System.out.println(bankOfGods.accountOne.getBalance());
     System.out.println(bankOfGods.accountOne.getMonlthlyInterest());
-
   }
 }

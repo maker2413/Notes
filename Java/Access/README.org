@@ -98,6 +98,7 @@
   }
   #+END_SRC
   Mutator methods, or “setters”, often are void methods — they don’t return anything, they just reset the value of an existing variable. Similarly, they often have one parameter that is the same type as the variable they’re trying to change.
+
 * Local Variables
   In addition to access modifiers like public and private, the scope of the variable also determines what parts of your code can access that variable.
 
@@ -129,6 +130,7 @@
   // i is out of scope here
   #+END_SRC
   You can only use i between the curly braces of the for loop. In general, whenever you see curly braces, be aware of scope. If a variable is defined inside curly braces, and you try to use that variable outside of those curly braces, you will likely see an error!
+
 * This
   Often times when creating classes, programmers will create local variables with the same name as instance variables. For example, consider the code block below:
   #+BEGIN_SRC java
@@ -201,6 +203,7 @@
   We reset the instance variable to the value passed into the parameter.
 
   Throughout the rest of this lesson, we’ll use this. when referring to an instance variable. This isn’t always explicitly necessary — if there’s no local variable with the same name, Java will know to use the instance variable with that name. That being said, it is a good habit to use this. when working with your instance variables to avoid potential confusion.
+
 * This with methods
   We’ve seen how the this works with variables, but we can also use the this with methods.
 
@@ -251,12 +254,14 @@
 	  this.pairWithOtherComputer(this);
   }
   #+END_SRC
+
 * Other private methods
   Now that we’ve seen how methods can call other methods using this., let’s look at a situation where you might want to use private methods. Oftentimes, private methods are helper methods — that is to say that they’re methods that other, bigger methods use.
 
   For example, for our CheckingAccount example, we might want a public method like getAccountInformation() that prints information like the name of the account owner, the amount of money in the account, and the amount of interest the account will make in a month. That way, another class, like a Bank, could call that public method to get all of that information quickly.
 
   Well, in order to get that information, we might want to break that larger method into several helper methods. For example, inside getAccountInformation(), we might want to call a function called calculateNextMonthInterst(). That helper method should probably be private. There’s no need for a Bank to call these smaller helper methods — instead, a Bank can call the one public method, and rely on that method to do all of the complicated work by calling smaller private methods.
+
 * Review
   Nice work! In this lesson, we dove into some of the more subtle features of classes with a focus on access, encapsulation, and scope. Here are some of the main takeaways from this lesson:
   - The public and private keywords are used to define what parts of code have access to other classes, methods, constructors, and instance variables.

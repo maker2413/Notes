@@ -31,7 +31,7 @@
 	which could be any number of or combination of vms, servers, and pods.
 
 * Spinnaker Installation
-  Spinnaker Installation instructions can be found: [[https://spinnaker.io/setup/install/][here]]. Spinnaker can be installed on any of the supported
+  Spinnaker Installation instructions can be found: [[https://spinnaker.io/setup/install/][here]. Spinnaker can be installed on any of the supported
   [[https://spinnaker.io/setup/install/providers/][providers]], and it can also be installed [[https://spinnaker.io/setup/install/providers/][locally]] on a linux machine or if you are interested in helping develop
   spinnaker you can install from the git repo with these: [[https://spinnaker.io/setup/install/environment/#local-git][instructions]].
 
@@ -41,4 +41,8 @@
   the [[./Minnaker/README.org][MINNAKER]] guide. I use minnaker to not only learn more about Spinnaker but to develop plugins and tools for
   Spinnaker.
 
+  I have included an [[./install_spinnaker.sh][installation script]] along with these notes. This script is meant to be run on an ubuntu machine.
+  I personally run this in a multipass vm.
+
 * Using Halyard
+  ~hal~

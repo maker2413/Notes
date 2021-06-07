@@ -13,7 +13,7 @@ tree .
 #+END_SRC
 
 #+RESULTS:
-#+begin_example
+#+begin_src sh
 .
 ├── app
 │   ├── build.gradle
@@ -42,7 +42,7 @@ tree .
 └── settings.gradle
 
 16 directories, 9 files
-#+end_example
+#+end_src
 
 You will notice that this time we have the =app= directory mentioned above and it contains both our source code and our
 test code which in this case will be =JUnit 4= format. You will also notice that if we ~cat~ our =App.java= it even

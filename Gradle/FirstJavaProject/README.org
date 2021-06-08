@@ -89,7 +89,8 @@ public class AppTest {
 }
 #+end_example
 
-The other thing that gradle went ahead and did for us is that it made some extra tasks that we can take advantage of:
+The other thing that gradle went ahead and did for us is that it made some extra tasks that we can take advantage
+of:
 #+BEGIN_SRC sh :results output :noweb yes
 ./gradlew tasks --all
 #+END_SRC
@@ -179,3 +180,126 @@ app:startScripts - Creates OS specific scripts to run the project as a JVM appli
 BUILD SUCCESSFUL in 35s
 1 actionable task: 1 executed
 #+end_example
+
+These tasks can be found in the [[./app/build.gradle][build.gradle]] and are being provided by the application plugin. Lets try one of the
+these tasks right now:
+#+BEGIN_SRC sh :results output :noweb yes
+./gradlew compileJava
+#+END_SRC
+*Outputs*:
+#+begin_example
+: > Task :app:compileJava UP-TO-DATE
+: 
+: BUILD SUCCESSFUL in 551ms
+: 1 actionable task: 1 up-to-date
+#+end_example
+
+Now if we look in the app directory:
+#+BEGIN_SRC sh :results output :noweb yes
+ls app/
+#+END_SRC
+*Outputs*:
+#+begin_example
+: build
+: build.gradle
+: src
+#+end_example
+
+We can see that gradle has compiled our java code and put it in a build directory in =app=. Now lets see what it
+created for us:
+#+BEGIN_SRC sh :results output :noweb yes
+tree app/build/
+#+END_SRC
+*Outputs*:
+#+begin_example
+app/build/
+├── classes
+│   └── java
+│       └── main
+│           └── com
+│               └── maker2413
+│                   └── gradle
+│                       └── App.class
+├── generated
+│   └── sources
+│       ├── annotationProcessor
+│       │   └── java
+│       │       └── main
+│       └── headers
+│           └── java
+│               └── main
+└── tmp
+    └── compileJava
+        └── source-classes-mapping.txt
+
+16 directories, 2 files
+#+end_example
+
+We also have a task that will clean up the build directory for us:
+#+BEGIN_SRC sh :results output :noweb yes
+./gradlew clean
+#+END_SRC
+*Outputs*:
+#+begin_example
+: > Task :app:clean
+: 
+: BUILD SUCCESSFUL in 507ms
+: 1 actionable task: 1 executed
+#+end_example
+
+Lets see if it worked:
+#+BEGIN_SRC sh :results output :noweb yes
+ls app/
+#+END_SRC
+*Outputs*:
+#+begin_example
+: build.gradle
+: src
+#+end_example
+
+Lets try one final task:
+#+BEGIN_SRC sh :results output :noweb yes
+./gradlew test
+#+END_SRC
+*Outputs*:
+#+begin_example
+> Task :app:compileJava
+> Task :app:processResources NO-SOURCE
+> Task :app:classes
+> Task :app:compileTestJava
+> Task :app:processTestResources NO-SOURCE
+> Task :app:testClasses
+> Task :app:test
+
+BUILD SUCCESSFUL in 1s
+3 actionable tasks: 3 executed
+#+end_example
+
+This will run the test we have defined in the =test= directory. It even generates a report in html format that we can
+open in a browser of our choice to see the results:
+#+BEGIN_SRC sh :results output :noweb yes
+tree app/build/reports/
+#+END_SRC
+*Outputs*:
+#+begin_example
+app/build/reports/
+└── tests
+    └── test
+        ├── classes
+        │   └── com.maker2413.gradle.AppTest.html
+        ├── css
+        │   ├── base-style.css
+        │   └── style.css
+        ├── index.html
+        ├── js
+        │   └── report.js
+        └── packages
+            └── com.maker2413.gradle.html
+
+6 directories, 6 files
+#+end_example
+
+Opening the index.html would display a site like this:
+[[./screenshot.jpg]]
+
+Feel free to play around with more of the tasks provided by the application plugin.

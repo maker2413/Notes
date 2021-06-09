@@ -47,7 +47,8 @@ the basics of Java and help you build a hello world program to get started.
   in simple terms. We will go more in depth on these concepts in the [[./ObjectOriented/README.org][Object Oriented]] section.
   - ~public~ :: In this case this method is public and can be used by other classes. Methods can also be set to private
 	and we will go more into this more later.
-  - ~static~ :: Our method is also set to static. TODO: Explain this
+  - ~static~ :: Our method is also set to static. This concept can be a bit complex to explain and later in the guide
+	I have a chapter on static use in Java: [[./Static/README.org][Static]].
   - ~void~  :: Means that this method will not return anything when it is finished running. You can also specify a
 	return type in this spot if our method is a going to return data when it is run. For more information on what
 	types we can list here refer to the [[./Variables/README.org][Variables]] section.
@@ -86,3 +87,4 @@ the basics of Java and help you build a hello world program to get started.
   - [[./Loops/README.org][Loops]] :: The guide on Loops in Java.
   - [[./StringMethods/README.org][String Methods]] :: The guide of various methods that come with the String object in Java.
   - [[./AccessScope/README.org][Access and Scope]] :: The guide on access, encapsalation, and static methods.
+  - [[./Inheritance/README.org][Inheritance]] :: The guide on inheritance in java.

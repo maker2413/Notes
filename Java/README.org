@@ -88,3 +88,5 @@ the basics of Java and help you build a hello world program to get started.
   - [[./StringMethods/README.org][String Methods]] :: The guide of various methods that come with the String object in Java.
   - [[./AccessScope/README.org][Access and Scope]] :: The guide on access, encapsalation, and static methods.
   - [[./Inheritance/README.org][Inheritance]] :: The guide on inheritance in java.
+  - [[./Debugging/README.org][Debugging]] :: The guide on debugging java programs.
+  - [[./2DArrays/README.org][2D Arrays]] :: The guide on 2 dimensional Arrays in java.

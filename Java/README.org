@@ -90,3 +90,4 @@ the basics of Java and help you build a hello world program to get started.
   - [[./Inheritance/README.org][Inheritance]] :: The guide on inheritance in java.
   - [[./Debugging/README.org][Debugging]] :: The guide on debugging java programs.
   - [[./2DArrays/README.org][2D Arrays]] :: The guide on 2 dimensional Arrays in java.
+  - [[./Other/README.org][Other]] :: This is just miscellaneous notes that didn't get their own chapter.

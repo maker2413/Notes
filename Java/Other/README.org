@@ -1,0 +1,4 @@
+#+TITLE: Other
+#+PROPERTY: header-args
+
+- lamdba :: https://www.w3schools.com/java/java_lambda.asp

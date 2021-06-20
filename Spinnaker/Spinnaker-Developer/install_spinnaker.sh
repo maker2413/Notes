@@ -1,4 +1,8 @@
 #!/bin/bash
+apply_manifest () {
+    cat $1 | sed "s/NAMESPACE/${NAMESPACE}/g" | sed "s/MINIO_PASSWORD/${MINO_PASSWORD}/g" | kubectl apply -f -
+}
+
 set -e
 
 BASE_DIR=/etc/spinnaker
@@ -16,8 +20,8 @@ sudo apt update -y
 sudo apt install -y openjdk-11-jdk
 
 echo "Deploying Halyard in Kubernetes"
-envsubst manifests/namespace.yml | kubectl apply -f -
-envsubst manifests/halyard.yml | kubectl apply -f -
+apply_manifest manifests/namespace.yml
+apply_manifest manifests/halyard.yml
 
 while [[ $(kubectl get statefulset halyard -o jsonpath='{.status.readyReplicas}') -ne 1 ]];
 do
@@ -54,19 +58,21 @@ fi
 
 echo "Copy Configs to Spinnaker Directory"
 cp -rpv manifests ${BASE_DIR}/templates/
-# cp -rpv profiles ${BASE_DIR}/templates/
+cp -rpv profiles ${BASE_DIR}/.hal/default/
 # cp -rpv service-settings ${BASE_DIR}/templates/
 # cp config ${BASE_DIR}/templates/
 
 echo "Deploying MinIO"
 openssl rand -base64 36 | tee ${BASE_DIR}/.hal/.secret/minio_password
-MINIO_PASSWORD=${cat ${BASE_DIR}/.hal/.secret/minio_password}
-envsubst manifests/minio.yml | kubectl apply -f -
+MINIO_PASSWORD=`cat ${BASE_DIR}/.hal/.secret/minio_password`
+apply_manifest manifests/minio.yml
 
 echo "Configuring Halyard"
 hal config provider kubernetes enable
-hal config provider kubernetes account add default
-hal config version edit --version 1.26.3
+hal config provider kubernetes account add default --kubeconfig-file $BASE_DIR/.kube/config
+hal config storage s3 edit --endpoint "http://minio.$NAMESPACE.9000" --bucket $NAMESPACE --access-key-id minio --secret-access-key $MINIO_PASSWORD
+hal config storage edit --type s3
+hal config version edit --version 1.26.4
 
 echo "Deploy Spinnaker"
 hal deploy apply

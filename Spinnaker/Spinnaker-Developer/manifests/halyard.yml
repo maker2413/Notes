@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: halyard
-  namespace: spinnaker
+  namespace: NAMESPACE
 spec:
   replicas: 1
   serviceName: halyard

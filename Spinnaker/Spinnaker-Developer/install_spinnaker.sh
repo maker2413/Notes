@@ -16,8 +16,8 @@ sudo apt update -y
 sudo apt install -y openjdk-11-jdk
 
 echo "Deploying Halyard in Kubernetes"
-kubectl apply -f manifests/namespace.yml
-kubectl apply -f manifests/halyard.yml
+envsubst manifests/namespace.yml | kubectl apply -f -
+envsubst manifests/halyard.yml | kubectl apply -f -
 
 while [[ $(kubectl get statefulset halyard -o jsonpath='{.status.readyReplicas}') -ne 1 ]];
 do
@@ -57,6 +57,11 @@ cp -rpv manifests ${BASE_DIR}/templates/
 # cp -rpv profiles ${BASE_DIR}/templates/
 # cp -rpv service-settings ${BASE_DIR}/templates/
 # cp config ${BASE_DIR}/templates/
+
+echo "Deploying MinIO"
+openssl rand -base64 36 | tee ${BASE_DIR}/.hal/.secret/minio_password
+MINIO_PASSWORD=${cat ${BASE_DIR}/.hal/.secret/minio_password}
+envsubst manifests/minio.yml | kubectl apply -f -
 
 echo "Configuring Halyard"
 hal config provider kubernetes enable

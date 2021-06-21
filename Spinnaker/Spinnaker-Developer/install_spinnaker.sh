@@ -1,6 +1,12 @@
 #!/bin/bash
-apply_manifest () {
-    cat $1 | sed "s/NAMESPACE/${NAMESPACE}/g" | sed "s/MINIO_PASSWORD/${MINO_PASSWORD}/g" | sed "s/BASE_DIR/${BASE_DIR}/g" | kubectl apply -f -
+format_manifests () {
+    for f in ${BASE_DIR}/templates/*; do        
+        sed -i \
+            -e "s|NAMESPACE|${NAMESPACE}|g" \
+            -e "s|MINIO_PASSWORD|${MINIO_PASSWORD}|g" \
+            -e "s|BASE_DIR|${BASE_DIR}|g" \
+            ${f}
+    done
 }
 
 set -e
@@ -19,9 +25,27 @@ sudo add-apt-repository ppa:openjdk-r/ppa -y
 sudo apt update -y
 sudo apt install -y openjdk-11-jdk
 
+echo "Creating Spinnaker Directory"
+sudo mkdir -p ${BASE_DIR}/manifests
+sudo mkdir -p ${BASE_DIR}/.kube
+sudo mkdir -p ${BASE_DIR}/.hal/.secret
+sudo mkdir -p ${BASE_DIR}/.hal/default/{profiles,service-settings}
+sudo chown -R 1000 ${BASE_DIR}
+
+echo "Generate MinIO Password"
+openssl rand -base64 36 | tee ${BASE_DIR}/.hal/.secret/minio_password
+MINIO_PASSWORD=`cat ${BASE_DIR}/.hal/.secret/minio_password`
+
+echo "Copy Configs to Spinnaker Directory"
+cp -rpv manifests ${BASE_DIR}/templates/
+cp -rpv profiles ${BASE_DIR}/.hal/default/
+# cp -rpv service-settings ${BASE_DIR}/templates/
+# cp config ${BASE_DIR}/templates/
+format_manifests
+
 echo "Deploying Halyard in Kubernetes"
-apply_manifest manifests/namespace.yml
-apply_manifest manifests/halyard.yml
+kubectl apply -f ${BASE_DIR}/templates/namespace.yml
+kubectl apply -f ${BASE_DIR}/templates/halyard.yml
 
 while [[ $(kubectl get statefulset halyard -o jsonpath='{.status.readyReplicas}') -ne 1 ]];
 do
@@ -39,12 +63,9 @@ kubectl -n spinnaker exec -i ${POD_NAME} -- sh -c "hal $*"
 EOF
 sudo chmod 755 /usr/local/bin/hal
 
-echo "Creating Spinnaker Directory"
-sudo mkdir -p ${BASE_DIR}/templates/{manifests,profiles,service-settings}
-sudo mkdir -p ${BASE_DIR}/manifests
-sudo mkdir -p ${BASE_DIR}/.kube
-sudo mkdir -p ${BASE_DIR}/.hal/.secret
-sudo mkdir -p ${BASE_DIR}/.hal/default/{profiles,service-settings}
+echo "Set up Kube Config"
+cp /etc/rancher/k3s/k3s.yaml ${BASE_DIR}/.kube/config
+sed -i "s/127.0.0.1/${PRIVATE_IP}/" ${BASE_DIR}/.kube/config
 sudo chown -R 1000 ${BASE_DIR}
 
 echo "Creating Endpoint file"
@@ -56,25 +77,21 @@ else
   cat ${BASE_DIR}/.hal/public_endpoint
 fi
 
-echo "Copy Configs to Spinnaker Directory"
-cp -rpv manifests ${BASE_DIR}/templates/
-cp -rpv profiles ${BASE_DIR}/.hal/default/
-# cp -rpv service-settings ${BASE_DIR}/templates/
-# cp config ${BASE_DIR}/templates/
-
-echo "Deploying MinIO"
-openssl rand -base64 36 | tee ${BASE_DIR}/.hal/.secret/minio_password
-MINIO_PASSWORD=`cat ${BASE_DIR}/.hal/.secret/minio_password`
-apply_manifest manifests/minio.yml
+echo "Deploy MinIO"
+kubectl apply -f ${BASE_DIR}/templates/minio.yml
 
 echo "Configuring Halyard"
 cp /etc/rancher/k3s/k3s.yaml /etc/spinnaker/.kube/config
 hal config provider kubernetes enable
-hal config provider kubernetes account add default --kubeconfig-file $BASE_DIR/.kube/config
+hal config provider kubernetes account add default
 hal config storage s3 edit --endpoint "http://minio.$NAMESPACE:9000" --bucket $NAMESPACE --access-key-id minio --secret-access-key $MINIO_PASSWORD --path-style-access true
 hal config storage edit --type s3
 hal config version edit --version 1.26.4
 hal config deploy edit --type distributed --account-name default
+
+echo "Configure URL"
+hal config security ui edit --override-base-url http://${PRIVATE_IP}:9000
+hal config security api edit --override-base-url http://${PRIVATE_IP}:8084
 
 echo "Deploy Spinnaker"
 hal deploy apply

@@ -1,6 +1,6 @@
 #!/bin/bash
 apply_manifest () {
-    cat $1 | sed "s/NAMESPACE/${NAMESPACE}/g" | sed "s/MINIO_PASSWORD/${MINO_PASSWORD}/g" | kubectl apply -f -
+    cat $1 | sed "s/NAMESPACE/${NAMESPACE}/g" | sed "s/MINIO_PASSWORD/${MINO_PASSWORD}/g" | sed "s/BASE_DIR/${BASE_DIR}/g" | kubectl apply -f -
 }
 
 set -e
@@ -68,11 +68,13 @@ MINIO_PASSWORD=`cat ${BASE_DIR}/.hal/.secret/minio_password`
 apply_manifest manifests/minio.yml
 
 echo "Configuring Halyard"
+cp /etc/rancher/k3s/k3s.yaml /etc/spinnaker/.kube/config
 hal config provider kubernetes enable
 hal config provider kubernetes account add default --kubeconfig-file $BASE_DIR/.kube/config
-hal config storage s3 edit --endpoint "http://minio.$NAMESPACE.9000" --bucket $NAMESPACE --access-key-id minio --secret-access-key $MINIO_PASSWORD
+hal config storage s3 edit --endpoint "http://minio.$NAMESPACE:9000" --bucket $NAMESPACE --access-key-id minio --secret-access-key $MINIO_PASSWORD --path-style-access true
 hal config storage edit --type s3
 hal config version edit --version 1.26.4
+hal config deploy edit --type distributed --account-name default
 
 echo "Deploy Spinnaker"
 hal deploy apply

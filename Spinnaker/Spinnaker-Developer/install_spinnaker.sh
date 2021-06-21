@@ -95,3 +95,6 @@ hal config security api edit --override-base-url http://${PRIVATE_IP}:8084
 
 echo "Deploy Spinnaker"
 hal deploy apply
+
+echo "Setup Ingress"
+kubectl apply -f ${BASE_DIR}/templates/spinnaker-ingress.yml

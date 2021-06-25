@@ -65,8 +65,8 @@ sudo chmod 755 /usr/local/bin/hal
 
 echo "Set up Kube Config"
 cp /etc/rancher/k3s/k3s.yaml ${BASE_DIR}/.kube/config
-sed -i "s/127.0.0.1/${PRIVATE_IP}/" ${BASE_DIR}/.kube/config
 sudo chown -R 1000 ${BASE_DIR}
+sed -i -e "s|127.0.0.1|${PRIVATE_IP}|g" ${BASE_DIR}/.kube/config
 
 echo "Creating Endpoint file"
 if [[ ! -s ${BASE_DIR}/.hal/public_endpoint ]]; then
@@ -81,7 +81,6 @@ echo "Deploy MinIO"
 kubectl apply -f ${BASE_DIR}/templates/minio.yml
 
 echo "Configuring Halyard"
-cp /etc/rancher/k3s/k3s.yaml /etc/spinnaker/.kube/config
 hal config provider kubernetes enable
 hal config provider kubernetes account add default
 hal config storage s3 edit --endpoint "http://minio.$NAMESPACE:9000" --bucket $NAMESPACE --access-key-id minio --secret-access-key $MINIO_PASSWORD --path-style-access true
@@ -96,5 +95,8 @@ hal config security api edit --override-base-url http://${PRIVATE_IP}:8084
 echo "Deploy Spinnaker"
 hal deploy apply
 
-echo "Setup Ingress"
-kubectl apply -f ${BASE_DIR}/templates/spinnaker-ingress.yml
+#echo "Setup Ingress"
+#kubectl apply -f ${BASE_DIR}/templates/spinnaker-ingress.yml
+
+echo "Here is the kube config you will use to access your k3s cluster"
+cat ${BASE_DIR}/.kube/config

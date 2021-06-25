@@ -1,0 +1,6 @@
+#+TITLE: Spinnaker-Developer
+#+PROPERTY: header-args
+
+This repo is a simple bash script I made to install [[https://k3s.io][k3s]] and deploy halyard, minio, and the
+spinnaker services. I use this setup to not only learn spinnaker in a local vm to but to
+develop plugins and pipelines.

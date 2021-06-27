@@ -1,26 +1,26 @@
-#+TITLE: Input/Output Number
+#+TITLE: Variables
 #+PROPERTY: header-args
 
-* What is this?
-  Variables in Java work much like any programming language, here are the most common types:
-  | Type   | Description          | Examples                     |
-  |--------+----------------------+------------------------------|
-  | bool   | true or false        | (true, false, 1, 0)          |
-  | char   | letter               | ('C', 'w', '!', '7')         |
-  | double | decimal numbers      | (2.82734105, -0.45, 1.1)     |
-  | int    | whole numbers        | (1, 6782341, -84256689)      |
-  | String | string of characters | ("abcd", "Hi", "Hey There!") |
-  Variables can be declared outside of a class but they can not have any values assigned to them outside of a class.
-  Variable names can start with any valide letter, =$=, or =_=. It is worth noting that Java does support ~++~ and
-  ~--~ notation for adding and subtracting =1= respectively. ~String~ is written with a capital =S= and is unique in
-  that we can also call upon the string class:
+Variables in Java work much like any programming language, here are the most common types:
+| Type   | Description          | Examples                     |
+|--------+----------------------+------------------------------|
+| bool   | true or false        | (true, false, 1, 0)          |
+| char   | letter               | ('C', 'w', '!', '7')         |
+| double | decimal numbers      | (2.82734105, -0.45, 1.1)     |
+| int    | whole numbers        | (1, 6782341, -84256689)      |
+| String | string of characters | ("abcd", "Hi", "Hey There!") |
+Variables can be declared outside of a class but they can not have any values assigned to them outside of a class.
+Variable names can start with any valide letter, =$=, or =_=. It is worth noting that Java does support ~++~ and
+~--~ notation for adding and subtracting =1= respectively. ~String~ is written with a capital =S= and is unique in
+that we can also call upon the string class:
+
 ** TODO Talk finish this example of string class.
   #+BEGIN_SRC java :tangle no
-  public class HelloWorld {
-	  public static void main(String[] args) {
-		  System.out.println("Hello World!");
-	  }
-  }
+    public class HelloWorld {
+        public static void main(String[] args) {
+            System.out.println("Hello World!");
+        }
+    }
   #+END_SRC
   One more thing to note about variables is if we want our variables to be unchangeable we can declare the variable
   with ~final~. A final variable can not be changed and we will error out when we try to run our code if we do so.
@@ -31,39 +31,39 @@
   ~outputNumber~.
 
   #+BEGIN_SRC java :tangle NumberManipulator.java
-  public class NumberManipulator {
-	  public static void main(String[] args) {
-		  // This is our original number so we are making it final
-		  final int inputNumber = 6;
+    public class NumberManipulator {
+        public static void main(String[] args) {
+            // This is our original number so we are making it final
+            final int inputNumber = 6;
 
-		  // This is the variable we are going to end with
-		  // Lets make this final as well to prove we aren't cheating
-		  final int outputNumber = 3;
+            // This is the variable we are going to end with
+            // Lets make this final as well to prove we aren't cheating
+            final int outputNumber = 3;
 
-		  // Print out numbers
-		  System.out.println("Input number was: " + inputNumber);
-		  System.out.println("Output will be: " + outputNumber);
+            // Print out numbers
+            System.out.println("Input number was: " + inputNumber);
+            System.out.println("Output will be: " + outputNumber);
 
-		  // Set our mathNumber to inputNumber
-		  int mathNumber = inputNumber;
+            // Set our mathNumber to inputNumber
+            int mathNumber = inputNumber;
 
-		  // Now lets do some mathmatical manipulation on our outputNumber
-		  System.out.println("Now doing math on input number...");
-		  mathNumber *= inputNumber;
-		  mathNumber += inputNumber;
-		  mathNumber /= inputNumber;
-		  mathNumber += 17;
-		  mathNumber -= inputNumber;
-		  mathNumber /= 6;
+            // Now lets do some mathmatical manipulation on our outputNumber
+            System.out.println("Now doing math on input number...");
+            mathNumber *= inputNumber;
+            mathNumber += inputNumber;
+            mathNumber /= inputNumber;
+            mathNumber += 17;
+            mathNumber -= inputNumber;
+            mathNumber /= 6;
 
-		  // Print out mathNumber
-		  System.out.println("Input number is now: " + mathNumber);
+            // Print out mathNumber
+            System.out.println("Input number is now: " + mathNumber);
 
-		  // Check if they were equal
-		  boolean same = mathNumber == outputNumber;
-		  System.out.println("Input number is now equal to Output number: " + same);
-	  }
-  }
+            // Check if they were equal
+            boolean same = mathNumber == outputNumber;
+            System.out.println("Input number is now equal to Output number: " + same);
+        }
+    }
   #+END_SRC
   This is just a simple program to show off some of the things we can do with variable in Java. Here is a bigger
   list of some of the ways we can manipulate and use variables in Java:

@@ -1,18 +1,20 @@
-* What is Org Mode?
-  Org mode is one of the many text editing modes in emacs. On a surface level it is used to write READMEs and to
-  make to do lists. Once you get deeper into org mode you will find that org mode can be used in many aspects of
-  your life. These are just some notes I have on the neat features I use in org mode however the full org mode guide
-  can be find on their [[https://orgmode.org/][website]]. Org is actually way too complex for me cover in this simple Notes repo and the full
-  guide should definitely be referenced to full take advantage of org mode. This guide simple exists for me to show
-  some of the simple features I find useful in org mode.
+#+TITLE: Org
+#+PROPERTY: header-args
+
+Org mode is one of the many text editing modes in emacs. On a surface level it is used to write READMEs and to
+make to do lists. Once you get deeper into org mode you will find that org mode can be used in many aspects of
+your life. These are just some notes I have on the neat features I use in org mode however the full org mode guide
+can be find on their [[https://orgmode.org/][website]]. Org is actually way too complex for me cover in this simple Notes repo and the full
+guide should definitely be referenced to full take advantage of org mode. This guide simple exists for me to show
+some of the simple features I find useful in org mode.
 
 * Headlines
   Headlines are what org mode refers to as the headers you see in this document. Headlines in org mode are simply
   started with an =*=:
   #+BEGIN_EXAMPLE
-  * This is a headline
-  ** This is a smaller sub headline
-  *** We can keep making them smaller
+    ,* This is a headline
+    ,** This is a smaller sub headline
+    ,*** We can keep making them smaller
   #+END_EXAMPLE
   One of the many features of headlines in org mode is that headlines can be folded. What I mean by this is pressing
   ~tab~ on any headline will collapse it out of view. These folded headlines can be reexpanded by pressing ~tab~
@@ -25,8 +27,8 @@
   is written: [[https://www.emacswiki.org/emacs/EmacsKeyNotation][Emacs wiki]]. By default this will mark you Headline as ~TODO~ and pressing it again will mark your
   headline as ~DONE~. So a simple TODO list could look like this:
   #+BEGIN_EXAMPLE org
-  * DONE Start Document on Org mode
-  * TODO Finish document on Org mode
+    ,* DONE Start Document on Org mode
+    ,* TODO Finish document on Org mode
   #+END_EXAMPLE
   Combining a TODO list with folding is a great way to keep track of a lot of things without information overload.
 

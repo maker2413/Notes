@@ -4,11 +4,11 @@
 In this lesson, we’re going to dive into how to create classes with your own static methods and static variables. To begin, let’s take a quick refresher on static methods.
 Static methods are methods that belong to an entire class, not a specific object of the class. Static methods are called using the class name and the . operator. We’ve seen a couple of static methods already!
 #+BEGIN_SRC java
-double randomNumber = Math.random();
-// Stores a random decimal between 0 and 1 in randomNumber
+  double randomNumber = Math.random();
+  // Stores a random decimal between 0 and 1 in randomNumber
  
-double number = String.valueOf("2.5");
-// Transforms the String "2.5" into a double
+  double number = String.valueOf("2.5");
+  // Transforms the String "2.5" into a double
 #+END_SRC
 
 In the first example, random() is a static method that belongs to the Math class. We didn’t need to create a Math object (like Math myMathObject = new Math()) in order to use that method. We could just call it using the class name.
@@ -20,43 +20,43 @@ Finally, notice that our main() methods have been static this whole time. When J
   Just like with static methods, we can access static variables by using the name of the class and the . operator. Finally, we declare static variables by using the static keyword during declaration. This keyword usually comes after the variable’s access modifier (public or private).
   When we put this all together, we might end up with a class that looks something like this:
   #+BEGIN_SRC java
-  public class Dog{
- 
-	// Static variables
-	public static String genus = "Canis";
- 
-	//Instance variables
-	public int age;
-	public String name;
- 
-	public Dog(int inputAge, String inputName){
-	  this.age = inputAge;
-	  this.name = inputName;
-	}
-  }
+    public class Dog{
+
+        // Static variables
+        public static String genus = "Canis";
+
+        //Instance variables
+        public int age;
+        public String name;
+
+        public Dog(int inputAge, String inputName){
+            this.age = inputAge;
+            this.name = inputName;
+        }
+    }
   #+END_SRC
 
   Since all dogs share the same genus, we could use a static variable to store that information for the entire class. However, we want each dog to have it’s own unique name and age, so those aren’t static. We could now access this static variable in a main() function like so:
   #+BEGIN_SRC java
-  public class Dog{
-	//Variables, constructors and methods defined here
- 
-	public static void main(String[] args){
-	  System.out.println(Dog.genus); // Prints Canis
-	}
-  }
+    public class Dog{
+        //Variables, constructors and methods defined here
+
+        public static void main(String[] args){
+            System.out.println(Dog.genus); // Prints Canis
+        }
+    }
   #+END_SRC
 
   Unlike static methods, you can still access static variables from a specific object of the class. However, no matter what object you use to access the variable, the value will always be the same. You can think of it as all objects of the class sharing the same variable
   #+BEGIN_SRC java
-  public static void main(String[] args){
-	Dog snoopy = new Dog(3, "Snoopy");
-	Dog ringo = new Dog(5, "Ringo");
- 
-	System.out.println(Dog.genus); // Prints Canis
-	System.out.println(snoopy.genus); // Prints Canis
-	System.out.println(ringo.genus); // Prints Canis
-  }
+    public static void main(String[] args){
+        Dog snoopy = new Dog(3, "Snoopy");
+        Dog ringo = new Dog(5, "Ringo");
+
+        System.out.println(Dog.genus); // Prints Canis
+        System.out.println(snoopy.genus); // Prints Canis
+        System.out.println(ringo.genus); // Prints Canis
+    }
   #+END_SRC
 
   Finally, you might have seen a few static variables before. If you want easy access to the largest possible integer, you can get it by using Integer.MAX_VALUE. If you look at the official documentation you’ll see that this variable is public, static, and final. (final means that you can’t change the variable’s value after creating it.) We’re starting to know a lot of Java keywords!
@@ -73,20 +73,20 @@ Finally, notice that our main() methods have been static this whole time. When J
 
   Let’s get the syntax out of the way first — just like with variables, to create a static method, use the static keyword in the method’s definition. Just like with variables, this keyword usually comes after public or private.
   #+BEGIN_SRC java
-  public static void myFirstStaticMethod(){
-	  // Some code here
-  }
+    public static void myFirstStaticMethod(){
+        // Some code here
+    }
   #+END_SRC
 
   Often times, you’ll see static methods that are accessors or mutators for static variables.
   #+BEGIN_SRC java
-  public static int getMyStaticVariable(){
-	  return myStaticVariable;
-  }
+    public static int getMyStaticVariable(){
+        return myStaticVariable;
+    }
 
-  public static void setMyStaticVariable(int newValue){
-	  myStaticVariable = newValue;
-  }
+    public static void setMyStaticVariable(int newValue){
+        myStaticVariable = newValue;
+    }
   #+END_SRC
 
   One important rule to note is that static methods can’t interact with non-static instance variables.

@@ -1,3 +1,5 @@
-* What is YAML
-  YAML stand for: YAML Ain't Markup Language. YAML is a human friendly data serialization standard for all
-  programming languages.
+#+TITLE: Yaml
+#+PROPERTY: header-args
+
+YAML stands for: YAML Ain't Markup Language. YAML is a human friendly data serialization standard for all
+programming languages.

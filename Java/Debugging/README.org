@@ -28,10 +28,10 @@ In this lesson, we will be looking at different errors and different error messa
 
   Here’s an example of a syntax error message:
   #+BEGIN_EXAMPLE
-  Debug.java:5: error: ';' expected
-    int year = 2019
-                    ^
-  1 error
+    Debug.java:5: error: ';' expected
+      int year = 2019
+                      ^
+    1 error
   #+END_EXAMPLE
   Usually the error is on the exact line indicated by the compiler, or the line just before it; however, if the problem is incorrectly nested braces, the actual error may be at the beginning of the nested block.
 
@@ -47,8 +47,8 @@ In this lesson, we will be looking at different errors and different error messa
 
   Here’s an example of a run-time error message:
   #+BEGIN_EXAMPLE
-  Exception in thread "main" java.lang.ArithmeticException: / by zero
-        at Debug.main(Debug.java:8)
+    Exception in thread "main" java.lang.ArithmeticException: / by zero
+          at Debug.main(Debug.java:8)
   #+END_EXAMPLE
 
 * Exceptions
@@ -79,25 +79,25 @@ In this lesson, we will be looking at different errors and different error messa
 
   The try and catch keywords come in pairs, though you can also catch several types of exceptions in a single block:
   #+BEGIN_SRC java
-  try {
-      //  Block of code to try
-  } catch (NullPointerException e) {
-      // Print the error message like this:
-      System.err.println("NullPointerException: " + e.getMessage());
-      // Or handle the error another way here
-  }
+    try {
+        //  Block of code to try
+    } catch (NullPointerException e) {
+        // Print the error message like this:
+        System.err.println("NullPointerException: " + e.getMessage());
+        // Or handle the error another way here
+    }
   #+END_SRC
   Notice how we used System.err.println() here instead of System.out.println(). System.err.println() will print to the standard error and the text will be in red.
 
   You can also chain exceptions together:
   #+BEGIN_SRC java
-  try {
-      //  Block of code to try
-  } catch (NullPointerException e) {
-      //  Code to handle a NullPointerException
-  } catch (ArithmeticException e) {
-      //  Code to handle an ArithmeticException
-  }
+    try {
+        //  Block of code to try
+    } catch (NullPointerException e) {
+        //  Code to handle a NullPointerException
+    } catch (ArithmeticException e) {
+        //  Code to handle an ArithmeticException
+    }
   #+END_SRC
   You can learn more about exceptions and handling them [[https://docs.oracle.com/javase/tutorial/essential/exceptions/index.html][here]].
 

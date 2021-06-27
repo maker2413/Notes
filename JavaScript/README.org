@@ -12,7 +12,7 @@ JavaScript is primarily known as the language of most modern web browsers, and i
 
   It’s going to be very useful for us to print values to the console, so we can see the work that we’re doing.
   #+BEGIN_SRC js
-  console.log(5);
+    console.log(5);
   #+END_SRC
 
   This example logs 5 to the console. The semicolon denotes the end of the line, or statement. Although in JavaScript your code will usually run as intended without a semicolon, we recommend learning the habit of ending each statement with a semicolon so you never leave one out in the few instances when they are required.
@@ -30,23 +30,23 @@ JavaScript is primarily known as the language of most modern web browsers, and i
 
   A single line comment will comment out a single line and is denoted with two forward slashes // preceding it.
   #+BEGIN_SRC js
-  // Prints 5 to the console
-  console.log(5);
+    // Prints 5 to the console
+    console.log(5);
   #+END_SRC
 
   You can also use a single line comment to comment after a line of code:
   #+BEGIN_SRC js
-  console.log(5);  // Prints 5
+    console.log(5);  // Prints 5
   #+END_SRC
 
   A multi-line comment will comment out multiple lines and is denoted with /* to begin the comment, and */ to end the comment.
   #+BEGIN_SRC js
-  /*
-  This is all commented 
-  console.log(10);
-  None of this is going to run!
-  console.log(99);
-  */
+    /*
+    This is all commented 
+    console.log(10);
+    None of this is going to run!
+    console.log(99);
+    ,*/
   #+END_SRC
 
   You can also use this syntax to comment something out in the middle of a line of code:
@@ -68,8 +68,8 @@ JavaScript is primarily known as the language of most modern web browsers, and i
 
   But before we do that, let’s get comfortable with strings and numbers!
   #+BEGIN_SRC js
-  console.log('Location of Codecademy headquarters: 575 Broadway, New York City');
-  console.log(40);
+    console.log('Location of Codecademy headquarters: 575 Broadway, New York City');
+    console.log(40);
   #+END_SRC
 
   In the example above, we first printed a string. Our string isn’t just a single word; it includes both capital and lowercase letters, spaces, and punctuation.

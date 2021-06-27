@@ -1,10 +1,12 @@
-* Notes
-  Just notes I made about different topics I have learned. These notes are all written in Org mode and although
-  that should not effect your viewing of them on GitHub it is something to be aware of if you were to clone this
-  repo down for your own personal use. If org mode is foreign to you you can check out my Notes I have on org mode
-  or there are converters available online to convert it to md, html, pdf, and many other formats. Also it is
-  important to note that any code found in this repo has been exported from the org README files so it will be a
-  duplicate of what the README has, but all code in this repo is runnable and exists for anyone to copy from.
+#+TITLE: Notes
+#+PROPERTY: header-args
+
+Just notes I made about different topics I have learned. These notes are all written in Org mode and although
+that should not effect your viewing of them on GitHub it is something to be aware of if you were to clone
+repo down for your own personal use. If org mode is foreign to you you can check out my Notes I have on org
+or there are converters available online to convert it to md, html, pdf, and many other formats. Also it is
+important to note that any code found in this repo has been exported from the org README files so it will be a
+duplicate of what the README has, but all code in this repo is runnable and exists for anyone to copy from.
 
 * Topics
   Here is a list of the "books" of various topics I have covered:

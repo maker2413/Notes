@@ -1,3 +1,6 @@
+#+TITLE: SSL
+#+PROPERTY: header-args
+
 * Hashing
   Hashing is a technique used in computing to ditermine if a file has changed from an expected state.
 
@@ -18,7 +21,7 @@
   Here is an example of how to generate an RSA private key:
 
   #+BEGIN_SRC fish
-  openssl genrsa -aes256 -out private.pem
+    openssl genrsa -aes256 -out private.pem
   #+END_SRC
 
   Here we use the ~genrsa~ option to make sure we are generating an ssl key of RSA type. We also passsed the ~-aes256~
@@ -29,7 +32,7 @@
   flag is not provided. If we wanted to specify an rsa key of a certain bit length we can just run the following:
 
   #+BEGIN_SRC fish
-  openssl genrsa 4096
+    openssl genrsa 4096
   #+END_SRC
 
   In this case we would generate an RSA key of 4096 bit length and the key will be output to the terminal.
@@ -38,7 +41,7 @@
   Here is an example of how to generate an RSA public key using the private key we made:
 
   #+BEGIN_SRC fish
-  openssl rsa -in private.pem -outform PEM -pubout -out public.pem
+    openssl rsa -in private.pem -outform PEM -pubout -out public.pem
   #+END_SRC
 
   Here we are using the ~rsa~ option to specify we are working with an rsa file. We then provide the ~-in~ flag and

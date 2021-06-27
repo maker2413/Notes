@@ -1,2 +1,2 @@
-#+TITLE: Emacs
+#+TITLE: Basics
 #+PROPERTY: header-args

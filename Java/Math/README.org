@@ -1,62 +1,61 @@
-#+TITLE: Math
+#+TITLE: The Math Class
 #+PROPERTY: header-args
 
-* The Math Class
-  Math can play a major role in our programs. It can become tedious to write out every equation we need in our code. Luckily, a lot of this work can be truncated using the Math class. The Java Math class is part of the java.lang package; it contains a variety of methods that can be used to perform numerical calculations in our programs. In this article, we’ll discuss the different types of Math methods available to us and how to implement them in our Java programs.
+Math can play a major role in our programs. It can become tedious to write out every equation we need in our code. Luckily, a lot of this work can be truncated using the Math class. The Java Math class is part of the java.lang package; it contains a variety of methods that can be used to perform numerical calculations in our programs. In this article, we’ll discuss the different types of Math methods available to us and how to implement them in our Java programs.
 
-  The Math class also offers a good opportunity for us to learn about Static methods. We’ll take a look at what static methods are and how they’re different from non-static methods.
+The Math class also offers a good opportunity for us to learn about Static methods. We’ll take a look at what static methods are and how they’re different from non-static methods.
 
 * Calling Static Methods
   Every method in the Math class is static. This means that we can call and use these methods without creating an object of the class. There are two main options for calling a static method.
 
   Our first option is to append the dot operator to the class name followed by the method we want to execute. If we wanted to reference a method of the Math class, we would use Math.NameOfMethodHere. Let’s see this in action with the Math class method min() which returns the smaller value of two given numbers:
   #+BEGIN_SRC java
-  class Numbers {
-	  public static void main(String[] args) {
-		  // Call method using the Class name, the dot operator, the method name, and argument
-		  int smallerNumber = Math.min(3, 10);
-		  System.out.println(smallerNumber); // Prints: 3
-	  }
-  }
+    class Numbers {
+        public static void main(String[] args) {
+            // Call method using the Class name, the dot operator, the method name, and argument
+            int smallerNumber = Math.min(3, 10);
+            System.out.println(smallerNumber); // Prints: 3
+        }
+    }
   #+END_SRC
   How is this any different from calling a non-static method? We don’t need to create an object of the class in order to use the methods it contains. Let’s see an example of a non-static method:
   #+BEGIN_SRC java
-  class Numbers {
-	  int firstNumber;
-	  int secondNumber;
+    class Numbers {
+        int firstNumber;
+        int secondNumber;
 
-	  public Numbers (int num1, int num2) {
-		  firstNumber = num1;
-		  secondNumber = num2;
-	  }
+        public Numbers (int num1, int num2) {
+            firstNumber = num1;
+            secondNumber = num2;
+        }
 
-	  // non-static method
-	  public int returnSum() {
-		  return firstNumber + secondNumber;
-	  }
+        // non-static method
+        public int returnSum() {
+            return firstNumber + secondNumber;
+        }
 
-	  public static void main(String[] args) {
-		  // Create an object
-		  Numbers myNumbers = new Numbers(2, 5);
-		  // Call a non-static method on object
-		  int sum = myNumbers.returnSum();
-		  System.out.println(sum); // Prints: 7
-	  }
-  }
+        public static void main(String[] args) {
+            // Create an object
+            Numbers myNumbers = new Numbers(2, 5);
+            // Call a non-static method on object
+            int sum = myNumbers.returnSum();
+            System.out.println(sum); // Prints: 7
+        }
+    }
   #+END_SRC
   In our code above, we had to create an object of type Numbers in order to use the non-static method returnSum(). With non-static methods, if we don’t create an object of this class (or one of its subclasses), we do not have access to its methods. This isn’t the case for static methods.
 
   Our second option for calling a static method from the Math class is to import the class by adding import static java.lang.Math.*; to the top of our program. If we import the Math class, we can reference the method using only the method name like so:
   #+BEGIN_SRC java
-  import static java.lang.Math.*; // import Math class
+    import static java.lang.Math.*; // import Math class
 
-  class Numbers {
-	  public static void main(String[] args) {
-		  // Call method by using method name and arguments
-		  int smallerNumber = min(3, 10);
-		  System.out.println(smallerNumber); // Prints: 3
-	  }
-  }
+    class Numbers {
+        public static void main(String[] args) {
+            // Call method by using method name and arguments
+            int smallerNumber = min(3, 10);
+            System.out.println(smallerNumber); // Prints: 3
+        }
+    }
   #+END_SRC
 
 * Useful Methods
@@ -67,8 +66,8 @@
 
    The absolute value states how many numbers a value is away from 0. The absolute value of always a positive number. For example, the absolute value of -5 is 5 because it is 5 away from 0. In Java, we can get the absolute value of a number like this:
    #+BEGIN_SRC java
-   System.out.println(Math.abs(5)); // Prints: 5
-   System.out.println(Math.abs(-5)); // Prints: 5
+     System.out.println(Math.abs(5)); // Prints: 5
+     System.out.println(Math.abs(-5)); // Prints: 5
    #+END_SRC
 
 ** double abs(double x)
@@ -76,8 +75,8 @@
 
    This is similar to the previous method, but this method takes in and returns a double type value:
    #+BEGIN_SRC java
-   System.out.println(Math.abs(5.0)); // Prints: 5.0
-   System.out.println(Math.abs(-5.0)); // Prints: 5.0
+     System.out.println(Math.abs(5.0)); // Prints: 5.0
+     System.out.println(Math.abs(-5.0)); // Prints: 5.0
    #+END_SRC
 
 ** double pow(double base, double exponent)
@@ -85,8 +84,8 @@
 
    The power, or exponent, describes how many times a number should be multiplied by itself. For example, 5 to the power of 3 is equivalent to 5 * 5 * 5, or 125. If we wanted to see this in Java, we could use Math.pow() like this:
    #+BEGIN_SRC java
-   double x = Math.pow(5, 3);
-   System.out.println(x); // Prints: 125.0
+     double x = Math.pow(5, 3);
+     System.out.println(x); // Prints: 125.0
    #+END_SRC
 
 ** double sqrt(double x)
@@ -94,10 +93,10 @@
 
    The square root of a number represents what value can be multiplied by itself in order to equal a specified value. For example, the square root of 49 is 7 because 7 * 7 is 49. In java, getting the square root of a value looks like this:
    #+BEGIN_SRC java
-   double x = Math.sqrt(49);
-   System.out.println(x); // Prints: 7.0
-   double y = Math.sqrt(52);
-   System.out.println(y); // Prints: 7.211102550927978
+     double x = Math.sqrt(49);
+     System.out.println(x); // Prints: 7.0
+     double y = Math.sqrt(52);
+     System.out.println(y); // Prints: 7.211102550927978
    #+END_SRC
 
 ** double random()
@@ -105,32 +104,32 @@
 
    Randomization is a great way to add probability to our programs. There are many ways to implement Math.random() in Java. Its default use case is to produce a random double value between 0.0 and 1.0. For example:
    #+BEGIN_SRC java
-   System.out.println(Math.random());
-   System.out.println(Math.random());
-   System.out.println(Math.random());
+     System.out.println(Math.random());
+     System.out.println(Math.random());
+     System.out.println(Math.random());
    #+END_SRC
    The random values can change every time we run our program. An example output of the above program is the following:
    #+BEGIN_SRC bash
-   0.8592007008856128
-   0.6120058754881421
-   0.48259656765819403
+     0.8592007008856128
+     0.6120058754881421
+     0.48259656765819403
    #+END_SRC
    With some manipulation, we can use Math.random() to create a random int or double value within a predefined range.
 
    For example, if we wanted a random double value between 0 and 9, we would multiply Math.random() by 10
    #+BEGIN_SRC java
-   // Random double value between 0 and 9
-   double a = Math.random() * 10;
+     // Random double value between 0 and 9
+     double a = Math.random() * 10;
    #+END_SRC
    If we wanted a random int value between 0 and 9, we would need to implement the (int) casting operator in our expression like so:
    #+BEGIN_SRC java
-   // Random int value between 0 and 9
-   int b = (int)(Math.random() * 10);
+     // Random int value between 0 and 9
+     int b = (int)(Math.random() * 10);
    #+END_SRC
    If we wanted our range to start at 1 and end at 10, we would have to add 1 to the end of our previous expression:
    #+BEGIN_SRC java
-   // Random int value between 1 and 10
-   int c = (int)(Math.random() * 10) + 1;
+     // Random int value between 1 and 10
+     int c = (int)(Math.random() * 10) + 1;
    #+END_SRC
    Note how the + 1 is added outside the parentheses. This is an important syntax to remember. If we placed the + 1 inside the parentheses, we would get a random int between 0 and 10
 
@@ -138,8 +137,8 @@
 
    For example:
    #+BEGIN_SRC java
-   // Random int value between 10 and 20
-   int d = (int)(Math.random() * 11 ) + 10;
+     // Random int value between 10 and 20
+     int d = (int)(Math.random() * 11 ) + 10;
    #+END_SRC
    We multiple Math*random() by 11 because 20 (our max value) minus 10 (our minimum value) plus 1 is 11. We add + 10 outside the parentheses so that our smallest value is guaranteed to be 10.
 

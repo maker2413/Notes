@@ -3,4 +3,55 @@
 
 This repo is a simple bash script I made to install [[https://k3s.io][k3s]] and deploy halyard, minio, and the
 spinnaker services. I use this setup to not only learn spinnaker in a local vm to but to
-develop plugins and pipelines.
+develop plugins and pipelines. This script is designed to be run on any debian based machine
+but feel free to tweak the script to run on your setup. If you just want a quick and easy
+ubuntu vm I definitely recommend run this in either a multipass vm or and EC2 instance in AWS.
+
+* System requirements
+  To run a spinnaker instance in k3s we will require a vm with about:
+  - 2 CPU cores
+  - 10 Gigs of ram
+  - 30 Gigs of disk space
+
+  You could probably get by with less but this is ideal for an environment to play around with.
+
+* Multipass
+  I run my spinnaker dev environment in a multipass vm. [[https://multipass.run/][Multipass]] is a tool made by the
+  cannonical (the team behind ubuntu). Multipass is used to create, use, and destroy ubuntu
+  vms on the fly. It support MacOS, Windows, Linux, and they even have a snap package (snap
+  is also developed by the cannonical team). I decided to go with a snap installation of
+  multipass on my arch machine: ~sudo snap install multipass~.
+  #+BEGIN_SRC sh
+    sudo snap install multipass
+  #+END_SRC
+
+  Once multipass is installed we can launch a vm for our spinnaker cluster super easily
+  with this:
+  #+BEGIN_SRC sh
+    multipass launch -c 2 -m 10G -d 30G --name minnaker
+  #+END_SRC
+
+  This will give us an ubuntu 20 vm with 2CPU cores, 10G of ram, 30G of disk space, and
+  give it the name =minnaker=.
+  Once it has fully booted we can get a shell into it by running: ~multipass shell minnaker~.
+
+* Clone repo
+  If you went with a multipass vm it comes preinstalled with ~git~ so simply clone down this
+  repo to get this installation script on your machine.
+  #+BEGIN_SRC sh
+    git clone https://github.com/maker2413/Spinnaker-Developer.git
+  #+END_SRC
+
+  From there all you have to do is run the install script and you should be good to go:
+  #+BEGIN_SRC sh
+    cd Spinnaker-Developer
+    ./install_spinnaker.sh
+  #+END_SRC
+
+  This can take quite a while to install as we not only have to download and install k3s,
+  but deploy all the various spinnaker microservices, halyard, and minio. After this script
+  finishes though it should have configured your spinnaker instance to be accessed over your
+  vms local ip. If you used multipass this can be found with the following: ~multipass list~.
+  If you ran this on an EC2 instance or some other machine you will be accessing over the
+  internet you will want to setup some authentication as by default spinnaker will only accept
+  local traffic if you don't have authentication setup.

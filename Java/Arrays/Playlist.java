@@ -9,36 +9,36 @@ Build Playlist.java with the best possible playlist of music using a Java ArrayL
 import java.util.ArrayList;
 
 class Playlist {
-  public static void main(String[] args) {
-    // Lets make our ArrayList
-    ArrayList<String> desertIslandPlaylist = new ArrayList<String>();
+    public static void main(String[] args) {
+        // Lets make our ArrayList
+        ArrayList<String> desertIslandPlaylist = new ArrayList<String>();
 
-    // Lets add some songs to our playlist
-    desertIslandPlaylist.add("She came in through the bathroom window");
-    desertIslandPlaylist.add("No one else");
-    desertIslandPlaylist.add("Chameleon");
-    desertIslandPlaylist.add("Slow jam");
-    desertIslandPlaylist.add("I've got you");
-    desertIslandPlaylist.add("Party at a rich dude's house");
+        // Lets add some songs to our playlist
+        desertIslandPlaylist.add("She came in through the bathroom window");
+        desertIslandPlaylist.add("No one else");
+        desertIslandPlaylist.add("Chameleon");
+        desertIslandPlaylist.add("Slow jam");
+        desertIslandPlaylist.add("I've got you");
+        desertIslandPlaylist.add("Party at a rich dude's house");
 
-    // Print our ArrayList
-    System.out.println(desertIslandPlaylist);
-    // Print how many items are in our ArrayList
-    System.out.println(desertIslandPlaylist.size());
+        // Print our ArrayList
+        System.out.println(desertIslandPlaylist);
+        // Print how many items are in our ArrayList
+        System.out.println(desertIslandPlaylist.size());
 
-    // We can only have 5 songs! Lets remove one
-    desertIslandPlaylist.remove(5);
-    System.out.println(desertIslandPlaylist);
+        // We can only have 5 songs! Lets remove one
+        desertIslandPlaylist.remove(5);
+        System.out.println(desertIslandPlaylist);
 
-    // Lets swap two of our songs
-    int a = desertIslandPlaylist.indexOf("No one else");
-    int b = desertIslandPlaylist.indexOf("Chameleon");
-    String tempA = desertIslandPlaylist.get(a);
-    String tempB = desertIslandPlaylist.get(b);
-    desertIslandPlaylist.set(a, tempB);
-    desertIslandPlaylist.set(b, tempA);
+        // Lets swap two of our songs
+        int a = desertIslandPlaylist.indexOf("No one else");
+        int b = desertIslandPlaylist.indexOf("Chameleon");
+        String tempA = desertIslandPlaylist.get(a);
+        String tempB = desertIslandPlaylist.get(b);
+        desertIslandPlaylist.set(a, tempB);
+        desertIslandPlaylist.set(b, tempA);
 
-    // Now lets see what it is like
-    System.out.println(desertIslandPlaylist);
-  }
+        // Now lets see what it is like
+        System.out.println(desertIslandPlaylist);
+    }
 }

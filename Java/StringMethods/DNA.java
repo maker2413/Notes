@@ -25,44 +25,44 @@ ATGCGATAGA is not a protein because the sequence length is not divisible by 3, s
 */
 
 public class DNA {
-  public boolean isProtein(String dna) {
-    System.out.println("String provided: " + dna);
-    int startCodon = dna.indexOf("ATG");
-    int stopCodon = dna.indexOf("TGA");
+    public boolean isProtein(String dna) {
+        System.out.println("String provided: " + dna);
+        int startCodon = dna.indexOf("ATG");
+        int stopCodon = dna.indexOf("TGA");
 
-    if (startCodon == -1) {
-      System.out.println("Protein does not have a start codon: ATG!");
-      return false;
-    } else if (stopCodon == -1) {
-      System.out.println("Protein does not have a stop codon: TGA!");
-      return false;
-    } else if ((stopCodon - startCodon) % 3 != 0) {
-      System.out.println("Protein is not divisible by 3!");
-      return false;
+        if (startCodon == -1) {
+          System.out.println("Protein does not have a start codon: ATG!");
+          return false;
+        } else if (stopCodon == -1) {
+          System.out.println("Protein does not have a stop codon: TGA!");
+          return false;
+        } else if ((stopCodon - startCodon) % 3 != 0) {
+          System.out.println("Protein is not divisible by 3!");
+          return false;
+        }
+
+        System.out.println(dna + " is a protein!");
+        return true;
     }
 
-    System.out.println(dna + " is a protein!");
-    return true;
-  }
+    public static void main(String[] args) {
+        //  -. .-.   .-. .-.   .
+        //    \   \ /   \   \ / 
+        //   / \   \   / \   \  
+        //  ~   `-~ `-`   `-~ `-
+        DNA dna = new DNA();
+        String dna1 = "ATGCGATACGCTTGA";
+        String dna2 = "ATGCGATACGTGA";
+        String dna3 = "ATTAATATGTACTGA";
+        String dna4 = "ACGAATTCCG";
 
-  public static void main(String[] args) {
-    //  -. .-.   .-. .-.   .
-    //    \   \ /   \   \ / 
-    //   / \   \   / \   \  
-    //  ~   `-~ `-`   `-~ `-
-    DNA dna = new DNA();
-    String dna1 = "ATGCGATACGCTTGA";
-    String dna2 = "ATGCGATACGTGA";
-    String dna3 = "ATTAATATGTACTGA";
-    String dna4 = "ACGAATTCCG";
-
-    dna.isProtein(dna1);
-    System.out.println("");
-    dna.isProtein(dna2);
-    System.out.println("");
-    dna.isProtein(dna3);
-    System.out.println("");
-    dna.isProtein(dna4);
-    System.out.println("");
-  }
+        dna.isProtein(dna1);
+        System.out.println("");
+        dna.isProtein(dna2);
+        System.out.println("");
+        dna.isProtein(dna3);
+        System.out.println("");
+        dna.isProtein(dna4);
+        System.out.println("");
+    }
 }

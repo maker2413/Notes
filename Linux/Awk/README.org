@@ -1,0 +1,175 @@
+#+TITLE: Awk
+#+PROPERTY: header-args
+
+Awk is a text manipulation tool that allows us to grab certain columns from text. Lets
+run ~ps~ for example and see what output we get:
+#+BEGIN_SRC sh :results output
+  ps -t pts/0
+#+END_SRC
+
+#+RESULTS:
+:     PID TTY          TIME CMD
+:    5675 pts/0    00:00:00 fish
+:    6298 pts/0    00:00:00 emacs
+
+Now lets pipe that same command into ~awk~ and see if we can grab just the first column:
+#+begin_src sh :results output
+  ps -t pts/0 | awk '{print $1}'
+#+end_src
+
+#+RESULTS:
+: PID
+: 5675
+: 6298
+
+If we needed to grab the second column we can do the following:
+#+begin_src sh :results output
+  ps -t pts/0 | awk '{print $2}'
+#+end_src
+
+#+RESULTS:
+: TTY
+: pts/0
+: pts/0
+
+If we needed to grab multiple columns we can of course specify more than one:
+#+begin_src sh :results output
+  ps -t pts/0 | awk '{print $1 $4}'
+#+end_src
+
+#+RESULTS:
+: PIDCMD
+: 5675fish
+: 6298emacs
+We will cover how to make this look better in the separators section of this chapter.
+
+If it is worth noting ~$0~ will print the full output:
+#+begin_src sh :results output
+  ps -t pts/0 | awk '{print $0}'
+  # We can also achieve this with: awk '{print}'
+#+end_src
+
+#+RESULTS:
+:     PID TTY          TIME CMD
+:    5675 pts/0    00:00:00 fish
+:    6298 pts/0    00:00:00 emacs
+
+* Separators
+  By default ~awk~ treats empty space as a field separator for columns but you can
+  specify any character you like. Lets play around with the contents of our passwd file:
+  #+begin_src sh :results output
+    cat /etc/passwd
+  #+end_src
+
+  #+RESULTS:
+  #+begin_example
+  root:x:0:0::/root:/bin/fish
+  bin:x:1:1::/:/usr/bin/nologin
+  daemon:x:2:2::/:/usr/bin/nologin
+  mail:x:8:12::/var/spool/mail:/usr/bin/nologin
+  ftp:x:14:11::/srv/ftp:/usr/bin/nologin
+  http:x:33:33::/srv/http:/usr/bin/nologin
+  nobody:x:65534:65534:Nobody:/:/usr/bin/nologin
+  dbus:x:81:81:System Message Bus:/:/usr/bin/nologin
+  systemd-journal-remote:x:982:982:systemd Journal Remote:/:/usr/bin/nologin
+  systemd-network:x:981:981:systemd Network Management:/:/usr/bin/nologin
+  systemd-resolve:x:980:980:systemd Resolver:/:/usr/bin/nologin
+  systemd-timesync:x:979:979:systemd Time Synchronization:/:/usr/bin/nologin
+  systemd-coredump:x:978:978:systemd Core Dumper:/:/usr/bin/nologin
+  uuidd:x:68:68::/:/usr/bin/nologin
+  avahi:x:977:977:Avahi mDNS/DNS-SD daemon:/:/usr/bin/nologin
+  colord:x:976:976:Color management daemon:/var/lib/colord:/usr/bin/nologin
+  dhcpcd:x:975:975:dhcpcd privilege separation:/:/usr/bin/nologin
+  git:x:974:974:git daemon user:/:/usr/bin/git-shell
+  lightdm:x:973:973:Light Display Manager:/var/lib/lightdm:/usr/bin/nologin
+  polkitd:x:102:102:PolicyKit daemon:/:/usr/bin/nologin
+  epost:x:1000:1000::/home/epost:/bin/fish
+  brltty:x:970:970:Braille Device Daemon:/var/lib/brltty:/usr/bin/nologin
+  dnsmasq:x:969:969:dnsmasq daemon:/:/usr/bin/nologin
+  nvidia-persistenced:x:143:143:NVIDIA Persistence Daemon:/:/usr/bin/nologin
+  rtkit:x:133:133:RealtimeKit:/proc:/usr/bin/nologin
+  usbmux:x:140:140:usbmux user:/:/usr/bin/nologin
+  systemd-oom:x:966:966:systemd Userspace OOM Killer:/:/usr/bin/nologin
+  #+end_example
+
+  Here we can see the file is clearly split into columns, however this time columns are
+  separated by =:=. Lets pass this into ~awk~ now:
+  #+begin_src sh :results output
+    # -F is used to specify our field separator
+    cat /etc/passwd | awk -F ":" '{print $1}'
+  #+end_src
+
+  #+RESULTS:
+  #+begin_example
+  root
+  bin
+  daemon
+  mail
+  ftp
+  http
+  nobody
+  dbus
+  systemd-journal-remote
+  systemd-network
+  systemd-resolve
+  systemd-timesync
+  systemd-coredump
+  uuidd
+  avahi
+  colord
+  dhcpcd
+  git
+  lightdm
+  polkitd
+  epost
+  brltty
+  dnsmasq
+  nvidia-persistenced
+  rtkit
+  usbmux
+  systemd-oom
+  #+end_example
+
+  This will give us a list of all the users on our system. Lets say now that we wanted
+  to not only grab all the users on our system but we wanted to know each user's home
+  directory and default shell. We can simply grab all of those columns with ~awk~ like
+  we have before but what if we wanted our output to be formatted pretty? With ~awk~ we
+  not only specify which field separator we want to look for in our input but we can
+  specify an output field separator:
+  #+begin_src sh :results output
+    # You will notice this time that we aren't piping the output of cat into awk
+    # but rather just telling awk which file we want to run this on. This is just
+    # another way to use awk and I wanted to show it off.
+    awk 'BEGIN{FS=":"; OFS="-"} {print $1, $6, $7}' /etc/passwd
+  #+end_src
+
+  #+RESULTS:
+  #+begin_example
+  root-/root-/bin/fish
+  bin-/-/usr/bin/nologin
+  daemon-/-/usr/bin/nologin
+  mail-/var/spool/mail-/usr/bin/nologin
+  ftp-/srv/ftp-/usr/bin/nologin
+  http-/srv/http-/usr/bin/nologin
+  nobody-/-/usr/bin/nologin
+  dbus-/-/usr/bin/nologin
+  systemd-journal-remote-/-/usr/bin/nologin
+  systemd-network-/-/usr/bin/nologin
+  systemd-resolve-/-/usr/bin/nologin
+  systemd-timesync-/-/usr/bin/nologin
+  systemd-coredump-/-/usr/bin/nologin
+  uuidd-/-/usr/bin/nologin
+  avahi-/-/usr/bin/nologin
+  colord-/var/lib/colord-/usr/bin/nologin
+  dhcpcd-/-/usr/bin/nologin
+  git-/-/usr/bin/git-shell
+  lightdm-/var/lib/lightdm-/usr/bin/nologin
+  polkitd-/-/usr/bin/nologin
+  epost-/home/epost-/bin/fish
+  brltty-/var/lib/brltty-/usr/bin/nologin
+  dnsmasq-/-/usr/bin/nologin
+  nvidia-persistenced-/-/usr/bin/nologin
+  rtkit-/proc-/usr/bin/nologin
+  usbmux-/-/usr/bin/nologin
+  systemd-oom-/-/usr/bin/nologin
+  #+end_example

@@ -6,4 +6,6 @@ various tools that I use in my daily life. Here is some of the information you c
 in this book:
 
 - [[./Basics/README.org][Basics]]:: This chapter will cover the basics of using a linux machine. Topics such as what is linux, how to get around in the command line, and package managment can be find in this chapter.
+- [[Awk/README.org][Awk]] :: This chapter covers the command line tool ~awk~.
 - [[Sed/README.org][Sed]] :: This chapter covers the command line tool ~sed~.
+- [[Cut/README.org][Cut]] :: This chapter covers the command line tool ~cut~.

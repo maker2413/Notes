@@ -1,0 +1,3 @@
+#+TITLE: Cut
+#+PROPERTY: header-args
+

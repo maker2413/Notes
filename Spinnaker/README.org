@@ -1,16 +1,19 @@
 #+TITLE: Spinnaker
 #+PROPERTY: header-args
 
-Spinnaker is a Continuous Deployment tool. The thing that makes Spinnaker different than most deployment tools is
-that Spinnaker has multi cloud support. Multi cloud support on its own isn't that unique of a concept but
-Spinnaker takes a very interesting approach to how it handles multi cloud. With Spinnaker you configure and
-connect your environment(s) from a multitude of supported [[https://spinnaker.io/setup/install/providers][providers]]. From there Spinnaker will treat them equal
-and give you the ability to define automated pipelines to deploy to certain environments or spread out the load
-amongst multiple. For any aditional documentation not described in this README you can consult the [[https://spinnaker.io/concepts][Spinnaker docs]].
+Spinnaker is a Continuous Deployment tool. The thing that makes Spinnaker different than
+most deployment tools is that Spinnaker has multi cloud support. Multi cloud support on
+its own isn't that unique of a concept but Spinnaker takes a very interesting approach to
+how it handles multi cloud. With Spinnaker you configure and connect your environment(s)
+from a multitude of supported [[https://spinnaker.io/setup/install/providers][providers]]. From there Spinnaker will treat them equal and
+give you the ability to define automated pipelines to deploy to certain environments or
+spread out the load amongst multiple. For any aditional documentation not described in
+this README you can consult the [[https://spinnaker.io/concepts][Spinnaker docs]].
 
 * Spinnaker Architecture
-  Spinnaker is composed of a number of independent microservices. These microservices can found and explained better
-  on the [[https://spinnaker.io/reference/architecture/][Spinnaker docs]], but I am going to list some of the important ones to know:
+  Spinnaker is composed of a number of independent microservices. These microservices can
+  found and explained better on the [[https://spinnaker.io/reference/architecture/][Spinnaker docs]], but I am going to list some of the
+  important ones to know:
   - [[https://github.com/spinnaker/deck][Desk]] :: Deck is the broswer-based UI of spinnaker.
   - [[https://github.com/spinnaker/gate][Gate]] :: Is the API Gateway for spinnaker; all API callers communicate with the Spinnaker Gate.
   - [[https://github.com/spinnaker/][Orca]] :: Orca is the orchestration engine of spinnaker. It handles all ad-hoc operations and pipelines. Here are the [[https://spinnaker.io/guides/developer/service-overviews/orca][Orca docs]].
@@ -24,15 +27,17 @@ amongst multiple. For any aditional documentation not described in this README y
   - Server Group :: In the spinnaker world a server group is a group of our spinnaker instances. This can be visualized similar to a kubernetes deployment but in this case it is just grouping of our spinnaker instances which could be any number of or combination of vms, servers, and pods.
 
 * Spinnaker Installation
-  Spinnaker Installation instructions can be found: [[https://spinnaker.io/setup/install/][here]]. Spinnaker can be installed on any of the supported
-  [[https://spinnaker.io/setup/install/providers/][providers]], and it can also be installed [[https://spinnaker.io/setup/install/providers/][locally]] on a linux machine or if you are interested in helping develop
-  spinnaker you can install from the git repo with these: [[https://spinnaker.io/setup/install/environment/#local-git][instructions]].
+  Spinnaker Installation instructions can be found: [[https://spinnaker.io/setup/install/][here]]. Spinnaker can be installed on
+  any of the supported [[https://spinnaker.io/setup/install/providers/][providers]], and it can also be installed [[https://spinnaker.io/setup/install/providers/][locally]] on a linux machine
+  or if you are interested in helping develop spinnaker you can install from the git repo
+  with these: [[https://spinnaker.io/setup/install/environment/#local-git][instructions]].
 
-  If you just want to play around with Spinnaker or develop a pipeline or plugin for spinnaker check out my
-  [[./Spinnaker-Developer/README.org][Spinnaker-Developer]] repo. This repo provides a bash script that will install k3s and deploy halyard, minio, and
-  the spinnaker services for you. For more information about my installation check out my [[./Spinnaker-Developer/README.org][Spinnaker-Developer]]
-  repo. You can also try Minnaker if you want a local dev environtment but I didn't
-  have much luck with their installation.
+  If you just want to play around with Spinnaker or develop a pipeline or plugin for
+  spinnaker check out my [[./Spinnaker-Developer/README.org][Spinnaker-Developer]] repo. This repo provides a bash script that
+  will install k3s and deploy halyard, minio, and the spinnaker services for you. For
+  more information about my installation check out my [[./Spinnaker-Developer/README.org][Spinnaker-Developer]] repo. You can
+  also try Minnaker if you want a local dev environtment but I didn't have much luck with
+  their installation.
 
 * Using Halyard
   ~hal~

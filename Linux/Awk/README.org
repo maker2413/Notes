@@ -225,7 +225,7 @@ If it is worth noting ~$0~ will print the full output:
   We used regex to define that we only wanted to look for lines that started with a ~/~.
   Now lets just pipe the output of our ~awk~ command into ~uniq~ to remove the duplicate
   shells, and lets pipe that into ~sort~ so they are sorted alphabetically:
-  #+begin_src sh :results output
+  #+begin_src sh :results example
     awk -F "/" '/^\// {print $NF}' /etc/shells | uniq | sort
   #+end_src
 
@@ -233,6 +233,18 @@ If it is worth noting ~$0~ will print the full output:
   : fish
   : git-shell
   : sh
+
+  This time lets search our bashrc for any lines starting a =b= or a =c=:
+  #+begin_src sh :results output
+    awk '$1 ~ /^[b,c]/ {print $0}' ~/.bashrc
+  #+end_src
+
+  #+RESULTS:
+  : case $- in
+  : case "$TERM" in
+  : 	color_prompt=yes
+  : 	color_prompt=
+  : case "$TERM" in
 
 * Scripting
   One of the things that makes ~awk~ so powerful is that it in itself is a scripting
@@ -284,3 +296,38 @@ If it is worth noting ~$0~ will print the full output:
   incrementing variable and initialize it, we set our stopping point, and we set our
   incrementing amount. You may have also noticed that we can do arithmetic in our ~awk~
   script which is another powerful aspect of ~awk~ scripting.
+
+* Line numbers
+  A feature of ~awk~ worth noting is the line number specifier. Say we had a big block
+  of output from a command and we only wanted to see a specific line number of the
+  output, or even a specific range of line numbers. Lets try this on the ~df~ command:
+  #+begin_src sh :results output
+    df | awk 'NR==7, NR==11 {print NR, $0}'
+  #+end_src
+
+  : 7 /dev/loop0        225280   225280         0 100% /var/lib/snapd/snap/multipass/4458
+  : 8 /dev/loop2         33152    33152         0 100% /var/lib/snapd/snap/snapd/12159
+  : 9 /dev/loop3        225280   225280         0 100% /var/lib/snapd/snap/multipass/4861
+  : 10 /dev/loop5         56832    56832         0 100% /var/lib/snapd/snap/core18/2066
+  : 11 /dev/loop4         56832    56832         0 100% /var/lib/snapd/snap/core18/2074
+
+  ~NR~ is what we use in ~awk~ to signify line number. Above you can see we were able to
+  grab lines 7-11 using ~NR~ and print both the line number and the line itself. Of
+  course if we didn't want to print the line number we could just drop ~NR~ from our
+  print statement:
+  #+begin_src sh :results output
+    df | awk 'NR==7, NR==11 {print $0}'
+  #+end_src
+
+  : /dev/loop0        225280   225280         0 100% /var/lib/snapd/snap/multipass/4458
+  : /dev/loop2         33152    33152         0 100% /var/lib/snapd/snap/snapd/12159
+  : /dev/loop3        225280   225280         0 100% /var/lib/snapd/snap/multipass/4861
+  : /dev/loop5         56832    56832         0 100% /var/lib/snapd/snap/core18/2066
+  : /dev/loop4         56832    56832         0 100% /var/lib/snapd/snap/core18/2074
+
+  We can also use ~NR~ to get a line count of a file, lets pick on =/etc/shells= again:
+  #+begin_src sh :results output
+    awk 'END {print NR}' /etc/shells
+  #+end_src
+
+  : 8

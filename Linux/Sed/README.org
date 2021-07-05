@@ -1,2 +1,166 @@
 #+TITLE: Sed
-#+PROPERTY: header-args
+#+PROPERTY: header-args :exports both
+
+~sed~ is a linux command line tool that allows you to search for a specific string of
+text and replace that text with something else. Once you learn ~sed~ you will find
+yourself doing it all the time either to speed up day to day command line life or to
+automate things with bash.
+
+* Substitutions
+  Lets practicing using ~sed~ to substite text. By default substitutions will allow us to
+  find and replace the first instance of our supplied text per line with the new text we
+  provide. I have included a sample of [[https://www.poetryfoundation.org/poems/43914/the-walrus-and-the-carpenter-56d222cbc80a9][The Walrus and the Carpenter by Lewis Carroll]] in
+  this directory that we can use to practice ~sed~ on:
+  #+NAME: Walrus
+  #+begin_src sh :results output :exports both
+    cat ./TheWalrusAndTheCarpenter.txt
+  #+end_src
+
+  #+RESULTS: Walrus
+  #+begin_example
+  ...
+
+  It seems a shame,' the Walrus said,
+        To play them such a trick,
+  After we've brought them out so far,
+        And made them trot so quick!'
+  The Carpenter said nothing but
+        The butter's spread too thick!'
+
+  I weep for you,' the Walrus said:
+        I deeply sympathize.'
+  With sobs and tears he sorted out
+        Those of the largest size,
+  Holding his pocket-handkerchief
+        Before his streaming eyes.
+
+  O Oysters,' said the Carpenter,
+        You've had a pleasant run!
+  Shall we be trotting home again?'
+        But answer came there none —
+  And this was scarcely odd, because
+        They'd eaten every one."
+  #+end_example
+  
+  For starters lets just try and replace the first instance of =a= on each line with =A=:
+  #+NAME: A
+  #+begin_src sh :results output :exports both
+    sed 's/a/A/' < TheWalrusAndTheCarpenter.txt > A.txt
+    cat A.txt
+  #+end_src
+
+  #+RESULTS: A
+  #+begin_example
+  ...
+
+  It seems A shame,' the Walrus said,
+        To plAy them such a trick,
+  After we've brought them out so fAr,
+        And mAde them trot so quick!'
+  The CArpenter said nothing but
+        The butter's spreAd too thick!'
+
+  I weep for you,' the WAlrus said:
+        I deeply sympAthize.'
+  With sobs And tears he sorted out
+        Those of the lArgest size,
+  Holding his pocket-hAndkerchief
+        Before his streAming eyes.
+
+  O Oysters,' sAid the Carpenter,
+        You've hAd a pleasant run!
+  ShAll we be trotting home again?'
+        But Answer came there none —
+  And this wAs scarcely odd, because
+        They'd eAten every one."
+  #+end_example
+
+  Success! To explain what just happened lets look at the ~sed~ command we typed:
+  #+begin_example sh
+    sed 's/a/A/' < TheWalrusAndTheCarpenter.txt > A.txt
+  #+end_example
+
+  We write our ~sed~ script inside of single quotes. Inside our single quotes we first
+  describe our action; here we wanted to substitute text so we used =s=. After
+  describing our action we provide a forward slash: =/=. For a substitution action we
+  then provide the text we want ~sed~ to find, in this case: =a=. After that
+  we provide another forward slash and the text we want to replace our found text with:
+  =A=. Finally we close out our substitution with one final forward slash and make
+  sure we close out our ~sed~ script with a single quote. After our ~sed~ script can
+  give a less than sign: =<= to provide ~sed~ with an input file and a greater than
+  sign: =>= to provide ~sed~ with an output file.
+
+  To replace *every* instance of our specified text we can add a =g= after our closing
+  forward slash to tell ~sed~ this is a global substitution:
+  #+NAME: A2
+  #+begin_src sh :results output :exports both
+    sed 's/a/A/g' < TheWalrusAndTheCarpenter.txt > A2.txt
+    cat A2.txt
+  #+end_src
+
+  #+RESULTS: A2
+  #+begin_example
+  ...
+
+  It seems A shAme,' the WAlrus sAid,
+        To plAy them such A trick,
+  After we've brought them out so fAr,
+        And mAde them trot so quick!'
+  The CArpenter sAid nothing but
+        The butter's spreAd too thick!'
+
+  I weep for you,' the WAlrus sAid:
+        I deeply sympAthize.'
+  With sobs And teArs he sorted out
+        Those of the lArgest size,
+  Holding his pocket-hAndkerchief
+        Before his streAming eyes.
+
+  O Oysters,' sAid the CArpenter,
+        You've hAd A pleAsAnt run!
+  ShAll we be trotting home AgAin?'
+        But Answer cAme there none —
+  And this wAs scArcely odd, becAuse
+        They'd eAten every one."
+  #+end_example
+
+  Most of the time when we use ~sed~ though we won't be providing input and output
+  files. Most of the time when we use ~sed~ we will be piping in the output of another
+  command and using ~sed~ to alter it:
+  #+NAME: Hey
+  #+begin_src sh :results output :exports both
+    echo "Hello World!" | sed 's/llo/y/'
+  #+end_src
+
+  #+RESULTS: Hey
+  : Hey World!
+
+  You will notice we also only used ~sed~ to replace =llo= with =y=. This is because
+  ~sed~ doesn't have to look for single letters or whole words but it actually looks for
+  text matching a regex we provide. For more information on regex notation look at my
+  guide on [[../../Regex/README.org][regex]].
+
+* Editing Files
+  Instead of having ~sed~ take an input file and generate an output file we can use the
+  ~-i~ flag to indent the file provided:
+  #+NAME: Cat
+  #+begin_src sh :results output :exports both
+    cat Cat.txt
+    sed -i 's/Meow/Woof/g' Cat.txt
+    cat Cat.txt
+  #+end_src
+
+  #+RESULTS: Cat
+  : Meow
+  : Woof
+
+  #+NAME: Cat2
+  #+begin_src sh :results output :exports none
+    cat Cat.txt
+    sed -i 's/Woof/Meow/g' Cat.txt
+    cat Cat.txt
+  #+end_src
+
+  #+RESULTS: Cat2
+  : Woof
+  : Meow

@@ -326,8 +326,28 @@ If it is worth noting ~$0~ will print the full output:
   : /dev/loop4         56832    56832         0 100% /var/lib/snapd/snap/core18/2074
 
   We can also use ~NR~ to get a line count of a file, lets pick on =/etc/shells= again:
-  #+begin_src sh :results output
+  #+NAME: LineCount
+  #+begin_src sh :results output :exports both
     awk 'END {print NR}' /etc/shells
   #+end_src
 
+  #+RESULTS: LineCount
   : 8
+
+  We can also use the line number feature of ~awk~ to replace the linux tool ~head~:
+  #+NAME: Head
+  #+begin_src sh :results output :exports both
+    awk 'NR < 13' /etc/shells
+  #+end_src
+
+  #+RESULTS: Head
+  : # Pathnames of valid login shells.
+  : # See shells(5) for details.
+  : 
+  : /bin/sh
+  : /bin/bash
+  : /usr/bin/git-shell
+  : /usr/bin/fish
+  : /bin/fish
+
+  We can see that we grabbed the first 13 lines of our shells file.

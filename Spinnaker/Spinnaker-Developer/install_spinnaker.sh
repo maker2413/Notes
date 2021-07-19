@@ -94,9 +94,8 @@ hal config security api edit --override-base-url http://${PRIVATE_IP}:8084
 
 echo "Deploy Spinnaker"
 hal deploy apply
-
-#echo "Setup Ingress"
-#kubectl apply -f ${BASE_DIR}/templates/spinnaker-ingress.yml
+KUBE_EDITOR='sed -i "s/ClusterIP/LoadBalancer/g"' kubectl edit svc spin-deck
+KUBE_EDITOR='sed -i "s/ClusterIP/LoadBalancer/g"' kubectl edit svc spin-gate
 
 echo "Here is the kube config you will use to access your k3s cluster"
 cat ${BASE_DIR}/.kube/config

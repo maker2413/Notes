@@ -102,4 +102,4 @@ echo "Here is the kube config you will use to access your k3s cluster"
 cat ${BASE_DIR}/.kube/config
 
 echo "Spinnaker is now starting up. Please wait for all pods to be ready:"
-watch echo "Spinnaker is now starting up. Please wait for all pods to be ready:" && kubectl get pods
+watch 'echo "Spinnaker is now starting up. Please wait for all pods to be ready:" && kubectl get pods'

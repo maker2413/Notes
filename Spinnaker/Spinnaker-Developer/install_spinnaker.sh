@@ -64,9 +64,9 @@ EOF
 sudo chmod 755 /usr/local/bin/hal
 
 echo "Set up Kube Config"
+sudo sed -i -e "s|127.0.0.1|${PRIVATE_IP}|g" /etc/rancher/k3s/k3s.yaml
 cp /etc/rancher/k3s/k3s.yaml ${BASE_DIR}/.kube/config
 sudo chown -R 1000 ${BASE_DIR}
-sed -i -e "s|127.0.0.1|${PRIVATE_IP}|g" ${BASE_DIR}/.kube/config
 
 echo "Creating Endpoint file"
 if [[ ! -s ${BASE_DIR}/.hal/public_endpoint ]]; then
@@ -100,3 +100,6 @@ hal deploy apply
 
 echo "Here is the kube config you will use to access your k3s cluster"
 cat ${BASE_DIR}/.kube/config
+
+echo "Spinnaker is now starting up. Please wait for all pods to be ready:"
+watch echo "Spinnaker is now starting up. Please wait for all pods to be ready:" && kubectl get pods

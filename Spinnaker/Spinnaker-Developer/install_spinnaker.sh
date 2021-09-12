@@ -17,7 +17,7 @@ PRIVATE_IP=$(ip route get 1.2.3.4 | awk '{print $7}' | head -n 1)
 PUBLIC_IP=$(curl -s ifconfig.me)
 
 echo "Installing Kubernetes"
-sudo curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="--write-kubeconfig-mode=644 --tls-san ${PUBLIC_IP}" sh -
+sudo curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="--write-kubeconfig-mode=644 --tls-san ${PUBLIC_IP}" INSTALL_K3S_VERSION="v1.21.2+k3s1" sh -
 sudo kubectl config set-context --current --namespace=${NAMESPACE}
 
 echo "Installing Java"

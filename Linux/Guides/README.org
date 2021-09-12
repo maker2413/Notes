@@ -1,0 +1,6 @@
+#+TITLE: Guides
+#+PROPERTY: header-args
+
+This section contains guides on various Linux Topics:
+- [[./Basics/README.org][Basics]] :: This chapter will cover the basics of using a linux machine. Topics such as what is linux, how to get around in the command line, and package managment can be find in this chapter.
+- [[./Networking/README.org][Networking]] :: This chapter will cover basics of networking in linux along with more advanced topics such as setting up bridge networks.

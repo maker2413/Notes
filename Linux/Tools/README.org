@@ -1,0 +1,8 @@
+#+TITLE: Tools
+#+PROPERTY: header-args
+
+This section contains guides on various Linux Tools:
+- [[./Awk/README.org][Awk]] :: This chapter covers the command line tool ~awk~.
+- [[./Sed/README.org][Sed]] :: This chapter covers the command line tool ~sed~.
+- [[./Cut/README.org][Cut]] :: This chapter covers the command line tool ~cut~.
+- [[./Tr/README.org][Tr]] :: This chapter covers the command line tool ~tr~.

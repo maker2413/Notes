@@ -4,4 +4,5 @@ This chapter will cover the basics of linux networking along with more advanced 
 creating bridged network adapaters.
 
 * Bridged network adapaters
-  sdlfjkasdflasdj
+  There are many was to create and manage bridged network adapters in linux. You can find
+  information on many of them: [[https://wiki.archlinux.org/title/Network_bridge][here]]. For my setup I opted to use [[https://wiki.archlinux.org/title/Systemd-networkd#Bridge_interface][Systemd-networkd]].

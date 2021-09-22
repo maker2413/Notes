@@ -1,0 +1,13 @@
+#+TITLE: Kubernetes Components
+#+PROPERTY: header-args
+
+Kubernetes is made up of multiple components that work together to make the kubernetes ecosystem.
+Some of these components only run on the master node and some run on your other nodes. We will cover
+the master node or control plane components first.
+
+* Control plane components
+  The control plane's components make global decisions about the cluster (for example, scheduling),
+  as well as detecting and responding to cluster events (for example, starting up a new pod when a
+  deployment's replicas field is unsatisfied). Control plane components can be run on any machine in
+  the cluster. However, for simplicity, set up scripts typically start all control plane components
+  on the same machine, and do not run user containers on this machine

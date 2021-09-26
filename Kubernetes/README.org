@@ -1,12 +1,13 @@
 #+TITLE: Kubernetes
 #+PROPERTY: header-args
 
-Kubernetes on a high level is a cluster of servers, virtual machines, or instances that
-manage and orchestrate containers to provide as close to 100% up time as possible. The
-word kubernetes comes from Greek and roughly translates to helmsman. This name is chose
-because you can think of kubernetes as the captain of your ships (containers). More
-on the history of kubernetes can be found on the kubernetes website: [[https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/][here]].
+Kubernetes on a high level is a cluster of servers, virtual machines, or
+instances that manage and orchestrate containers to provide as close to 100% up
+time as possible. The word kubernetes comes from Greek and roughly translates to
+helmsman. This name is chose because you can think of kubernetes as the captain
+of your ships (containers). More on the history of kubernetes can be found on
+the kubernetes website: [[https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/][here]].
 
-This guide aims to cover everything I have learned about kubernetes and will be broken
-out into chapters. Here are the chapters I have so far:
+This guide aims to cover everything I have learned about kubernetes and will be
+broken out into chapters. Here are the chapters I have so far:
 - [[./Components/README.org][Components]] :: This chapter will go over the various components of kubernetes and describe what they do.

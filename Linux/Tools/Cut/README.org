@@ -1,9 +1,9 @@
 #+TITLE: Cut
 #+PROPERTY: header-args :exports both
 
-~cut~ is a linux command line tool that allows us to remove a section from each line
-provided, whether that is a file or the output of another command. Lets see a simple run
-of the ~cut~ command:
+~cut~ is a linux command line tool that allows us to remove a section from each
+line provided, whether that is a file or the output of another command. Lets see
+a simple run of the ~cut~ command:
 #+NAME: HelloWorld
 #+begin_src sh :results output :exports both
   echo "Hello there world! What a wonderful day!" | cut -c 1-15
@@ -12,10 +12,10 @@ of the ~cut~ command:
 #+RESULTS: HelloWorld
 : Hello there wor
 
-We piped our echo statement into ~cut~ and gave it the =-c= flag to indicate we wanted to
-grab a certain section of characters including spaces from each line provided. In this
-case we only have one line of text so we grabbed characters 1-15 from it. We can also
-just ~cut~ characters from a file:
+We piped our echo statement into ~cut~ and gave it the =-c= flag to indicate we
+wanted to grab a certain section of characters including spaces from each line
+provided. In this case we only have one line of text so we grabbed characters
+1-15 from it. We can also just ~cut~ characters from a file:
 #+NAME: FileCut
 #+begin_src sh :results output :exports both
   cut -c 1-8 /etc/shells
@@ -31,9 +31,9 @@ just ~cut~ characters from a file:
 : /usr/bin
 : /bin/fis
 
-Here we grabbed the first 8 characters of each line of our =/etc/shells= file. We don't
-have to give ~cut~ an exact range of characters either. Say we wanted to grab everything
-after the first 6 characters of our shells file:
+Here we grabbed the first 8 characters of each line of our =/etc/shells= file.
+We don't have to give ~cut~ an exact range of characters either. Say we wanted
+to grab everything after the first 6 characters of our shells file:
 #+NAME: Shells
 #+begin_src sh :results output :exports both
   cut -c 6- /etc/shells
@@ -52,9 +52,9 @@ after the first 6 characters of our shells file:
 This would give us a list of our installed shells.
 
 * Delimiters
-  ~cut~ can do more than just grab a range of characters for us though. The =-d= flag
-  allows us to provide a delimiter to tell ~cut~ what each of the fields we want to work
-  with are separted by. Lets see an example of that:
+  ~cut~ can do more than just grab a range of characters for us though. The =-d=
+  flag allows us to provide a delimiter to tell ~cut~ what each of the fields we
+  want to work with are separted by. Lets see an example of that:
   #+NAME: Delimiter
   #+begin_src sh :results output :exports both
     echo "Hello there world! What a wonderful day!" | cut -d ' ' -f3
@@ -63,9 +63,9 @@ This would give us a list of our installed shells.
   #+RESULTS: Delimiter
   : world!
 
-  We just told ~cut~ that we want to separate our text into fields based on an empty
-  space. We then told cut that we wanted the third field (=-f3=). Lets see a real world
-  example of when this would be used:
+  We just told ~cut~ that we want to separate our text into fields based on an
+  empty space. We then told cut that we wanted the third field (=-f3=). Lets see
+  a real world example of when this would be used:
   #+NAME: Users
   #+begin_src sh :results output :exports both
     cut -d ':' -f1 /etc/passwd
@@ -102,5 +102,5 @@ This would give us a list of our installed shells.
   systemd-oom
   #+end_example
 
-  We told ~cut~ to look in =/etc/passwd= and use the delimiter =:= to print us the first
-  field of each line. This provided us with the users on our system.
+  We told ~cut~ to look in =/etc/passwd= and use the delimiter =:= to print us
+  the first field of each line. This provided us with the users on our system.

@@ -1,52 +1,63 @@
 #+TITLE: Minnaker
 #+PROPERTY: header-args
 
-The simple answer is that [[https://github.com/armory/minnaker.git][minnaker]] is a set of scripts to install and configure a lightweight deployment of
-Spinnaker in a [[https://k3d.io][k3d]]. This allows you to play around with and learn Spinnaker without breaking anything in a
-production environment, however possibly even more important then that, this minnaker instance can be used to
-safely develop plugins for spinnaker. It is also very important to note that minnaker is still in very early
-development and as of writing this guide some of the scripts in the repo are currently broken so much of the
-information in this guide will hopefully be outdated very soon. You should always consult there documentation
-first if you hit an issues with this guide.
+The simple answer is that [[https://github.com/armory/minnaker.git][minnaker]] is a set of scripts to install and configure
+a lightweight deployment of Spinnaker in a [[https://k3d.io][k3d]]. This allows you to play around
+with and learn Spinnaker without breaking anything in a production environment,
+however possibly even more important then that, this minnaker instance can be
+used to safely develop plugins for spinnaker. It is also very important to note
+that minnaker is still in very early development and as of writing this guide
+some of the scripts in the repo are currently broken so much of the information
+in this guide will hopefully be outdated very soon. You should always consult
+there documentation first if you hit an issues with this guide.
 
 * Standing up minnaker
-  Like I mentioned above many of the scripts in the minnaker repo are currently broken as of writing this guide and
-  at the moment the only support OS to run minnaker on is either ubuntu or debian linux distros. Fear not though
-  cannonical, the team behind ubuntu, have a tool that we can leverage to easily deploy an ubuntu vm without having
-  to do too much leg work. If you want to stand up your own ubuntu or debian vm or are already running ubuntu or
-  debian on your machine feel free to skip ahead.
+  Like I mentioned above many of the scripts in the minnaker repo are currently
+  broken as of writing this guide and at the moment the only support OS to run
+  minnaker on is either ubuntu or debian linux distros. Fear not though
+  cannonical, the team behind ubuntu, have a tool that we can leverage to easily
+  deploy an ubuntu vm without having to do too much leg work. If you want to
+  stand up your own ubuntu or debian vm or are already running ubuntu or debian
+  on your machine feel free to skip ahead.
 
 ** [[https://github.com/canonical/multipass][Multipass]]
 *** What is it
-    First lets start with a brief discussion of what multipass is and why it can help us. Multipass is a tool
-    developed by cannonical (ubuntu team) to create, use, and destroy ubuntu vms on the fly and it supports Windows,
-    MacOS, and Linux. They even have snap packages (snap is also developed by cannonical) of Multipass available.
+    First lets start with a brief discussion of what multipass is and why it can
+    help us. Multipass is a tool developed by cannonical (ubuntu team) to
+    create, use, and destroy ubuntu vms on the fly and it supports Windows,
+    MacOS, and Linux. They even have snap packages (snap is also developed by
+    cannonical) of Multipass available.
 
 *** How does it work
-    Multipass essentially is a wrapper script that interacts with various virtualization technologies based on what
-    OS you are using. On Linux Multipass will make use of KVM, On Windows it will use Hyper-V, and on MacOS it will
-    use HyperKit to run a vm with minimal overhead. Multipass also supports virtualbox if that is desired. Multipass
-    also will fetch new images and keep them up to date for you so you don't have to.
+    Multipass essentially is a wrapper script that interacts with various
+    virtualization technologies based on what OS you are using. On Linux
+    Multipass will make use of KVM, On Windows it will use Hyper-V, and on MacOS
+    it will use HyperKit to run a vm with minimal overhead. Multipass also
+    supports virtualbox if that is desired. Multipass also will fetch new images
+    and keep them up to date for you so you don't have to.
 
 *** Sold! Take my money
-    Woah put those dollars away Multipass is an open source and free software so lets just dive right into the
-    installation:
+    Woah put those dollars away Multipass is an open source and free software so
+    lets just dive right into the installation:
     - Linux :: For Linux they suggest using the snap package available: ~sudo snap install multipass~, however you can try and build from source code in the repo if you so choose.
     - MacOS :: For MacOS they have a brew package in the default taps: ~brew install --cask multipass~.
     - Windows :: For Windows you will unfortunately have to download the install from: [[https://github.com/canonical/multipass/releases][Their GitHub]].
 
 *** Deploying Multipass
-    Multipass is a very simple yet powerful tool. To full see documentation for it please use the ~--help~ flag or
-    refernece the [[https://github.com/canonical/multipass/][Multipass GitHub]]. For our use case just run the follow for an adequate system for our needs:
+    Multipass is a very simple yet powerful tool. To full see documentation for
+    it please use the ~--help~ flag or refernece the [[https://github.com/canonical/multipass/][Multipass GitHub]]. For our
+    use case just run the follow for an adequate system for our needs:
     #+BEGIN_SRC sh
       multipass launch -c 2 -m 10G -d 30G --name minnaker-vm
     #+END_SRC
 
-    This will simply create and start a vm with 2 cpus, 10G of ram, and a 30G disk. You can give it a different name
-    if you choose, I just went with =minnaker-vm= for simplicity. To connect to your vm simply run:
+    This will simply create and start a vm with 2 cpus, 10G of ram, and a 30G
+    disk. You can give it a different name if you choose, I just went with
+    =minnaker-vm= for simplicity. To connect to your vm simply run:
     #+BEGIN_SRC sh
       multipass shell minnaker-vm
     #+END_SRC
 
-    This will give you a shell in the vm. I like to copy over my ssh public key to ~/home/ubuntu/.ssh/authorized_keys~
-    That way I can ssh to the vm and not have to use ~multipass shell~ again.
+    This will give you a shell in the vm. I like to copy over my ssh public key
+    to ~/home/ubuntu/.ssh/authorized_keys~ That way I can ssh to the vm and not
+    have to use ~multipass shell~ again.

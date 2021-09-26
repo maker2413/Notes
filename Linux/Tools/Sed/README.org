@@ -1,16 +1,17 @@
 #+TITLE: Sed
 #+PROPERTY: header-args :exports both
 
-~sed~ is a linux command line tool that allows you to search for a specific string of
-text and replace that text with something else. Once you learn ~sed~ you will find
-yourself doing it all the time either to speed up day to day command line life or to
-automate things with bash.
+~sed~ is a linux command line tool that allows you to search for a specific
+string of text and replace that text with something else. Once you learn ~sed~
+you will find yourself doing it all the time either to speed up day to day
+command line life or to automate things with bash.
 
 * Substitutions
-  Lets practicing using ~sed~ to substite text. By default substitutions will allow us to
-  find and replace the first instance of our supplied text per line with the new text we
-  provide. I have included a sample of [[https://www.poetryfoundation.org/poems/43914/the-walrus-and-the-carpenter-56d222cbc80a9][The Walrus and the Carpenter by Lewis Carroll]] in
-  this directory that we can use to practice ~sed~ on:
+  Lets practicing using ~sed~ to substite text. By default substitutions will
+  allow us to find and replace the first instance of our supplied text per line
+  with the new text we provide. I have included a sample of
+  [[https://www.poetryfoundation.org/poems/43914/the-walrus-and-the-carpenter-56d222cbc80a9][The Walrus and the Carpenter by Lewis Carroll]] in this directory that we can
+  use to practice ~sed~ on:
   #+NAME: Walrus
   #+begin_src sh :results output :exports both
     cat ./TheWalrusAndTheCarpenter.txt
@@ -49,7 +50,8 @@ automate things with bash.
         They'd eaten every one."
   #+end_example
   
-  For starters lets just try and replace the first instance of =a= on each line with =A=:
+  For starters lets just try and replace the first instance of =a= on each line
+  with =A=:
   #+NAME: A
   #+begin_src sh :results output :exports both
     sed 's/a/A/' < TheWalrusAndTheCarpenter.txt > A.txt
@@ -89,23 +91,25 @@ automate things with bash.
         They'd eAten every one."
   #+end_example
 
-  Success! To explain what just happened lets look at the ~sed~ command we typed:
+  Success! To explain what just happened lets look at the ~sed~ command we
+  typed:
   #+begin_example sh
     sed 's/a/A/' < TheWalrusAndTheCarpenter.txt > A.txt
   #+end_example
 
-  We write our ~sed~ script inside of single quotes. Inside our single quotes we first
-  describe our action; here we wanted to substitute text so we used =s=. After
-  describing our action we provide a forward slash: =/=. For a substitution action we
-  then provide the text we want ~sed~ to find, in this case: =a=. After that
-  we provide another forward slash and the text we want to replace our found text with:
-  =A=. Finally we close out our substitution with one final forward slash and make
-  sure we close out our ~sed~ script with a single quote. After our ~sed~ script can
-  give a less than sign: =<= to provide ~sed~ with an input file and a greater than
-  sign: =>= to provide ~sed~ with an output file.
+  We write our ~sed~ script inside of single quotes. Inside our single quotes we
+  first describe our action; here we wanted to substitute text so we used =s=.
+  After describing our action we provide a forward slash: =/=. For a
+  substitution action we then provide the text we want ~sed~ to find, in this
+  case: =a=. After that we provide another forward slash and the text we want to
+  replace our found text with: =A=. Finally we close out our substitution with
+  one final forward slash and make sure we close out our ~sed~ script with a
+  single quote. After our ~sed~ script can give a less than sign: =<= to provide
+  ~sed~ with an input file and a greater than sign: =>= to provide ~sed~ with an
+  output file.
 
-  To replace *every* instance of our specified text we can add a =g= after our closing
-  forward slash to tell ~sed~ this is a global substitution:
+  To replace *every* instance of our specified text we can add a =g= after our
+  closing forward slash to tell ~sed~ this is a global substitution:
   #+NAME: A2
   #+begin_src sh :results output :exports both
     sed 's/a/A/g' < TheWalrusAndTheCarpenter.txt > A2.txt
@@ -145,9 +149,9 @@ automate things with bash.
         They'd eAten every one."
   #+end_example
 
-  Most of the time when we use ~sed~ though we won't be providing input and output
-  files. Most of the time when we use ~sed~ we will be piping in the output of another
-  command and using ~sed~ to alter it:
+  Most of the time when we use ~sed~ though we won't be providing input and
+  output files. Most of the time when we use ~sed~ we will be piping in the
+  output of another command and using ~sed~ to alter it:
   #+NAME: Hey
   #+begin_src sh :results output :exports both
     echo "Hello World!" | sed 's/llo/y/'
@@ -156,14 +160,14 @@ automate things with bash.
   #+RESULTS: Hey
   : Hey World!
 
-  You will notice we also only used ~sed~ to replace =llo= with =y=. This is because
-  ~sed~ doesn't have to look for single letters or whole words but it actually looks for
-  text matching a regex we provide. For more information on regex notation look at my
-  guide on [[../../Regex/README.org][regex]].
+  You will notice we also only used ~sed~ to replace =llo= with =y=. This is
+  because ~sed~ doesn't have to look for single letters or whole words but it
+  actually looks for text matching a regex we provide. For more information on
+  regex notation look at my guide on [[../../Regex/README.org][regex]].
 
 * Editing Files
-  Instead of having ~sed~ take an input file and generate an output file we can use the
-  ~-i~ flag to indent the file provided:
+  Instead of having ~sed~ take an input file and generate an output file we can
+  use the ~-i~ flag to indent the file provided:
   #+NAME: Cat
   #+begin_src sh :results output :exports both
     cat Cat.txt
@@ -187,9 +191,9 @@ automate things with bash.
   : Meow
 
 * Line Patterns
-  Another aspect of ~sed~ scripting that allows us to search for specific lines to edit
-  is line patterns. To use line patterns we simply specify the pattern we want to search
-  for before listing our action:
+  Another aspect of ~sed~ scripting that allows us to search for specific lines
+  to edit is line patterns. To use line patterns we simply specify the pattern
+  we want to search for before listing our action:
   #+NAME: LP
   #+begin_src sh :results output :exports both
     cat TheWalrusAndTheCarpenter.txt | sed '/Walrus/s/said/grunted/'
@@ -228,15 +232,16 @@ automate things with bash.
         They'd eaten every one."
   #+end_example
 
-  Now every line that contained the text =Walrus= had the first instance of the word
-  =said= changed to =grunted=. Remember though that since we didn't at a =g= to the end
-  this command only changes the first instance of the word =said=. If we wanted to
-  change all instances of the word =said= on any line containing =Walrus= would need to
-  make it global with: ~/Walrus/s/said/grunted/g~. In this case it does matter since our
-  poem doesn't abuse the word =said=.
+  Now every line that contained the text =Walrus= had the first instance of
+  the word =said= changed to =grunted=. Remember though that since we didn't at
+  a =g= to the end this command only changes the first instance of the word
+  =said=. If we wanted to change all instances of the word =said= on any line
+  containing =Walrus= would need to make it global with:
+  ~/Walrus/s/said/grunted/g~. In this case it does matter since our poem doesn't
+  abuse the word =said=.
 
-  We can also use the line pattern functionality of ~sed~ to delete lines that match our
-  line pattern. Let's take a look at that:
+  We can also use the line pattern functionality of ~sed~ to delete lines that
+  match our line pattern. Let's take a look at that:
   #+NAME: CutWalrus
   #+begin_src sh :results output :exports both
     sed '/Carpenter/d' < TheWalrusAndTheCarpenter.txt > CutWalrus.txt
@@ -273,13 +278,13 @@ automate things with bash.
         They'd eaten every one."
   #+end_example
 
-  Now the Carpenter character doesn't exist in our poem. We just need to use the action
-  =d= instead of =s= which stands for delete.
+  Now the Carpenter character doesn't exist in our poem. We just need to use the
+  action =d= instead of =s= which stands for delete.
 
 * Multiple Expressions
-  What if we wanted to do multiple ~sed~ substitutions in one command. ~sed~ allows us
-  to have multiple expressions provided in the same command by using the flag =-e=
-  before each one. Lets see what that looks like:
+  What if we wanted to do multiple ~sed~ substitutions in one command. ~sed~
+  allows us to have multiple expressions provided in the same command by using
+  the flag =-e= before each one. Lets see what that looks like:
   #+NAME: Expressions
   #+begin_src sh :results output :exports both
     cat /etc/shells | sed -e 's/usr/u/g' -e 's/bin/b/g'
@@ -295,15 +300,15 @@ automate things with bash.
   : /u/b/fish
   : /b/fish
 
-  We were able to change all instances of =usr= to =u= and all instances of =bin= to
-  =b=.
+  We were able to change all instances of =usr= to =u= and all instances of
+  =bin= to =b=.
 
 * Separators
-  One thing that I need to clear the air on is that we aren't actually forced to use the
-  forward slash: =/= to separate our inputs in a ~sed~ command. You can technically use
-  any character you want that isn't part of your phrase. Normally if people don't use
-  =/= they will use =|= or =#= but it doesn't have to be these, these are just the most
-  common. Lets see how this works:
+  One thing that I need to clear the air on is that we aren't actually forced to
+  use the forward slash: =/= to separate our inputs in a ~sed~ command. You can
+  technically use any character you want that isn't part of your phrase.
+  Normally if people don't use =/= they will use =|= or =#= but it doesn't have
+  to be these, these are just the most common. Lets see how this works:
   #+NAME: Separators
   #+begin_src sh :results output :exports both
     cat /etc/shells | sed -e 's|usr|u|g' -e 's#bin#b#g'
@@ -322,8 +327,8 @@ automate things with bash.
   You can see we got the exact same output as the section above.
 
 * Printing Lines
-  We can use ~sed~ to print the lines that contain our provided text. This feature is
-  sort of similar to ~grep~:
+  We can use ~sed~ to print the lines that contain our provided text. This
+  feature is sort of similar to ~grep~:
   #+NAME: Printing
   #+begin_src sh :results output :exports both
     cat /etc/shells | sed -n '/usr/p'
@@ -333,15 +338,16 @@ automate things with bash.
   : /usr/bin/git-shell
   : /usr/bin/fish
 
-  By using the ~-n~ flag we can suppress automatic printing of and provide a regex
-  pattern to search for. We can then provide our regex pattern and use the print action:
-  =p= to only print those lines.
+  By using the ~-n~ flag we can suppress automatic printing of and provide a
+  regex pattern to search for. We can then provide our regex pattern and use the
+  print action: =p= to only print those lines.
 
 * Translate
-  One of the lesser used ~sed~ functions is the translate function, executed by using
-  =y= in our ~sed~ script. This will find the characters we provided and replace them
-  with what we specify. This function is very similar to the ~tr~ command and you can
-  find my guide on ~tr~ [[../Tr/README.org][here]]. Lets just see a quick example of this in action:
+  One of the lesser used ~sed~ functions is the translate function, executed by
+  using =y= in our ~sed~ script. This will find the characters we provided and
+  replace them with what we specify. This function is very similar to the ~tr~
+  command and you can find my guide on ~tr~ [[../Tr/README.org][here]]. Lets just see a quick example
+  of this in action:
   #+NAME: Translate
   #+begin_src sh :results output :exports both
     echo "Hello there world! What a beautiful day!" | sed 'y/aieou/AEIOU/'
@@ -352,23 +358,24 @@ automate things with bash.
 
   This replaced every lowercase vowel with its uppercase counterpart.
 
-  From here you should have about all the information you are going to need on ~sed~.
+  From here you should have about all the information you are going to need on
+  ~sed~.
 
 * Neat Tricks
-  Here are some neat tricks that can be done with ~sed~ if you are thirsting for more
-  ~sed~ information.
+  Here are some neat tricks that can be done with ~sed~ if you are thirsting for
+  more ~sed~ information.
 
 ** Remove extra white space
-   This ~sed~ command simply does some regex magic to remove all extra whitespace from
-   the end of lines:
+   This ~sed~ command simply does some regex magic to remove all extra
+   whitespace from the end of lines:
    #+NAME: ExtraSpace
    #+begin_example sh
      sed -i 's/ *$//g' <file>
    #+end_example
 
 ** Removing extra tabs
-   This ~sed~ command simply does similar regex magic to remove all extra tabs from the
-   end of lines:
+   This ~sed~ command simply does similar regex magic to remove all extra tabs
+   from the end of lines:
    #+NAME: ExtraTab
    #+begin_example sh
      sed -i 's/[[:space:]]*$//g' <file>
@@ -382,25 +389,25 @@ automate things with bash.
    #+end_src
 
 ** Convert lower case to upper case
-   This ~sed~ command will swap out lower case characters (a-z) with their upper case
-   counterpart:
+   This ~sed~ command will swap out lower case characters (a-z) with their upper
+   case counterpart:
    #+NAME: LowerToUpper
    #+begin_src sh
      sed -i 's/[a-z]/\U&/g' <file>
    #+end_src
 
 ** Convert upper case to lower case
-   This ~sed~ command will swap out upper case characters (A-Z) with their lower case
-   counterpart:
+   This ~sed~ command will swap out upper case characters (A-Z) with their lower
+   case counterpart:
    #+NAME: UpperToLower
    #+begin_src sh
      sed -i 's/[A-Z]/\L&/g' <file>
    #+end_src
 
 ** Replacement for ~head~
-   We can use ~sed~ to grab a certain amount of lines from a specified file similar to
-   the linux tool ~head~. This doesn't serve too much purpose but I though I would not
-   it:
+   We can use ~sed~ to grab a certain amount of lines from a specified file
+   similar to the linux tool ~head~. This doesn't serve too much purpose but I
+   though I would not it:
    #+NAME: Head
    #+begin_src sh
      sed 11q <file>

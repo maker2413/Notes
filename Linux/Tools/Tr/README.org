@@ -1,9 +1,9 @@
 #+TITLE: Tr
 #+PROPERTY: header-args :exports both
 
-~tr~ stands for translate and is a linux command line tool that allows us to transform
-characters in text provided to ~tr~, either from files or from the output of other
-commands. Lets look at a very basic example of ~tr~:
+~tr~ stands for translate and is a linux command line tool that allows us to
+transform characters in text provided to ~tr~, either from files or from the
+output of other commands. Lets look at a very basic example of ~tr~:
 #+NAME: Tr
 #+begin_src sh :results output :exports both
   echo "Hello there world!" | tr 'e' 'E'
@@ -13,8 +13,8 @@ commands. Lets look at a very basic example of ~tr~:
 : HEllo thErE world!
 
 When we use ~tr~ we provide it the character(s) we want to search for and the
-character(s) we want to replace it with. It is very important to note that ~tr~ is used
-to translate *characters*. Lets see what I mean by that:
+character(s) we want to replace it with. It is very important to note that ~tr~
+is used to translate *characters*. Lets see what I mean by that:
 #+NAME: Characters
 #+begin_src sh :results output :exports both
   echo "Hello there world! What a beautiful day!" | tr 'aeiou' 'AEIOU'
@@ -23,12 +23,12 @@ to translate *characters*. Lets see what I mean by that:
 #+RESULTS: Characters
 : HEllO thErE wOrld! WhAt A bEAUtIfUl dAy!
 
-You can see that ~tr~ translated every =a=, =e=, =i=, =o=, or =u= character to its upper
-case counterpart.
+You can see that ~tr~ translated every =a=, =e=, =i=, =o=, or =u= character to
+its upper case counterpart.
 
 * Deleting
-  We can also use ~tr~ to delete characters from our text using the =-d= flag. Lets see
-  that in action:
+  We can also use ~tr~ to delete characters from our text using the =-d= flag.
+  Lets see that in action:
   #+NAME: Delete
   #+begin_src sh :results output :exports both
     echo "Hello there world! What a beautiful day!" | tr -d 'aeiou '
@@ -40,10 +40,11 @@ case counterpart.
   Now we removed every vowel and space from our text.
 
 * Squeeze
-  Other than the default translate function or the delete function of ~tr~ we also have a
-  squeeze function available to us. This squeeze function is signified with the =-s=
-  flag. The squeeze function will go and find repeated characters matching the list we
-  supply and squeezing them down to one character. Lets see that squeeze action:
+  Other than the default translate function or the delete function of ~tr~ we
+  also have a squeeze function available to us. This squeeze function is
+  signified with the =-s= flag. The squeeze function will go and find repeated
+  characters matching the list we supply and squeezing them down to one
+  character. Lets see that squeeze action:
   #+NAME: Squeeze
   #+begin_src sh :results output :exports both
     echo "Thiiiiisss is aaaaa llllliinneeee offfff texxxxxtttt." | tr -s 'aeiou'
@@ -52,9 +53,9 @@ case counterpart.
   #+RESULTS: Squeeze
   : Thisss is a lllllinne offfff texxxxxtttt.
 
-  You can see we squeezed the duplicate vowels down to a single character. We can also
-  provide ~tr~ with a class of characters as opposed to a large list. Lets try this on
-  the previous ~echo~ statement we made:
+  You can see we squeezed the duplicate vowels down to a single character. We
+  can also provide ~tr~ with a class of characters as opposed to a large list.
+  Lets try this on the previous ~echo~ statement we made:
   #+NAME: Classes
   #+begin_src sh :results output :exports both
     echo "Thiiiiisss is aaaaa llllliinneeee offfff texxxxxtttt." | tr -s '[:lower:]' '[:upper:]'
@@ -63,13 +64,13 @@ case counterpart.
   #+RESULTS: Classes
   : THIS IS A LINE OF TEXT.
 
-  This command squeezed any lower case letters for us and turned them into upper case
-  letters.
+  This command squeezed any lower case letters for us and turned them into upper
+  case letters.
 
 * Complement
-  Another function of ~tr~ is the complement function. We can think of complement as a
-  function we can add onto any ~tr~ command to do the opposite of what we say. Lets see
-  complement paired with a delete command:
+  Another function of ~tr~ is the complement function. We can think of
+  complement as a function we can add onto any ~tr~ command to do the opposite
+  of what we say. Lets see complement paired with a delete command:
   #+NAME: ComplementDelete
   #+begin_src sh :results output :exports both
     echo "Hello there world! What a beautiful day!" | tr -cd 'aeiou '
@@ -78,9 +79,9 @@ case counterpart.
   #+RESULTS: ComplementDelete
   : eo ee o a a eauiu a
 
-  This deleted everything but the vowels from our text. It is worth noting that the end
-  of our text has a endline character (=\n=) and this will be deleted as well unless we
-  add it to our list of characters.
+  This deleted everything but the vowels from our text. It is worth noting that
+  the end of our text has a endline character (=\n=) and this will be deleted as
+  well unless we add it to our list of characters.
   #+NAME: ComplementDelete2
   #+begin_src sh :results output :exports both
     echo "Hello there world! What a beautiful day!" | tr -cd 'aeiou \n'
@@ -89,23 +90,25 @@ case counterpart.
   #+RESULTS: ComplementDelete2
   : eo ee o a a eauiu a
 
-  That concludes all of the basic features of ~tr~ I am going to cover. If you feel
-  like you want to know more ways to use ~tr~ I have included some useful tricks below.
+  That concludes all of the basic features of ~tr~ I am going to cover. If you
+  feel like you want to know more ways to use ~tr~ I have included some useful
+  tricks below.
 
 * Useful Tricks
   Here are some useful ways to use ~tr~ in your scripting life.
 
 ** Random text
-   If you didn't already know there is a file in linux that contains random text in it
-   (=/dev/urandom=). Grabbing text from this file can be handy for generating random
-   passwords. If we run ~head~ on it though we will see that it also contains gibberish:
+   If you didn't already know there is a file in linux that contains random text
+   in it (=/dev/urandom=). Grabbing text from this file can be handy for
+   generating random passwords. If we run ~head~ on it though we will see that
+   it also contains gibberish:
    #+NAME: HeadRandom
    #+begin_example sh
      head -n 3 /dev/urandom
    #+end_example
 
-   We can pipe this into ~tr~ and delete everything that isn't a printable character
-   like so:
+   We can pipe this into ~tr~ and delete everything that isn't a printable
+   character like so:
    #+NAME: RandomText
    #+begin_src sh :results output :exports both
      head -n 3 /dev/urandom | tr -cd '[:print:]'

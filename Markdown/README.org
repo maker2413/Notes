@@ -1,8 +1,9 @@
 #+TITLE: Markdown
 #+PROPERTY: header-args
 
-Markdown is a lightweight markup language for creating formatted text using a plain text editor. You may have seen
-files with the extension ~.md~ before; that is markdown. I use org predominately in my repos but markdown is a much
-more popular markup language and therefore it is still very important to know.
+Markdown is a lightweight markup language for creating formatted text using a
+plain text editor. You may have seen files with the extension ~.md~ before; that
+is markdown. I use org predominately in my repos but markdown is a much more
+popular markup language and therefore it is still very important to know.
 
 * Basics

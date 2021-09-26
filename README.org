@@ -1,16 +1,18 @@
 #+TITLE: Notes
 #+PROPERTY: header-args
 
-Just notes I made about different topics I have learned. These notes are all written in
-Org mode and although that should not effect your viewing of them on GitHub it is
-something to be aware of if you were to clone repo down for your own personal use. If org
-mode is foreign to you you can check out my Notes I have on org or there are converters
-available online to convert it to md, html, pdf, and many other formats. Also it is
-important to note that any code found in this repo has been exported from the org README
-files so it will be a duplicate of what the README has, but all code in this repo is
-runnable and exists for anyone to copy from.
+Just notes I made about different topics I have learned. These notes are all
+written in Org mode and although that should not effect your viewing of them on
+GitHub it is something to be aware of if you were to clone repo down for your
+own personal use. If org mode is foreign to you you can check out my Notes I
+have on org or there are converters available online to convert it to md, html,
+pdf, and many other formats. Also it is important to note that any code found in
+this repo has been exported from the org README files so it will be a duplicate
+of what the README has, but all code in this repo is runnable and exists for
+anyone to copy from.
 
 * Topics
   Here is a list of the "books" of various topics I have covered:
   - [[./Java/README.org][Java]] :: This starts at an absolute begineer level and just gets you on your feet with Java.
   - [[./Spinnaker/README.org][Spinnaker]] :: This is notes I have taken on spinnaker thus far. I also have included my repo to stand up a spinnaker development environment.
+  - [[./Kubernetes/README.org][Kubernetes]] :: This is the notes I have taken on Kubernetes so far.

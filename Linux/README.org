@@ -1,9 +1,9 @@
 #+TITLE: Linux
 #+PROPERTY: header-args
 
-This book contains notes on various aspects of the linux operating system. It also covers
-various tools that I use in my daily life. Here is some of the information you can find
-in this book:
+This book contains notes on various aspects of the linux operating system. It
+also covers various tools that I use in my daily life. Here is some of the
+information you can find in this book:
 
 * [[./Tools/README.org][Tools]]
   This section contains guides on various Linux Tools:

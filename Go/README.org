@@ -2,45 +2,51 @@
 #+PROPERTY: header-args :tangle main.go
 
 * Simple Card game in Go
-  This program is a just a simple game of cards that will show off some of the features of go and explain how it
-  differs from other languages.
+  This program is a just a simple game of cards that will show off some of the
+  features of go and explain how it differs from other languages.
 
-  In go we must specify a what package type our program is at the top of the file.
+  In go we must specify a what package type our program is at the top of the
+  file.
   #+BEGIN_SRC go
     package main
   #+END_SRC
-  When we specify main as our package will know that this is a program that we will be running or building. If
-  however this program we are writing is just a module we want to import in another program we would specify a name
-  for our module here on the package line. In this case I want to just run this program so it will be my main
-  package.
+  When we specify main as our package will know that this is a program that we
+  will be running or building. If however this program we are writing is just a
+  module we want to import in another program we would specify a name for our
+  module here on the package line. In this case I want to just run this program
+  so it will be my main package.
 
 * IMPORTS
-  The next block we will write in our go file will be out imports. The imports block is used to import library files
-  or modules that we will be using. We can even specify a git url on the imports line and we build our code go will
-  go out and import code from the repo.
+  The next block we will write in our go file will be out imports. The imports
+  block is used to import library files or modules that we will be using. We can
+  even specify a git url on the imports line and we build our code go will go
+  out and import code from the repo.
 
   Here is an example of the imports block:
   #+BEGIN_SRC go
     import "fmt"
   #+END_SRC
 
-  In this simple program we will only be needing the fmt library. The fmt library is a builtin library to go and is
-  used for formatted I/O, or more simply put it is used to print out and take input.
+  In this simple program we will only be needing the fmt library. The fmt
+  library is a builtin library to go and is used for formatted I/O, or more
+  simply put it is used to print out and take input.
 
 * Variables
-  After the imports block we get to our actual code. Normally this is where you will see functions defined and we
-  will get to that, but variables can also be defined in this section of the file. Variables CAN NOT have a value
-  assigned to them out of a function so that will be important to keep in mind.
+  After the imports block we get to our actual code. Normally this is where you
+  will see functions defined and we will get to that, but variables can also be
+  defined in this section of the file. Variables CAN NOT have a value assigned
+  to them out of a function so that will be important to keep in mind.
 
   With that in mind lets look at some examples of variables being initailized:
   #+BEGIN_SRC go
     // Name of the game we will play
     var game string
   #+END_SRC
-  You will notice that in go variables are created by specifying ~var~. After ~var~ we list the name of the variable
-  which in this case is ~game~. Finally after our variable's name we specify what type of variable it is which in
-  this case we went with ~string~. In go we have quite a few variable types that we can use, here is some common
-  variable types that are used in go:
+  You will notice that in go variables are created by specifying ~var~. After
+  ~var~ we list the name of the variable which in this case is ~game~. Finally
+  after our variable's name we specify what type of variable it is which in this
+  case we went with ~string~. In go we have quite a few variable types that we
+  can use, here is some common variable types that are used in go:
   | Type    | Description                    | Examples                  |
   |---------+--------------------------------+---------------------------|
   | bool    | true or false                  | (true, false, 1, 0)       |
@@ -50,10 +56,12 @@
   More variable types exist and can be found in the [[https://www.tutorialspoint.com/go/go_data_types.htm][docs]].
 
 * Arrays and Slices
-  Another type of data type we have available to us in go is both arrays and slices. Arrays are treated the same as
-  they are in most programming languages as in they are a collection of elements of the same type. Arrrays can not
-  be scaled up or shrunk down after they are defined, they have a fixed length. To solve that go introduces slices;
-  a special data type in go. A slice can be pictured as an array that grow and shrink as you require throughout your
+  Another type of data type we have available to us in go is both arrays and
+  slices. Arrays are treated the same as they are in most programming languages
+  as in they are a collection of elements of the same type. Arrrays can not be
+  scaled up or shrunk down after they are defined, they have a fixed length. To
+  solve that go introduces slices; a special data type in go. A slice can be
+  pictured as an array that grow and shrink as you require throughout your
   program. Lets look at an example of each being declared:
   #+BEGIN_SRC go
     // Array of our 5 tables
@@ -64,12 +72,14 @@
   #+END_SRC
 
 * Functions
-  Every program in go requires a function named main to signify where the code starts. Functions make up the bluk
-  of where your programs logic will be written. Function's in go are written as ~func~ followed by the name of the
-  function. Immediately after the name of the function we list the inputs that this function takes or a blank list
-  to specify no input: ~main()~. After the name of the function and the list of inputs we can list a return type.
-  This is only required if we plan to return something when we call on the function as the default function of a
-  function is to not return anything.
+  Every program in go requires a function named main to signify where the code
+  starts. Functions make up the bulk of where your programs logic will be
+  written. Function's in go are written as ~func~ followed by the name of the
+  function. Immediately after the name of the function we list the inputs that
+  this function takes or a blank list to specify no input: ~main()~. After the
+  name of the function and the list of inputs we can list a return type. This is
+  only required if we plan to return something when we call on the function as
+  the default function of a function is to not return anything.
 
   A simple function with no input can be written as follows:
   #+BEGIN_SRC go
@@ -78,12 +88,14 @@
             return "Five of Diamonds"
     }
   #+END_SRC
-  Take note of the return line. In this example we will be returning a string with a card's name so we specify
-  string right after the name of the function: ~newCard() string~.
+  Take note of the return line. In this example we will be returning a string
+  with a card's name so we specify string right after the name of the function:
+  ~newCard() string~.
 
 * Loops
-  Go gives us the ability to loop using for loops. Unlike most other programming languages the for loop in go is
-  used for all forms of loops. For loops in go have components to them:
+  Go gives us the ability to loop using for loops. Unlike most other programming
+  languages the for loop in go is used for all forms of loops. For loops in go
+  have components to them:
   - the init statement :: executed before the first iteration
   - the condition expression :: evaluated before every iteration
   - the post statement :: executed at the end of every iteration
@@ -106,7 +118,8 @@
   #+END_EXAMPLE
   This is comparable to a while loop in most other programming languages.
 
-  You can also ommit the condition statement and this will create a loop that runs forever:
+  You can also ommit the condition statement and this will create a loop that
+  runs forever:
   #+BEGIN_EXAMPLE go
   // will run till the heat death of the universe
   for {
@@ -115,8 +128,8 @@
   #+END_EXAMPLE
 
 * Custom data types
-  Similar to how some programming languages have object oriented go has custom data types. With custom data types
-  we can essentially...
+  Similar to how some programming languages have object oriented go has custom
+  data types. With custom data types we can essentially...
   #+BEGIN_SRC go :tangle deck.go
   package main
 

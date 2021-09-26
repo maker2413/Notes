@@ -1,8 +1,8 @@
 #+TITLE: Awk
 #+PROPERTY: header-args
 
-Awk is a text manipulation tool that allows us to grab certain columns from text. Lets
-run ~ps~ for example and see what output we get:
+Awk is a text manipulation tool that allows us to grab certain columns from
+text. Lets run ~ps~ for example and see what output we get:
 #+BEGIN_SRC sh :results output
   ps -t pts/0
 #+END_SRC
@@ -11,7 +11,8 @@ run ~ps~ for example and see what output we get:
 :    5675 pts/0    00:00:00 fish
 :    6298 pts/0    00:00:00 emacs
 
-Now lets pipe that same command into ~awk~ and see if we can grab just the first column:
+Now lets pipe that same command into ~awk~ and see if we can grab just the first
+column:
 #+begin_src sh :results output
   ps -t pts/0 | awk '{print $1}'
 #+end_src
@@ -37,7 +38,8 @@ If we needed to grab multiple columns we can of course specify more than one:
 : PIDCMD
 : 5675fish
 : 6298emacs
-We will cover how to make this look better in the separators section of this chapter.
+We will cover how to make this look better in the separators section of this
+chapter.
 
 If it is worth noting ~$0~ will print the full output:
 #+begin_src sh :results output
@@ -50,8 +52,9 @@ If it is worth noting ~$0~ will print the full output:
 :    6298 pts/0    00:00:00 emacs
 
 * Separators
-  By default ~awk~ treats empty space as a field separator for columns but you can
-  specify any character you like. Lets play around with the contents of our passwd file:
+  By default ~awk~ treats empty space as a field separator for columns but you
+  can specify any character you like. Lets play around with the contents of our
+  passwd file:
   #+begin_src sh :results output
     cat /etc/passwd
   #+end_src
@@ -86,8 +89,8 @@ If it is worth noting ~$0~ will print the full output:
   systemd-oom:x:966:966:systemd Userspace OOM Killer:/:/usr/bin/nologin
   #+end_example
 
-  Here we can see the file is clearly split into columns, however this time columns are
-  separated by =:=. Lets pass this into ~awk~ now:
+  Here we can see the file is clearly split into columns, however this time
+  columns are separated by =:=. Lets pass this into ~awk~ now:
   #+begin_src sh :results output
     # -F is used to specify our field separator
     cat /etc/passwd | awk -F ":" '{print $1}'
@@ -123,12 +126,12 @@ If it is worth noting ~$0~ will print the full output:
   systemd-oom
   #+end_example
 
-  This will give us a list of all the users on our system. Lets say now that we wanted
-  to not only grab all the users on our system but we wanted to know each user's home
-  directory and default shell. We can simply grab all of those columns with ~awk~ like
-  we have before but what if we wanted our output to be formatted pretty? With ~awk~ we
-  not only specify which field separator we want to look for in our input but we can
-  specify an output field separator:
+  This will give us a list of all the users on our system. Lets say now that we
+  wanted to not only grab all the users on our system but we wanted to know each
+  user's home directory and default shell. We can simply grab all of those
+  columns with ~awk~ like we have before but what if we wanted our output to be
+  formatted pretty? With ~awk~ we not only specify which field separator we want
+  to look for in our input but we can specify an output field separator:
   #+begin_src sh :results output
     # You will notice this time that we aren't piping the output of cat into awk
     # but rather just telling awk which file we want to run this on. This is just
@@ -166,12 +169,12 @@ If it is worth noting ~$0~ will print the full output:
   systemd-oom-/-/usr/bin/nologin
   #+end_example
 
-  You will see that now we have the three fields we wanted and they are being separated
-  by a =-= like we specified in our command.
+  You will see that now we have the three fields we wanted and they are being
+  separated by a =-= like we specified in our command.
 
 * String parsing
-  For our next challenge lets say we wanted to know each of the shells installed on our
-  system. We can just view whats in ~/etc/shells~:
+  For our next challenge lets say we wanted to know each of the shells installed
+  on our system. We can just view whats in ~/etc/shells~:
   #+begin_src sh :results output
     cat /etc/shells
   #+end_src
@@ -185,8 +188,8 @@ If it is worth noting ~$0~ will print the full output:
   : /usr/bin/fish
   : /bin/fish
 
-  This will work but what if we wanted just the name of the shells themselves. With
-  ~awk~ we can print just the last column of our supplied text with ~$NF~:
+  This will work but what if we wanted just the name of the shells themselves.
+  With ~awk~ we can print just the last column of our supplied text with ~$NF~:
   #+begin_src sh :results output
     awk -F "/" '{print $NF}' /etc/shells
   #+end_src
@@ -200,16 +203,17 @@ If it is worth noting ~$0~ will print the full output:
   : fish
   : fish
 
-  This is almost what we wanted but you will see that the first few lines of the shells
-  file also stuck around since it didn't use our ~/~ separator. Lets talk about how we
-  can tell ~awk~ exactly what kind of text we want to look for from our file. Inside of
-  our single quotes in our awk command we can do more than just specify what we want to
-  print. In fact anything inside our single quotes is actually our ~awk~ script if you
-  want to think about it that way. Earlier in the separators section you saw that we
-  told ~awk~ what we wanted our input and output field separators to be; this was
-  done inside the single quotes of our ~awk~ command. Now lets tell ~awk~ what type of
-  line we want to grab for our shells file. We can specify any search pattern we want to
-  look for inside of ~/ /~:
+  This is almost what we wanted but you will see that the first few lines of the
+  shells file also stuck around since it didn't use our ~/~ separator. Lets talk
+  about how we can tell ~awk~ exactly what kind of text we want to look for from
+  our file. Inside of our single quotes in our awk command we can do more than
+  just specify what we want to print. In fact anything inside our single quotes
+  is actually our ~awk~ script if you want to think about it that way. Earlier
+  in the separators section you saw that told ~awk~ what we wanted our input and
+  output field separators to be; this was done inside the single quotes of our
+  ~awk~ command. Now lets tell ~awk~ what type of line we want to grab for our
+  shells file. We can specify any search pattern we want to look for inside of
+  ~/ /~:
   #+begin_src sh :results output
     # awk uses regex inside of the '/ /' to define what it is searching for.
     # For more information on regex see my regex guide.
@@ -222,9 +226,10 @@ If it is worth noting ~$0~ will print the full output:
   : fish
   : fish
 
-  We used regex to define that we only wanted to look for lines that started with a ~/~.
-  Now lets just pipe the output of our ~awk~ command into ~uniq~ to remove the duplicate
-  shells, and lets pipe that into ~sort~ so they are sorted alphabetically:
+  We used regex to define that we only wanted to look for lines that started
+  with a ~/~. Now lets just pipe the output of our ~awk~ command into ~uniq~ to
+  remove the duplicate shells, and lets pipe that into ~sort~ so they are sorted
+  alphabetically:
   #+begin_src sh :results example
     awk -F "/" '/^\// {print $NF}' /etc/shells | uniq | sort
   #+end_src
@@ -247,10 +252,10 @@ If it is worth noting ~$0~ will print the full output:
   : case "$TERM" in
 
 * Scripting
-  One of the things that makes ~awk~ so powerful is that it in itself is a scripting
-  language. What do I mean by that? Lets think of an example, we will be picking on the
-  shells file again. Lets say we only wanted to print lines that are over 8 characters
-  long:
+  One of the things that makes ~awk~ so powerful is that it in itself is a
+  scripting language. What do I mean by that? Lets think of an example, we will
+  be picking on the shells file again. Lets say we only wanted to print lines
+  that are over 8 characters long:
   #+begin_src sh :results output
     awk 'length($0) > 8' /etc/shells
   #+end_src
@@ -292,15 +297,17 @@ If it is worth noting ~$0~ will print the full output:
   The square of 10 is 100
   #+end_example
 
-  Our for loop is layed out just like it is in any other language; We specify our
-  incrementing variable and initialize it, we set our stopping point, and we set our
-  incrementing amount. You may have also noticed that we can do arithmetic in our ~awk~
-  script which is another powerful aspect of ~awk~ scripting.
+  Our for loop is layed out just like it is in any other language; We specify
+  our incrementing variable and initialize it, we set our stopping point, and we
+  set our incrementing amount. You may have also noticed that we can do
+  arithmetic in our ~awk~ script which is another powerful aspect of ~awk~
+  scripting.
 
 * Line numbers
-  A feature of ~awk~ worth noting is the line number specifier. Say we had a big block
-  of output from a command and we only wanted to see a specific line number of the
-  output, or even a specific range of line numbers. Lets try this on the ~df~ command:
+  A feature of ~awk~ worth noting is the line number specifier. Say we had a big
+  block of output from a command and we only wanted to see a specific line
+  number of the output, or even a specific range of line numbers. Lets try this
+  on the ~df~ command:
   #+begin_src sh :results output
     df | awk 'NR==7, NR==11 {print NR, $0}'
   #+end_src
@@ -311,10 +318,10 @@ If it is worth noting ~$0~ will print the full output:
   : 10 /dev/loop5         56832    56832         0 100% /var/lib/snapd/snap/core18/2066
   : 11 /dev/loop4         56832    56832         0 100% /var/lib/snapd/snap/core18/2074
 
-  ~NR~ is what we use in ~awk~ to signify line number. Above you can see we were able to
-  grab lines 7-11 using ~NR~ and print both the line number and the line itself. Of
-  course if we didn't want to print the line number we could just drop ~NR~ from our
-  print statement:
+  ~NR~ is what we use in ~awk~ to signify line number. Above you can see we were
+  able to grab lines 7-11 using ~NR~ and print both the line number and the line
+  itself. Of course if we didn't want to print the line number we could just
+  drop ~NR~ from our print statement:
   #+begin_src sh :results output
     df | awk 'NR==7, NR==11 {print $0}'
   #+end_src
@@ -325,7 +332,8 @@ If it is worth noting ~$0~ will print the full output:
   : /dev/loop5         56832    56832         0 100% /var/lib/snapd/snap/core18/2066
   : /dev/loop4         56832    56832         0 100% /var/lib/snapd/snap/core18/2074
 
-  We can also use ~NR~ to get a line count of a file, lets pick on =/etc/shells= again:
+  We can also use ~NR~ to get a line count of a file, lets pick on =/etc/shells=
+  again:
   #+NAME: LineCount
   #+begin_src sh :results output :exports both
     awk 'END {print NR}' /etc/shells
@@ -334,7 +342,8 @@ If it is worth noting ~$0~ will print the full output:
   #+RESULTS: LineCount
   : 8
 
-  We can also use the line number feature of ~awk~ to replace the linux tool ~head~:
+  We can also use the line number feature of ~awk~ to replace the linux tool
+  ~head~:
   #+NAME: Head
   #+begin_src sh :results output :exports both
     awk 'NR < 13' /etc/shells

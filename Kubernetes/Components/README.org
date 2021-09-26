@@ -1,73 +1,87 @@
 #+TITLE: Kubernetes Components
 #+PROPERTY: header-args
 
-Kubernetes is made up of multiple components that work together to make the Kubernetes ecosystem.
-Some of these components only run on the master node and some run on your other nodes. We will cover
-the master node or control plane components first.
+Kubernetes is made up of multiple components that work together to make the
+Kubernetes ecosystem. Some of these components only run on the master node and
+some run on your other nodes. We will cover the master node or control plane
+components first. You can find more information on the Kubernetes componenets:
+[[https://kubernetes.io/docs/concepts/overview/components/][here]].
 
 * Control plane components
-  The control plane's components make global decisions about the cluster (for example, scheduling),
-  as well as detecting and responding to cluster events (for example, starting up a new Pod when a
-  deployment's replicas field is unsatisfied). Control plane components can be run on any machine in
-  the cluster. However, for simplicity, set up scripts typically start all control plane components
-  on the same machine, and do not run user containers on this machine
+  The control plane's components make global decisions about the cluster (for
+  example, scheduling), as well as detecting and responding to cluster events
+  (for example, starting up a new Pod when a deployment's replicas field is
+  unsatisfied). Control plane components can be run on any machine in the
+  cluster. However, for simplicity, set up scripts typically start all control
+  plane components on the same machine, and do not run user containers on this
+  machine
   - kube-apiserver
-    The api server is the component of the Kubernetes control plane that exposes the Kubernetes api.
-    The api server is the front end of the Kubernetes control plane and is designed to scale
-    horizontally. You can run several instances of the kube-apiserver and balance traffic between
-    those instances.
+    The api server is the component of the Kubernetes control plane that exposes
+    the Kubernetes api. The api server is the front end of the Kubernetes
+    control plane and is designed to scale horizontally. You can run several
+    instances of the kube-apiserver and balance traffic between those instances.
   - etcd
-    The etcd component is the consistent and highly-available key value store used as Kubernetes'
-    backing store for all cluster data. If your Kubernetes cluster uses etcd as its backing store,
-    make sure you have a back up plan for your data. More inforamtion on backing up etcd can be found
-    here: [[https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/#backing-up-an-etcd-cluster][backing up etcd]].
+    The etcd component is the consistent and highly-available key value store
+    used as Kubernetes' backing store for all cluster data. If your Kubernetes
+    cluster uses etcd as its backing store, make sure you have a back up plan
+    for your data. More inforamtion on backing up etcd can be found here:
+    [[https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/#backing-up-an-etcd-cluster][backing up etcd]].
   - kube-scheduler
-    The kube-scheduler is the control plane component that watches for newly created Pods with no
-    assigned node, and selects a node for them to run on. Factors taken into account for scheduling
-    decisions include: individual and collective resource requirements, hardware/software/policy
-    constraints, affinity and anti-affinity specifications, data locality, inter-workload
+    The kube-scheduler is the control plane component that watches for newly
+    created Pods with no assigned node, and selects a node for them to run on.
+    Factors taken into account for scheduling decisions include: individual and
+    collective resource requirements, hardware/software/policy constraints,
+    affinity and anti-affinity specifications, data locality, inter-workload
     interference, and deadlines.
   - kube-controller-manager
-    The kube-controller-manager is the control plane component that runs controller processes.
-    Logically, each controller is a separate process, but to reduce complexity, they are all compiled
-    into a single binary and run in a single process. Some types of these controllers are:
+    The kube-controller-manager is the control plane component that runs
+    controller processes. Logically, each controller is a separate process, but
+    to reduce complexity, they are all compiled into a single binary and run in
+    a single process. Some types of these controllers are:
     - Node controller :: Responsible for noticing and responding when nodes go down.
     - Job controller :: Wathes for job objects that represent one-off tasks, then creates Pods to run those tasks to completion.
     - Endpoints controller :: Populates the endpoints object (that is, joins Services and Pods).
     - Service Account & Token controllers :: Create default accounts and api access tokens for new namespaces.
   - cloud-controller-manager
-    The cloud-controller-manager is the control plane component that embeds cloud-specific control
-    logic. The cloud controller manager lets you link your cluster into your cloud provider's api, and
-    separates out the components that interact with that cloud platform form components that interact
-    with that cloud platform from components that only interact with your cluster. The
-    cloud-controller-manager only runs controllers that are specific to your cloud provider. If you
-    are running Kubernetes on your own premises, or in a learning environment inside your own PC, the
-    cluster does not have a cloud-controller-manager. As with the kube-controller-manager, the
-    cloud-controller-manager combines several logically independent control loops into a single binary
-    that you run as a single process. You can scale horizontally (run more than one copy) to improve
-    performance or to help tolerate failures. The following controllers can have cloud provider
+    The cloud-controller-manager is the control plane component that embeds
+    cloud-specific control logic. The cloud controller manager lets you link
+    your cluster into your cloud provider's api, and separates out the
+    components that interact with that cloud platform form components that
+    interact with that cloud platform from components that only interact with
+    your cluster. The cloud-controller-manager only runs controllers that are
+    specific to your cloud provider. If you are running Kubernetes on your own
+    premises, or in a learning environment inside your own PC, the cluster does
+    not have a cloud-controller-manager. As with the kube-controller-manager,
+    the cloud-controller-manager combines several logically independent control
+    loops into a single binary that you run as a single process. You can scale
+    horizontally (run more than one copy) to improve performance or to help
+    tolerate failures. The following controllers can have cloud provider
     dependencies:
     - Node controller :: For checking the cloud provider to determine if a node has been deleted in the cloud after it stops responding.
     - Route controller :: For setting up routes in the underlying cloud infrastructure.
     - Service controller :: For creating, updating, and deleting cloud provider load balancers.
 
 * Node Components
-  Node components run on every node, maintaining running Pods and providing the Kubernetes runtime
-  environment. Here are the node components:
+  Node components run on every node, maintaining running Pods and providing the
+  Kubernetes runtime environment. Here are the node components:
   - kubelet
-    The kubelet component is an agent that runs on each node in the cluster. It makes sure that
-    containers are running in a Pod. The kubelet takes a set of PodSpecs that are provided through
-    various mechanisms and ensures that the controller described in those PodSpecs are running
-    healthy. The kubelet doesn't manage controllers which were not created by Kubernetes.
+    The kubelet component is an agent that runs on each node in the cluster. It
+    makes sure that containers are running in a Pod. The kubelet takes a set of
+    PodSpecs that are provided through various mechanisms and ensures that the
+    controller described in those PodSpecs are running healthy. The kubelet
+    doesn't manage controllers which were not created by Kubernetes.
   - kube-proxy
-    The kube-proxy component is a network proxy that runs on each node in your cluster, implementing
-    part of the Kubernetes Service concept. The kube-proxy maintains network rules on nodes. These
-    network rules allow network communication to your Pods from network sessions inside or outside of
-    your cluster. The kube-proxy uses the operating system packet filtering layer if there is one and
-    it's available. Otherwise, kube-proxy forwards the traffic itself.
+    The kube-proxy component is a network proxy that runs on each node in your
+    cluster, implementing part of the Kubernetes Service concept. The kube-proxy
+    maintains network rules on nodes. These network rules allow network
+    communication to your Pods from network sessions inside or outside of your
+    cluster. The kube-proxy uses the operating system packet filtering layer if
+    there is one and it's available. Otherwise, kube-proxy forwards the traffic
+    itself.
   - container runtime
-    The container runtime is the software that is responsible for running containers. Kubernetes
-    supports several container runtimes: Docker, containerd, CRI-O, and any implementation of the
-    Kubernetes CRI (Container Runtime Interface).
+    The container runtime is the software that is responsible for running
+    containers. Kubernetes supports several container runtimes: Docker,
+    containerd, CRI-O, and any implementation of the Kubernetes CRI (Container
+    Runtime Interface).
 
 * Addons

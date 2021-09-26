@@ -2,7 +2,8 @@
 #+PROPERTY: header-args
 
 * length()
-  In Java, the length() string method returns the length ⁠— total number of characters ⁠— of a String.
+  In Java, the length() string method returns the length ⁠— total number of
+  characters ⁠— of a String.
 
   Suppose we have a String called str, str.length() would return its length.
 
@@ -19,13 +20,16 @@
     H e l l o _ W o r l d !
   #+END_SRC
 
-  In theory, the length of a String is the same as the Unicode units of the String. For example, escape sequences such as \n count as only one character.
+  In theory, the length of a String is the same as the Unicode units of the
+  String. For example, escape sequences such as \n count as only one character.
 
 * concat()
-  The concat() method concatenates one string to the end of another string. Concatenation is the operation of joining two strings together.
+  The concat() method concatenates one string to the end of another string.
+  Concatenation is the operation of joining two strings together.
 
-  Suppose we have a String called str1 and another String called str2, using str1.concat(str2) would return str1 with str2 appended to the end of it.
-  For example:
+  Suppose we have a String called str1 and another String called str2, using
+  str1.concat(str2) would return str1 with str2 appended to the end of it. For
+  example:
 
   #+BEGIN_SRC java
     String name = new String("Code");
@@ -35,11 +39,15 @@
     System.out.println(name);
   #+END_SRC
   Codecademy would be printed.
-  Strings are immutable objects which means that String methods, like concat() do not actually change a String object.
+  Strings are immutable objects which means that String methods, like concat()
+  do not actually change a String object.
 
-  Our variable, name holds a reference to the String object, "Code". When we use concat() on name, we changed its value so that it references a new object — "Code", combined with the String literal, "cademy".
+  Our variable, name holds a reference to the String object, "Code". When we use
+  concat() on name, we changed its value so that it references a new object —
+  "Code", combined with the String literal, "cademy".
 
-  Suppose we do something slightly different. We’ll use concat() on name without reassigning its value:
+  Suppose we do something slightly different. We’ll use concat() on name without
+  reassigning its value:
 
   #+BEGIN_SRC java
     String name = "Code";
@@ -48,15 +56,26 @@
 
     System.out.println(name);
   #+END_SRC
-  Code would be printed instead. The value of the String can’t change! Instead, we create a new object and need to assign that new object to some variable.
+  Code would be printed instead. The value of the String can’t change! Instead,
+  we create a new object and need to assign that new object to some variable.
 
-  When we first discussed Objects we learned that if we tried printing an Object, we’d get an output of the class name and the Object’s memory address. If we wanted to get a more useful printout, we’d have to call the Object’s toString() method.
+  When we first discussed Objects we learned that if we tried printing an
+  Object, we’d get an output of the class name and the Object’s memory address.
+  If we wanted to get a more useful printout, we’d have to call the Object’s
+  toString() method.
 
-  This toString() method comes into play with concat(). If we concatenate a String with another Object, we’re really adding the result of that Object’s toString() method to our original String. We can even see this when we concatenate two Strings together (remember a String is an Object). When we use concat() on another String, we don’t concatenate its memory address to the original String. Instead, we combine the result of its toString() method to the original String.
+  This toString() method comes into play with concat(). If we concatenate a
+  String with another Object, we’re really adding the result of that Object’s
+  toString() method to our original String. We can even see this when we
+  concatenate two Strings together (remember a String is an Object). When we use
+  concat() on another String, we don’t concatenate its memory address to the
+  original String. Instead, we combine the result of its toString() method to
+  the original String.
 
 * equals()
-  With objects, such as Strings, we can’t use the primitive equality operator == to check for equality between two strings. To test equality with strings, we use a built-in method called equals().
-  For example:
+  With objects, such as Strings, we can’t use the primitive equality operator
+  == to check for equality between two strings. To test equality with strings,
+  we use a built-in method called equals(). For example:
   #+BEGIN_SRC java
     String flavor1 = "Mango";
     String flavor2 = "Peach";
@@ -68,12 +87,16 @@
     // prints false
   #+END_SRC
 
-  Side note, there’s also an equalsIgnoreCase() method that compares two strings without considering upper/lower cases.
+  Side note, there’s also an equalsIgnoreCase() method that compares two strings
+  without considering upper/lower cases.
 
-  We can also compare String values lexicographically (think dictionary order) using the .compareTo() method. When we call the .compareTo() method, each character is in the String is converted to Unicode; then the Unicode character from each String is compared.
+  We can also compare String values lexicographically (think dictionary order)
+  using the .compareTo() method. When we call the .compareTo() method, each
+  character is in the String is converted to Unicode; then the Unicode character
+  from each String is compared.
 
-  The method will return an int that represents the difference between the two Strings.
-  For example:
+  The method will return an int that represents the difference between the two
+  Strings. For example:
   #+BEGIN_SRC java
     String flavor1 = "Mango";
     String flavor2 = "Peach";
@@ -84,14 +107,27 @@
 
   When we use .compareTo(), we must pay attention to the return value:
 
-  If the method returns 0, the two Strings are equal.
-  If the value is less than 0, then the String object is lexicographically less than the String object argument.
-  If the value is greater than 0, then the String object is lexicographically greater than the String object argument.
-  In the example above, "Mango" comes before "Peach", so we get a negative number (we specifically get -3 because the Unicode values of "M" and "P" differ by 3). If we did flavor2.compareTo(flavor1), we would get 3, signifying that "Peach" is greater than "Mango".
+  - If the method returns 0, the two Strings are equal.
+  - If the value is less than 0, then the String object is lexicographically
+    less than the String object argument.
+  - If the value is greater than 0, then the String object is lexicographically
+    greater than the String object argument.
+  In the example above, "Mango" comes before "Peach", so we get a negative
+  number (we specifically get -3 because the Unicode values of "M" and "P"
+  differ by 3). If we did flavor2.compareTo(flavor1), we would get 3, signifying
+  that "Peach" is greater than "Mango".
 
-  Note: Make sure to pay attention to capitalization when using .compareTo(). Upper case and lower case letters have different Unicode values. For example, when comparing "Mango" and "Peach", we got -3, meaning that "Mango" was smaller. But if we compare "mango" and "Peach" we get 29. The Unicode value for lower case "m" is actually larger than upper case "P". Using .compareToIgnoreCase() will perform the same task, but will not consider upper/lower 
+  Note: Make sure to pay attention to capitalization when using .compareTo().
+  Upper case and lower case letters have different Unicode values. For example,
+  when comparing "Mango" and "Peach", we got -3, meaning that "Mango" was
+  smaller. But if we compare "mango" and "Peach" we get 29. The Unicode value
+  for lower case "m" is actually larger than upper case "P". Using
+  .compareToIgnoreCase() will perform the same task, but will not consider
+  upper/lower
+
 * index()
-  If we want to know the index of the first occurence of a character in a string, we can use the indexOf() method on a string.
+  If we want to know the index of the first occurence of a character in a
+  string, we can use the indexOf() method on a string.
 
   Remember that the indices in Java start with 0:
   #+BEGIN_SRC java
@@ -101,9 +137,12 @@
   #+END_SRC
   This would output 2.
 
-  Although C is the third letter in the English alphabet, it is located in the second index of the string.
+  Although C is the third letter in the English alphabet, it is located in the
+  second index of the string.
 
-  Suppose we want to know the index of the first occurrence of an entire substring. The indexOf() instance method can also return where the substring begins (the index of the first character in the substring):
+  Suppose we want to know the index of the first occurrence of an entire
+  substring. The indexOf() instance method can also return where the substring
+  begins (the index of the first character in the substring):
   #+BEGIN_SRC java
     String letters = "ABCDEFGHIJKLMN";
 
@@ -113,37 +152,46 @@
 
   If the indexOf() doesn’t find what it’s looking for, it’ll return a -1.
 * charAt()
-  The charAt() method returns the character located at a String‘s specified index.
-  For example:
+  The charAt() method returns the character located at a String‘s specified
+  index. For example:
   #+BEGIN_SRC java
     String str = "qwer";
 
     System.out.println(str.charAt(2));
   #+END_SRC
-  It would output e because that’s what’s at index 2. (Once again, indices start with 0.)
+  It would output e because that’s what’s at index 2. (Once again, indices start
+  with 0.)
 
-  Suppose we try to return the character located at index 4. It would produce an IndexOutOfBoundsException error because index 4 is out of str‘s range:
+  Suppose we try to return the character located at index 4. It would produce an
+  IndexOutOfBoundsException error because index 4 is out of str‘s range:
   #+BEGIN_SRC bash
     java.lang.StringIndexOutOfBoundsException: String index out of range: 4
   #+END_SRC
 * substring()
-  There may be times when we only want a part of a string. In such cases, we may want to extract a substring from a string.
+  There may be times when we only want a part of a string. In such cases, we may
+  want to extract a substring from a string.
 
   The substring() method does exactly that. For example:
   #+BEGIN_SRC java
     String line = "The Heav'ns and all the Constellations rung";
     System.out.println(line.substring(24));
   #+END_SRC
-  It would output Constellations rung because that’s what begins at index 24 and ends at the end of line. The substring begins with the character at the specified index and extends to the end of the string.
+  It would output Constellations rung because that’s what begins at index 24 and
+  ends at the end of line. The substring begins with the character at the
+  specified index and extends to the end of the string.
 
-  But suppose we want a substring from the middle of the string. We can include two arguments with this string method. For example:
+  But suppose we want a substring from the middle of the string. We can include
+  two arguments with this string method. For example:
   #+BEGIN_SRC java
     String line = "The Heav'ns and all the Constellations rung";
     System.out.println(line.substring(24, 38));
   #+END_SRC
-  It would output Constellations because that’s the substring that begins at index 24 and ends at index 38.
+  It would output Constellations because that’s the substring that begins at
+  index 24 and ends at index 38.
 
-  We can use this method to return a single-element substring at a specific index by calling substring() with the wanted index value as the first argument and then the index value plus one as the second argument.
+  We can use this method to return a single-element substring at a specific
+  index by calling substring() with the wanted index value as the first argument
+  and then the index value plus one as the second argument.
 
   For example, we can use this method to output just C:
   #+BEGIN_SRC java
@@ -152,7 +200,8 @@
     // Prints: C
   #+END_SRC
 * toUpperCase()/toLowerCase()
-  There will be times when we have a word in a case other than what we need it in. Luckily, Java has a couple String methods to help us out:
+  There will be times when we have a word in a case other than what we need it
+  in. Luckily, Java has a couple String methods to help us out:
 
   toUpperCase(): returns the string value converted to uppercase
   toLowerCase(): returns the string value converted to lowercase
@@ -165,4 +214,7 @@
     String lower = input.toLowerCase();
     // stores "cricket!"
   #+END_SRC
-  A good use of this functionality is to ensure consistency of the data you store in a database. Making sure all of the data you get from a user is lowercase before you store it in your database will make your database easier to search through later.
+  A good use of this functionality is to ensure consistency of the data you
+  store in a database. Making sure all of the data you get from a user is
+  lowercase before you store it in your database will make your database easier
+  to search through later.

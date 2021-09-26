@@ -1,10 +1,16 @@
 #+TITLE: Access Scope
 #+PROPERTY: header-args
 
-As our Java programs begin to get bigger and we begin to have multiple Objects and Classes that interact with each other, the concepts of access and scope come into play. To oversimplify things, the concepts of access and scope both center around what parts of your programs can interact with specific variables or methods from other parts of your program. Let’s take a brief look at some of the concepts we’ll cover:
+As our Java programs begin to get bigger and we begin to have multiple Objects
+and Classes that interact with each other, the concepts of access and scope come
+into play. To oversimplify things, the concepts of access and scope both center
+around what parts of your programs can interact with specific variables or
+methods from other parts of your program. Let’s take a brief look at some of the
+concepts we’ll cover:
 
 Access:
-- The public and private keywords and how they relate to Classes, variables, constructors, and methods
+- The public and private keywords and how they relate to Classes, variables,
+  constructors, and methods
 - The concept of encapsulation
 - Accessor methods, sometimes known as “getters”
 - Mutator methods, sometimes known as “setters”
@@ -14,9 +20,15 @@ Scope:
 - The this keyword
 
 * Public
-  We can define the access of many different parts of our code including instance variables, methods, constructors, and even a class itself. If we choose to declare these as public this means that any part of our code can interact with them - even if that code is in a different class!
+  We can define the access of many different parts of our code including
+  instance variables, methods, constructors, and even a class itself. If we
+  choose to declare these as public this means that any part of our code can
+  interact with them - even if that code is in a different class!
 
-  The way we declare something to be public is to use the public keyword in the declaration statement. In the code block below, we have a public class, constructor, instance variables, and method. Notice the five different uses of public.
+  The way we declare something to be public is to use the public keyword in the
+  declaration statement. In the code block below, we have a public class,
+  constructor, instance variables, and method. Notice the five different uses of
+  public.
   #+BEGIN_SRC java
     public class Dog{
         public String name;
@@ -33,7 +45,11 @@ Scope:
     }
   #+END_SRC
 
-  Since everything about a Dog is public, any other class can access anything about a Dog. For example, let’s say there was a DogSchool class. Any method of the DogSchool class could make a new Dog using the public Dog constructor, directly access that Dog’s instance variables, and directly use that Dog’s methods:
+  Since everything about a Dog is public, any other class can access anything
+  about a Dog. For example, let’s say there was a DogSchool class. Any method of
+  the DogSchool class could make a new Dog using the public Dog constructor,
+  directly access that Dog’s instance variables, and directly use that Dog’s
+  methods:
   #+BEGIN_SRC java
     public class DogSchool{
         public void makeADog(){
@@ -44,11 +60,22 @@ Scope:
     }
   #+END_SRC
 
-  Notice that the DogSchool class and the makeADog() method are also public. This means that if some other class created a DogSchool, they would have access to these methods as well! We have public methods calling public methods!
-  One final thing to note is that for the purposes of this lesson, we’ll almost always make our classes and constructors public. While you can set them to private, it’s fairly uncommon to do so. Instead, we’ll focus on why you might make your instance variables and methods private. We’ll start looking into the private keyword in the next exercise.
+  Notice that the DogSchool class and the makeADog() method are also public.
+  This means that if some other class created a DogSchool, they would have
+  access to these methods as well! We have public methods calling public
+  methods!
+
+  One final thing to note is that for the purposes of this lesson, we’ll almost
+  always make our classes and constructors public. While you can set them to
+  private, it’s fairly uncommon to do so. Instead, we’ll focus on why you might
+  make your instance variables and methods private. We’ll start looking into the
+  private keyword in the next exercise.
 
 * Private and encapsulation
-  By now you’re probably catching onto what the private keyword does. When a Class’ instance variable or method is marked as private, that means that you can only access those structures from elsewhere inside that same class. Let’s look back at our DogSchool example:
+  By now you’re probably catching onto what the private keyword does. When a
+  Class’ instance variable or method is marked as private, that means that you
+  can only access those structures from elsewhere inside that same class. Let’s
+  look back at our DogSchool example:
   #+BEGIN_SRC java
     public class DogSchool{
         public void makeADog(){
@@ -58,18 +85,40 @@ Scope:
         }
     }
   #+END_SRC
-  makeADog is trying to directly access Dog‘s .age variable. It’s also trying to use the .speak() method. If those are marked as private in the Dog class, the DogSchool class won’t be able to do that. Other methods within the Dog class would be able to use .age or .speak() (for example, we could use cujo.age within the Dog class), but other classes won’t have access.
+  makeADog is trying to directly access Dog‘s .age variable. It’s also trying to
+  use the .speak() method. If those are marked as private in the Dog class, the
+  DogSchool class won’t be able to do that. Other methods within the Dog class
+  would be able to use .age or .speak() (for example, we could use cujo.age
+  within the Dog class), but other classes won’t have access.
 
-  At this point, you might be thinking to yourself “Why even bother with any of this? In the last exercise, my code was broken until I flipped some variables and methods to public. Why don’t I just make everything public?”
+  At this point, you might be thinking to yourself “Why even bother with any of
+  this? In the last exercise, my code was broken until I flipped some variables
+  and methods to public. Why don’t I just make everything public?”
 
-  While those are valid points, sometimes restricting our code is actually useful from a design perspective. This is one of the core ideas behind encapsulation. By making our instance variables (and some methods) private, we encapsulate our code into nice little bundles of logic.
+  While those are valid points, sometimes restricting our code is actually
+  useful from a design perspective. This is one of the core ideas behind
+  encapsulation. By making our instance variables (and some methods) private,
+  we encapsulate our code into nice little bundles of logic.
 
-  For example, a Bank object doesn’t necessarily need to know the inner workings of a CheckingAccount object. It doesn’t need to know that the money is stored in a field named money, or that interest is added to an account by using a method named .addInterest(). In fact, if it had access to those fields or methods, it’s possible that someone using a Bank object could change things in a CheckingAccount without realizing it. By limiting access by using the private keyword, we are able to segment, or encapsulate, our code into individual units.
+  For example, a Bank object doesn’t necessarily need to know the inner workings
+  of a CheckingAccount object. It doesn’t need to know that the money is stored
+  in a field named money, or that interest is added to an account by using a
+  method named .addInterest(). In fact, if it had access to those fields or
+  methods, it’s possible that someone using a Bank object could change things in
+  a CheckingAccount without realizing it. By limiting access by using the
+  private keyword, we are able to segment, or encapsulate, our code into
+  individual units.
 
-  Note that we don’t necessarily want to completely block everything from other classes. In the next exercise, we’ll get into when you might want to make methods public — we’ll take a look at getter and setter methods.
+  Note that we don’t necessarily want to completely block everything from other
+  classes. In the next exercise, we’ll get into when you might want to make
+  methods public — we’ll take a look at getter and setter methods.
 
 * Accessor
-  When writing classes, we often make all of our instance variables private. However, we still might want some other classes to have access to them, we just don’t want those classes to know the exact variable name. To give other classes access to a private instance variable, we would write an accessor method (sometimes also known as a “getter” method).
+  When writing classes, we often make all of our instance variables private.
+  However, we still might want some other classes to have access to them, we
+  just don’t want those classes to know the exact variable name. To give other
+  classes access to a private instance variable, we would write an accessor
+  method (sometimes also known as a “getter” method).
   #+BEGIN_SRC java
     public class Dog{
         private String name;
@@ -80,9 +129,14 @@ Scope:
         }
     }
   #+END_SRC
-  Even though the instance variable name is private, other classes could call the public method getName() which returns the value of that instance variable. Accessor methods will always be public, and will have a return type that matches the type of the instance variable they’re accessing.
+  Even though the instance variable name is private, other classes could call
+  the public method getName() which returns the value of that instance variable.
+  Accessor methods will always be public, and will have a return type that
+  matches the type of the instance variable they’re accessing.
 
-  Similarly, private instance variables often have mutator methods (sometimes known as “setters”). These methods allow other classes to reset the value stored in private instance variables.
+  Similarly, private instance variables often have mutator methods (sometimes
+  known as “setters”). These methods allow other classes to reset the value
+  stored in private instance variables.
   #+BEGIN_SRC java
     public class Dog{
         private String name;
@@ -98,12 +152,21 @@ Scope:
         }
     }
   #+END_SRC
-  Mutator methods, or “setters”, often are void methods — they don’t return anything, they just reset the value of an existing variable. Similarly, they often have one parameter that is the same type as the variable they’re trying to change.
+  Mutator methods, or “setters”, often are void methods — they don’t return
+  anything, they just reset the value of an existing variable. Similarly, they
+  often have one parameter that is the same type as the variable they’re trying
+  to change.
 
 * Local Variables
-  In addition to access modifiers like public and private, the scope of the variable also determines what parts of your code can access that variable.
+  In addition to access modifiers like public and private, the scope of the
+  variable also determines what parts of your code can access that variable.
 
-  The scope of a variable is determined by where the variable is declared. For example, because instance variables are declared inside a class but outside any methods or constructors, all methods and constructors are within the scope of that variable. For example, in the code block below, constructors and methods of the Dog class are using the Dog instance variables like name and age:
+  The scope of a variable is determined by where the variable is declared. For
+  example, because instance variables are declared inside a class but outside
+  any methods or constructors, all methods and constructors are within the scope
+  of that variable. For example, in the code block below, constructors and
+  methods of the Dog class are using the Dog instance variables like name and
+  age:
   #+BEGIN_SRC java
     class Dog{
         public String name;
@@ -121,19 +184,32 @@ Scope:
         }
     }
   #+END_SRC
-  However, if we have a variable declared inside a method, that variable can only be used inside that method. The same is true for parameters. The scope of those parameters is only the method they’re associated with. If you try to use a parameter outside the function it’s defined in, you’ll get an error. These variables are often called local variables. Note that we don’t use public or private when declaring local variables.
+  However, if we have a variable declared inside a method, that variable can
+  only be used inside that method. The same is true for parameters. The scope of
+  those parameters is only the method they’re associated with. If you try to use
+  a parameter outside the function it’s defined in, you’ll get an error. These
+  variables are often called local variables. Note that we don’t use public or
+  private when declaring local variables.
 
-  This idea of scope extends to conditionals and loops as well. If you declare a variable inside the body of a conditional or in a loop, that variable can only be used inside that structure. This also includes the variable you’re using as your looping variable. For example, consider the following block of code:
+  This idea of scope extends to conditionals and loops as well. If you declare a
+  variable inside the body of a conditional or in a loop, that variable can only
+  be used inside that structure. This also includes the variable you’re using as
+  your looping variable. For example, consider the following block of code:
   #+BEGIN_SRC java
     for(int i = 0; i < 10; i++){
         // You can use i here
     }
     // i is out of scope here
   #+END_SRC
-  You can only use i between the curly braces of the for loop. In general, whenever you see curly braces, be aware of scope. If a variable is defined inside curly braces, and you try to use that variable outside of those curly braces, you will likely see an error!
+  You can only use i between the curly braces of the for loop. In general,
+  whenever you see curly braces, be aware of scope. If a variable is defined
+  inside curly braces, and you try to use that variable outside of those curly
+  braces, you will likely see an error!
 
 * This
-  Often times when creating classes, programmers will create local variables with the same name as instance variables. For example, consider the code block below:
+  Often times when creating classes, programmers will create local variables
+  with the same name as instance variables. For example, consider the code block
+  below:
   #+BEGIN_SRC java
     public class Dog{
         public String name;
@@ -152,9 +228,14 @@ Scope:
         }
     }
   #+END_SRC
-  We have an instance variable named name, but the method speakNewName has a parameter named name. So when the method tries to print name, which variable will be printed? By default, Java refers to the local variable name. So in this case, the value passed to the parameter will be printed and not the instance variable.
+  We have an instance variable named name, but the method speakNewName has a
+  parameter named name. So when the method tries to print name, which variable
+  will be printed? By default, Java refers to the local variable name. So in
+  this case, the value passed to the parameter will be printed and not the
+  instance variable.
 
-  If we wanted to access the instance variable and not the local variable, we could use the this keyword.
+  If we wanted to access the instance variable and not the local variable, we
+  could use the this keyword.
   #+BEGIN_SRC java
     public class Dog{
         public String name;
@@ -179,21 +260,31 @@ Scope:
         }
     }
   #+END_SRC
-  The this keyword is a reference to the current object. We used this.name in our speakNewName() method. This caused the method to print out the value stored in the instance variable name of whatever Dog Object called speakNewName(). (Note that in this somewhat contrived example, the local variable name used as a parameter gets completely ignored).
+  The this keyword is a reference to the current object. We used this.name in
+  our speakNewName() method. This caused the method to print out the value
+  stored in the instance variable name of whatever Dog Object called
+  speakNewName(). (Note that in this somewhat contrived example, the local
+  variable name used as a parameter gets completely ignored).
 
-  Oftentimes, you’ll see constructors have parameters with the same name as the instance variable. For example, you might see something like:
+  Oftentimes, you’ll see constructors have parameters with the same name as the
+  instance variable. For example, you might see something like:
   #+BEGIN_SRC java
     public Dog(String name){
         this.name = name;
     }
   #+END_SRC
-  You can read this as “set this Dog‘s instance variable name equal to the variable passed into the constructor”. While this naming is a common convention, it can also be confusing. There’s nothing wrong with naming your parameters something else to be more clear. Sometimes you will see something like:
+  You can read this as “set this Dog‘s instance variable name equal to the
+  variable passed into the constructor”. While this naming is a common
+  convention, it can also be confusing. There’s nothing wrong with naming your
+  parameters something else to be more clear. Sometimes you will see something
+  like:
   #+BEGIN_SRC java
     public Dog(String inputName){
         this.name = inputName;
     }
   #+END_SRC
-  This is now a little clearer — we’re setting the Dog‘s instance variable name equal to the name we give the constructor.
+  This is now a little clearer — we’re setting the Dog‘s instance variable name
+  equal to the name we give the constructor.
 
   Finally, mutator methods also usually follow this pattern:
   #+BEGIN_SRC java
@@ -203,10 +294,15 @@ Scope:
   #+END_SRC
   We reset the instance variable to the value passed into the parameter.
 
-  Throughout the rest of this lesson, we’ll use this. when referring to an instance variable. This isn’t always explicitly necessary — if there’s no local variable with the same name, Java will know to use the instance variable with that name. That being said, it is a good habit to use this. when working with your instance variables to avoid potential confusion.
+  Throughout the rest of this lesson, we’ll use this. when referring to an
+  instance variable. This isn’t always explicitly necessary — if there’s no
+  local variable with the same name, Java will know to use the instance variable
+  with that name. That being said, it is a good habit to use this. when working
+  with your instance variables to avoid potential confusion.
 
 * This with methods
-  We’ve seen how the this works with variables, but we can also use the this with methods.
+  We’ve seen how the this works with variables, but we can also use the this
+  with methods.
 
   Recall how we’ve been calling methods up to this point:
   #+BEGIN_SRC java
@@ -215,7 +311,9 @@ Scope:
         myDog.speak();
     }
   #+END_SRC
-  Here we’re creating an instance of a Dog and using that Dog to call the speak() method. However, when defining methods, we can also use the this keyword to call other methods. Consider the code block below:
+  Here we’re creating an instance of a Dog and using that Dog to call the
+  speak() method. However, when defining methods, we can also use the this
+  keyword to call other methods. Consider the code block below:
   #+BEGIN_SRC java
     public class Computer{
         public int brightness;
@@ -235,16 +333,29 @@ Scope:
         }
     }
   #+END_SRC
-  Take a look at the resetSettings() method in particular. This method calls other methods from the class. But it needs an object to call those methods! Rather than create a new object (like we did with the Dog named myDog earlier), we use this as the object. What this means is that the object that calls resetSettings() will be used to call setBrightness(0) and setVolume(0).
+  Take a look at the resetSettings() method in particular. This method calls
+  other methods from the class. But it needs an object to call those methods!
+  Rather than create a new object (like we did with the Dog named myDog
+  earlier), we use this as the object. What this means is that the object that
+  calls resetSettings() will be used to call setBrightness(0) and setVolume(0).
   #+BEGIN_SRC java
     public static void main(String[] args){
         Computer myComputer = new Computer();
         myComputer.resetSettings();
     }
   #+END_SRC
-  In this example, calling myComputer.resetSettings() is as if we called myComputer.setBrightness(0) and myComputer.setVolume(0). this serves as a placeholder for whatever object was used to call the original method.
+  In this example, calling myComputer.resetSettings() is as if we called
+  myComputer.setBrightness(0) and myComputer.setVolume(0). this serves as a
+  placeholder for whatever object was used to call the original method.
 
-  Finally, this can be used as a value for a parameter. Let’s say a method exists that takes a Computer as a parameter (that method’s signature might be something like public void pairWithOtherComputer(Computer other). If you’re writing another method of the Computer, and want to call the pairWithOtherComputer() method, you could use this as the parameter. That call might look something like this.pairWithOtherComputer(this). You’re using the current object to call the method and are passing that object as that method’s parameter.
+  Finally, this can be used as a value for a parameter. Let’s say a method
+  exists that takes a Computer as a parameter (that method’s signature might be
+  something like public void pairWithOtherComputer(Computer other). If you’re
+  writing another method of the Computer, and want to call the
+  pairWithOtherComputer() method, you could use this as the parameter. That call
+  might look something like this.pairWithOtherComputer(this). You’re using the
+  current object to call the method and are passing that object as that method’s
+  parameter.
   #+BEGIN_SRC java
     public void pairWithOtherComputer(Computer other){
         // Code for method that uses the parameter other
@@ -257,16 +368,34 @@ Scope:
   #+END_SRC
 
 * Other private methods
-  Now that we’ve seen how methods can call other methods using this., let’s look at a situation where you might want to use private methods. Oftentimes, private methods are helper methods — that is to say that they’re methods that other, bigger methods use.
+  Now that we’ve seen how methods can call other methods using this., let’s look
+  at a situation where you might want to use private methods. Oftentimes,
+  private methods are helper methods — that is to say that they’re methods that
+  other, bigger methods use.
 
-  For example, for our CheckingAccount example, we might want a public method like getAccountInformation() that prints information like the name of the account owner, the amount of money in the account, and the amount of interest the account will make in a month. That way, another class, like a Bank, could call that public method to get all of that information quickly.
+  For example, for our CheckingAccount example, we might want a public method
+  like getAccountInformation() that prints information like the name of the
+  account owner, the amount of money in the account, and the amount of interest
+  the account will make in a month. That way, another class, like a Bank, could
+  call that public method to get all of that information quickly.
 
-  Well, in order to get that information, we might want to break that larger method into several helper methods. For example, inside getAccountInformation(), we might want to call a function called calculateNextMonthInterst(). That helper method should probably be private. There’s no need for a Bank to call these smaller helper methods — instead, a Bank can call the one public method, and rely on that method to do all of the complicated work by calling smaller private methods.
+  Well, in order to get that information, we might want to break that larger
+  method into several helper methods. For example, inside
+  getAccountInformation(), we might want to call a function called
+  calculateNextMonthInterst(). That helper method should probably be private.
+  There’s no need for a Bank to call these smaller helper methods — instead, a
+  Bank can call the one public method, and rely on that method to do all of the
+  complicated work by calling smaller private methods.
 
 * Review
-  Nice work! In this lesson, we dove into some of the more subtle features of classes with a focus on access, encapsulation, and scope. Here are some of the main takeaways from this lesson:
-  - The public and private keywords are used to define what parts of code have access to other classes, methods, constructors, and instance variables.
-  - Encapsulation is a technique used to keep implementation details hidden from other classes. Its aim is to create small bundles of logic.
-  - The this keyword can be used to designate the difference between instance variables and local variables.
+  Nice work! In this lesson, we dove into some of the more subtle features of
+  classes with a focus on access, encapsulation, and scope. Here are some of the
+  main takeaways from this lesson:
+  - The public and private keywords are used to define what parts of code have
+    access to other classes, methods, constructors, and instance variables.
+  - Encapsulation is a technique used to keep implementation details hidden from
+    other classes. Its aim is to create small bundles of logic.
+  - The this keyword can be used to designate the difference between instance
+    variables and local variables.
   - Local variables can only be used within the scope that they were defined in.
   - The this keyword can be used to call methods when writing classes.

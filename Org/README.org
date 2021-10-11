@@ -48,3 +48,10 @@ exists for me to show some of the simple features I find useful in org mode.
   - Tab on new blank heading indents it
     - Tab again will cycle through other indentation options
   - You can toggle TODO status of headings with S-right, S-left, or C-c C-t
+
+#+begin_src emacs-lisp :results value :tangle no
+  (message "Hello!")
+#+end_src
+
+#+RESULTS:
+: Hello!

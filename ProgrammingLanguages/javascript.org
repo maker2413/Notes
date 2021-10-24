@@ -3,7 +3,7 @@
 :END:
 #+title: JavaScript
 #+created: [2021-10-15 Fri 22:36]
-#+last_modified: [2021-10-17 Sun 16:35:45]
+#+last_modified: [2021-10-24 Sun 04:55:42]
 #+filetags: ProgrammingLanguage JavaScript
 
 Javascript is a high-level, object-oriented, multi-paradigm programming
@@ -41,23 +41,25 @@ guide:
 
 ** Data Types
   In JavaScript, there are seven fundamental [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data types]]:
-  - Number
+  - *Number*:
     Number in JavaScript is similar to an ~int~ or a ~float~ data type in most
     other programming languages.
-  - String
+  - *String*:
     In JavaScript strings can be surrounded by single quotes: ' ... ' or double
     quotes " ... ". Though we prefer single quotes.
-  - Boolean
-  - Undefined
+  - *Boolean*:
+    In JavaScript booleans are just standard booleans described in the
+    [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data types]] guide.
+  - *Undefined*:
     This data type is denoted by the keyword undefined (without quotes). It also
     represents the absence of a value though it has a different use than null.
-  - Null
+  - *Null*:
     This data type represents the intentional absence of a value, and is
     represented by the keyword null (without quotes).
-  - Symbol
+  - *Symbol*:
     A newer feature to the language, symbols are unique identifiers, useful in
     more complex coding. No need to worry about these for now.
-  - BigInt
+  - *BigInt*:
     BigInt in JavaScript is similar to a ~double~ data type in most other
     programming languages.
 

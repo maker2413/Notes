@@ -3,7 +3,7 @@
 :END:
 #+title: Data Types
 #+created: [2021-10-17 Sun 12:55]
-#+last_modified: [2021-10-17 Sun 15:19:14]
+#+last_modified: [2021-10-24 Sun 04:52:36]
 #+filetags: ProgrammingLanguage Basics
 
 In programming data types, also sometimes referred to as types, are the types of
@@ -12,18 +12,18 @@ than likely will, support other data types but this guide is going to go over
 the most basic types that are used by most programming languages.
 
 Some of the most common data types are the following:
-- int or integer:
+- *int or integer*:
   The ~int~, sometimes also referred to as ~integer~, data type is used to store
   numeric values. Some languages have a maximum value this data type can store
   but as a general rule ~int~ can store any positive or negative number within
   the limits of your chosen language.
-- long:
+- *long*:
   The ~long~ data type is used to store a larger number than ~int~ can store (if
   your programming language has a limit). It is important note that a ~long~
   data type is normally a 64 bit memory address as opposed to ~int~ which is
   normally a 32 bit memory address. With that in mind ~long~ should only be used
   when an ~int~ is not adequate.
-- float:
+- *float*:
   The ~float~ data type is used to store floating point numbers or numbers with
   a decimal value. Some examples of what we can store in a ~float~ could be:
   ~1.2~, ~24.57~, or ~27894.02832~. Some programming languages handle ~float~
@@ -34,7 +34,7 @@ Some of the most common data types are the following:
   on how much information can be stored in a ~float~ data type. For a bigger
   number most languages that have a limit on ~float~ will also hava ~double~
   data type.
-- double:
+- *double*:
   The ~double~ data type is used like to store a larger value number than ~int~
   can store (if your programming language has a limit) and normally also
   supports decimal values like a ~float~. Its important to note that most of the
@@ -42,7 +42,7 @@ Some of the most common data types are the following:
   address as opposed to ~int~ or ~float~ which is normally a 32 bit memory
   address. With that in mind a ~double~ should only be used when an ~int~ or
   ~float~ is adequate.
-- char:
+- *char*:
   The ~char~ data type is used to store a single character. Some programming
   languages don't have a specific data type for characters and instead opt to
   just support strings. Every programming language can potentially handle the
@@ -54,7 +54,7 @@ Some of the most common data types are the following:
   type you will not be able to do calculations with it in most programming
   languages as you are actually storing a charater of say =5=, not a value of
   ~5~.
-- string or String:
+- *string or String*:
   The ~string~ data type, sometimes referred to as ~String~, can be thought of
   as a "string" (pun intended) of ~char~ data types. Again some programming
   languages treat ~string~ differently and have different limits as to what can
@@ -62,7 +62,7 @@ Some of the most common data types are the following:
   support whatever your language of choices supports for ~char~. Most commonly
   programming languages denote a ~string~ with double quotes:
   ~"This is a string!"~.
-- bool or boolean:
+- *bool or boolean*:
   The ~bool~ data type, sometimes referred to as ~boolean~, can be thought of as
   a data type that is either true or false. Although every programming language
   can treat ~bool~ different most of them allow you to store either ~true~,

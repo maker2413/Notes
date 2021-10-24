@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       0835ea0d-ca22-4d0c-97fb-9454087c6c78
+:END:
+#+title: Functions
+#+created: [2021-10-19 Tue 20:34]
+#+last_modified: [2021-10-19 Tue 20:38:07]
+#+filetags: ProgrammingLanguage Basics
+
+* TODO Reference
+  https://en.wikipedia.org/wiki/Subroutine

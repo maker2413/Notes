@@ -1,0 +1,60 @@
+:PROPERTIES:
+:ID:       b60776ea-0a30-4b2c-8f7c-61aaad423db6
+:END:
+#+title: Comments
+#+created: [2021-10-16 Sat 00:04]
+#+last_modified: [2021-10-16 Sat 19:47:13]
+#+filetags: ProgrammingLanguage Basics
+
+Comments are lines in your code that will get ignored when compiling or running
+your code. When programming you may want to leave information for other people
+that may be looking at your code to describe pieces of it, that is what comments
+are for! This is the concept of comments and it is a really good habbit to get
+into especially when working in a group environment where you will infact have
+other people looking at and working with your code.
+
+Every programming language can handle comments differently, however most of them
+will either use ~#~, ~;;~, or ~//~ for their notation for what a comment
+is. Here are are a couple of examples of comments from some various languages:
+- Elisp:
+  #+begin_src emacs-lisp
+    ;; This is a comment in elisp!
+  #+end_src
+- Python:
+  #+begin_src python
+    # This is a comment in python!
+  #+end_src
+- Java:
+  #+begin_src java
+    // This is a comment in Java!
+  #+end_src
+
+* Block Comments
+  :PROPERTIES:
+  :ID:       aebd9c01-f62a-48f5-b29f-02f9db445b3f
+  :END:
+  Sometimes you may need to add multiple lines of comments in your program and
+  although you could comment out every line most programming languages have
+  support for block comments. Most programming languages that use the ~#~ or
+  ~;;~ syntax for their single line comments don't outright support block
+  comments so unfortunately you may have to comment out each line however most
+  languages that use the ~//~ syntax for their single line comments will use
+  ~/*~ for the beginning of their block of comments and ~*/~ for the end of
+  their comment block. Lets see some examples of this:
+  - C:
+    #+begin_src c
+      /*
+      This is a multi line comment block in C!
+      These are very useful when describing
+      something that is more indepth than a
+      single line comment will provide.
+      */
+    #+end_src
+  - Java:
+    #+begin_src java
+      /*
+      This is a multi line comment block in Java!
+      You can see that it uses the same syntax
+      as C.
+      */
+    #+end_src

@@ -1,0 +1,157 @@
+:PROPERTIES:
+:ID:       a29e994c-1920-4ea6-8cfa-946c82e25429
+:END:
+#+title: JavaScript
+#+created: [2021-10-15 Fri 22:36]
+#+last_modified: [2021-10-17 Sun 16:35:45]
+#+filetags: ProgrammingLanguage JavaScript
+
+Javascript is a high-level, object-oriented, multi-paradigm programming
+language. JavaScript is primarily known as the language of most modern web
+browsers, and its early quirks gave it a bit of a bad reputation. However, the
+language has continued to evolve and improve. JavaScript is a powerful,
+flexible, and fast programming language now being used for increasingly complex
+web development and beyond!
+
+The role Javascript plays in web development is as follows:
+- HTML :: is the actual content of the page.
+- CSS :: is the presentation of the web page.
+- Javascript :: is the actual programming language.
+
+In recent years Javascript has been seen popping up outside of the web browser
+world with tools like [[https://nodejs.org/en/][nodejs]] allowing Javascript applications to interact with
+just a web server to make it more of a backend programming language. Or
+implementations like [[https://angular.io/][angular]] bringing Javascript to the mobile or desktop
+world. Also tools like [[https://reactjs.org/][react]] bringing Javascript to native desktop apps. These
+addvances in the Javascript world make learning Javascript a vital tool to
+almost any development field.
+
+This guide is going to reference "modern" JavaScript. Modern JavaScript is noted
+as any version of JavaScript after ES6: [[https://www.w3schools.com/js/js_versions.asp][JavaScript Versions]].
+
+This first page will cover the absolute basic Fundamentals of JavaScript. If you
+feel like you can skip this part feel free to jump to another section of the
+guide:
+* TODO Link to other topics
+
+* JavaScript Fundamentals
+  This is section is going to cover the basic fundamentals of JavaScript. If you
+  are fairly versed in other programming languages you can probably skip this
+  section and go to one of the more advanced topics listed above.
+
+** Data Types
+  In JavaScript, there are seven fundamental [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data types]]:
+  - Number
+    Number in JavaScript is similar to an ~int~ or a ~float~ data type in most
+    other programming languages.
+  - String
+    In JavaScript strings can be surrounded by single quotes: ' ... ' or double
+    quotes " ... ". Though we prefer single quotes.
+  - Boolean
+  - Undefined
+    This data type is denoted by the keyword undefined (without quotes). It also
+    represents the absence of a value though it has a different use than null.
+  - Null
+    This data type represents the intentional absence of a value, and is
+    represented by the keyword null (without quotes).
+  - Symbol
+    A newer feature to the language, symbols are unique identifiers, useful in
+    more complex coding. No need to worry about these for now.
+  - BigInt
+    BigInt in JavaScript is similar to a ~double~ data type in most other
+    programming languages.
+
+  These datatypes are considered primitive data types. They are the most basic
+  data types in the language. Objects are more complex, and we'll cover them
+  later on.
+
+  Its also important to note that JavaScript has dynamic typing. This means we
+  do *not* have to manually define the type of data we will store in each
+  variable. Instead data types are determined automatically.
+
+  *Tips*
+  - You can use the keyword ~typeof~ to see what data type a value or variable
+    is.
+  - Since JavaScript variables are dynamic you can change a variables data type
+    but assigning it a value of a new data type and it will be updated on the
+    fly.
+  
+** Comments
+   JavaScript uses ~//~ for its [[id:b60776ea-0a30-4b2c-8f7c-61aaad423db6][Comment]] notation and ~/* */~ for its
+   [[id:aebd9c01-f62a-48f5-b29f-02f9db445b3f][Block Comment]] notation.
+
+** Declaring variables
+   Declaring [[id:2f7bedf9-adcd-4c8c-a26f-47282f8f4ad0][variables]] in JavaScript can be done with the ~let~, ~const~, and
+   ~var~ keywords. The ~let~ and ~const~ variables were added in ES6+ (modern
+   JavaScript). Again I want to point out that JavaScript uses dynamic variable
+   declaration so we don't actually have to define what [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data type]] our variable
+   is. This also means we can reassign a different value to the variable and it
+   will change the variables [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data type]] for us.
+   - ~let~ allows you to mutate (change) the variable:
+     #+begin_src javascript
+       let age = 30;
+       age = 31;
+     #+end_src
+   - ~const~ makes a variable immutable (unchangable):
+     #+begin_src javascript
+       const year = 2021;
+       // This would throw an error
+       year = 2022;
+     #+end_src
+     It is worth noting that when using const the variable has to be assigned a
+     value or JavaScript will throw an error about ~const~ missing a
+     declaration.
+   - ~var~ is more of a legacy feature of JavaScript and works pretty much the
+     same as ~let~:
+     #+begin_src javascript
+       var job = 'programmer';
+       job = 'teacher';
+     #+end_src
+     Usage of ~var~ should be mostly avoided as it is a legacy feature and has
+     mostly been replaced by ~let~.
+
+** TODO Operators
+   In JavaScript [[id:df70107c-3adf-4c58-987d-cf74be9e149f][operators]] are treated just like they are in most other
+   languages and JavaScript also suppports the ~++~ and ~--~ operators.
+
+   Operators allow us to change or work with values to put it simply. Lets at an
+   example of some simple math operators:
+   #+begin_src javascript
+     const now = 2037;
+     const ageJonas = now - 1991;
+     const ageSarah = now - 2018;
+     console.log(ageJonas, ageSarah);
+     // Prints: 46 19
+
+     console.log(ageJonas * 2, ageJonas / 10, 2 ** 3);
+     // Prints: 92 4.6 8
+     // 2 ** 3 means 2 to the power of 3
+
+     const firstName = 'Jonas';
+     const lastName = 'Cuomo';
+     console.log(firstName + ' ' + lastName);
+     // Prints: Jonas Cuomo
+   #+end_src
+
+   Now lets look at some assignment operators:
+   #+begin_src javascript
+     let x = 10 + 5; // 15
+     x += 10; // 25
+     x *= 4; // 100
+     x ++; // 101
+     x --; // 100
+   #+end_src
+
+   Lets also show some comparison operators:
+   #+begin_src javascript
+     console.log(ageJonas > ageSarah);
+     // Prints: true
+
+     console.log(ageSarah >= 18);
+     // Prints: true
+   #+end_src
+
+   *Tips*
+   - Here is a guide on operator precedence which describes the order in which
+     operators get executed when combined together in one statement:
+     [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence][Operator Precedence]].

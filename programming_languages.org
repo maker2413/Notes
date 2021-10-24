@@ -1,9 +1,9 @@
 :PROPERTIES:
 :ID:       94903e09-f03d-4b20-b2eb-1da7618282ee
 :END:
-#+title: ProgrammingLanguages
+#+title: Programming Languages
 #+created: [2021-10-15 Fri 22:35]
-#+last_modified: [2021-10-15 Fri 22:37:26]
+#+last_modified: [2021-10-24 Sun 14:19:54]
 
 Here are some of the programming languages I have covered:
 - [[id:a29e994c-1920-4ea6-8cfa-946c82e25429][JavaScript]]

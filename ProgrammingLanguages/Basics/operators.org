@@ -3,15 +3,21 @@
 :END:
 #+title: Operators
 #+created: [2021-10-17 Sun 15:30]
-#+last_modified: [2021-10-19 Tue 20:36:52]
+#+last_modified: [2021-10-24 Sun 20:37:05]
 #+filetags: ProgrammingLanguage Basics
 
-Operators are constructs that are defined with programming languages which
+Operators are constructs that are defined within programming languages which
 behave similar to [[id:0835ea0d-ca22-4d0c-97fb-9454087c6c78][Functions]], but differ syntacticaly. Common examples of
 operators include:
-- Arithmetic operations
-- Comparison operations
-- Logical operations
+- Arithmetic operations: (+, -, /, *, etc ...)
+- Comparison operations: (>, <, etc ...)
+- Logical operations: (AND, OR, NOT, etc ...)
+
+* Basic Examples
+  Lets go over some of the basic operators listed above:
+
+** Arithmetic Operators
+   Arithmetic operators are ...
 
 * TODO Reference
   https://en.wikipedia.org/wiki/Operator_(computer_programming)

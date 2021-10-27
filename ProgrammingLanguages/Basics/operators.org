@@ -3,18 +3,21 @@
 :END:
 #+title: Operators
 #+created: [2021-10-17 Sun 15:30]
-#+last_modified: [2021-10-26 Tue 19:23:29]
+#+last_modified: [2021-10-26 Tue 21:21:50]
 #+filetags: ProgrammingLanguage Basics
 
 Operators are constructs that are defined within programming languages which
-behave similar to [[id:0835ea0d-ca22-4d0c-97fb-9454087c6c78][Functions]], but differ syntacticaly. Common examples of
-operators include:
-- Arithmetic operations: (+, -, /, *, etc ...)
-- Comparison operations: (>, <, etc ...)
-- Logical operations: (AND, OR, NOT, etc ...)
+behave similar to [[id:0835ea0d-ca22-4d0c-97fb-9454087c6c78][Functions]], but differ syntacticaly in that you don't have to
+predefine the function.
 
 * Basic Examples
-  Lets go over some of the basic operators listed above:
+  Common examples of operators include:
+  - Arithmetic operations: (+, -, /, *, etc ...)
+  - Comparison operations: (>, <, etc ...)
+  - Logical operations: (AND, OR, NOT, etc ...)
+
+  These basic operators should be available to some extent in any programming
+  language.
 
 ** Arithmetic Operators
    In computer programming we often need to manipulate data doing mathematical
@@ -129,11 +132,11 @@ operators include:
    operators also come into play when we only want to execute our [[id:43a52c85-bd75-4092-be1c-fd10fefaf672][conditionals]]
    when our condition *isn't* true, this is the NOT logical operator. Lets look
    at some examples of logical operators:
-   | Operator | Description                       | Example           | Output |
-   |----------+-----------------------------------+-------------------+--------|
-   | ~&&~     | Checks if both opperands are true | (5 > 2)&&(5 == 2) | false  |
-   | ~||~     | Checks if one opperands is true   | (5 > 2)||(5 == 2) | true   |
-   | ~!~      | Negates logic of condition        | !(5 == 2)         | true   |
+   | Operator   | Description                       | Example                   | Output |
+   |------------+-----------------------------------+---------------------------+--------|
+   | ~&&~       | Checks if both opperands are true | (5 > 2)&&(5 == 2)         | false  |
+   | \vert\vert | Checks if one opperands is true   | (5 > 2)\vert\vert(5 == 2) | true   |
+   | ~!~        | Negates logic of condition        | !(5 == 2)                 | true   |
 
    Almost all programming languages support these logical operators and will
    almost always use the same syntax. Lets take a look at an example of these
@@ -146,10 +149,18 @@ operators include:
      if ( a && b ) {
         printf("This will never print because condition is false\n" );
      }
+
      if ( a || b ) {
         printf("This will be printed print because condition is true\n" );
      }
+
      if ( !(a && b) ) {
         printf("This will be printed print because condition is true\n" );
      }
    #+end_src
+
+* TODO Advanced Examples
+  Some of the more advanced examples of operators are:
+  - Assignment operators: (~=~, ~:=~, etc ...)
+  - Field access in record or object: (~.~)
+  - Scope resolution operator: (~::~, ~.~, etc ...)

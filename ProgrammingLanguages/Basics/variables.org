@@ -3,7 +3,7 @@
 :END:
 #+title: Variables
 #+created: [2021-10-17 Sun 11:38]
-#+last_modified: [2021-10-17 Sun 14:35:20]
+#+last_modified: [2021-10-27 Wed 01:07:04]
 #+filetags: ProgrammingLanguage Basics
 
 In programming when you want to store a value for future use in your program you
@@ -13,10 +13,10 @@ that point in memory when we need it.
 
 * Creating Variables
   Most programming languages follow one of two syntax. Some programming
-  langauges require you to define the [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][Data Type]] of your variable while other
-  programming languages can dynamically determine what [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][Data Type]] your variable
+  langauges require you to define the [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data type]] of your variable while other
+  programming languages can dynamically determine what [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data type]] your variable
   is and won't require you to define it. First lets look at some examples of how
-  to declare variables in languages that require you to define the [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][Data Type]] of
+  to declare variables in languages that require you to define the [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data type]] of
   the variable:
   - C:
     #+begin_src c
@@ -38,7 +38,7 @@ that point in memory when we need it.
     #+end_src
 
   Now lets looks at some examples of programming languages that dynamically set
-  the [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][Data Type]] of variables:
+  the [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data type]] of variables:
   - Bash:
     #+begin_src bash
       day=20;

@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       43a52c85-bd75-4092-be1c-fd10fefaf672
+:END:
+#+title: Conditionals
+#+created: [2021-10-26 Tue 18:45]
+#+last_modified: [2021-10-26 Tue 21:37:09]
+#+filetags: ProgrammingLanguage Basics
+
+In programming languages, conditionals (also known as conditional statements,
+conditional expressions, and conditional constructs), are how we handle
+decisions in our programs. Specifically, conditionals perform different
+operations based on whether a programmer defined condition evaluates to true or
+false.

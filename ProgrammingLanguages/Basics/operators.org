@@ -1,0 +1,166 @@
+:PROPERTIES:
+:ID:       df70107c-3adf-4c58-987d-cf74be9e149f
+:END:
+#+title: Operators
+#+created: [2021-10-17 Sun 15:30]
+#+last_modified: [2021-10-26 Tue 21:21:50]
+#+filetags: ProgrammingLanguage Basics
+
+Operators are constructs that are defined within programming languages which
+behave similar to [[id:0835ea0d-ca22-4d0c-97fb-9454087c6c78][Functions]], but differ syntacticaly in that you don't have to
+predefine the function.
+
+* Basic Examples
+  Common examples of operators include:
+  - Arithmetic operations: (+, -, /, *, etc ...)
+  - Comparison operations: (>, <, etc ...)
+  - Logical operations: (AND, OR, NOT, etc ...)
+
+  These basic operators should be available to some extent in any programming
+  language.
+
+** Arithmetic Operators
+   In computer programming we often need to manipulate data doing mathematical
+   calculations, or to put it more simple we use arithmetic operators to alter
+   data. Here are the basic forms of arithmetic operators:
+   | Operator | Description                              | Example     |
+   |----------+------------------------------------------+-------------|
+   | ~+~      | Adds to opperands                        | 5 + 2 = 7   |
+   | ~-~      | Subtracts second operrand from the first | 5 - 2 = 3   |
+   | ~*~      | Multiples both opperands                 | 5 * 2 = 10  |
+   | ~/~      | Divides numerator by de-numerator        | 5 / 2 = 2.5 |
+   | ~%~      | Gives the reminder of division           | 5 % 2 = 1   |
+
+   Almost all programming languages support these basic arithmetic operators and
+   will treat them the same as these are basic math concepts. Here is an example
+   of these operators in C:
+   #+begin_src c
+     int a = 10;
+     int b = 20;
+
+     int c = a + b;   
+     printf( "Value of c = %d\n", c);
+     // Prints: 30
+
+     c = a - b;   
+     printf( "Value of c = %d\n", c);
+     // Prints: -10
+
+     c = a * b;   
+     printf( "Value of c = %d\n", c);
+     // Prints: 200
+
+     c = b / a;   
+     printf( "Value of c = %d\n", c);
+     // Prints: 2
+
+     c = b % a;   
+     printf( "Value of c = %d\n", c);
+     // Prints: 0
+   #+end_src
+
+** Comparison Operators
+   Comparison operators are used to compare the contents of two values to put it
+   simply. Comparison operators are most commonly used when we are working with
+   [[id:43a52c85-bd75-4092-be1c-fd10fefaf672][conditionals]] to determine what step we want to take next with our program
+   based on the contents of our values. Comparison operators behind the scenes
+   give an output of a boolean [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data type]]. Here are the most basic forms of
+   comparison operators:
+   | Operator | Description                                | Example  | Output |
+   |----------+--------------------------------------------+----------+--------|
+   | ~==~     | Checks if the values are equal             | (5 == 2) | false  |
+   | ~!=~     | Checks if the values are *not* equal       | (5 != 2) | true   |
+   | ~>~      | Checks if left value is greater than right | (5 > 2)  | true   |
+   | ~<~      | Checks if left value is  than right        | (5 < 2)  | false  |
+   | ~>=~     | Greater than *or* equal to                 | (5 >= 2) | true   |
+   | ~<=~     | Less than *or* equal to                    | (5 <= 2) | false  |
+
+   Almost all programming languages have some support for these basic comparison
+   operators, although some may use different syntax. Here is an example of
+   these being used in C, however we will be using [[id:43a52c85-bd75-4092-be1c-fd10fefaf672][conditionals]] in this example
+   so if you are unfamiliar with the concept be sure to check that guide:
+   #+begin_src c
+     int a = 10;
+     int b = 20;
+
+     /* Here we check whether a is equal to 10 or not */
+     if( a == 10 ) {
+        /* if a is equal to 10 then this body will be executed */
+        printf( "a is equal to 10\n");
+     }
+
+     /* Here we check whether a and b are not equal */
+     if( a != b ) {
+        /* if a is not equal to b then this body will be executed */
+        printf( "a is not equal to b\n");
+     }
+
+     /* Here we check whether b is equal to 10 or not */
+     if( b == 10 ) {
+        /* if b is equal to 10 then this body will be executed */
+        printf( "b is equal to 10\n");
+     }
+
+     /* Here we check if a is greater then b or not */
+     if( a > b ) {
+        /* if a is greater than b then this body will be executed */
+        printf( "a is greater than b\n");
+     }
+
+     /* Here we check if a is less than b or not */
+     if( a < b ) {
+        /* if a is less than b then this body will be executed */
+        printf( "a is less than b\n");
+     }
+
+     /* Here we check if a is greater than or equal to b or not */
+     if( a >= b ) {
+        /* if a is greater than or equal to b then this body will be executed */
+        printf( "a is greater than or equal to b\n");
+     }
+
+     /* Here we check if a is less than or equal to b or not */
+     if( a <= b ) {
+        /* if a is less than or equal to b then this body will be executed */
+        printf( "a is less than or equal to b\n");
+     }
+   #+end_src
+
+** Logical Operators
+   Suppose we want to check for more than one condition in our [[id:43a52c85-bd75-4092-be1c-fd10fefaf672][conditionals]].
+   That is where logical operators come into play in our program. Logical
+   operators also come into play when we only want to execute our [[id:43a52c85-bd75-4092-be1c-fd10fefaf672][conditionals]]
+   when our condition *isn't* true, this is the NOT logical operator. Lets look
+   at some examples of logical operators:
+   | Operator   | Description                       | Example                   | Output |
+   |------------+-----------------------------------+---------------------------+--------|
+   | ~&&~       | Checks if both opperands are true | (5 > 2)&&(5 == 2)         | false  |
+   | \vert\vert | Checks if one opperands is true   | (5 > 2)\vert\vert(5 == 2) | true   |
+   | ~!~        | Negates logic of condition        | !(5 == 2)                 | true   |
+
+   Almost all programming languages support these logical operators and will
+   almost always use the same syntax. Lets take a look at an example of these
+   logical operators in C, we will be using [[id:43a52c85-bd75-4092-be1c-fd10fefaf672][conditionals]] in this example so if
+   you are unfamiliar with the concept check out that guide:
+   #+begin_src c
+     int a = 1;
+     int b = 0;
+
+     if ( a && b ) {
+        printf("This will never print because condition is false\n" );
+     }
+
+     if ( a || b ) {
+        printf("This will be printed print because condition is true\n" );
+     }
+
+     if ( !(a && b) ) {
+        printf("This will be printed print because condition is true\n" );
+     }
+   #+end_src
+
+* TODO Advanced Examples
+  Some of the more advanced examples of operators are:
+  - Assignment operators: (~=~, ~:=~, etc ...)
+  - Field access in record or object: (~.~)
+  - Scope resolution operator: (~::~, ~.~, etc ...)

@@ -1,0 +1,111 @@
+:PROPERTIES:
+:ID:       0835ea0d-ca22-4d0c-97fb-9454087c6c78
+:END:
+#+title: Functions
+#+created: [2021-10-19 Tue 20:34]
+#+last_modified: [2021-10-24 Sun 15:28:48]
+#+filetags: ProgrammingLanguage Basics
+
+In programming a function (also known as a subroutine) is a sequence of
+instructions that performs a specific task. To put that in simpler English:
+Functions are a block of code that does a specific task and can be called from
+elsewhere in your program whenever you need to execute said task. Functions can
+allow you to:
+- View your program as a bunch of sub-steps.
+- Reuse code instead of rewriting logic.
+- Keep variable namespace clean.
+  Variables defined in a function only exist during the duration of the function
+  executing.
+- Test small parts of our program in isolation from the rest of our program.
+
+* How to write a function
+  So like most things in programming any programming language can handle how
+  functions are defined differently. Some good general guidelines are that
+  programming languages will either have you define what [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data type]] your function
+  will return after it finishes executing or the programming language allows you
+  to define functions dynamically and will handle the information returned from
+  the funciton for you. Most programming languages will also have you define if
+  any [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data types]] get passed into your function for the function to use. Lets see
+  some exmaples of creating functions, we will first go over some languages that
+  require you to define the [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data type]] the function will return:
+  - C:
+    #+begin_src c
+      void greeting (string name) {
+        printf("Hello %s!", name);
+      }
+    #+end_src
+  - Java:
+    #+begin_src java
+      public class Main {
+        static void greeting(String name) {
+          System.out.println("Hello " + name + "!");
+        }
+      }
+    #+end_src
+
+  Now lets looks at some examples of programming languages that let you
+  dynamically create functions:
+  - Bash:
+    #+begin_src bash
+      greeting() {
+        echo "Hello $1!";
+      }
+    #+end_src
+  - Python:
+    #+begin_src python
+      def greeting(name) {
+        print("Hello " + name + "!")
+      }
+    #+end_src
+
+* How to call a function
+  To call a function and execute it in most programming languages you just call
+  the name of the function and pass it any [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data types]] it is expecting if it is
+  expecting any input variables. It is important to note that in some
+  programming languages a function has to be defined before it can be called so
+  the function should be placed above the line where you are calling it in the
+  file. Some programming languages don't require you to define the input data
+  for the function and will allow you to dynamically pass in arguments. Lets
+  look at how to call the functions we defined above:
+  - C:
+    #+begin_src c
+      void greeting (string name) {
+        printf("Hello %s!", name);
+      }
+
+      int main() {
+        greeting("Maker");
+      }
+    #+end_src
+  - Java:
+    #+begin_src java
+      public class Main {
+        static void greeting(String name) {
+          System.out.println("Hello " + name + "!");
+        }
+
+        public static void main(String[] args) {
+          greeting("Maker");
+        }
+      }
+    #+end_src
+  - Python:
+    #+begin_src python
+      def greeting(name) {
+        print("Hello " + name + "!")
+      }
+
+      greeting("Maker");
+    #+end_src
+
+  Bash is one of those languages that doesn't require you to define the input
+  arguments for your function. Lets see how to call the bash function we defined
+  above:
+  - Bash:
+    #+begin_src bash
+      greeting() {
+        echo "Hello $1!";
+      }
+
+      greeting("Maker");
+    #+end_src

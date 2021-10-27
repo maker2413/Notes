@@ -1,0 +1,97 @@
+:PROPERTIES:
+:ID:       2f7bedf9-adcd-4c8c-a26f-47282f8f4ad0
+:END:
+#+title: Variables
+#+created: [2021-10-17 Sun 11:38]
+#+last_modified: [2021-10-17 Sun 14:35:20]
+#+filetags: ProgrammingLanguage Basics
+
+In programming when you want to store a value for future use in your program you
+store it in what is called a variable. Under the hood a variable is just a name
+give to a specific point in the computers memory that allows us to reference
+that point in memory when we need it.
+
+* Creating Variables
+  Most programming languages follow one of two syntax. Some programming
+  langauges require you to define the [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][Data Type]] of your variable while other
+  programming languages can dynamically determine what [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][Data Type]] your variable
+  is and won't require you to define it. First lets look at some examples of how
+  to declare variables in languages that require you to define the [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][Data Type]] of
+  the variable:
+  - C:
+    #+begin_src c
+      int day = 20;
+      string month = "October";
+      int year = 2052;
+
+      char firstInitial = 'E';
+      char lastInitial = 'P';
+    #+end_src
+  - Java:
+    #+begin_src java
+      int day = 20;
+      String month = "October";
+      int year = 2052;
+
+      char firstInitial = 'E';
+      char lastInitial = 'P';
+    #+end_src
+
+  Now lets looks at some examples of programming languages that dynamically set
+  the [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][Data Type]] of variables:
+  - Bash:
+    #+begin_src bash
+      day=20;
+      month="October";
+      year=2052;
+
+      firstInitial='E';
+      lastInitial='P';
+    #+end_src
+  - Python:
+    #+begin_src python
+      day = 20
+      month = "October"
+      year = 2052
+
+      firstInitial = 'E'
+      lastInitial = 'P'
+    #+end_src
+
+* Using Variables
+  Now that we have learned how to create variables lets actually use them in our
+  programs. In most programming languages you can access the value of a variable
+  by either calling it's name outright or by using a ~$~ in front of the
+  variable name. Lets see some examples:
+  - Bash:
+    #+begin_src bash
+      x=5;
+      y=$(($x+5));
+
+      echo "$y";
+      # Prints: 10
+    #+end_src
+  - C:
+    #+begin_src c
+      int x = 5;
+      int y = x + 5;
+
+      printf("%d", y);
+      // Prints: 10
+    #+end_src
+  - Java:
+    #+begin_src java
+      int x = 5;
+      int y = x + 5;
+
+      system.out.println(y);
+      // Prints: 10
+    #+end_src
+  - Python:
+    #+begin_src python
+      x = 5
+      y = x + 5
+
+      print(y)
+      # Prints: 10
+    #+end_src

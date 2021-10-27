@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-      - org-roam
 
 env:
   AWS_DEFAULT_REGION: us-west-2

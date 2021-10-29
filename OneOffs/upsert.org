@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       ecc4defd-2b7e-4577-97b0-c952833cfcb9
+:END:
+#+title: Upsert
+#+created: [2021-10-28 Thu 14:21]
+#+last_modified: [2021-10-28 Thu 14:23:04]
+#+filetags: OneOff
+
+~upsert~ I believe comes from the mysql world is, from what I understand, a
+mashup of ~insert~ and ~delete~. Instead of deleting a record and then inserting
+the new value you want you can run an ~upsert~ which will update the record if
+it exists and insert it if its doesn't currently exist. ~upsert~ is used as a
+term outside of mysql now like Kapp from the k14s suite.

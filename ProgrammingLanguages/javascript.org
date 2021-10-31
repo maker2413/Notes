@@ -3,7 +3,7 @@
 :END:
 #+title: JavaScript
 #+created: [2021-10-15 Fri 22:36]
-#+last_modified: [2021-10-24 Sun 04:55:42]
+#+last_modified: [2021-10-31 Sun 04:48:17]
 #+filetags: ProgrammingLanguage JavaScript
 
 Javascript is a high-level, object-oriented, multi-paradigm programming
@@ -117,7 +117,7 @@ guide:
    languages and JavaScript also suppports the ~++~ and ~--~ operators.
 
    Operators allow us to change or work with values to put it simply. Lets at an
-   example of some simple math operators:
+   example of some simple arithmetic operators:
    #+begin_src javascript
      const now = 2037;
      const ageJonas = now - 1991;
@@ -157,3 +157,59 @@ guide:
    - Here is a guide on operator precedence which describes the order in which
      operators get executed when combined together in one statement:
      [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence][Operator Precedence]].
+
+** Functions
+   In JavaScript [[id:0835ea0d-ca22-4d0c-97fb-9454087c6c78][functions]] work pretty standard to most other programming
+   languages. Please refer to the [[id:0835ea0d-ca22-4d0c-97fb-9454087c6c78][functions]] guide if you are unfamiliar with the
+   concept of functions. JavaScript does not require us to define a return type
+   for our functions as JavaScript is a dynamic type language. In JavaScript we
+   also don't have to define a [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data type]] for any arguments we assign to our
+   functions. It is important to note that we define functions with the
+   ~function~ keyword in JavaScript. Lets look at some examples of functions in
+   JavaScript:
+   #+begin_src javascript
+     function fullName (first, last) {
+       console.log(first, last);
+       return first + last;
+     }
+
+     console.log(fullName('Jonas', 'Cuomo'));
+     // Prints: Jonas Cuomo
+   #+end_src
+
+   You will notice that we can also nest functions which will use the output of
+   the inner function as an input argument for the outter function. In this case
+   I am referring to how we nested our call to the ~fullName~ function in
+   ~console.log~. ~console.log~ is a built in [[id:df70107c-3adf-4c58-987d-cf74be9e149f][operator]] in JavaScript, which
+   although isn't technically a function it can be thought of as one. Refer to
+   my [[id:df70107c-3adf-4c58-987d-cf74be9e149f][operators]] guide for a more indepth look at what operators are and they
+   differ from functions.
+
+*** Expression Functions
+    The example covered above is what is known as a "declaration" function in
+    JavaScript. This is probably the most standard way of defining a function in
+    JavaScript, however it is not the only way. We can also define an
+    "expression" function. An expression function is very similar in concept and
+    even follows all the same rules mentioned above, however we assign the
+    function definition to a variable and then call the function by the variable
+    name. This sounds confusing so lets look at an example:
+    #+begin_src javascript
+      const fullName = function (first, last) {
+        console.log(first, last);
+        return first + last;
+      }
+
+      console.log(fullName('Jonas', 'Cuomo'));
+      // Prints: Jonas Cuomo
+    #+end_src
+
+    Although this may look weird it is important to learn as sometimes we will
+    be required to create expression functions. The reason this work in
+    JavaScript is because in JavaScript functions are just a value so we can
+    assign them to a variable like we would any other value. This will become
+    important later as we dive deeper into funcitons.
+
+    One important difference to note between declaration functions and
+    expression functions is that we can actually call declaration functions
+    before they have been defined whereas with expression functions we have to
+    have defined the function in our code before we can call it.

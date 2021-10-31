@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       945b2c5e-b0cb-42f4-b833-5a7b54446fe6
+:END:
+#+title: Docker
+#+created: [2021-10-31 Sun 17:06]
+#+last_modified: [2021-10-31 Sun 17:24:49]
+#+filetags: Tool
+
+* References
+  - https://www.ctl.io/developers/blog/post/dockerfile-entrypoint-vs-cmd/

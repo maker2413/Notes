@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       a67cff5b-1fc5-4ed4-8daa-dede88c97261
+:END:
+#+title: OneOffs
+#+created: [2021-10-31 Sun 17:22]
+#+last_modified: [2021-10-31 Sun 17:23:01]
+
+One offs are simple notes I have made that aren't fleshed out enough to be a
+full guide. Here are some of the topics I have one-offs of so far:
+- [[id:ecc4defd-2b7e-4577-97b0-c952833cfcb9][Upsert]]

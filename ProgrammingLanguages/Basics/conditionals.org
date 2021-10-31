@@ -3,7 +3,7 @@
 :END:
 #+title: Conditionals
 #+created: [2021-10-26 Tue 18:45]
-#+last_modified: [2021-10-26 Tue 21:37:09]
+#+last_modified: [2021-10-31 Sun 16:49:38]
 #+filetags: ProgrammingLanguage Basics
 
 In programming languages, conditionals (also known as conditional statements,
@@ -11,3 +11,88 @@ conditional expressions, and conditional constructs), are how we handle
 decisions in our programs. Specifically, conditionals perform different
 operations based on whether a programmer defined condition evaluates to true or
 false.
+
+* If/Else
+  :PROPERTIES:
+  :ID:       2d3d01d4-07af-4511-a3c4-f246659a0d23
+  :END:
+  The most basic form of conditionals is the ~if~ statement. Almost every
+  programming language has some form of ~if~ statement. We use ~if~ statements
+  to execute a block of code "if" a definded condition is true for our program.
+  Most programming languages use the almost same syntax for ~if~ statements,
+  lets look at some examples:
+  - Bash:
+    #+begin_src bash
+      if [[ $NUM -gt 10 ]]
+      then
+         echo "$NUM is greater than 10."
+      fi
+    #+end_src
+  - C:
+    #+begin_src c
+      if (num > 10) {
+        printf("%d is greater than 10.", num);
+      }
+    #+end_src
+  - Java:
+    #+begin_src java
+      if (num > 10) {
+        system.out.println(num + 'is greater than 10.');
+      }
+    #+end_src
+  - Python:
+    #+begin_src python
+      if num > 10:
+        print(num + "is greater than 10.");
+    #+end_src
+
+    The other half of an if/else statement is the ~else~ statement. We use
+    ~else~ to define what we want our program to execute if we didn't fulfill
+    the condition of our ~if~ statement. Most programming languages also support
+    an ~elseif~ statement. An ~elseif~ statement is essentially followup if
+    statements we want to check for before falling back on our ~else~
+    statement. Lets add some ~elseif~ and ~else~ statements to our examples
+    above:
+  - Bash:
+    #+begin_src bash
+      if [[ $NUM -gt 10 ]]
+      then
+        echo "$NUM is greater than 10."
+      elif [[ $NUM -lt 10 ]]
+      then
+        echo "$NUM is less than 10."
+      else
+        echo "$NUM is 10."
+      fi
+    #+end_src
+  - C:
+    #+begin_src c
+      if (num > 10) {
+        printf("%d is greater than 10.", num);
+      }
+      else if (num < 10) {
+        printf("%d is less than 10.", num);
+      }
+      else {
+        printf("%d is 10.", num);
+      }
+    #+end_src
+  - Java:
+    #+begin_src java
+      if (num > 10) {
+        system.out.println(num + 'is greater than 10.');
+      } else if (num < 10) {
+        System.out.println(num + 'is less than 10.');
+      } else {
+        System.out.println(num + 'is 10.');
+      }
+    #+end_src
+  - Python:
+    #+begin_src python
+      if num > 10:
+        print(num + "is greater than 10.");
+      elif num < 10:
+        print(num + "is less than 10.");
+      else:
+        print(num + "is 10.");
+    #+end_src

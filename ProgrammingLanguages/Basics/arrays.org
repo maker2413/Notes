@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       6f7860bc-25cd-4712-aeeb-1bef8cc5f62e
+:END:
+#+title: Arrays
+#+created: [2021-10-31 Sun 17:03]
+#+last_modified: [2021-10-31 Sun 17:04:04]
+#+filetags: ProgrammingLanguage Basics
+

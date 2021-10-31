@@ -3,7 +3,7 @@
 :END:
 #+title: Variables
 #+created: [2021-10-17 Sun 11:38]
-#+last_modified: [2021-10-27 Wed 01:07:04]
+#+last_modified: [2021-10-31 Sun 16:48:41]
 #+filetags: ProgrammingLanguage Basics
 
 In programming when you want to store a value for future use in your program you
@@ -84,7 +84,7 @@ that point in memory when we need it.
       int x = 5;
       int y = x + 5;
 
-      system.out.println(y);
+      System.out.println(y);
       // Prints: 10
     #+end_src
   - Python:

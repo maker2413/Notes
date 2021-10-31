@@ -3,7 +3,7 @@
 :END:
 #+title: JavaScript
 #+created: [2021-10-15 Fri 22:36]
-#+last_modified: [2021-10-31 Sun 04:48:17]
+#+last_modified: [2021-10-31 Sun 10:18:07]
 #+filetags: ProgrammingLanguage JavaScript
 
 Javascript is a high-level, object-oriented, multi-paradigm programming
@@ -213,3 +213,15 @@ guide:
     expression functions is that we can actually call declaration functions
     before they have been defined whereas with expression functions we have to
     have defined the function in our code before we can call it.
+
+*** Arrow Functions
+    JavaScript also has a form of functions called "arrow" functions. Arrow
+    functions behave just like expression functions, but are much easier and
+    quicker to write. We wirte arrow functions with: ~=>~ and with arrow
+    functions a return statement is assumed. Lets take a look at how we would
+    write our above examples as an arrow function:
+    #+begin_src javascript
+      const fullName = (first, last) => first + last;
+
+      console.log(fullName('Jonas', 'Cuomo'));
+    #+end_src

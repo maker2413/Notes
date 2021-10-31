@@ -25,11 +25,12 @@ jobs:
 
       - name: Run Container
         run: |
-          docker run --rm -v $(pwd):/opt/OrgFiles $DOCKER_IMAGE:$DOCKER_TAG
+          docker run --rm -v $(pwd):/opt/OrgFiles $DOCKER_IMAGE:$DOCKER_TAG \
+          ./OrgFiles/publish.el
 
       - name: Upload to S3
         run: |
-          aws s3 cp web-site s3://$BUCKET_NAME/ --recursive
+          aws s3 cp WebSite s3://$BUCKET_NAME/ --recursive
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

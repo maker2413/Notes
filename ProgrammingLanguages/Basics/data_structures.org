@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       9fcbd1ea-5bc4-4d0b-a69f-c84d43281f24
+:END:
+#+title: Data Structures
+#+created: [2021-10-31 Sun 20:17]
+#+last_modified: [2021-10-31 Sun 20:17:56]
+#+filetags: ProgrammingLanguage Basics
+
+* TODO Describe Data Structures
+  - [[id:6f7860bc-25cd-4712-aeeb-1bef8cc5f62e][Arrays]]

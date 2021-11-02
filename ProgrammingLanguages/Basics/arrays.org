@@ -3,6 +3,9 @@
 :END:
 #+title: Arrays
 #+created: [2021-10-31 Sun 17:03]
-#+last_modified: [2021-10-31 Sun 17:04:04]
+#+last_modified: [2021-11-01 Mon 23:47:22]
 #+filetags: ProgrammingLanguage Basics
 
+In programming an array is a [[id:9fcbd1ea-5bc4-4d0b-a69f-c84d43281f24][data structure]] of a collection of elements each
+identified by an array index. Arrays allow us to store multiple items of the
+same type together.

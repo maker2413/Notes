@@ -3,7 +3,7 @@
 :END:
 #+title: JavaScript
 #+created: [2021-10-15 Fri 22:36]
-#+last_modified: [2021-10-31 Sun 10:18:07]
+#+last_modified: [2021-11-03 Wed 22:28:40]
 #+filetags: ProgrammingLanguage JavaScript
 
 Javascript is a high-level, object-oriented, multi-paradigm programming
@@ -112,7 +112,7 @@ guide:
      Usage of ~var~ should be mostly avoided as it is a legacy feature and has
      mostly been replaced by ~let~.
 
-** TODO Operators
+** Operators
    In JavaScript [[id:df70107c-3adf-4c58-987d-cf74be9e149f][operators]] are treated just like they are in most other
    languages and JavaScript also suppports the ~++~ and ~--~ operators.
 
@@ -207,7 +207,7 @@ guide:
     be required to create expression functions. The reason this work in
     JavaScript is because in JavaScript functions are just a value so we can
     assign them to a variable like we would any other value. This will become
-    important later as we dive deeper into funcitons.
+    important later as we dive deeper into functions.
 
     One important difference to note between declaration functions and
     expression functions is that we can actually call declaration functions

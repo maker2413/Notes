@@ -19,14 +19,10 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
 
-      - name: Pull Image
-        run: |
-          docker pull $DOCKER_IMAGE:$DOCKER_TAG
-
-      - name: Run Container
-        run: |
-          docker run --rm -v $(pwd):/opt/OrgFiles $DOCKER_IMAGE:$DOCKER_TAG \
-          ./OrgFiles/publish.el
+      - name: Publish Org Files
+        uses: maker2413/OrgRoamPublish@38e421dac721e2abcc10363fc1db04f87ddc8a48
+        with:
+          args: publish.el
 
       - name: Upload to S3
         run: |

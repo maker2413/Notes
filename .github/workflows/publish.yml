@@ -20,9 +20,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Publish Org Files
-        uses: maker2413/OrgRoamPublish@b5f061d178d7db3fcf7146d540dd7d4a8a59005a
+        uses: maker2413/OrgRoamPublish@f9bb2ff3f307cb2ce3fd186dcdef86ec74fa6bbe
         with:
-          args: publish.el
+          publish_script: publish.el
 
       - name: Upload to S3
         run: |

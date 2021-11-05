@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Publish Org Files
-        uses: maker2413/OrgRoamPublish@38e421dac721e2abcc10363fc1db04f87ddc8a48
+        uses: maker2413/OrgRoamPublish@b5f061d178d7db3fcf7146d540dd7d4a8a59005a
         with:
           args: publish.el
 

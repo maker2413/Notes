@@ -1,5 +1,7 @@
 (package-initialize)
 
+(load "/opt/install.el")
+
 (require 'use-package)
 (use-package org-roam
   :ensure t

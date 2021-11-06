@@ -1,8 +1,7 @@
 (package-initialize)
 
-(load "/opt/install.el")
-
 (require 'use-package)
+
 (use-package org-roam
   :ensure t
   :init
@@ -17,20 +16,49 @@
 (require 'htmlize)
 (require 'ox-publish)
 
+;; Configure Packages
+(setq-default indent-tabs-mode nil)
+(setq tab-width 2)
+(setq c-basic-offset 2)
+(setq sh-basic-offset 2)
+(add-hook 'python-mode-hook
+          (lambda()
+            (setq tab-width 2)
+            (setq py-indent-offset 2)))
+
+;; Set Defaults
+(setq base-dir "/opt/OrgFiles")
+(setq output-dir "/opt/OrgFiles/WebSite")
+
+(setq maker/header "
+<link rel='stylesheet' type='text/css' href='/css/style.css'/>")
+
 (setq org-id-extra-files (org-roam-list-files))
 
 ;; Define the publishing project
 (setq org-publish-project-alist
-      (list
-       (list "org-files"
-             :recursive t
-             :base-directory "/opt/OrgFiles"
-             :exclude ".*[Tt]emplates/.*\\|.*[Pp]rojects/.*\\|.*[Dd]ailies/.*"
-             :html-validation-link nil             ;; Dont show validation link
-             :publishing-directory "/opt/OrgFiles/WebSite"
-             :publishing-function 'org-html-publish-to-html
-             :section-numbers nil                  ;; Don't show section numbers
-             :with-author nil)))                   ;; Don't show author
+      `(("org-files"
+         :base-directory ,base-dir
+         :base-extension "org"
+         :exclude ".*[Tt]emplates/.*\\|.*[Pp]rojects/.*\\|.*[Dd]ailies/.*\\|WebSite/.*"
+         :html-doctype "html5"
+         :html-head-extra ,maker/header
+         :html-head-include-default-style nil
+         :html-validation-link nil
+         :publishing-directory ,output-dir
+         :publishing-function org-html-publish-to-html
+         :section-numbers nil
+         :recursive t
+         :with-author nil)
+        ("css"
+         :base-directory ,base-dir
+         :base-extension "css"
+         :exclude "WebSite/.*"
+         :publishing-directory ,output-dir
+         :publishing-function org-publish-attachment
+         :recursive t)
+        ("website"
+         :components ("org-files" "css"))))
 
 ;; Generate the site output
 (org-publish-all t)

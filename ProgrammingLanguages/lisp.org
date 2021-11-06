@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       85dcb828-5822-4d77-a826-e276d6c5e007
+:END:
+#+title: Lisp
+#+created: [2021-11-06 Sat 06:01]
+#+last_modified: [2021-11-06 Sat 06:04:10]
+#+filetags: ProgrammingLanguage
+
+PARENTHESES

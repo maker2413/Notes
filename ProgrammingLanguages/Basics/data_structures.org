@@ -11,3 +11,9 @@ data so that it can be managed and efficiently used.
 
 * TODO Describe Data Structures
   - [[id:6f7860bc-25cd-4712-aeeb-1bef8cc5f62e][Arrays]]
+  - Linked Lists
+  - Graphs
+  - Maps
+  - Hashmaps
+  - So many kinds of tree
+  - Strings (YES EVEN STRINGS)

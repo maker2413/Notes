@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       d18ed6e8-dbce-4822-9d3f-3de38246ba38
+:END:
+#+title: Emacs
+#+created: [2021-11-06 Sat 07:48]
+#+last_modified: [2021-11-06 Sat 07:48:59]
+#+filetags: Tool
+
+Its a great operating system with a built in text editor.

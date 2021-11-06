@@ -3,12 +3,12 @@
 :END:
 #+title: ELisp
 #+created: [2021-11-06 Sat 05:31]
-#+last_modified: [2021-11-06 Sat 06:08:21]
+#+last_modified: [2021-11-06 Sat 07:49:34]
 #+filetags: ProgrammingLanguage
 
 ELisp, or Emacs Lisp, is the programming language used to configure and extend
-functionality in [[id:2fb29a49-7725-441b-885e-92e22ebe5344][Emacs]]. ELisp is built off of [[id:85dcb828-5822-4d77-a826-e276d6c5e007][Lisp]] and shares much of the
-syntax. ELisp was made specifically for the purpose of extending [[id:2fb29a49-7725-441b-885e-92e22ebe5344][Emacs]]. Much of
-the [[id:2fb29a49-7725-441b-885e-92e22ebe5344][Emacs]] source code is written in ELisp. Some of the low level functionality
+functionality in [[id:d18ed6e8-dbce-4822-9d3f-3de38246ba38][Emacs]]. ELisp is built off of [[id:85dcb828-5822-4d77-a826-e276d6c5e007][Lisp]] and shares much of the
+syntax. ELisp was made specifically for the purpose of extending [[id:d18ed6e8-dbce-4822-9d3f-3de38246ba38][Emacs]]. Much of
+the [[id:d18ed6e8-dbce-4822-9d3f-3de38246ba38][Emacs]] source code is written in ELisp. Some of the low level functionality
 is built in C (like the interpreter for ELisp), but most of the built in
 libraries and functions are written in ELisp.

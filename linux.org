@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       8f8d4797-dca7-4e7f-afcb-b12fa196d412
+:END:
+#+title: Linux
+#+created: [2021-11-08 Mon 19:49]
+#+last_modified: [2021-11-08 Mon 19:50:24]
+
+* LS
+  Here is some more information on ls -lah since you asked Carrie: So the -lah bit
+  is actually 3 separate flags we are giving the ls command and if you wanted to
+  see what each of those does you can run ls --help to see the help menu for ls:
+  <see attached screenshot>
+
+  For a brief description though the -l flag gives a longer output to ls and will
+  show things like permissions, who owns them, and file size for the files and
+  directories output. The -a flag will show all the files and directories (this
+  includes files and directories that begin with . as these are normally hidden
+  from output). And finally the -h flag provides headers at the top of the output,
+  these are essentially just to make the output prettier.
+
+  The only other thing worth noting are that ls -lah is the same as typing ls -a
+  -l -h or ls -ahl . In bash or zsh (the default shell on Mac) you can pass flags
+  to a command in any order or even multiple chained together like ls -l -a -h and
+  if you are ever curious about the flags on a command most commands will show a
+  help menu when you type --help ie:  ls --help , although this isn’t always the
+  case and in cases like that you can read the manual for the command in question
+  with man ie: man ls.

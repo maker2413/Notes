@@ -2,6 +2,9 @@
 
 (require 'use-package)
 
+(use-package htmlize
+  :ensure t)
+
 (use-package org-roam
   :ensure t
   :init
@@ -13,8 +16,11 @@
   :config
   (org-roam-setup))
 
-(require 'htmlize)
+(require 'ox-html)
 (require 'ox-publish)
+
+;; Don't create backup files (those ending with ~) during the publish process.
+(setq make-backup-files nil)
 
 ;; Configure Packages
 (setq-default indent-tabs-mode nil)
@@ -59,6 +65,20 @@
          :recursive t)
         ("website"
          :components ("org-files" "css"))))
+
+;; Overwrite default HTML output template
+;; (eval-after-load "ox-html"
+;;   '(defun org-html-template (contents info)
+;;      (concat (org-html-doctype info)
+;;              "<html lan=\"en\">
+;;                 <head>"
+;;              (org-html--build-meta-info info)
+;;              (org-html--build-head info)
+;;              (org-html--build-mathjax-config info)
+;;              "</head>
+;;               <body>"
+;;              "<div class='note-container'>"
+;;              )))
 
 ;; Generate the site output
 (org-publish-all t)

@@ -3,7 +3,7 @@
 :END:
 #+title: JavaScript
 #+created: [2021-10-15 Fri 22:36]
-#+last_modified: [2021-11-03 Wed 22:28:40]
+#+last_modified: [2021-11-11 Thu 23:59:55]
 #+filetags: ProgrammingLanguage JavaScript
 
 Javascript is a high-level, object-oriented, multi-paradigm programming
@@ -225,3 +225,40 @@ guide:
 
       console.log(fullName('Jonas', 'Cuomo'));
     #+end_src
+
+** TODO Data Structures
+   In JavaScript we have many [[id:9fcbd1ea-5bc4-4d0b-a69f-c84d43281f24][data structures]] available to us to use in our
+   programs. The simplest of these are [[id:6f7860bc-25cd-4712-aeeb-1bef8cc5f62e][arrays]].
+
+*** TODO Arrays
+    Arrays in JavaScript follow a fairly standard syntax to most dynamic
+    programming languages. Lets look at an example:
+    #+begin_src javascript
+      // Literal syntax:
+      const friends = ['John', 'Jacob', 'Jingle'];
+      console.log(friends);
+      // Prints: ['John', 'Jacob', 'Jingle']
+
+      console.log(friends[1]);
+      // Prints: Jacob
+      console.log(friends[friends.length - 1]);
+      // Prints: Jingle
+
+      friends[2] = 'Jay';
+      console.log(friends);
+      // Prints: ['John', 'Jacob', 'Jay']
+      // TODO: Even though array was declared with const entries can be updated. More on this later
+
+      // Using new keyword:
+      const friends = new Array('John', 'Jacob', 'Jingle');
+      console.log(friends);
+      // Prints: ['John', 'Jacob', 'Jingle']
+    #+end_src
+
+* TODO What's next
+  Well now we have covered the absolute basics of JavaScript and many basic
+  topics of programming as a whole. Lets now finally dive into some of the meat
+  of the JavaScript programming language. Here are some of the topics I have
+  covered, if JavaScript is completely new to you I would suggest going through
+  them in the order listed:
+  - [[id:8d2ac1dc-17ab-4fc5-8792-11042f900f42][DOM and Events]]

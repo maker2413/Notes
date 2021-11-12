@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       8d2ac1dc-17ab-4fc5-8792-11042f900f42
+:END:
+#+title: DOM and Events
+#+created: [2021-11-11 Thu 23:42]
+#+last_modified: [2021-11-12 Fri 00:11:56]
+#+filetags: ProgrammingLanguage JavaScript
+
+When working with JavaScript you may encounter people or websites mentioning the
+DOM, you may ask yourself "what is DOM in JavaScript?". DOM stands for: Document
+Object Model. The DOM is basically a structured representation of HTML
+documents. This allows us to use JavaScript to access elements and styles of our
+HTML document and to manipulate them.
+
+It is important to note that DOM is not part of JavaScript as JavaScript is part
+of the ECMA script dialect. The DOM and the DOM methods are actually part of Web
+APIs. These APIs are provided by the web browsers that we know and love ie:
+Chrome, Safari, FireFox, and others.
+
+* TODO Events
+  Events are triggered when something happens on the page and allow us to write
+  JavaScript code that will fire when certain events happen on our page.

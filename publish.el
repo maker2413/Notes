@@ -40,6 +40,7 @@
 (setq maker/header "
 <link rel='stylesheet' type='text/css' href='/css/style.css'/>
 <script src='/js/script.js'></script>
+<script src='/js/URI.js'></script>
 ")
 
 (setq org-id-extra-files (org-roam-list-files))
@@ -85,6 +86,7 @@
              (org-html--build-mathjax-config info)
              "</head>\n"
              "<body>\n"
+             "<div class='notes'>\n"
              "<div class='note'>\n"
              ;; Document contents.
              (let ((div (assq 'content (plist-get info :html-divs))))
@@ -111,6 +113,7 @@
                       "")))))
              contents
              (format "</%s>\n" (nth 1 (assq 'content (plist-get info :html-divs))))
+             "</div>\n"
              "</div>\n"
              ;; Postamble.
              (org-html--build-pre/postamble 'postamble info)

@@ -1,8 +1,8 @@
 'use strict';
 
 let pages = [window.location.pathname];
-// console.log(notes);
-// console.log(window.location);
+let switchDirectionWindowWidth = 900;
+let animationLength = 200;
 
 function stackPage(link, level) {
   level = Number(level) || pages.length;
@@ -27,12 +27,12 @@ function unstackPages(level) {
 }
 
 function updateLinkStatuses() {
-  let links = Array.prototype.slice.call(document.querySelectorAll("a"));
+  let links = Array.prototype.slice.call(document.querySelectorAll('a'));
   links.forEach(function (e) {
-    if (pages.indexOf(e.getAttribute("href")) > -1) {
-      e.classList.add("active");
+    if (pages.indexOf(e.getAttribute('href')) > -1) {
+      e.classList.add('active');
     } else {
-      e.classList.remove("active");
+      e.classList.remove('active');
     }
   });
 }
@@ -52,6 +52,18 @@ function fetchPage(link, level) {
       let el = template.content.querySelector('.note');
       container.appendChild(el);
       stackPage(link, level);
+
+      setTimeout(
+        function (el, level) {
+          el.dataset.level = level + 1;
+          initializePage(el, level + 1);
+          el.scrollIntoView();
+          if (window.MathJax) {
+            window.MathJax.typeset();
+          }
+        }.bind(null, el, level),
+        10
+      );
     });
 }
 
@@ -89,11 +101,10 @@ function initializePage(note, level) {
       }
       updateLinkStatuses();
     }
-    // console.log(template.content.querySelector('.note').outerHTML);
   })
 }
 
-window.addEventListener("popstate", function (event) {
+window.addEventListener('popstate', function (event) {
   // TODO: check state and pop pages if possible, rather than reloading.
   window.location = window.location; // this reloads the page.
 });

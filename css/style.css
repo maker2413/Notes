@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
   font-family: "Inter", sans-serif;
   display: flex;
   flex-flow: column;
@@ -27,6 +26,10 @@ body {
   overflow-y: auto;
   vertical-align: top;
   box-sizing: border-box;
+}
+
+.content {
+  padding: 24px;
 }
 
 a {

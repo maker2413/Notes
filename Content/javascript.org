@@ -3,7 +3,7 @@
 :END:
 #+title: JavaScript
 #+created: [2021-10-15 Fri 22:36]
-#+last_modified: [2021-11-11 Thu 23:59:55]
+#+last_modified: [2021-11-22 Mon 15:34:09]
 #+filetags: ProgrammingLanguage JavaScript
 
 Javascript is a high-level, object-oriented, multi-paradigm programming
@@ -247,7 +247,9 @@ guide:
       friends[2] = 'Jay';
       console.log(friends);
       // Prints: ['John', 'Jacob', 'Jay']
-      // TODO: Even though array was declared with const entries can be updated. More on this later
+
+      // TODO: Even though array was declared with const entries can be updated.
+      // More on this later
 
       // Using new keyword:
       const friends = new Array('John', 'Jacob', 'Jingle');

@@ -3,7 +3,7 @@
 
 *Disclaimer*
 My old notes were not designed for this website and don't link properly. These
-notes can best be viewed at my [[https://www.github.com/maker2413/Notes/Content/LegacyNotes/][GitHub]]. In the long term these notes will be
+notes can best be viewed at my [[https://github.com/maker2413/Notes/tree/master/Content/LegacyNotes][GitHub]]. In the long term these notes will be
 converted into my new notes layout and this directory won't exist so this is a
 temporary work around.
 

@@ -35,6 +35,7 @@
 
 ;; Set Defaults
 (setq base-dir "/opt/OrgFiles")
+(setq notes-dir (concat base-dir "/Content"))
 (setq output-dir "/opt/OrgFiles/WebSite")
 
 (setq maker/header "
@@ -47,8 +48,8 @@
 
 ;; Define the publishing project
 (setq org-publish-project-alist
-      `(("org-files"
-         :base-directory ,base-dir
+      `(("org-notes"
+         :base-directory ,notes-dir
          :base-extension "org"
          :exclude ".*[Tt]emplates/.*\\|.*[Pp]rojects/.*\\|.*[Dd]ailies/.*\\|WebSite/.*"
          :html-doctype "html5"
@@ -69,7 +70,7 @@
          :publishing-function org-publish-attachment
          :recursive t)
         ("website"
-         :components ("org-files" "css"))))
+         :components ("org-notes" "css"))))
 
 ;; Overwrite default HTML output template
 ;;

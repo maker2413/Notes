@@ -10,6 +10,14 @@ html, body {
   padding: 0;
 }
 
+.notes-container {
+  display: flex;
+  flex: 1;
+  flex-grow: 1;
+  overflow-x: auto !important;
+  white-space: nowrap;
+}
+
 .notes {
   max-width: 100%;
   flex-grow: 1;
@@ -18,14 +26,15 @@ html, body {
 .note {
   background: #ffffff;
   border-left: 1px solid rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
   display: inline-block;
-  width: 100%;
-  max-width: 625px;
   height: 100% !important;
+  max-width: 625px;
   max-height: 100%;
   overflow-y: auto;
   vertical-align: top;
-  box-sizing: border-box;
+  white-space: normal;
+  width: 100%;
 }
 
 .content {

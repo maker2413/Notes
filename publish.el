@@ -87,6 +87,7 @@
              (org-html--build-mathjax-config info)
              "</head>\n"
              "<body>\n"
+             "<div class='notes-container'>\n"
              "<div class='notes'>\n"
              "<div class='note'>\n"
              ;; Document contents.
@@ -114,6 +115,7 @@
                       "")))))
              contents
              (format "</%s>\n" (nth 1 (assq 'content (plist-get info :html-divs))))
+             "</div>\n"
              "</div>\n"
              "</div>\n"
              ;; Postamble.

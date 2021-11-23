@@ -35,8 +35,10 @@
 
 ;; Set Defaults
 (setq base-dir "/opt/OrgFiles")
+(setq images-dir (concat base-dir "/Images"))
 (setq notes-dir (concat base-dir "/Content"))
 (setq output-dir "/opt/OrgFiles/WebSite")
+(setq images-output-dir (concat output-dir "/images"))
 
 (setq maker/header "
 <link rel='stylesheet' type='text/css' href='/css/style.css'/>
@@ -51,7 +53,6 @@
       `(("org-notes"
          :base-directory ,notes-dir
          :base-extension "org"
-         :exclude ".*[Tt]emplates/.*\\|.*[Pp]rojects/.*\\|.*[Dd]ailies/.*\\|WebSite/.*"
          :html-doctype "html5"
          :html-head-extra ,maker/header
          :html-head-include-default-style nil
@@ -62,15 +63,21 @@
          :section-numbers nil
          :recursive t
          :with-author nil)
-        ("css"
+        ("css-js"
          :base-directory ,base-dir
          :base-extension "css\\|js"
          :exclude "WebSite/.*"
          :publishing-directory ,output-dir
          :publishing-function org-publish-attachment
          :recursive t)
+        ("images"
+         :base-directory ,images-dir
+         :base-extension "png"
+         :publishing-directory ,images-output-dir
+         :publishing-function org-publish-attachment
+         :recursive t)
         ("website"
-         :components ("org-notes" "css"))))
+         :components ("org-notes" "css-js" "images"))))
 
 ;; Overwrite default HTML output template
 ;;

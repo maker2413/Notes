@@ -9,7 +9,7 @@ function stackPage(link, level) {
   link = URI(link);
   let url = URI(window.location);
   pages.push(link.path());
-  url.setQuery('stackedNotes', pages.slice(1, pages.length));
+  url.setQuery('stack', pages.slice(1, pages.length));
 
   let oldPages = pages.slice(0, level - 1);
   let state = { pages: oldPages, level: level };
@@ -113,8 +113,8 @@ window.onload = function() {
   initializePage(document.querySelector('.note'));
 
   let url = URI(window.location);
-  if (url.hasQuery('stackedNotes')) {
-    let stacks = url.query(true).stackedNotes;
+  if (url.hasQuery('stack')) {
+    let stacks = url.query(true).stack;
     if (!Array.isArray(stacks)) {
       stacks = [stacks];
     }

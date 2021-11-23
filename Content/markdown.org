@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       a262fb74-7247-415e-82e7-89a75538fa6b
+:END:
+#+title: Markdown
+#+created: [2021-11-22 Mon 22:04]
+#+last_modified: [2021-11-22 Mon 22:15:48]
+#+filetags: Tool
+
+Markdown is a [[id:7d97f527-f387-44c0-86c9-4dbbe0ab28e0][markup language]] and quite possibly the most common one. For this
+reason it can be quite vital to at least know the basics of Markdown.

@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       06bff409-7879-43e6-844c-70464924c86b
+:END:
+#+title: Zettelkasten
+#+created: [2021-11-22 Mon 22:08]
+#+last_modified: [2021-11-22 Mon 22:09:43]
+#+filetags: OneOff
+
+Zettelkasten is a note taking method of writing smaller fragments of ideas into
+separate notes and linking them together by similar concepts. It can be thought
+of as being similar to a slidebox in a library. More information can be found
+here: https://zettelkasten.de/posts/overview/

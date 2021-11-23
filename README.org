@@ -1,15 +1,18 @@
 #+TITLE: Notes
 
-This is my notes repo, and is a collection of guides I have put together over
-topics I have learned. As of right now this repo is a quite a work in progress
-but ultimately I would love for the notes here to be a collection of everything
-I have learned in my career. I have recently been working on updating these
-notes to a more in depth layout that will make more sense to newcomers. If you
-would like to see my old notes please refer to the [[./LegacyNotes/README.org][LegacyNotes]] directory.
+This is my Notes repo. This repo contains a collection of all of the notes I
+have written while studying and learning various topics in my education and
+studies. I want to make these notes public and usable by anyone wanting to learn
+to help others more easily learn the skills I have developed. I have also made
+great efforts to make these notes as easily viewable via my website:
+https://www.ethanp.dev.
 
-As of right now you can check out these guides to begin diving into my notes:
-- [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][Programming Languages]]
-- [[id:aa1519cc-d56c-4fbf-90bd-ea284b8d706f][Tools]]
+This entire repo and the website are currently under heavy development. I have
+recently taken up the effort of converting these notes to [[https://zettelkasten.de/posts/overview/][Zettelkasten]] note
+taking format to link common ideas together and hopefully some day build a
+"brain map" of all the concepts in this repo. More information on how this repo
+is written and how my website is built can be found here: *TODO*
 
-Also be sure to check out my one-off notes:
-- [[id:a67cff5b-1fc5-4ed4-8daa-dede88c97261][OneOffs]]
+*Disclaimer*
+Since these are personal notes any contain in this repo or the website are
+subject to containing partial or even inaccurate ideas and content.

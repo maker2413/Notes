@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       e10c886e-46bd-4a00-bd25-5167caede214
+:END:
+#+title: CSS
+#+created: [2021-11-22 Mon 23:10]
+#+last_modified: [2021-11-22 Mon 23:10:44]
+#+filetags: ProgrammingLanguage
+
+CSS is styling language that allows you to make your websites "pretty"

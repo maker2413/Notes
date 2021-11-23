@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       5205eaca-eac2-49fe-aeb1-e7d8d75d0a7e
+:END:
+#+title: Org Roam
+#+created: [2021-11-22 Mon 22:06]
+#+last_modified: [2021-11-22 Mon 22:09:55]
+#+filetags: Tool
+
+Org Roam is a package for [[id:d18ed6e8-dbce-4822-9d3f-3de38246ba38][Emacs]] that lets you take [[id:be6def1e-809e-4f8e-a031-a234694a8f86][Org Mode]] based notes. It is
+intended for linking concepts together using the [[id:06bff409-7879-43e6-844c-70464924c86b][Zettelkasten]] note taking
+method.

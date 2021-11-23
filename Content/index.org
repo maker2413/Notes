@@ -13,3 +13,6 @@ As of right now you can check out these guides to begin diving into my notes:
 
 Also be sure to check out my one-off notes:
 - [[id:a67cff5b-1fc5-4ed4-8daa-dede88c97261][OneOffs]]
+
+Information on what exactly you are looking at or how this website is made can
+be found here: [[id:309a008f-9aca-4074-951b-287f3fe27506][How This Website Is Made]].

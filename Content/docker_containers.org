@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       f353679b-d43d-4a15-84af-6234afaf243c
+:END:
+#+title: Docker Containers
+#+created: [2021-11-23 Tue 13:10]
+#+last_modified: [2021-11-23 Tue 13:11:23]
+#+filetags: Tool
+
+A Docker Container is a running container of a ...

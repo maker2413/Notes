@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       c7cc03ef-ed81-4f63-b5f8-ed0b4963aa9b
+:END:
+#+title: Binary
+#+created: [2021-11-23 Tue 12:33]
+#+last_modified: [2021-11-23 Tue 12:39:07]
+#+filetags: Concept
+
+Binary is a numbering scheme consisting of 2 digits (0 and 1). This can also be
+referred to as a base 2 number system. We as humans normally deal with a base 10
+numbering system in our life ie: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9. Binary or base 2
+is just one of an infinite amount of numbering systems. Computers work with a
+base 2 numbering system because down at component level computers interpret base
+2 as 0 being no electricity in a component and 1 as being electricity in a
+component.

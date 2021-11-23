@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       0b26d098-2049-4db0-be8e-f7ddef7f4dfa
+:END:
+#+title: GitHub Actions
+#+created: [2021-11-23 Tue 12:48]
+#+last_modified: [2021-11-23 Tue 12:49:40]
+#+filetags: Tool
+
+GitHub actions are the builtin [[id:7cf81101-13b0-4093-85cb-89e9d82e61cc][CI/CD]] tool in GitHub.

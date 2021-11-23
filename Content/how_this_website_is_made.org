@@ -3,7 +3,7 @@
 :END:
 #+title: How This Website Is Made
 #+created: [2021-11-22 Mon 22:01]
-#+last_modified: [2021-11-22 Mon 23:12:04]
+#+last_modified: [2021-11-23 Tue 14:20:08]
 #+filetags: OneOff
 
 This website is the built from my [[https://github.com/maker2413/Notes][Notes]] repo and is the best way I could come up
@@ -17,11 +17,25 @@ package in [[id:d18ed6e8-dbce-4822-9d3f-3de38246ba38][Emacs]] called [[id:5205ea
   the scenes.
 
   So since the content of my notes and subsequently this website are written in
-  [[id:be6def1e-809e-4f8e-a031-a234694a8f86][Org Mode]] a wrote a script in [[id:960b6e04-6c5a-413f-b0ca-ed89e06c3542][ELisp]] called [[https://github.com/maker2413/Notes/blob/master/publish.el][publish.el]] that configures settings
-  for the ox-html [[id:d18ed6e8-dbce-4822-9d3f-3de38246ba38][Emacs]] package to publish org files to html files. I also
-  overwrite the default publish template so I am able to insert some extra ~div~
-  elements to format the website with [[id:e10c886e-46bd-4a00-bd25-5167caede214][CSS]]. Allow this script is quite complex
+  [[id:be6def1e-809e-4f8e-a031-a234694a8f86][Org Mode]] I wrote a script in [[id:960b6e04-6c5a-413f-b0ca-ed89e06c3542][ELisp]] called [[https://github.com/maker2413/Notes/blob/master/publish.el][publish.el]] that configures settings
+  for the ~ox-html~ [[id:d18ed6e8-dbce-4822-9d3f-3de38246ba38][Emacs]] package to publish org files to html files. I also
+  overwrote the default publish template so I am able to insert some extra ~div~
+  elements to format the website with [[id:e10c886e-46bd-4a00-bd25-5167caede214][CSS]]. Although this script is quite complex
   and does way more than I am giving it credit for I tried to make an effort to
   document what the script is doing via comments, so if you are interested in
   the logic or if you want to use this script for a similar project you are
   working on feel free to check it out and lift anything that helps you.
+
+  This script is run via [[id:0b26d098-2049-4db0-be8e-f7ddef7f4dfa][GitHub Actions]] on push to the master branch of the
+  repo. If you want to see the actual workflow file you can check it out
+  [[https://github.com/maker2413/Notes/blob/master/.github/workflows/publish.yml][here]]. This action uses a [[id:74055a6c-068b-4913-9672-e6f548b9ba56][Docker Image]] that I also made to run [[id:d18ed6e8-dbce-4822-9d3f-3de38246ba38][Emacs]] in a
+  docker image to execute the publish.el script. The Docker image in question
+  can be found [[https://github.com/maker2413/OrgRoamPublish][here]] and is available on both [[id:77516fcb-97b3-4e90-bd96-ca22b44340df][GitHub Packages]] and [[id:61d18b9a-213c-4404-aa8f-2ff319029c92][Docker Hub]]. I
+  also made a more bare bones version that this [[id:74055a6c-068b-4913-9672-e6f548b9ba56][Docker Image]] is built off of
+  that doesn't include the [[id:5205eaca-eac2-49fe-aeb1-e7d8d75d0a7e][Org Roam]] package, which can be found [[https://github.com/maker2413/OrgPublish][here]].
+
+* What makes it look like this?
+  I was inspired by [[https://notes.andymatuschak.org/About_these_notes][Andy Matuschak's notes]] and wanted to replicate his
+  [[https://en.wikipedia.org/wiki/Miller_columns][miller column]] design. I also took some of the [[id:e10c886e-46bd-4a00-bd25-5167caede214][CSS]] and [[id:a29e994c-1920-4ea6-8cfa-946c82e25429][JavaScript]] from
+  [[https://www.jethro.dev][Jethro Kuan's]] (the developer of the [[id:5205eaca-eac2-49fe-aeb1-e7d8d75d0a7e][Org Roam]] package) website. You can see my
+  CSS [[https://github.com/maker2413/Notes/tree/master/css][here]] and my JavaScript [[https://github.com/maker2413/Notes/tree/master/js][here]].

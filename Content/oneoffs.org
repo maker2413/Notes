@@ -3,7 +3,8 @@
 :END:
 #+title: OneOffs
 #+created: [2021-10-31 Sun 17:22]
-#+last_modified: [2021-11-22 Mon 22:02:22]
+#+last_modified: [2021-11-23 Tue 12:30:44]
+#+filetags: Reference
 
 One offs are simple notes I have made that aren't fleshed out enough to be a
 full guide. Here are some of the topics I have one-offs of so far:

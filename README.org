@@ -14,5 +14,5 @@ taking format to link common ideas together and hopefully some day build a
 is written and how my website is built can be found here: *TODO*
 
 *Disclaimer*
-Since these are personal notes any contain in this repo or the website are
-subject to containing partial or even inaccurate ideas and content.
+Since these are personal notes any content in this repo or the website is
+subject to containing partial or even inaccurate ideas or concepts.

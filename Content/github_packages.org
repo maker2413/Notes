@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       77516fcb-97b3-4e90-bd96-ca22b44340df
+:END:
+#+title: GitHub Packages
+#+created: [2021-11-23 Tue 13:08]
+#+last_modified: [2021-11-23 Tue 13:11:51]
+#+filetags: Tool
+
+GitHub Packages are the builtin package repository in GitHub. It allows you to
+publish and share both packages and images to other users. It can even be used
+to share [[id:74055a6c-068b-4913-9672-e6f548b9ba56][Docker Images]].

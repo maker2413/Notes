@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       7cf81101-13b0-4093-85cb-89e9d82e61cc
+:END:
+#+title: CI/CD
+#+created: [2021-11-23 Tue 12:48]
+#+last_modified: [2021-11-23 Tue 12:49:07]
+#+filetags: Concept
+
+CI/CD stand for Continuous Integration and Continuous Deployment.

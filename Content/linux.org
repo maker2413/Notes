@@ -3,7 +3,8 @@
 :END:
 #+title: Linux
 #+created: [2021-11-08 Mon 19:49]
-#+last_modified: [2021-11-08 Mon 19:50:24]
+#+last_modified: [2021-11-23 Tue 12:31:17]
+#+filetags: OperatingSystem
 
 * LS
   Here is some more information on ls -lah since you asked Carrie: So the -lah bit

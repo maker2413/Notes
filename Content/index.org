@@ -1,11 +1,18 @@
 #+TITLE: Notes
+#+created: [2021-10-15 Fri 20:31]
+#+last_modified: [2021-11-23 Tue 12:44:32]
 
 This is my notes repo, and is a collection of guides I have put together over
 topics I have learned. As of right now this repo is a quite a work in progress
 but ultimately I would love for the notes here to be a collection of everything
-I have learned in my career. I have recently been working on updating these
-notes to a more in depth layout that will make more sense to newcomers. If you
-would like to see my old notes please refer to the [[./LegacyNotes/README.org][LegacyNotes]] directory.
+I have learned in my career and personal life. I have recently been working on
+updating these notes to a more in depth layout that will make more sense to
+newcomers. If you would like to see my old notes please refer to my
+[[./LegacyNotes/README.org][LegacyNotes]].
+
+*Disclaimer*
+Since these are personal notes any content in this repo or the website is
+subject to containing partial or even inaccurate ideas or concepts.
 
 As of right now you can check out these guides to begin diving into my notes:
 - [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][Programming Languages]]

@@ -3,7 +3,21 @@
 :END:
 #+title: Programming Languages
 #+created: [2021-10-15 Fri 22:35]
-#+last_modified: [2021-10-24 Sun 14:19:54]
+#+last_modified: [2021-11-23 Tue 12:46:02]
+#+filetags: Reference
 
-Here are some of the programming languages I have covered:
+Programming is the act of giving a set of instructions to a computer to
+execute. If you think of it like cooking using a recipe you can think of
+yourself as the computer and the recipe's author would be the programmer. The
+recipe book would be code and the language of the book would be the programming
+language. The most complex the recipe the more complex the final result will
+be.
+
+Computers think in [[id:c7cc03ef-ed81-4f63-b5f8-ed0b4963aa9b][binary]] and programming languages allow us to translate the 1s
+and 0s into something that is more human readable. A programming language is
+just a series of symbols that serve as a bridge that allow humans to translate
+our thoughts into instructions that computers can understand.
+
+Here are some of the programming languages I have covered so far:
+- [[id:960b6e04-6c5a-413f-b0ca-ed89e06c3542][ELisp]]
 - [[id:a29e994c-1920-4ea6-8cfa-946c82e25429][JavaScript]]

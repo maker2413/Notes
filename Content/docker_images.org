@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       74055a6c-068b-4913-9672-e6f548b9ba56
+:END:
+#+title: Docker Images
+#+created: [2021-11-23 Tue 13:10]
+#+last_modified: [2021-11-23 Tue 13:11:34]
+#+filetags: Tool
+
+Docker Images are images that can be used to run [[id:f353679b-d43d-4a15-84af-6234afaf243c][Docker Containers]].

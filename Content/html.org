@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       d0e74ec8-41c6-4fc8-a2db-4691f32f7e9b
+:END:
+#+title: HTML
+#+created: [2021-11-23 Tue 14:32]
+#+last_modified: [2021-11-23 Tue 14:33:59]
+#+filetags: ProgrammingLanguage
+
+HTML is the programming language of the web. It used to write the contents of a
+website and [[id:e10c886e-46bd-4a00-bd25-5167caede214][CSS]] is used to format the content on the website. [[id:a29e994c-1920-4ea6-8cfa-946c82e25429][JavaScript]] is used
+to add logic to a website.

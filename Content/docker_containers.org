@@ -3,7 +3,7 @@
 :END:
 #+title: Docker Containers
 #+created: [2021-11-23 Tue 13:10]
-#+last_modified: [2021-11-23 Tue 13:11:23]
+#+last_modified: [2021-11-23 Tue 14:22:47]
 #+filetags: Tool
 
-A Docker Container is a running container of a ...
+A Docker Container is a running container of a [[id:74055a6c-068b-4913-9672-e6f548b9ba56][Docker Image]].

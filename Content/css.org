@@ -3,7 +3,9 @@
 :END:
 #+title: CSS
 #+created: [2021-11-22 Mon 23:10]
-#+last_modified: [2021-11-22 Mon 23:10:44]
+#+last_modified: [2021-11-23 Tue 14:36:16]
 #+filetags: ProgrammingLanguage
 
-CSS is styling language that allows you to make your websites "pretty"
+CSS is styling language that allows you to make your websites "pretty".
+
+[[./images/css_box_model.png]]

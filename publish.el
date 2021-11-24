@@ -92,6 +92,7 @@
              (org-html--build-meta-info info)
              (org-html--build-head info)
              (org-html--build-mathjax-config info)
+             "<link rel='shortcut icon' type='image/png' href='./images/brain.png'/>\n"
              "</head>\n"
              "<body>\n"
              "<div class='notes-container'>\n"

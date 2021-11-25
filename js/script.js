@@ -2,7 +2,7 @@
 
 let pages = [window.location.pathname];
 let switchDirectionWindowWidth = 900;
-let animationLength = 200;
+let animationLength = 800;
 
 function stackPage(link, level) {
   level = Number(level) || pages.length;
@@ -37,7 +37,7 @@ function updateLinkStatuses() {
   });
 }
 
-function fetchPage(link, level) {
+function fetchPage(link, level, animate = false) {
   if (pages.indexOf(link) > -1) return;
   level = Number(level) || pages.length;
 
@@ -58,8 +58,11 @@ function fetchPage(link, level) {
           el.dataset.level = level + 1;
           initializePage(el, level + 1);
           el.scrollIntoView();
-          if (window.MathJax) {
-            window.MathJax.typeset();
+          if (animate) {
+            el.animate(
+              [{ opacity: 0 }, { opacity: 1}],
+              animationLength
+            );
           }
         }.bind(null, el, level),
         10
@@ -95,7 +98,7 @@ function initializePage(note, level) {
         el.addEventListener('click', function (e) {
           if (!e.ctrlKey && !e.metaKey) {
             e.preventDefault();
-            fetchPage(el.getAttribute('href'), this.dataset.level);
+            fetchPage(el.href, this.dataset.level, true);
           }
         });
       }
@@ -104,7 +107,7 @@ function initializePage(note, level) {
   })
 }
 
-window.addEventListener('popstate', function (event) {
+window.addEventListener('popstate', function (_event) {
   // TODO: check state and pop pages if possible, rather than reloading.
   window.location = window.location; // this reloads the page.
 });

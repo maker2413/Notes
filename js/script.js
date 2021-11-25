@@ -50,6 +50,7 @@ function fetchPage(link, level, animate = false) {
       let template = document.createElement('template');
       template.innerHTML = text;
       let el = template.content.querySelector('.note');
+      el.style.opacity = 0;
       container.appendChild(el);
       stackPage(link, level);
 
@@ -64,6 +65,7 @@ function fetchPage(link, level, animate = false) {
               animationLength
             );
           }
+          el.style.opacity = 1;
         }.bind(null, el, level),
         10
       );

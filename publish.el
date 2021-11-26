@@ -42,6 +42,9 @@
 
 (setq maker/header "
 <link rel='stylesheet' type='text/css' href='/css/style.css'/>
+<link rel='stylesheet' type='text/css' href='https://unpkg.com/tippy.js@6/themes/light.css'/>
+<script src='https://unpkg.com/@popperjs/core@2'></script>
+<script src='https://unpkg.com/tippy.js@6'></script>
 <script src='/js/script.js'></script>
 <script src='/js/URI.js'></script>
 ")

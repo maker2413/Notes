@@ -22,8 +22,18 @@ function unstackPages(level) {
 
   for (let i = level; i < children.length; i++) {
     container.removeChild(children[i]);
+    destroyPreviews(children[i]);
   }
   pages = pages.slice(0, level);
+}
+
+function destroyPreviews(note) {
+  let links = Array.prototype.slice.call(note.querySelectorAll("a[data-uuid]"));
+  links.forEach(function (link) {
+    if (link.hasOwnProperty("_tippy")) {
+      link._tippy.destroy();
+    }
+  });
 }
 
 function updateLinkStatuses() {
@@ -72,6 +82,27 @@ function fetchPage(link, level, animate = false) {
     });
 }
 
+function createPreview(link, html) {
+  let frame = document.createElement('iframe');
+  frame.width = "400px";
+  frame.height = "300px";
+  frame.srcdoc = html;
+  tippy(
+    link, {
+      allowHTML: true,
+      content: frame.outerHTML,
+      delay: 500,
+      interactive: true,
+      interactiveBorder: 10,
+      inlinePositioning: false,
+      maxWidth: "none",
+      placement: "right",
+      theme: "light",
+      touch: ["hold", 500]
+    }
+  );
+}
+
 function initializePage(note, level) {
   level = level || pages.length;
 
@@ -97,6 +128,8 @@ function initializePage(note, level) {
 
       template.innerHTML = await response.text();
       if (response.headers.get('content-type').includes('text/html')) {
+        createPreview(el, template.content.querySelector('.note').outerHTML);
+
         el.addEventListener('click', function (e) {
           if (!e.ctrlKey && !e.metaKey) {
             e.preventDefault();

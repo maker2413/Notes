@@ -12,6 +12,7 @@ html, body {
 
 iframe {
   border: none;
+  display: block;
   overflow: hidden;
   overflow-y: hidden;
 }

@@ -1,10 +1,13 @@
 (package-initialize)
 
+;; Install use-package for easy package installs
 (require 'use-package)
 
+;; Install htmlize to export org files to html
 (use-package htmlize
   :ensure t)
 
+;; Install and Configure the org-roam package
 (use-package org-roam
   :ensure t
   :init
@@ -40,6 +43,7 @@
 (setq output-dir "/opt/OrgFiles/WebSite")
 (setq images-output-dir (concat output-dir "/images"))
 
+;; Set html header information
 (setq maker/header "
 <link rel='stylesheet' type='text/css' href='/css/style.css'/>
 <link rel='stylesheet' type='text/css' href='https://unpkg.com/tippy.js@6/themes/light.css'/>
@@ -49,10 +53,12 @@
 <script src='/js/URI.js'></script>
 ")
 
+;; Add roam files to list of files to search IDs for
 (setq org-id-extra-files (org-roam-list-files))
 
 ;; Define the publishing project
 (setq org-publish-project-alist
+      ;; org-notes is used for the actual org files
       `(("org-notes"
          :base-directory ,notes-dir
          :base-extension "org"
@@ -66,6 +72,7 @@
          :section-numbers nil
          :recursive t
          :with-author nil)
+        ;; css-js is used for css and javascript files
         ("css-js"
          :base-directory ,base-dir
          :base-extension "css\\|js"
@@ -73,12 +80,14 @@
          :publishing-directory ,output-dir
          :publishing-function org-publish-attachment
          :recursive t)
+        ;; images is used for the images directory
         ("images"
          :base-directory ,images-dir
          :base-extension "png"
          :publishing-directory ,images-output-dir
          :publishing-function org-publish-attachment
          :recursive t)
+        ;; publish all above
         ("website"
          :components ("org-notes" "css-js" "images"))))
 

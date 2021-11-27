@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       0856b32b-1060-4fcb-9a42-5382b11deb47
+:END:
+#+title: GitLab
+#+created: [2021-11-26 Fri 15:54]
+#+last_modified: [2021-11-26 Fri 15:58:38]
+#+filetags: Companies
+
+GitLab is one of the most popular public [[id:dd5ad15d-458d-41de-b918-056542c0da6b][Git]] server on the web. Although much
+smaller than [[id:0c164614-cdac-4936-aca3-a6cb340883fa][GitHub]] in user base it has a strong community.

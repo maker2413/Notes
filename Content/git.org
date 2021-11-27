@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       dd5ad15d-458d-41de-b918-056542c0da6b
+:END:
+#+title: Git
+#+created: [2021-11-26 Fri 15:45]
+#+last_modified: [2021-11-26 Fri 16:06:49]
+#+filetags: Tool
+
+Git is a version control software originally started by Linux Toralds (The
+creator of Linux). It was designed as an alternative other version control
+software like [[https://www.nongnu.org/cvs/][CVS]] or [[https://subversion.apache.org/][SVN]]. It differs from its competitors in that each user
+clones down the entire contents of the repository to their machine and push up
+changes that they make locally, only requiring the user to connect to the server
+to save their work.

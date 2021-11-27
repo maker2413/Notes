@@ -3,7 +3,7 @@
 :END:
 #+title: How This Website Is Made
 #+created: [2021-11-22 Mon 22:01]
-#+last_modified: [2021-11-23 Tue 14:20:08]
+#+last_modified: [2021-11-26 Fri 15:39:54]
 #+filetags: OneOff
 
 This website is the built from my [[https://github.com/maker2413/Notes][Notes]] repo and is the best way I could come up
@@ -39,3 +39,7 @@ package in [[id:d18ed6e8-dbce-4822-9d3f-3de38246ba38][Emacs]] called [[id:5205ea
   [[https://en.wikipedia.org/wiki/Miller_columns][miller column]] design. I also took some of the [[id:e10c886e-46bd-4a00-bd25-5167caede214][CSS]] and [[id:a29e994c-1920-4ea6-8cfa-946c82e25429][JavaScript]] from
   [[https://www.jethro.dev][Jethro Kuan's]] (the developer of the [[id:5205eaca-eac2-49fe-aeb1-e7d8d75d0a7e][Org Roam]] package) website. You can see my
   CSS [[https://github.com/maker2413/Notes/tree/master/css][here]] and my JavaScript [[https://github.com/maker2413/Notes/tree/master/js][here]].
+
+* Feedback
+  If you have any feedback on what I could improve feel free to open an issue on
+  GitHub: [[https://github.com/maker2413/Notes/issues][here]] or submit a PR with your suggested changes.

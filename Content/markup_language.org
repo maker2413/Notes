@@ -3,6 +3,40 @@
 :END:
 #+title: Markup Language
 #+created: [2021-11-22 Mon 22:05]
-#+last_modified: [2021-11-22 Mon 22:06:03]
+#+last_modified: [2021-11-29 Mon 07:44:05]
 #+filetags: Tool
 
+A markup language is a system for annotating a document in a way that is
+visually distinguishable from the content of the document. These annotations are
+only used to format the text in that document to describe how it should be
+displayed as the annotations will not be displayed with the formatted
+text. There are three main types of markup languages:
+- Presentational markup:
+  This kind of markup is traditionally used by word-processing systems and
+  normally uses [[id:c7cc03ef-ed81-4f63-b5f8-ed0b4963aa9b][binary]] code embedded within the document to format the
+  text. This kind of markup is usually hidden from the human users, including
+  the authors and editors.
+
+- Procedural markup:
+  With procedural, markup is embedded in text which provides instructions for
+  programs that process the document to format the text a specific way. Some
+  well known examples of a procedural markup include: =TeX= and =PostScript=. It
+  is expected that a processor program will run through the text from beginning
+  to end, following the instructions as they are encountered. Documents with
+  procedural markup often are edited with the markup visible and directly edited
+  by the author.
+
+- Descriptive markup:
+  With descriptive markup, markup is specifically used to label parts of the
+  document for what they are. Well-known systems that provide such labels are
+  =LaTeX=, [[id:d0e74ec8-41c6-4fc8-a2db-4691f32f7e9b][HTML]], and [[id:1f634140-4dd2-4a32-bc46-55e29b0b814a][XML]]. The objective is to decouple the structure of the
+  document from any particular treatment or rendition of it.
+
+So as you can see there are many forms of markup languages and many languages
+for each form. Markup languages are often used to write up documentation
+associated with code so it is good for a programmer to know at least one or more
+markup languages.
+
+The most popular and commonly used markup language for documenting code is
+[[id:a262fb74-7247-415e-82e7-89a75538fa6b][markdown]], however I am a big fan of [[id:3336e7d9-ec1f-4d21-be4b-ae4a7cba7c8f][org]] which [[id:0c164614-cdac-4936-aca3-a6cb340883fa][GitHub]] also supports for writing
+up documentation.

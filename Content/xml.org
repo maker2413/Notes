@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       1f634140-4dd2-4a32-bc46-55e29b0b814a
+:END:
+#+title: XML
+#+created: [2021-11-29 Mon 06:10]
+#+last_modified: [2021-11-29 Mon 06:11:53]
+#+filetags: Tool
+
+XML stands for =Extensible Markup Language=. XML is a markup language that
+defines a set of rules for encoding documents in a format that is both
+human-readable and machine-readable.

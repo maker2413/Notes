@@ -3,7 +3,7 @@
 :END:
 #+title: How This Website Is Made
 #+created: [2021-11-22 Mon 22:01]
-#+last_modified: [2021-12-01 Wed 22:45:55]
+#+last_modified: [2021-12-01 Wed 22:48:34]
 #+filetags: OneOff
 
 This website is the built from my [[https://github.com/maker2413/Notes][Notes]] repo and is the best way I could come up

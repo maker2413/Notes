@@ -3,12 +3,12 @@
 :END:
 #+title: How This Website Is Made
 #+created: [2021-11-22 Mon 22:01]
-#+last_modified: [2021-11-26 Fri 15:39:54]
+#+last_modified: [2021-12-01 Wed 22:45:55]
 #+filetags: OneOff
 
 This website is the built from my [[https://github.com/maker2413/Notes][Notes]] repo and is the best way I could come up
 with to display the contents of my notes I have accumulated throughout the
-years. These notes are written in [[id:be6def1e-809e-4f8e-a031-a234694a8f86][Org Mode]] and are linked together using a
+years. These notes are written in [[id:3336e7d9-ec1f-4d21-be4b-ae4a7cba7c8f][Org Mode]] and are linked together using a
 package in [[id:d18ed6e8-dbce-4822-9d3f-3de38246ba38][Emacs]] called [[id:5205eaca-eac2-49fe-aeb1-e7d8d75d0a7e][Org Roam]].
 
 * How is it made?
@@ -17,7 +17,7 @@ package in [[id:d18ed6e8-dbce-4822-9d3f-3de38246ba38][Emacs]] called [[id:5205ea
   the scenes.
 
   So since the content of my notes and subsequently this website are written in
-  [[id:be6def1e-809e-4f8e-a031-a234694a8f86][Org Mode]] I wrote a script in [[id:960b6e04-6c5a-413f-b0ca-ed89e06c3542][ELisp]] called [[https://github.com/maker2413/Notes/blob/master/publish.el][publish.el]] that configures settings
+  [[id:3336e7d9-ec1f-4d21-be4b-ae4a7cba7c8f][Org Mode]] I wrote a script in [[id:960b6e04-6c5a-413f-b0ca-ed89e06c3542][ELisp]] called [[https://github.com/maker2413/Notes/blob/master/publish.el][publish.el]] that configures settings
   for the ~ox-html~ [[id:d18ed6e8-dbce-4822-9d3f-3de38246ba38][Emacs]] package to publish org files to html files. I also
   overwrote the default publish template so I am able to insert some extra ~div~
   elements to format the website with [[id:e10c886e-46bd-4a00-bd25-5167caede214][CSS]]. Although this script is quite complex

@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       a727bbf9-2eb7-4a09-94ba-d955f6ec7c0a
+:ROAM_ALIASES: RegExp Regex
+:END:
+#+title: Regular Expressions
+#+created: [2021-12-01 Wed 21:05]
+#+last_modified: [2021-12-01 Wed 21:41:45]
+#+filetags: Concept
+
+A regular expression, sometimes also referred to RegExp or regex, is a sequence
+of characters that specifies a search pattern. Usually these patterns are used
+to search text or a file that is passed into a string searching program or
+algorithm. Regular expressions are important to know because sometimes when you
+are working with computers you will need to a find a specific pattern of text
+and regular expressions will allow you to define how this pattern should
+look. You can think of regular expressions as wildcards (~*.txt~) on steroids.

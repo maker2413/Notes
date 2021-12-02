@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       4cdeb399-efc2-4670-9da7-b0bc566b2aa5
+:END:
+#+title: Concepts
+#+created: [2021-12-01 Wed 21:45]
+#+last_modified: [2021-12-01 Wed 21:46:49]
+#+filetags: Reference
+
+Here are some of the concepts I have covered:
+- [[id:c7cc03ef-ed81-4f63-b5f8-ed0b4963aa9b][Binary]]
+- [[id:7cf81101-13b0-4093-85cb-89e9d82e61cc][CI/CD]]
+- [[id:7d97f527-f387-44c0-86c9-4dbbe0ab28e0][Markup Language]]
+- [[id:a727bbf9-2eb7-4a09-94ba-d955f6ec7c0a][Regular Expressions]]

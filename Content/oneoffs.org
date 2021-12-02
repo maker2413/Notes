@@ -3,10 +3,11 @@
 :END:
 #+title: OneOffs
 #+created: [2021-10-31 Sun 17:22]
-#+last_modified: [2021-11-23 Tue 12:30:44]
+#+last_modified: [2021-12-01 Wed 21:53:53]
 #+filetags: Reference
 
 One offs are simple notes I have made that aren't fleshed out enough to be a
 full guide. Here are some of the topics I have one-offs of so far:
 - [[id:309a008f-9aca-4074-951b-287f3fe27506][How This Website Is Made]]
 - [[id:ecc4defd-2b7e-4577-97b0-c952833cfcb9][Upsert]]
+- [[id:06bff409-7879-43e6-844c-70464924c86b][Zettelkasten]]

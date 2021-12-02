@@ -3,8 +3,8 @@
 :END:
 #+title: GitHub
 #+created: [2021-11-26 Fri 15:43]
-#+last_modified: [2021-11-26 Fri 15:57:33]
-#+filetags: Companies
+#+last_modified: [2021-12-01 Wed 21:52:29]
+#+filetags: Company Service
 
 GitHub is the most popular public [[id:dd5ad15d-458d-41de-b918-056542c0da6b][Git]] server on the web. It is commonly used to
 host some of the biggest open source projects in the world. It is owned by

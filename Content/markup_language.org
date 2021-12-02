@@ -3,8 +3,8 @@
 :END:
 #+title: Markup Language
 #+created: [2021-11-22 Mon 22:05]
-#+last_modified: [2021-11-29 Mon 07:44:05]
-#+filetags: Tool
+#+last_modified: [2021-12-01 Wed 21:46:14]
+#+filetags: Concept
 
 A markup language is a system for annotating a document in a way that is
 visually distinguishable from the content of the document. These annotations are

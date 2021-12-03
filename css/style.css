@@ -62,6 +62,11 @@ a:hover {
   opacity: 0.5;
 }
 
+a[target="_blank"]:after {
+  padding-left: 3px;
+  content: url(/images/external_link.png);
+}
+
 img {
   max-width: 560px;
   max-height: 100%;

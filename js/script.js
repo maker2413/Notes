@@ -104,6 +104,8 @@ function createPreview(link, html) {
 }
 
 function initializePage(note, level) {
+  targetBlank();
+
   level = level || pages.length;
 
   let links = Array.prototype.slice.call(note.querySelectorAll('a'));
@@ -141,6 +143,20 @@ function initializePage(note, level) {
     }
   })
 }
+
+function targetBlank() {
+  // remove subdomain of current site's url and setup regex
+  var internal = location.host.replace("www.", "");
+      internal = new RegExp(internal, "i");
+      
+  var a = document.getElementsByTagName('a'); // then, grab every link on the page
+  for (var i = 0; i < a.length; i++) {
+    var href = a[i].host; // set the host of each link
+    if( !internal.test(href) ) { // make sure the href doesn't contain current site's host
+      a[i].setAttribute('target', '_blank'); // if it doesn't, set attributes
+    }
+  }
+};
 
 window.addEventListener('popstate', function (_event) {
   // TODO: check state and pop pages if possible, rather than reloading.

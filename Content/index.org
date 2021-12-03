@@ -1,6 +1,6 @@
 #+TITLE: Notes
 #+created: [2021-10-15 Fri 20:31]
-#+last_modified: [2021-12-01 Wed 21:55:45]
+#+last_modified: [2021-12-02 Thu 21:44:17]
 
 These are my notes, and a collection of guides I have put together over topics I
 have learned. As of right now this website is quite a work in progress but
@@ -11,7 +11,7 @@ sense to newcomers. If you would like to see my old notes please refer to my
 [[./LegacyNotes/README.org][LegacyNotes]].
 
 *Disclaimer*
-Since these are personal notes any content on this website are subject to
+Since these are personal notes any content on this website is subject to
 containing partial or even inaccurate ideas or concepts.
 
 As of right now you can check out these guides to begin diving into my notes:

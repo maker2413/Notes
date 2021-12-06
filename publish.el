@@ -71,7 +71,8 @@
          :publishing-function org-html-publish-to-html
          :section-numbers nil
          :recursive t
-         :with-author nil)
+         :with-author nil
+         :with-toc nil)
         ;; css-js is used for css and javascript files
         ("css-js"
          :base-directory ,base-dir

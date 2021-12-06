@@ -3,26 +3,24 @@
 :END:
 #+title: Linux
 #+created: [2021-11-08 Mon 19:49]
-#+last_modified: [2021-11-23 Tue 12:31:17]
+#+last_modified: [2021-12-05 Sun 16:26:36]
 #+filetags: OperatingSystem
 
-* LS
-  Here is some more information on ls -lah since you asked Carrie: So the -lah bit
-  is actually 3 separate flags we are giving the ls command and if you wanted to
-  see what each of those does you can run ls --help to see the help menu for ls:
-  <see attached screenshot>
+Linux is an open source and free operating system and if even you have never
+heard of it just by using the internet you have used it before as Linux is
+commonly used on servers for its lightweight and powerful usage. Linux is also
+the back bone to Android and many smart devices you may use in your day to day
+life. If you are getting to any career relating to computers it is very
+important to at least know a bit about running Linux as Linux runs the world.
 
-  For a brief description though the -l flag gives a longer output to ls and will
-  show things like permissions, who owns them, and file size for the files and
-  directories output. The -a flag will show all the files and directories (this
-  includes files and directories that begin with . as these are normally hidden
-  from output). And finally the -h flag provides headers at the top of the output,
-  these are essentially just to make the output prettier.
-
-  The only other thing worth noting are that ls -lah is the same as typing ls -a
-  -l -h or ls -ahl . In bash or zsh (the default shell on Mac) you can pass flags
-  to a command in any order or even multiple chained together like ls -l -a -h and
-  if you are ever curious about the flags on a command most commands will show a
-  help menu when you type --help ie:  ls --help , although this isn’t always the
-  case and in cases like that you can read the manual for the command in question
-  with man ie: man ls.
+As a good general rule of thumb if you encounter tool that you haven't used
+before and you are interested how to use it most Linux tools allow you to use
+either the ~-h~ flag or type ~--help~ to get helpful information about the
+command. If this still doesn't help you find what you are looking for you can
+use a Linux tool called [[id:97b6c627-602e-4a30-837b-75555a7eae94][man]] to view the manual page of the tool you are trying
+to run. Example: ~man ls~ would give us the manual of the ~ls~ command. If you
+want to learn about some of the command line tools in the Linux world please
+check out some of the following guides:
+- [[id:2be8b689-98da-4e62-82d9-1e0cf4b050e3][CD]] :: used to change directories
+- [[id:a18196a7-adf8-4d86-af49-bb4915c366ca][LS]] :: used to list file and directories
+- [[id:97b6c627-602e-4a30-837b-75555a7eae94][Man]] :: used to read manual pages for help with commands and tools

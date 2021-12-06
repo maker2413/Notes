@@ -1,2 +1,0 @@
-#+TITLE: Emacs
-#+PROPERTY: header-args

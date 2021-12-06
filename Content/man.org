@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       97b6c627-602e-4a30-837b-75555a7eae94
+:END:
+#+title: Man
+#+created: [2021-12-05 Sun 16:23]
+#+last_modified: [2021-12-05 Sun 16:56:55]
+#+filetags: Linux Tool
+
+The ~man~ command is used to display the manual of the command or tool you
+specify. For example to get the manual of the [[id:a18196a7-adf8-4d86-af49-bb4915c366ca][ls]] command you would just need to
+run: ~man ls~. From there the manual will be displayed and you can scroll
+through it and press ~q~ to close the manual.

@@ -3,8 +3,13 @@
 :END:
 #+title: Markdown
 #+created: [2021-11-22 Mon 22:04]
-#+last_modified: [2021-11-22 Mon 22:15:48]
+#+last_modified: [2021-12-05 Sun 16:20:45]
 #+filetags: Tool
 
-Markdown is a [[id:7d97f527-f387-44c0-86c9-4dbbe0ab28e0][markup language]] and quite possibly the most common one. For this
-reason it can be quite vital to at least know the basics of Markdown.
+Markdown is a [[id:7d97f527-f387-44c0-86c9-4dbbe0ab28e0][markup language]] and quite possibly the most common one for
+documenting code. If you have ever encountered a file that ends in ~.md~ before;
+that is a Markdown file. If you have ever looked at projects on [[id:0c164614-cdac-4936-aca3-a6cb340883fa][GitHub]], [[id:0856b32b-1060-4fcb-9a42-5382b11deb47][GitLab]],
+or any other code hosting platform you have seen README files written in
+Markdown. For this reason it can be quite vital to at least know the basics of
+Markdown if you are going to be making projects that you would like to
+document.

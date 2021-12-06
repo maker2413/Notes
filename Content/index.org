@@ -1,6 +1,6 @@
 #+TITLE: Notes
 #+created: [2021-10-15 Fri 20:31]
-#+last_modified: [2021-12-02 Thu 21:44:17]
+#+last_modified: [2021-12-05 Sun 22:05:05]
 
 These are my notes, and a collection of guides I have put together over topics I
 have learned. As of right now this website is quite a work in progress but
@@ -16,6 +16,7 @@ containing partial or even inaccurate ideas or concepts.
 
 As of right now you can check out these guides to begin diving into my notes:
 - [[id:4cdeb399-efc2-4670-9da7-b0bc566b2aa5][Concepts]]
+- [[id:8f8d4797-dca7-4e7f-afcb-b12fa196d412][Linux]]
 - [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][Programming Languages]]
 - [[id:aa1519cc-d56c-4fbf-90bd-ea284b8d706f][Tools]]
 

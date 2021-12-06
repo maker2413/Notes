@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       a18196a7-adf8-4d86-af49-bb4915c366ca
+:END:
+#+title: LS
+#+created: [2021-12-05 Sun 15:41]
+#+last_modified: [2021-12-05 Sun 22:04:15]
+#+filetags: Linux Tool
+
+The ~ls~ tool is used to list file and directories in the specified directory or
+your current directory if one isn't specified. For example running: ~ls /~ would
+show all the files and directories on the root of the hard drive.
+
+Some important flags to ~ls~ command to know are:
+- ~-a~ :: shows hidden and 'dot' files
+- ~-h~ :: adds a header row to each column
+- ~-l~ :: displays extended file metadata as a table
+
+These flags can also be chained together like this: ~ls -lah~. For any more
+information on the ~ls~ tool please refer to the [[id:97b6c627-602e-4a30-837b-75555a7eae94][Man]] page for ~ls~.

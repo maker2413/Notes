@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       2be8b689-98da-4e62-82d9-1e0cf4b050e3
+:END:
+#+title: CD
+#+created: [2021-11-08 Mon 20:22]
+#+last_modified: [2021-12-05 Sun 21:54:02]
+#+filetags: Linux Tool
+
+The ~cd~ tool is used in the [[id:8f8d4797-dca7-4e7f-afcb-b12fa196d412][Linux]] command line to change the directory you are
+currently in to the directory specified. To move up one directory run:
+~cd ..~. This works because in [[id:8f8d4797-dca7-4e7f-afcb-b12fa196d412][Linux]] ~.~ is used to represent your current
+working directory and ~..~ is used to represent the directory above your current
+directory.
+
+For any more information on ~cd~ please refer to the [[id:97b6c627-602e-4a30-837b-75555a7eae94][Man]] page of ~cd~.

@@ -1,0 +1,70 @@
+:PROPERTIES:
+:ID:       1ecd0b78-8533-45ab-9c07-6d03f866eb9a
+:END:
+#+title: TypeScript Annotations
+#+created: [2021-12-06 Mon 21:46]
+#+last_modified: [2021-12-06 Mon 23:33:20]
+#+filetags: ProgrammingLanguage TypeScript
+
+In [[id:0817633b-da6b-4889-ab18-267d6cb9ef60][TypeScript]] there are two ways to defines types. We can manually define types
+with annotations or we can have [[id:0817633b-da6b-4889-ab18-267d6cb9ef60][TypeScript]] define types via inference.
+
+So what exactly are annotation types? Annotations are code we add to tell
+[[id:0817633b-da6b-4889-ab18-267d6cb9ef60][TypeScript]] what type of value a variable will refer to. Type annotations are
+defined by the developer manually. Where as type inference is when [[id:0817633b-da6b-4889-ab18-267d6cb9ef60][TypeScript]]
+tries to figure out what type of value a variable refers to. Type inference is
+guessed by [[id:0817633b-da6b-4889-ab18-267d6cb9ef60][TypeScript]].
+
+Lets look at the difference in how these types are defined:
+#+begin_src typescript
+  let apples: number = 5;
+  // The colon and 'number' are our type annotation
+  let bananas = 4;
+  // If you hover over bananas in your IDE of choice you can see that
+  // TypeScript still knows this variable has a type of number. This
+  // is and example of inference.
+#+end_src
+
+Lets also look at how we annotate different values in our code:
+#+begin_src typescript
+  // Primitive types
+  let speed: string = 'fast';
+  let hasName: boolean = true;
+  let nothingMuch: null = null;
+  let nothing: undefined = undefined;
+
+  // Built in objects
+  let now: Date = new Date();
+
+  // Arrays
+  let colors: string[] = ['red', 'green', 'blue'];
+  let myNumbers: number[] = [1, 2, 3];
+  let truths: boolean[] = [true, true, false];
+
+  // Classes
+  class Car {
+
+  }
+  let car: Car = new Car();
+
+  // Object literal
+  let point: { x: number; y: number; } = {
+    x: 10,
+    y: 20
+  };
+
+  // Functions
+  const logNumber: (i: number) => void = (i: number) => {
+    console.log(i);
+  };
+  // ': (i: number) => void' is our annotation for our function
+  // void means we aren't expecting to return anything
+#+end_src
+
+Lets talk quickly about how type inference works. When we type
+~const color = 'red';~ for instance type inference will determine that we want a
+string. This happens because we initialized our variable when we declared it.
+When we type ~const color~ we are declaring a variable and ~'red'~ is our
+variable initialization. If we were to declare a variable but don't initialize
+it on the same line [[id:0817633b-da6b-4889-ab18-267d6cb9ef60][TypeScript]] will not be able to infer what type our variable
+is and give it a type of ~any~.

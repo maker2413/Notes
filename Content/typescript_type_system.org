@@ -1,0 +1,51 @@
+:PROPERTIES:
+:ID:       aa46db0b-e3fc-4c85-8ab8-66aaedf1bef2
+:END:
+#+title: TypeScript Type System
+#+created: [2021-12-06 Mon 21:45]
+#+last_modified: [2021-12-06 Mon 22:04:32]
+#+filetags: ProgrammingLanguage TypeScript
+
+You may be asking yourself what is a type system? A type is an easy way to refer
+to the different properties and functions that a value has. What this means is
+[[id:0817633b-da6b-4889-ab18-267d6cb9ef60][TypeScript]] allows us to define annotations that describe what [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data type]] our
+variables are expected to be, what our functions are expecting as input and what
+they will return after execution, and what any other value in our code is
+expected to be.
+
+In [[id:0817633b-da6b-4889-ab18-267d6cb9ef60][TypeScript]] There are two forms of types that we can define:
+- primitive types ([[id:a29e994c-1920-4ea6-8cfa-946c82e25429][JavaScript]] [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data types]]):
+  - number
+  - boolean
+  - void
+  - undefined
+  - string
+  - symbol
+  - null
+- Object types (types that we define):
+  - functions
+  - arrays
+  - classes
+  - objects
+
+So you may be asking yourself why do we care about types? Types are used by the
+[[id:0817633b-da6b-4889-ab18-267d6cb9ef60][TypeScript]] compiler to analyze our code for errors. Types also allow other
+engineers to understand what values are flowing around our codebase. Although it
+is not a requirement for the reasons mentioned when we write [[id:0817633b-da6b-4889-ab18-267d6cb9ef60][TypeScript]] code for
+good coding standards we should define types everywhere!
+
+*Examples of types*
+#+begin_src typescript
+  const today = new Date();
+
+  today.getMonth();
+
+  const person = {
+    age: 20
+  };
+
+  class Color {
+  }
+
+  const red = new Color();
+#+end_src

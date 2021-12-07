@@ -3,8 +3,8 @@
 :END:
 #+title: TypeScript
 #+created: [2021-12-05 Sun 23:57]
-#+last_modified: [2021-12-06 Mon 02:08:21]
-#+filetags: ProgrammingLanguage
+#+last_modified: [2021-12-06 Mon 21:53:32]
+#+filetags: ProgrammingLanguage TypeScript
 
 TypeScript is a progamming language that is based on [[id:a29e994c-1920-4ea6-8cfa-946c82e25429][JavaScript]]. In fact
 TypeScript is written just like [[id:a29e994c-1920-4ea6-8cfa-946c82e25429][JavaScript]] with added syntax for types and
@@ -24,51 +24,8 @@ added. Although it isn't a requirement to know [[id:a29e994c-1920-4ea6-8cfa-946c
 TypeScript I would highly recommend you have an understanding of at least the
 basics before learning TypeScript.
 
-* What is a type system?
-  *Placeholder Text*
-  The following text is just some quick notes I have jotted down and need to still
-  be reworded to be more descript:
-  - A type is an easy way to refer to the different properties and functions that a
-  value has.
-  - There are two forms of types:
-    - primitive types (JS types):
-      - number
-      - boolean
-      - void
-      - undefined
-      - string
-      - symbol
-      - null
-    - Object types (types that we define):
-      - functions
-      - arrays
-      - classes
-      - objects
-  - Why do we care about types?
-    - types are used by the typescript compiler to analyze our code for errors.
-    - types allow other engineers to understand what values are flowing around our
-      codebase.
-  - Where do we use types?
-    - Everywhere!
-  *Examples in Features/types.ts*
-
-* Type annotations in action
-  *Placeholder Text*
-  The following text is just some quick notes I have jotted down and need to still
-  be reworded to be more descript:
-  - What are type annotations?:
-    - Code we add to tell Typescript what type of value a variable will refer to.
-    - Type annotations are defined by the developer.
-  - What is type inference?:
-    - TypeScript tries to figure out what type of value a variable refers to.
-    - Type inference is guessed by TypeScript.
-  *Examples in Features/annotations/variables.ts*
-  - Understanding Inference:
-    - when we type ~const color = 'red';~ type inference will determine we want
-      a string.
-    - This happens because we initialized our variable when we declared it.
-      - ~const color~ is a variable declaration.
-      - ~'red'~ is our variable initialization.
-    - If we declare a variable but don't initialize it on the same line
-      typescript will not be able to infer what type our variable is and give it
-      a type of ~any~.
+If you are completely new to TypeScript I would recommend viewing the following
+topics in order, however if you are here for information on a specific topic
+feel free to skip around:
+- [[id:aa46db0b-e3fc-4c85-8ab8-66aaedf1bef2][TypeScript Type System]]
+- [[id:1ecd0b78-8533-45ab-9c07-6d03f866eb9a][TypeScript Annotations]]

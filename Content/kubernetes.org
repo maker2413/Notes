@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       c98976a7-563e-4f21-a436-f71201e24af4
+:END:
+#+title: Kubernetes
+#+created: [2022-02-05 Sat 14:36]
+#+last_modified: [2022-02-05 Sat 14:42:55]
+#+filetags: Kubernetes Tool
+
+Kubernetes on a high level is a cluster of servers, virtual machines, or
+instances that manage and orchestrate containers to provide as close to 100% up
+time as possible. The word Kubernetes comes from Greek and roughly translates to
+helmsman. This name was chosen because you can think of Kubernetes as the
+captain of your ships (containers). More on the history of Kubernetes can be
+found on the Kubernetes website: [[https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/][here]].
+
+This guide aims to cover everything I have learned about Kubernetes and will be
+broken out into chapters. Here are the chapters I have so far:
+- [[id:26364aaa-416e-46e5-ab00-fa94fe74f24c][Components]] :: This chapter will go over the various components of Kubernetes and describe what they do.

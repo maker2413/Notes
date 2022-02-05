@@ -1,5 +1,10 @@
-#+TITLE: Kubernetes Components
-#+PROPERTY: header-args
+:PROPERTIES:
+:ID:       26364aaa-416e-46e5-ab00-fa94fe74f24c
+:END:
+#+title: Kubernetes Components
+#+created: [2022-02-05 Sat 14:40]
+#+last_modified: [2022-02-05 Sat 14:42:13]
+#+filetags: Kubernetes Concept
 
 Kubernetes is made up of multiple components that work together to make the
 Kubernetes ecosystem. Some of these components only run on the master node and

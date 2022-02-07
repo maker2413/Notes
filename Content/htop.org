@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       e7c79ac9-707d-4c40-a817-536e55975588
+:END:
+#+title: HTOP
+#+created: [2022-02-06 Sun 17:21]
+#+last_modified: [2022-02-06 Sun 17:26:07]
+#+filetags: Linux Tool
+
+~htop~ is a program that allows you to see your running processes on your
+machine. You can think of it like task manager in [[id:9020d898-7f38-4d9d-a928-562566e8a2e6][Windows]]. It works both from
+the command line or from a GUI making it a very versatile tool to see what is
+going on with your system. There are other task management tools in [[id:8f8d4797-dca7-4e7f-afcb-b12fa196d412][Linux]], but
+~htop~ is the most popular.

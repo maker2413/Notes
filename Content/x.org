@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       ba6f16f6-63fa-4b0e-bd12-854eb497e88f
+:END:
+#+title: X
+#+created: [2022-02-06 Sun 17:08]
+#+last_modified: [2022-02-06 Sun 17:09:14]
+#+filetags: Linux Tool
+
+~X~ or ~xorg~ is the program that runs our graphics server on [[id:8f8d4797-dca7-4e7f-afcb-b12fa196d412][Linux]].

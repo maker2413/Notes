@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       9020d898-7f38-4d9d-a928-562566e8a2e6
+:END:
+#+title: Windows
+#+created: [2022-02-06 Sun 17:22]
+#+last_modified: [2022-02-06 Sun 17:24:43]
+#+filetags: OperatingSystem
+
+Windows is the most popular desktop operating system and I try not to use it as
+much as possible. Other than gaming I personally think it has no merit in the
+computing world as people that are more tech savvy will be given more freedom
+and power with an operating system like [[id:8f8d4797-dca7-4e7f-afcb-b12fa196d412][Linux]], and people that aren't tech savvy
+and only use their computer for web browsing can probably get by with something
+like a smartphone, tablet, or Chromebook.

@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       46ddbeb4-927a-4235-b920-051f3e649c34
+:END:
+#+title: Partitioning
+#+created: [2022-02-06 Sun 16:57]
+#+last_modified: [2022-02-06 Sun 16:58:23]
+#+filetags: Concept
+
+Partitioning allows you to split your drive into multiple partitions or
+sections.

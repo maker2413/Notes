@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       64bc07ad-9723-49d3-a972-54d2fe1f780b
+:END:
+#+title: Grub
+#+created: [2022-02-06 Sun 12:39]
+#+last_modified: [2022-02-06 Sun 12:41:37]
+#+filetags: Linux Tool
+
+~grub~ is the most commonly used boot manager and simply handles how your
+operating systems boot. It is capable of support multiple operating systems on
+one machine, commonly referred to as "multi-boot", and allows the user to select
+between the installed operating systems at boot.

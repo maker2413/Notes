@@ -1,0 +1,103 @@
+:PROPERTIES:
+:ID:       ea6dfc82-bd00-4abe-a67d-652145adf9f5
+:END:
+#+title: File System
+#+created: [2022-02-06 Sun 12:20]
+#+last_modified: [2022-02-06 Sun 18:08:08]
+#+filetags: Linux Concept OperatingSystem
+
+- Home directory is where each users personal files gets stored. The home
+  directory is similar to the Users directory in Windows.
+- root directory is the root of the entire filesystem. Think C: for
+  Windows. In Windows if you connected an additional hard drive you would see a
+  D: drive, an E: drive, etc. Each of these letters represents the "root" of
+  that additional hard drive in Windows. In Linux we don't have drive letters,
+  we only have one root and in the root folder you will see folders like "mnt"
+  and "media". These are folders where our additional hard drives, cd drives, or
+  flash drives get mounted. Lets go over the directory structure of root now:
+  - bin:
+    The bin folder contains most of our basic executable programs or "binaries",
+    which is where bin gets its name, lives. If you look in the bin directory
+    you will see programs like [[id:a18196a7-adf8-4d86-af49-bb4915c366ca][LS]] or [[id:76e95672-9ba3-4691-8149-86b65fe39533][CP]] live there.
+  - boot:
+    This folder contains all of the files necessary to boot your system. This
+    folder is normally only used by your boot manager ie: [[id:64bc07ad-9723-49d3-a972-54d2fe1f780b][grub]]
+  - dev:
+    This is where all of your devices live. [[id:8f8d4797-dca7-4e7f-afcb-b12fa196d412][Linux]] follows the [[id:76fdcf18-4c3c-414a-b16e-4c9fa7f4ed72][Unix]] mentality
+    that everything about your computer is a file, so in this dev directory you
+    will see file representation of all of your computer hardware. An example of
+    this can be seen when we look in the dev directory you may see files called
+    ~sda~, ~sda2~, ~sdb~, etc. All of the "sd" files are disk drives, whether
+    they be internal or external, and the third letter represents the number of
+    the device starting with "a" (your boot drive). The numbers if present for
+    that drive represent the individual partitions of that drive. If you are new
+    to the concept of drive partitioning look at my guide: [[id:46ddbeb4-927a-4235-b920-051f3e649c34][Partitioning]].
+  - etc:
+    This directory contains configuration files for system wide programs. The
+    name "etc" is shorthand for the word etcetera and in the early days of [[id:76fdcf18-4c3c-414a-b16e-4c9fa7f4ed72][Unix]]
+    etc was used to store the extra files that didn't below in bin, dev, or
+    lib. Over the years the directory has changed its purpose to a place to
+    house configuration files but hasn't changed its name and therefore is still
+    called etc. For instance if we look in the X11 directory of etc:
+     ~ls /etc/X11/~ we see the configuration files for our [[id:ba6f16f6-63fa-4b0e-bd12-854eb497e88f][X]] server.
+  - lib:
+    Some distos may have multiple "lib" directories for instance on my system I
+    have both a lib directory and a lib64 directory. Either way these folders
+    just contain binaries for our applications.
+  - media:
+    Most distros will handle mounting additional drives automatically and will
+    more than likely mount them in the "media" folder.
+  - opt:
+    The opt folder stands for optional and typically just contains drivers from
+    vendors.
+  - proc:
+    The proc directory is where you will normally find a bunch of pseudo files
+    that contain information about processes running on your system. If you look
+    in proc you will see multiple directories that are just a string of
+    numbers. These numbers correlate to the PIDs, or process IDs, of your
+    running programs. If you use a program like [[id:e7c79ac9-707d-4c40-a817-536e55975588][htop]] to see your PIDs you will
+    see that each one has a directory in proc.
+  - root:
+    The root directory is the home directory of the root user. On most distros
+    the root directory is generally empty.
+  - run:
+    The run directory is very different than most of the other
+    directories. The run directory runs a tmp filesystem and everything inside
+    of the run folder is loaded into ram and everything in the run directory
+    gets deleted when the system gets restarted. These files are generally just
+    files that the system needs to boot.
+  - sbin:
+    This directory contains the system binaries for our system. These are
+    programs that only an administrator would use so in order to access or use
+    any of the programs in this directory you need to be the root user or using
+    [[id:c4903e5f-c4a9-4d0e-864b-01d7b392fdfa][sudo]].
+  - srv:
+    This directory contains files pertaining to services running on your
+    machine, say ftp or http. In most cases if you are using your machine as a
+    daily driver you probably won't be running services like this so the srv
+    directory will be empty.
+  - sys:
+    The sys directory, short for system, gives us access to files let us
+    interact with the system kernel. Messing with your kernel isn't something
+    you would normally do so you probably won't do anything in this directory
+    normally.
+  - tmp:
+    The tmp directory, short for temporary, is a place for temporary files to be
+    stored that will be wiped when the system reboots. This directory normally
+    contains temporary files for programs to use during their running
+    session. For instance if you are working on a document that you haven't
+    saved yet a copy of that file will be saved here so if your document editor
+    crashes your work will still be stored in tmp as long as you don't reboot.
+  - usr:
+    The usr directory, short for user, is a place for programs that can be used
+    by the user. This isn't to be confused with the bin directory as bin
+    contains programs that anyone on the system can use, whereas usr contains
+    programs that can only be accessed by the current user. If you ever install
+    an application and it has an option to install for all users it will install
+    to each users usr directory, whereas if you install for the current user
+    only it will install in your users directory in usr.
+  - var:
+    The var directory, short for variable, contains files and directories which
+    will grow in size as you are running your system. This includes things like
+    crash data which will get appended too whenever something crashes on your
+    system.

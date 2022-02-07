@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       c4903e5f-c4a9-4d0e-864b-01d7b392fdfa
+:END:
+#+title: Sudo
+#+created: [2022-02-06 Sun 12:37]
+#+last_modified: [2022-02-06 Sun 12:38:08]
+#+filetags: Linux Tool
+
+The ~sudo~ commands stands for "super user do" and it allows non root users to
+assume the role of root for the duration of their command.

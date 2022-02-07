@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       76fdcf18-4c3c-414a-b16e-4c9fa7f4ed72
+:END:
+#+title: Unix
+#+created: [2022-02-06 Sun 12:42]
+#+last_modified: [2022-02-06 Sun 12:45:11]
+#+filetags: OperatingSystem
+
+The ~unix~ operating system nowadays is most popularly know as being the
+operating system that [[id:8f8d4797-dca7-4e7f-afcb-b12fa196d412][Linux]] was trying to reenvision back in the day. It can be
+said that ~unix~ designed much of [[id:8f8d4797-dca7-4e7f-afcb-b12fa196d412][Linux]]'s design philosophy because of this.

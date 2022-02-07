@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       76e95672-9ba3-4691-8149-86b65fe39533
+:END:
+#+title: CP
+#+created: [2022-02-06 Sun 12:32]
+#+last_modified: [2022-02-06 Sun 12:33:15]
+#+filetags: Linux Tool
+
+The ~cp~ command is the copy tool in [[id:8f8d4797-dca7-4e7f-afcb-b12fa196d412][Linux]].

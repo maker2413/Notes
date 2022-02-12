@@ -3,7 +3,7 @@
 :END:
 #+title: Linux
 #+created: [2021-11-08 Mon 19:49]
-#+last_modified: [2022-02-06 Sun 12:38:57]
+#+last_modified: [2022-02-12 Sat 04:17:24]
 #+filetags: OperatingSystem
 
 Linux is an open source and free operating system and if even you have never
@@ -25,7 +25,7 @@ check out some of the following guides:
 - [[id:76e95672-9ba3-4691-8149-86b65fe39533][CP]] :: used to copy files or directories
 - [[id:a18196a7-adf8-4d86-af49-bb4915c366ca][LS]] :: used to list file and directories
 - [[id:97b6c627-602e-4a30-837b-75555a7eae94][Man]] :: used to read manual pages for help with commands and tools
-- [[id:c4903e5f-c4a9-4d0e-864b-01d7b392fdfa][Sudo]] :: allows non root users to assume the root user for the duration of
-  their command
+- [[id:c4903e5f-c4a9-4d0e-864b-01d7b392fdfa][Sudo]] :: allows non root users to assume the root user for the duration of their command
+- [[id:0bbbc442-1a15-42d7-bc9c-48c9baaf079d][Tmux]] :: allows you to split your terminal into panes or to keep your terminal session running in the background
 
 - [[id:ea6dfc82-bd00-4abe-a67d-652145adf9f5][File System]]

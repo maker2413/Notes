@@ -1,0 +1,74 @@
+:PROPERTIES:
+:ID:       0bbbc442-1a15-42d7-bc9c-48c9baaf079d
+:END:
+#+title: Tmux
+#+created: [2022-02-11 Fri 20:31]
+#+last_modified: [2022-02-12 Sat 04:29:54]
+#+filetags: Linux Tool
+
+The ~tmux~ tool is a terminal application that allows you to split your terminal
+into panes in a single window. It can also be used to detach from sessions and
+keep them running in the background. This allows you to keep processes or
+scripts running in the background without being visible and allow you to still
+use the terminal or to disconnect from the remote host and check back in
+later. Additionally tmux can also allow multiple users to attach to the same
+session of tmux. This can be very usefully when collaborating with others or
+when having someone else review your work.
+
+By simply type ~tmux~ after installing it you can open your first tmux
+session. You will notice that it looks quite similar to your normal terminal
+however now we will cover some of the basics of tmux like splitting our screen.
+
+All tmux commands are triggered with a *prefix key* and a *command key* and
+tmux uses [[id:d18ed6e8-dbce-4822-9d3f-3de38246ba38][Emacs]] notation for its key bindings. By default tmux uses ~C-b~
+for its prefix key binding. If you are unfamiliar with [[id:d18ed6e8-dbce-4822-9d3f-3de38246ba38][Emacs]] notation, this
+simply means ~Ctrl~ and ~b~. To split panes vertically in your tmux session the
+command key is ~%~ meaning your fully sequence of keys would be ~C-b %~ (~Ctrl~
+and ~b~, then release and press ~Shift~ and ~5~). Similarly to split panes
+horizontally the key sequence is ~C-b "~.
+
+Before we go to much further I want to point out that everything about tmux is
+customizable. Not only can you customize the prefix key or any of the command
+keys but you can also customize how the green status bar at the bottom of your
+session works like adding a calendar, battery icon, or upcoming
+events. Customization will not be covered in this guide at the current moment. 
+
+Now as useful as this is you also need to learn how to navigate the panes you
+created to get any use out of them. To switch to a different pane you can simply
+type ~C-b <arrow keys>~ or ~C-b o~ to switch panes in a clockwise rotation. Once
+you are done with a pane and wish to close it out simply type ~exit~ or ~C-d~ to
+kill it.
+
+We can also create new windows with tmux. You can think of this like virtual
+desktops in a modern operating system. Simply type ~C-b c~ to create a new
+window where you can split up panes like before and do work with a clean
+slate. To switch between your windows type ~C-b p~ to go to your previous window
+or ~C-b n~ to go to your next window. You can also type ~C-b <number>~ to switch
+to a specific window.
+
+Now that you have knowledge of the basics of tmux usage lets dive into session
+management with tmux. To detach from your current session of tmux and keep it
+running in the background simply type ~C-b d~ or ~C-b D~ to have tmux prompt you
+asking which session you want to detach. A detached session of tmux will
+continue to run in the background which can be very handy if you are running
+something that you want to keep running but need to get back to your terminal
+for something else or you need to check back in for the results later.
+
+To see the current running detached sessions simply run ~tmux ls~ at the command
+line. This will print out the list of the current detached sessions, each with a
+unique id. To attach to one of these detached sessions simply run
+~tmux attach -t <id>~ and you will be dropped right back into that session. It
+is important to note that if you wanted to give your session a custom id to make
+it more memorable you can run ~tmux new -s <name>~ to give it a unique name or
+id. You can also rename existing session by running
+~tmux rename-session -t <id> <name>~.
+
+With all of that covered you have now mastered the basics of tmux! Going forward
+if you want to learn more tmux key bindings there is a built in help menu that
+can be accessed with ~C-b ?~. I also find the tmux cheat sheet to be a great
+online resource: [[https://tmuxcheatsheet.com/][tmux cheat sheet]]. I will also point out some of the neat key
+bindings I have started using:
+- ~C-b z~ makes your current pane full screen. Running it again makes it go back
+  to the size that it was.
+- ~C-b C-<arrow key>~ lets you resize your current pane in the direction of the
+  arrow key you type.

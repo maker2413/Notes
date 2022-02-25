@@ -1,0 +1,87 @@
+:PROPERTIES:
+:ID:       21e203d3-2839-41ab-abbc-eb876b6426ca
+:END:
+#+title: Yaml
+#+created: [2022-02-24 Thu 19:40]
+#+last_modified: [2022-02-24 Thu 20:39:05]
+#+filetags: Tool
+
+At its conception ~yaml~ was given its name based the following acronym:
+- Y :: Yet
+- A :: Another
+- M :: Markup
+- L :: Language
+Although quickly the developers came to the conclusion that yaml was so much
+more than a [[id:7d97f527-f387-44c0-86c9-4dbbe0ab28e0][markup language]] and was instead more like a data serialization
+language so deciding that they didn't want to buy another domain since they
+already owned [[https://yaml.org]], they gave it the rather humorous acronym:
+- Y :: Yaml
+- A :: Ain't
+- M :: Markup
+- L :: Language
+
+Other than being a recursive acronym it also really sells the point of how
+powerful yaml truly is. So if yaml ain't a markup language what is it? I
+still consider yaml to be a [[id:7d97f527-f387-44c0-86c9-4dbbe0ab28e0][markup language]] and so does most of the rest of
+the world but it definitely sets itself apart for other [[id:7d97f527-f387-44c0-86c9-4dbbe0ab28e0][markup languages]] with
+its syntax. Let's look at an excerpt from the yaml [[https://yaml.org/spec/][Website]]:
+
+"YAML™ (rhymes with “camel”) is a human-friendly, cross language, Unicode based
+data serialization language designed around the common native data structures of
+agile programming languages. It is broadly useful for programming needs ranging
+from configuration files to Internet messaging to object persistence to data
+auditing."
+
+* How to yaml
+  Lets stop talking and to the basics. Lets start by taking a look at an example
+  yaml file:
+  #+begin_src yaml
+    ---
+    john: "Lennon"
+    paul: "Sir MacCartney"
+    george: Harrison
+    ringo: Star
+    members: 4
+    inspirational: true
+    albums:
+      - revolver
+      - help
+      - white
+      - "abbey road"
+    instruments:
+      bass-guitar: true
+      drums: true
+      guitar: true
+      number-of-instruments:
+        bass: 1
+        drums: 1
+        guitars: 2
+      left-handed:
+        Paul: true
+
+    ---
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: myapp-deployment
+      labels:
+        env: production
+    spec:
+      selector:
+        matchLabels:
+          app: myapp
+      replicas: 6
+      template:
+        metadata:
+          name: nginx-2
+          labels:
+            app: myapp
+        spec:
+          containers:
+            - name: nginx
+              image: nginx
+  #+end_src
+
+  Yaml allows us to define multiple documents in a single file. Each document
+  starts with ~---~. The next thing we see is a construct that makes up most of
+  the yaml syntax: the key/value pair.

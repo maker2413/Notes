@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       91b8e015-8303-49da-a14b-94745d3cd699
+:END:
+#+title: Json
+#+created: [2022-03-11 Fri 03:53]
+#+last_modified: [2022-03-11 Fri 03:54:18]
+#+filetags: Tool
+
+Json is a very popular [[id:7d97f527-f387-44c0-86c9-4dbbe0ab28e0][markup language]] and although it isn't my favorite it is
+important to at least understand the basics in case you ever encounter it.

@@ -3,7 +3,7 @@
 :END:
 #+title: Yaml
 #+created: [2022-02-24 Thu 19:40]
-#+last_modified: [2022-02-24 Thu 20:39:05]
+#+last_modified: [2022-03-11 Fri 15:18:41]
 #+filetags: Tool
 
 At its conception ~yaml~ was given its name based the following acronym:
@@ -84,4 +84,212 @@ auditing."
 
   Yaml allows us to define multiple documents in a single file. Each document
   starts with ~---~. The next thing we see is a construct that makes up most of
-  the yaml syntax: the key/value pair.
+  the yaml syntax: the key/value pair. *john* is a key and *"Lennon"* is a
+  string value for this key. Yaml supports more [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data types]] than strings though
+  we can see that *members* is an integer and *inspirational* is a boolean. Yaml
+  also supports floating point numbers ie: *3.14159*. Strings can be noted with
+  single quotes, double quotes, or no quotes at all like in the case of the key
+  *george*. Yaml is also smart enough to note integers and floating point
+  numbers without quotes. The *albums* key has four elements assigned to it,
+  each of these is denoted with a ~-~. Indentation in yaml is very important so
+  to note that these elements are part of the *albums* key they are all indented
+  with two spaces. The number of spaces can vary from file to file but yaml will
+  not support tabs and two spaces is the most common indentation so it is wise
+  to follow standards. Finally we see the *instruments* key which we can think
+  of as a dictionary, containing three booleans and two nested
+  dictionaries. Yaml supports nesting of key/value pairs, and mixing types.
+
+  If you have experience with [[id:91b8e015-8303-49da-a14b-94745d3cd699][json]] you may notice that the layout and concepts
+  of yaml is very similar, just with less curly braces. In fact you can convert
+  most yaml documents to [[id:91b8e015-8303-49da-a14b-94745d3cd699][json]] and vice versa. Here is a helpful link if
+  converting from [[id:91b8e015-8303-49da-a14b-94745d3cd699][json]] to yaml interests you: [[https://www.json2yaml.com/][json2yaml]].
+
+* Indentation and Whitespace
+  Whitespace is a very important part of yaml's formatting. Unless otherwise
+  indicated, newlines indicate the end of a field. Yaml uses indentation to
+  determine what key your entry belongs to. Like shown above it is most common
+  to indent with two spaces when denoting a list of values for a key or building
+  a dictionary for a key although indentation just has to be one or more
+  spaces. Yaml does *not* support tabs for its indentation as some languages or
+  tools handle tabs differently.
+
+* Comments
+  In yaml comments are denoted with a pound sign: ~#~. Comments can appear at
+  the end of a line or at the beginning specifying the entire line as a
+  comment. Lets look at an example:
+  #+begin_src yaml
+    ---
+    # This is a comment
+    foo: bar # So is this though
+  #+end_src
+
+  Although there is no requirement for it; it is most common to leave a space
+  before and after the pound sign for easy readability so it is a good habit to
+  get into.
+
+* Yaml Datatypes
+  We briefly covered it up above but lets go over the specifics of what
+  [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data types]] yaml supports:
+
+** Key/Value Pairs and Dictionaries
+   The Key/Value pair is yaml's basic building blocks. Every item in a yaml
+   document is a member of at least one dictionary, whether that be a dictionary
+   defined in the document or the document itself. The key of a Key/Value pair
+   is always a string, however the value is a scalar and can be any [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data types]]
+   support by yaml. We have already seen the value being set as a string,
+   number, boolean, or another dictionary.
+
+** Numeric Types
+   Yaml recognizes many common numeric types and even some not so common numeric
+   types. The first of these numeric types are Integer types. We have seen some
+   examples above but lets look at what Integer types are supported:
+   #+begin_src yaml
+     ---
+     foo: 231234
+     bar: 0xDE23
+     plop: 023332
+   #+end_src
+
+   We can see that ~foo~ is just a standard decimal number, however ~bar~ is a
+   hexadecimal number (denoted by the ~0x~) and ~plop~ is an octal number
+   (denoted by the ~0~ at the beginning).
+
+   The next numeric type that yaml supports is the floating point numbers. Yaml
+   supports both fixed and exponential floating point numbers:
+   #+begin_src yaml
+     ---
+     foo: 3.14159
+     bar: 24.6701e+05
+   #+end_src
+
+   The less common numeric types yaml supports is infinity and not-a-number or
+   ~NAN~ as it is referred:
+   #+begin_src yaml
+     ---
+     foo: .inf
+     bar: -.inf
+     plop: .NAN
+   #+end_src
+
+   In our example we can see that ~foo~ is given a value of infinity whereas
+   ~bar~ is given a value of negative infinity. Finally we assign ~plop~ a value
+   of ~NAN~.
+
+** Strings
+   Yaml handles strings very well and in most situations you don't have to
+   specify single or double quotes, however if you want escape sequences handled
+   we need to use double quotes:
+   #+begin_src yaml
+     ---
+     foo: "This string has an escape squence\n"
+     # Will be read as "This string has an escape squence"
+
+     bar: This string has a\n
+     # Will be read as "This string has a\n"
+
+     plop: 'This string has a\n'
+     # Will be read as "This string has a\n"
+   #+end_src
+
+   Yaml will not escape strings with single quotes either as we can see, but
+   using single quotes will avoid having the string contents interpreted as
+   document formatting. Strings values can also span multiple lines with the
+   fold (~>~) character:
+   #+begin_src yaml
+     ---
+     foo: >-
+       This string spans
+       multiple lines.
+       I can write stories
+       with this.
+   #+end_src
+
+   With fold however the block will not be interpreted with the newline
+   characters making it all one string. If you want to keep the formatting you
+   can use the pipe (~|~) character, which behaves very similar to the fold
+   character but interprets the field exactly as it is:
+   #+begin_src yaml
+     ---
+     bar: |
+       Now I can really
+       type my story.
+       This will keep its
+       formatting exactly
+       as it is displayed!
+   #+end_src
+
+** Nulls
+   If you every need to assign a null value to a key you yaml supports that as
+   well. You can specify a null value with either a tilde (~~~) or the unquoted
+   string ~null~:
+   #+begin_src yaml
+     ---
+     foo: ~
+     bar: null
+   #+end_src
+
+** Booleans
+   In yaml you specify boolean values with keywords with ~True~, ~true~, ~On~,
+   ~on~, ~Yes~, or ~yes~ to represent true and ~False~, ~false~, ~Off~, ~off~,
+   ~No~, or ~no~ to represent false:
+   #+begin_src yaml
+     ---
+     foo: True
+     bar: False
+     light: On
+     tv: no
+   #+end_src
+
+** Arrays
+   You can specify arrays in yaml on a single line or with a list:
+   #+begin_src yaml
+     ---
+     items: [ 1, 2, 3, 4, 5]
+     numbers:
+       - 1
+       - 2
+       - 3
+       - 4
+       - 5
+   #+end_src
+
+   The list format is useful when your list contains complex objects instead of
+   scalar values:
+   #+begin_src yaml
+     ___
+     items:
+       - things:
+           thing1: huey
+           things2: dewey
+           thing3: louie
+       - other things:
+           key: value
+   #+end_src
+
+   An array can contain any valid yaml value. The values in a list do not have
+   to be the same type either.
+
+** Dictionaries
+   We briefly covered dictionaries previously, but there is more to them. Like
+   arrays, you can put dictionaries inline:
+   #+begin_src yaml
+     ---
+     foo: { thing1: huey, thing2: louie, thing3: dewey }
+   #+end_src
+
+   Dictionaries can span multiple lines:
+   #+begin_src yaml
+     ---
+     foo: bar
+     bar: foo
+   #+end_src
+
+   Dictionaries can of course also be nested:
+   #+begin_src yaml
+     ---
+     foo:
+       bar:
+         - bar
+         - rab
+         - plop
+   #+end_src

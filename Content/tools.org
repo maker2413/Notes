@@ -3,7 +3,7 @@
 :END:
 #+title: Tools
 #+created: [2021-10-31 Sun 17:20]
-#+last_modified: [2021-12-01 Wed 21:50:23]
+#+last_modified: [2022-03-11 Fri 03:57:11]
 #+filetags: Reference
 
 Here are some of the tools I have covered:
@@ -14,7 +14,9 @@ Here are some of the tools I have covered:
 - [[id:dd5ad15d-458d-41de-b918-056542c0da6b][Git]]
 - [[id:0b26d098-2049-4db0-be8e-f7ddef7f4dfa][GitHub Actions]]
 - [[id:77516fcb-97b3-4e90-bd96-ca22b44340df][GitHub Packages]]
+- [[id:91b8e015-8303-49da-a14b-94745d3cd699][Json]]
 - [[id:3336e7d9-ec1f-4d21-be4b-ae4a7cba7c8f][Org]]
 - [[id:5205eaca-eac2-49fe-aeb1-e7d8d75d0a7e][Org Roam]]
 - [[id:a262fb74-7247-415e-82e7-89a75538fa6b][Markdown]]
 - [[id:1f634140-4dd2-4a32-bc46-55e29b0b814a][XML]]
+- [[id:21e203d3-2839-41ab-abbc-eb876b6426ca][Yaml]]

@@ -3,7 +3,7 @@
 :END:
 #+title: Markup Language
 #+created: [2021-11-22 Mon 22:05]
-#+last_modified: [2022-02-24 Thu 20:32:48]
+#+last_modified: [2022-03-11 Fri 03:57:22]
 #+filetags: Concept
 
 A markup language is a system for annotating a document in a way that is
@@ -43,5 +43,6 @@ up documentation.
 
 Here is a list of some of the markup languages I have covered:
 - [[id:a262fb74-7247-415e-82e7-89a75538fa6b][Markdown]]
+- [[id:91b8e015-8303-49da-a14b-94745d3cd699][Json]]
 - [[id:3336e7d9-ec1f-4d21-be4b-ae4a7cba7c8f][Org]]
 - [[id:21e203d3-2839-41ab-abbc-eb876b6426ca][Yaml]]

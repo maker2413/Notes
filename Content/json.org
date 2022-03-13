@@ -3,10 +3,11 @@
 :END:
 #+title: Json
 #+created: [2022-03-11 Fri 03:53]
-#+last_modified: [2022-03-13 Sun 11:47:14]
+#+last_modified: [2022-03-13 Sun 11:54:49]
 #+filetags: Tool
 
 Json is a very popular [[id:7d97f527-f387-44c0-86c9-4dbbe0ab28e0][markup language]] and although it isn't my favorite it is
 important to at least understand the basics in case you ever encounter it. Json
 ([[id:a29e994c-1920-4ea6-8cfa-946c82e25429][JavaScript]] Object Notation) is a data format that was built to be easily
-readable for both humans and computers. While [[id:21e203d3-2839-41ab-abbc-eb876b6426ca][yaml]] is great 
+readable for both humans and computers. While [[id:21e203d3-2839-41ab-abbc-eb876b6426ca][yaml]] is great for defining
+configuration information,

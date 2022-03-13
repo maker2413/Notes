@@ -53,6 +53,10 @@
 <script src='/js/URI.js'></script>
 ")
 
+;; Set html footer information
+(setq maker/footer "This page was last updated: %C. <a href='https://github.com/maker2413/Notes/'>Source</a>
+")
+
 ;; Add roam files to list of files to search IDs for
 (setq org-id-extra-files (org-roam-list-files))
 
@@ -66,6 +70,7 @@
          :html-head-extra ,maker/header
          :html-head-include-default-style nil
          :html-head-include-scripts nil
+         :html-postamble ,maker/footer
          :html-validation-link nil
          :publishing-directory ,output-dir
          :publishing-function org-html-publish-to-html

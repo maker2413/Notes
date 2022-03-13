@@ -67,6 +67,10 @@ a[target="_blank"]:after {
   content: url(/images/external_link.png);
 }
 
+dt {
+  font-weight: bold;
+}
+
 img {
   max-width: 560px;
   max-height: 100%;

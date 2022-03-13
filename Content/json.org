@@ -3,7 +3,7 @@
 :END:
 #+title: Json
 #+created: [2022-03-11 Fri 03:53]
-#+last_modified: [2022-03-13 Sun 13:07:05]
+#+last_modified: [2022-03-13 Sun 16:53:35]
 #+filetags: Tool
 
 Json is a very popular [[id:7d97f527-f387-44c0-86c9-4dbbe0ab28e0][markup language]] and although it isn't my favorite it is
@@ -123,3 +123,13 @@ and is very commonly encountered when working with [[id:91ceb802-e5d7-498e-b04c-
   #+begin_src json
     { "first_name": "John", "last_name": 'Lennon' }
   #+end_src
+
+* Conclusion
+  That pretty covers json as the syntax and structure are quite simple. Unlike
+  [[id:21e203d3-2839-41ab-abbc-eb876b6426ca][yaml]] whitespace and indentation don't matter as long as your syntax is
+  right. Interestingly since [[id:21e203d3-2839-41ab-abbc-eb876b6426ca][yaml]] is a superset of json, [[id:21e203d3-2839-41ab-abbc-eb876b6426ca][yaml]] files can be
+  converted to json files most of the time with easy using a converter like
+  [[https://www.json2yaml.com/][json2yaml]]. [[id:21e203d3-2839-41ab-abbc-eb876b6426ca][Yaml]] does have a lot more features than json so this may not always
+  be possible without some editing including the fact that [[id:21e203d3-2839-41ab-abbc-eb876b6426ca][yaml]] even allows you
+  to embed other [[id:7d97f527-f387-44c0-86c9-4dbbe0ab28e0][markup languages]] including json so that can be another great
+  reason to at least be familiar with json.

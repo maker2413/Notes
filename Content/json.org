@@ -3,11 +3,123 @@
 :END:
 #+title: Json
 #+created: [2022-03-11 Fri 03:53]
-#+last_modified: [2022-03-13 Sun 11:54:49]
+#+last_modified: [2022-03-13 Sun 13:07:05]
 #+filetags: Tool
 
 Json is a very popular [[id:7d97f527-f387-44c0-86c9-4dbbe0ab28e0][markup language]] and although it isn't my favorite it is
 important to at least understand the basics in case you ever encounter it. Json
 ([[id:a29e994c-1920-4ea6-8cfa-946c82e25429][JavaScript]] Object Notation) is a data format that was built to be easily
 readable for both humans and computers. While [[id:21e203d3-2839-41ab-abbc-eb876b6426ca][yaml]] is great for defining
-configuration information,
+configuration information in a simple key, value format, json is more powerful
+when it comes to providing a convenient way for applications to exchange data
+and is very commonly encountered when working with [[id:91ceb802-e5d7-498e-b04c-2d77c0af9d76][APIs]].
+
+* History
+  In the early 2000s Douglas Crockford created json to be minimal, portable, and
+  textual. A subset of [[id:a29e994c-1920-4ea6-8cfa-946c82e25429][JavaScript]], json came into popularity around the same
+  time. It was standardized in 2013, and published in 2017 as [[https://datatracker.ietf.org/doc/html/rfc8259][RFC8259]], the
+  Internet Engineering Task Force (IETF) standard for the Internet.
+
+  Json grew out of a need for stateless, real-time server-to-browser
+  communication. It aimed to be a lightweight alternative to [[id:1f634140-4dd2-4a32-bc46-55e29b0b814a][XML]] to allow for
+  easy parsing of [[id:a29e994c-1920-4ea6-8cfa-946c82e25429][JavaScript]] on the web.
+
+  Although json was designed around [[id:a29e994c-1920-4ea6-8cfa-946c82e25429][JavaScript]], it is not restricted to use with
+  [[id:a29e994c-1920-4ea6-8cfa-946c82e25429][JavaScript]].
+
+* Structure
+  Json's simplicity is part of its appeal. It's easy to write, easy to read, and
+  easy to translate between the [[id:9fcbd1ea-5bc4-4d0b-a69f-c84d43281f24][data structures]] of most languages. Lets take a
+  look at what makes up a json object, the [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data types]] that json supports, and
+  other specifics with the syntax of this [[id:7d97f527-f387-44c0-86c9-4dbbe0ab28e0][markup language]].
+
+  If you have ever worked with an [[id:91ceb802-e5d7-498e-b04c-2d77c0af9d76][API]] or looked through the documentation for
+  one you have probably encountered json. The criteria for a valid json file is
+  rather simple, though it can be used to describe complex data. The structure
+  of a json object is as follows:
+  - Curly braces (~{}~) hold objects
+  - The data is in Key/Value pairs
+  - Square brackets (~[]~) hold arrays
+  - Each data element is enclosed with if it is a character, or without quotes
+    if it is a numeric value
+  - Commas are used to separate pieces of data
+
+  Here is a basic example:
+  #+begin_src json
+    {
+      "name": "John Lennon",
+      "born": 1940,
+      "died": 1980
+    }
+  #+end_src
+
+  The key of our first object is ~name~ and the value is ~John Lennon~ in the
+  above example. We can also see that our second and third objects have a
+  numeric value assigned to them.
+
+  Json also allows us to nest json structures like this:
+  #+begin_src json
+    {
+      "band_members": [
+        { "name": "John Lennon", "born": 1940 },
+        { "name": "Paul McCartney", "born": 1942 },    
+        { "name": "George Harrison", "born": 1943 },
+        { "name": "Ringo Star", "born": 1940 },
+      ]
+    }
+  #+end_src
+
+  In this example we can see that a primary object with a single key
+  (~band_members~) has an array as its value. Within that array, each item is
+  itself an object, similar to the earlier simple example. Objects and arrays
+  are values that can hold other values, so there's an unlimited nesting that
+  could happen with json data. That allows json to describe most [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data types]],
+  from to tabular to even more complex.
+
+* Json Data Types
+  Now that we have seen the structure of json, lets look into what [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data types]]
+  are supported. We have seen some of them in the above example and there are
+  only a couple more to cover. Here is the complete list of json [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data types]]:
+  - string :: Literal text that's enclosed with quotes.
+  - number :: Positive or negative integers or floating point numbers
+  - object :: A Key/Value pair enclosed in curly braces.
+  - array :: A collection of one or more json objects.
+  - boolean :: A value that is either true or false with no quotes.
+  - null :: Indicates the absence of data for a Key/Value pair, represented as
+    ~null~ with no quotes.
+
+  Here is an example of a json object that includes all of these [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data types]]:
+  #+begin_src json
+    {
+      "name": "John Lennon",
+      "born": 1940,
+      "instruments": ["vocals", "keyboards", "guitars"],
+      "mathmatician": false,
+      "current_location": null
+    }
+  #+end_src
+
+* Syntax
+  We have already covered the structure of json, which provides the basics of
+  the syntax. In this section we will suggest some best practices to avoid
+  common json errors:
+
+  *Always enclose the Key/Value pair within double quotes.* Most json parsers
+  don't like to parse json objects with single quotes:
+  #+begin_src json
+    { "name": "John Lennon" }
+  #+end_src
+
+  *Never use hyphen in your key fields.* Use underscores (~_~), all lower case,
+  or camel case:
+  #+begin_src json
+    { "first_name": "John", "last_name": "Lennon" }
+  #+end_src
+
+  *Use a json linter to confirm valid json.* Install a command line linter or
+  use an online tool like [[https://jsonlint.com/][JSONLint]]. If you copy this next example into a json
+  linter, you should get a parse error the single quotes around the value for
+  ~last_name~:
+  #+begin_src json
+    { "first_name": "John", "last_name": 'Lennon' }
+  #+end_src

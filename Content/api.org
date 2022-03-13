@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       91ceb802-e5d7-498e-b04c-2d77c0af9d76
+:END:
+#+title: API
+#+created: [2022-03-13 Sun 12:30]
+#+last_modified: [2022-03-13 Sun 12:30:55]
+#+filetags: Concept
+
+API stands for application program interface, which is a set of definitions and
+protocols for building and integrating application software.

@@ -1,6 +1,6 @@
 #+TITLE: Notes
 #+created: [2021-10-15 Fri 20:31]
-#+last_modified: [2022-02-05 Sat 14:43:27]
+#+last_modified: [2022-03-13 Sun 21:40:11]
 
 These are my notes, and a collection of guides I have put together over topics I
 have learned. As of right now this website is quite a work in progress but
@@ -18,8 +18,10 @@ As of right now you can check out these guides to begin diving into my notes:
 - [[id:4cdeb399-efc2-4670-9da7-b0bc566b2aa5][Concepts]]
 - [[id:c98976a7-563e-4f21-a436-f71201e24af4][Kubernetes]]
 - [[id:8f8d4797-dca7-4e7f-afcb-b12fa196d412][Linux]]
+- [[id:7d97f527-f387-44c0-86c9-4dbbe0ab28e0][Markup Languages]]
 - [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][Programming Languages]]
 - [[id:aa1519cc-d56c-4fbf-90bd-ea284b8d706f][Tools]]
+- [[id:71fa1fd6-35fd-43d6-b18c-b40c2621ca15][Templating Languages]]
 
 Also be sure to check out my one-off notes:
 - [[id:a67cff5b-1fc5-4ed4-8daa-dede88c97261][OneOffs]]

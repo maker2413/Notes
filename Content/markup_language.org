@@ -3,7 +3,7 @@
 :END:
 #+title: Markup Language
 #+created: [2021-11-22 Mon 22:05]
-#+last_modified: [2022-03-11 Fri 03:57:22]
+#+last_modified: [2022-03-13 Sun 21:40:28]
 #+filetags: Concept
 
 A markup language is a system for annotating a document in a way that is
@@ -46,3 +46,4 @@ Here is a list of some of the markup languages I have covered:
 - [[id:91b8e015-8303-49da-a14b-94745d3cd699][Json]]
 - [[id:3336e7d9-ec1f-4d21-be4b-ae4a7cba7c8f][Org]]
 - [[id:21e203d3-2839-41ab-abbc-eb876b6426ca][Yaml]]
+- [[id:1f634140-4dd2-4a32-bc46-55e29b0b814a][XML]]

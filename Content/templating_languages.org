@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       71fa1fd6-35fd-43d6-b18c-b40c2621ca15
+:END:
+#+title: Templating Languages
+#+created: [2022-03-13 Sun 18:05]
+#+last_modified: [2022-03-13 Sun 18:08:19]
+#+filetags: Reference
+
+Templating languages are type of meta [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]]. By that I mean that
+templating languages often at surface level may look or work like a programming
+language but are rather a way of writing up a template that another programming
+language can render to generate a string of text or a file.
+
+Some templating languages I have notes on are:
+- [[id:b805c0d0-895d-4806-a223-6a9c99cf29fb][Jsonnet]]

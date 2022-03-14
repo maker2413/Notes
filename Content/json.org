@@ -3,7 +3,7 @@
 :END:
 #+title: Json
 #+created: [2022-03-11 Fri 03:53]
-#+last_modified: [2022-03-13 Sun 16:53:35]
+#+last_modified: [2022-03-13 Sun 21:41:26]
 #+filetags: Tool
 
 Json is a very popular [[id:7d97f527-f387-44c0-86c9-4dbbe0ab28e0][markup language]] and although it isn't my favorite it is
@@ -133,3 +133,5 @@ and is very commonly encountered when working with [[id:91ceb802-e5d7-498e-b04c-
   be possible without some editing including the fact that [[id:21e203d3-2839-41ab-abbc-eb876b6426ca][yaml]] even allows you
   to embed other [[id:7d97f527-f387-44c0-86c9-4dbbe0ab28e0][markup languages]] including json so that can be another great
   reason to at least be familiar with json.
+
+  I also have notes on [[id:b805c0d0-895d-4806-a223-6a9c99cf29fb][jsonnet]] which is a [[id:71fa1fd6-35fd-43d6-b18c-b40c2621ca15][templating language]] for json files.

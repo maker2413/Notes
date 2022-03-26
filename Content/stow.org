@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       6f86b678-5aac-4bba-8723-c988766e1078
+:END:
+#+title: Stow
+#+created: [2022-03-25 Fri 23:46]
+#+last_modified: [2022-03-25 Fri 23:47:45]
+#+filetags: GNU Linux Tool
+
+The [[id:12725881-479a-46a7-8654-3e64bd2ee236][GNU]] ~stow~ tool.

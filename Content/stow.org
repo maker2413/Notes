@@ -3,7 +3,8 @@
 :END:
 #+title: Stow
 #+created: [2022-03-25 Fri 23:46]
-#+last_modified: [2022-03-25 Fri 23:47:45]
+#+last_modified: [2022-04-04 Mon 05:24:47]
 #+filetags: GNU Linux Tool
 
-The [[id:12725881-479a-46a7-8654-3e64bd2ee236][GNU]] ~stow~ tool.
+The [[id:12725881-479a-46a7-8654-3e64bd2ee236][GNU]] ~stow~ tool is used to create symlinks from a destination directory to a
+target directory. This is also known as a symlink farm.

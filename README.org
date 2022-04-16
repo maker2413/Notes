@@ -16,3 +16,10 @@ is written and how my website is built can be found here: [[https://www.ethanp.d
 *Disclaimer*
 Since these are personal notes any content in this repo or the website is
 subject to containing partial or even inaccurate ideas or concepts.
+
+* Development
+  To build the website and view it locally you will need ~docker~ and ~make~ on
+  your system and then you can simple run ~make~ at the root of this repo. The
+  website will now be available in the ~Website~ directory. To host this website
+  via docker you can also simply run ~make webserver~ in the root of this repo
+  and the website will be available at [[localhost:8080]].

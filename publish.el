@@ -40,7 +40,7 @@
 (setq base-dir "/opt/OrgFiles")
 (setq images-dir (concat base-dir "/Images"))
 (setq notes-dir (concat base-dir "/Content"))
-(setq output-dir "/opt/OrgFiles/WebSite")
+(setq output-dir "/opt/OrgFiles/Website")
 (setq images-output-dir (concat output-dir "/images"))
 
 ;; Set html header information
@@ -51,6 +51,7 @@
 <script src='https://unpkg.com/tippy.js@6'></script>
 <script src='/js/script.js'></script>
 <script src='/js/URI.js'></script>
+<link rel='shortcut icon' type='image/png' href='./images/brain.png'/>\n
 ")
 
 ;; Set html footer information
@@ -82,7 +83,7 @@
         ("css-js"
          :base-directory ,base-dir
          :base-extension "css\\|js"
-         :exclude "WebSite/.*"
+         :exclude "Website/.*"
          :publishing-directory ,output-dir
          :publishing-function org-publish-attachment
          :recursive t)
@@ -110,7 +111,6 @@
              (org-html--build-meta-info info)
              (org-html--build-head info)
              (org-html--build-mathjax-config info)
-             "<link rel='shortcut icon' type='image/png' href='./images/brain.png'/>\n"
              "</head>\n"
              "<body>\n"
              "<div class='notes-container'>\n"

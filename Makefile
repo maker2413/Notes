@@ -14,3 +14,6 @@ webserver:
 		--name notes-web \
 		--rm \
 		nginx
+
+webserverstop:
+	@docker stop notes-web

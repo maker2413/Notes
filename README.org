@@ -23,3 +23,6 @@ subject to containing partial or even inaccurate ideas or concepts.
   website will now be available in the ~Website~ directory. To host this website
   via docker you can also simply run ~make webserver~ in the root of this repo
   and the website will be available at [[localhost:8080]].
+
+  To stop the web server you can also run ~make webserverstop~ to stop the
+  docker container.

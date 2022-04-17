@@ -52,6 +52,10 @@
 <script src='/js/script.js'></script>
 <script src='/js/URI.js'></script>
 <link rel='shortcut icon' type='image/png' href='./images/brain.png'/>\n
+<form id='search' autocomplete='off'>
+<input type='text' id='search-input' name='query' placeholder=\"Type here to search\">
+<input type='submit' value='search'>
+</form>
 ")
 
 ;; Set html footer information

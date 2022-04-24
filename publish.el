@@ -45,18 +45,18 @@
 (setq images-output-dir (concat output-dir "/images"))
 
 ;; Set html header information
-(setq maker/header "
-<link rel='stylesheet' type='text/css' href='/css/style.css'/>
+(setq maker/header "<link rel='stylesheet' type='text/css' href='/css/style.css'/>
 <link rel='stylesheet' type='text/css' href='https://unpkg.com/tippy.js@6/themes/light.css'/>
 <script src='https://unpkg.com/@popperjs/core@2'></script>
 <script src='https://unpkg.com/tippy.js@6'></script>
 <script src='/js/script.js'></script>
 <script src='/js/URI.js'></script>
-<link rel='shortcut icon' type='image/png' href='./images/brain.png'/>\n
+<link rel='shortcut icon' type='image/png' href='./images/brain.png'/>
 <form id='search' autocomplete='off' action=/search.html>
+<label hidden for='search-input'>Search site</label>
 <input type='text' id='search-input' name='query' placeholder=\"Type here to search\">
 <input type='submit' value='search'>
-</form>
+</form>\n
 ")
 
 ;; Set html footer information

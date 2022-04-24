@@ -1,12 +1,12 @@
 .PHONY: dev
-dev:
+build:
 	@docker run \
 		--rm \
 		-v $(shell pwd):/opt/OrgFiles \
 		maker2413/orgroampublish \
 		publish.el
 
-webserver:
+dev:
 	@docker run \
 		-p 8080:80 \
 		-d \
@@ -15,5 +15,5 @@ webserver:
 		--rm \
 		nginx
 
-webserverstop:
+stop:
 	@docker stop notes-web

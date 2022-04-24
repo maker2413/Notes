@@ -41,6 +41,7 @@
 (setq images-dir (concat base-dir "/Images"))
 (setq notes-dir (concat base-dir "/Content"))
 (setq output-dir "/opt/OrgFiles/Website")
+(setq static-dir (concat base-dir "/Static"))
 (setq images-output-dir (concat output-dir "/images"))
 
 ;; Set html header information
@@ -52,7 +53,7 @@
 <script src='/js/script.js'></script>
 <script src='/js/URI.js'></script>
 <link rel='shortcut icon' type='image/png' href='./images/brain.png'/>\n
-<form id='search' autocomplete='off'>
+<form id='search' autocomplete='off' action=/search.html>
 <input type='text' id='search-input' name='query' placeholder=\"Type here to search\">
 <input type='submit' value='search'>
 </form>
@@ -83,11 +84,16 @@
          :recursive t
          :with-author nil
          :with-toc nil)
-        ;; css-js is used for css and javascript files
-        ("css-js"
-         :base-directory ,base-dir
-         :base-extension "css\\|js"
-         :exclude "Website/.*"
+        ;; static is used for the static assets in "Static"
+        ;; ("css-js"
+        ;;  :base-directory ,base-dir
+        ;;  :base-extension "css\\|js"
+        ;;  :exclude "Website/.*"
+        ;;  :publishing-directory ,output-dir
+        ;;  :publishing-function org-publish-attachment
+        ;;  :recursive t)
+        ("static"
+         :base-directory ,static-dir
          :publishing-directory ,output-dir
          :publishing-function org-publish-attachment
          :recursive t)
@@ -100,7 +106,7 @@
          :recursive t)
         ;; publish all above
         ("website"
-         :components ("org-notes" "css-js" "images"))))
+         :components ("org-notes" "static" "images"))))
 
 ;; Overwrite default HTML output template
 ;;

@@ -51,12 +51,7 @@
 <script src='https://unpkg.com/tippy.js@6'></script>
 <script src='/js/script.js'></script>
 <script src='/js/URI.js'></script>
-<link rel='shortcut icon' type='image/png' href='./images/brain.png'/>
-<form id='search' autocomplete='off' action=/search.html>
-<label hidden for='search-input'>Search site</label>
-<input type='text' id='search-input' name='query' placeholder=\"Type here to search\">
-<input type='submit' value='search'>
-</form>\n
+<link rel='shortcut icon' type='image/png' href='./images/brain.png'/>\n
 ")
 
 ;; Set html footer information
@@ -94,6 +89,7 @@
         ;;  :recursive t)
         ("static"
          :base-directory ,static-dir
+         :base-extension "css\\|js\\|html"
          :publishing-directory ,output-dir
          :publishing-function org-publish-attachment
          :recursive t)
@@ -123,6 +119,13 @@
              (org-html--build-mathjax-config info)
              "</head>\n"
              "<body>\n"
+             "<header>\n"
+             "<form id='search' autocomplete='off' action=/search.html>\n"
+             "<label hidden for='search-input'>Search site</label>\n"
+             "<input type='text' id='search-input' name='query' placeholder='Type here to search'>\n"
+             "<input type='submit' value='search'>\n"
+             "</form>\n"
+             "</header>\n"
              "<div class='notes-container'>\n"
              "<div class='notes'>\n"
              "<div class='note'>\n"

@@ -51,7 +51,7 @@
 <script src='https://unpkg.com/tippy.js@6'></script>
 <script src='/js/script.js'></script>
 <script src='/js/URI.js'></script>
-<link rel='shortcut icon' type='image/png' href='./images/brain.png'/>\n
+<link rel='shortcut icon' type='image/png' href='./images/me.svg'/>\n
 ")
 
 ;; Set html footer information
@@ -96,7 +96,7 @@
         ;; images is used for the images directory
         ("images"
          :base-directory ,images-dir
-         :base-extension "png"
+         :base-extension "png\\|svg"
          :publishing-directory ,images-output-dir
          :publishing-function org-publish-attachment
          :recursive t)

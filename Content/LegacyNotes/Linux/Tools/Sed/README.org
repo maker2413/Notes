@@ -167,7 +167,7 @@ command line life or to automate things with bash.
 
 * Editing Files
   Instead of having ~sed~ take an input file and generate an output file we can
-  use the ~-i~ flag to indent the file provided:
+  use the ~-i~ flag to inline edit the file provided:
   #+NAME: Cat
   #+begin_src sh :results output :exports both
     cat Cat.txt

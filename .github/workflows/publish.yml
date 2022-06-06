@@ -7,7 +7,7 @@ on:
 
 env:
   AWS_DEFAULT_REGION: us-west-2
-  BUCKET_NAME: www.ethanp.dev
+  BUCKET_NAME: notes.ethancpost.com
   DOCKER_IMAGE: maker2413/orgroampublish
   DOCKER_TAG: latest
 

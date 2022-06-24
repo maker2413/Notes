@@ -9,7 +9,7 @@ const HTML_FOLDER = "Website";
 const SEARCH_FIELDS = ["title", "description", "keywords", "body"];
 const EXCLUDE_FILES = ["search.html"];
 const MAX_PREVIEW_CHARS = 275;  // Number of characters to show for a given search result
-const OUTPUT_INDEX = "Website/js/lunr_index.js";
+const OUTPUT_INDEX = "lunr_index.js";
 
 function isHtml(filename) {
   lower = filename.toLowerCase();

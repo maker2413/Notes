@@ -41,17 +41,17 @@
 (setq images-dir (concat base-dir "/Images"))
 (setq notes-dir (concat base-dir "/Content"))
 (setq output-dir "/opt/OrgFiles/Website")
+(setq static-dir (concat base-dir "/Static"))
 (setq images-output-dir (concat output-dir "/images"))
 
 ;; Set html header information
-(setq maker/header "
-<link rel='stylesheet' type='text/css' href='/css/style.css'/>
+(setq maker/header "<link rel='stylesheet' type='text/css' href='/css/style.css'/>
 <link rel='stylesheet' type='text/css' href='https://unpkg.com/tippy.js@6/themes/light.css'/>
 <script src='https://unpkg.com/@popperjs/core@2'></script>
 <script src='https://unpkg.com/tippy.js@6'></script>
 <script src='/js/script.js'></script>
 <script src='/js/URI.js'></script>
-<link rel='shortcut icon' type='image/png' href='./images/brain.png'/>\n
+<link rel='shortcut icon' type='image/png' href='./images/me.svg'/>\n
 ")
 
 ;; Set html footer information
@@ -65,6 +65,7 @@
 (setq org-publish-project-alist
       ;; org-notes is used for the actual org files
       `(("org-notes"
+         :auto-sitemap t
          :base-directory ,notes-dir
          :base-extension "org"
          :html-doctype "html5"
@@ -79,24 +80,30 @@
          :recursive t
          :with-author nil
          :with-toc nil)
-        ;; css-js is used for css and javascript files
-        ("css-js"
-         :base-directory ,base-dir
-         :base-extension "css\\|js"
-         :exclude "Website/.*"
+        ;; static is used for the static assets in "Static"
+        ;; ("css-js"
+        ;;  :base-directory ,base-dir
+        ;;  :base-extension "css\\|js"
+        ;;  :exclude "Website/.*"
+        ;;  :publishing-directory ,output-dir
+        ;;  :publishing-function org-publish-attachment
+        ;;  :recursive t)
+        ("static"
+         :base-directory ,static-dir
+         :base-extension "css\\|js\\|html"
          :publishing-directory ,output-dir
          :publishing-function org-publish-attachment
          :recursive t)
         ;; images is used for the images directory
         ("images"
          :base-directory ,images-dir
-         :base-extension "png"
+         :base-extension "png\\|svg"
          :publishing-directory ,images-output-dir
          :publishing-function org-publish-attachment
          :recursive t)
         ;; publish all above
         ("website"
-         :components ("org-notes" "css-js" "images"))))
+         :components ("org-notes" "static" "images"))))
 
 ;; Overwrite default HTML output template
 ;;
@@ -113,6 +120,13 @@
              (org-html--build-mathjax-config info)
              "</head>\n"
              "<body>\n"
+             "<header>\n"
+             "<form id='search' autocomplete='off' action=/search.html>\n"
+             "<label hidden for='search-input'>Search site</label>\n"
+             "<input type='text' id='search-input' name='query' placeholder='Type here to search'>\n"
+             "<input type='submit' value='search'>\n"
+             "</form>\n"
+             "</header>\n"
              "<div class='notes-container'>\n"
              "<div class='notes'>\n"
              "<div class='note'>\n"

@@ -1,13 +1,14 @@
-name: Publish Notes To Bucket
+name: Publish Notes To Dev Bucket
 
 on:
   push:
     branches:
-      - master
+      - '**'
+      - '!master'
 
 env:
   AWS_DEFAULT_REGION: us-west-2
-  BUCKET_NAME: notes.ethancpost.com
+  BUCKET_NAME: notes.ethanp.dev
   DOCKER_IMAGE: maker2413/orgroampublish
   DOCKER_TAG: latest
 
@@ -39,12 +40,12 @@ jobs:
         run: |
           aws s3 sync --size-only Website s3://$BUCKET_NAME/
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.DEV_AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.DEV_AWS_SECRET_ACCESS_KEY }}
 
       - name: Upload Search Index to S3
         run: |
           aws s3 cp lunr_index.js s3://$BUCKET_NAME/js/
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.DEV_AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.DEV_AWS_SECRET_ACCESS_KEY }}

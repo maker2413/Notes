@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lan="en">
   <head>
-    <!-- 2022-04-24 Sun 13:54 -->
     <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Search</title>
-        <meta name="generator" content="Org mode">
-          <link rel='stylesheet' type='text/css' href='/css/style.css'/>
-          <script src='https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js'></script>
-          <script src='/js/search.js'></script>
-          <link rel='shortcut icon' type='image/png' href='./images/me.svg'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Search</title>
+    <meta name="generator" content="Org mode">
+    <link rel='stylesheet' type='text/css' href='/css/style.css'/>
+    <link rel='stylesheet' type='text/css' href='/css/search.css'/>
+    <link rel='stylesheet' type='text/css' href='https://unpkg.com/tippy.js@6/themes/light.css'/>
+    <script src='https://unpkg.com/@popperjs/core@2'></script>
+    <script src='https://unpkg.com/tippy.js@6'></script>
+    <script src='https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js'></script>
+    <script src='/js/lunr_index.js' defer></script>
+    <script src='/js/search.js' defer></script>
+    <script src='/js/URI.js' defer></script>
+    <script src='/js/script.js' defer></script>
+    <link rel='shortcut icon' type='image/png' href='./images/me.svg'/>
   </head>
   <body>
     <header>
@@ -23,6 +29,8 @@
         <div class='note'>
           <div class="content">
             <p>Please enter a keyword above to search this site.</p>
+            <div class="resultCount" id="resultCount"></div>
+            <div id="searchResults"></div>
           </div>
         </div>
       </div>

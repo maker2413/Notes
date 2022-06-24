@@ -65,6 +65,7 @@
 (setq org-publish-project-alist
       ;; org-notes is used for the actual org files
       `(("org-notes"
+         :auto-sitemap t
          :base-directory ,notes-dir
          :base-extension "org"
          :html-doctype "html5"

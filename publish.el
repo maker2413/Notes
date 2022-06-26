@@ -122,7 +122,7 @@
              "<body>\n"
              "<header>\n"
              "<form id='search' autocomplete='off' action=/search.html>\n"
-             "<label hidden for='search-input'>Search site</label>\n"
+             "<label hidden for='search-input'></label>\n"
              "<input type='text' id='search-input' name='query' placeholder='Type here to search'>\n"
              "<input type='submit' value='search'>\n"
              "</form>\n"

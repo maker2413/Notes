@@ -3,7 +3,7 @@
 :END:
 #+title: AWK
 #+created: [2022-06-26 Sun 10:22]
-#+last_modified: [2022-06-26 Sun 12:00:37]
+#+last_modified: [2022-06-26 Sun 12:08:52]
 #+filetags: Linux Tool
 #+property: header-args
 
@@ -11,36 +11,36 @@ The ~awk~ command is a text manipulation tool that allows us to grab certain
 columns from text. Awk is typically used to extract certain information from
 text. Lets look at a quick example of what ~awk~ does. Lets start by getting the
 output of the [[id:2f1ec3ca-08a0-44a2-8ba2-0b448f8434e9][PS]] command:
-#+begin_src bash :results output
+#+begin_src bash :results example
   ps -t pts/0
 #+end_src
 
 #+RESULTS:
-:     PID TTY          TIME CMD
-:    2490 pts/0    00:00:00 fish
-:    8608 pts/0    00:00:03 emacs
+|   PID | TTY   |     TIME | CMD   |
+|  2490 | pts/0 | 00:00:00 | fish  |
+| 17838 | pts/0 | 00:00:03 | emacs |
 
 Now lets try to pipe that command into ~awk~ and see if we grab just the first
 column of test (the PID column):
-#+begin_src bash :results output
+#+begin_src bash :results example
   ps -t pts/0 | awk '{print $1}'
 #+end_src
 
 #+RESULTS:
-: PID
-: 2490
-: 9888
+|   PID |
+|  2490 |
+| 17838 |
 
 You can see that this printed out just the first column of text. Similarly we
 can grab just the TTY column with the following:
-#+begin_src bash :results output
+#+begin_src bash :results example
   ps -t pts/0 | awk '{print $2}'
 #+end_src
 
 #+RESULTS:
-: TTY
-: pts/0
-: pts/0
+| TTY   |
+| pts/0 |
+| pts/0 |
 
 Just as a quick note ~'{print $0}'~ in ~awk~ will print the entirety of the text
 piped into ~awk~ and you can also have multiple outputs in ~awk~. For instance
@@ -48,11 +48,11 @@ if we wanted to print the PID and TTY columns we could just use the following
 print command: ~'{print $1 $2}'~. It is also worth noting before we dive into
 the syntax of ~awk~ that instead of always piping text into ~awk~ you can also
 just specify which file you want awk to run against like this:
-~awk '{command}' <file>~.
+~awk '{action}' <file>~.
 
 So lets dive into what this command is actually stating. Awk is a very powerful
 tool whose syntax can be described as a data driven [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]]. The
-basic syntax of any ~awk~ command is as follows: ~awk '<pattern> {<command>}'~.
+basic syntax of any ~awk~ command is as follows: ~awk '<pattern> {<action>}'~.
 Being that ~awk~ is in fact its own feature rich scripting language we can also
 write an ~awk~ script that we want to reuse and pass that to ~awk~ with the =-f=
 flag: ~awk -f awk_script.txt <file>~.

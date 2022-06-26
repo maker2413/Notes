@@ -3,7 +3,7 @@
 :END:
 #+title: Linux
 #+created: [2021-11-08 Mon 19:49]
-#+last_modified: [2022-04-08 Fri 22:46:04]
+#+last_modified: [2022-06-26 Sun 10:51:16]
 #+filetags: OperatingSystem
 
 Linux is an open source and free operating system and if even you have never
@@ -21,10 +21,12 @@ use a Linux tool called [[id:97b6c627-602e-4a30-837b-75555a7eae94][man]] to view
 to run. Example: ~man ls~ would give us the manual of the ~ls~ command. If you
 want to learn about some of the command line tools in the Linux world please
 check out some of the following guides:
+- [[id:4baa1bc5-814d-4dae-9272-11f19b3ffbff][AWK]] :: used to grab columns of text from text
 - [[id:2be8b689-98da-4e62-82d9-1e0cf4b050e3][CD]] :: used to change directories
 - [[id:76e95672-9ba3-4691-8149-86b65fe39533][CP]] :: used to copy files or directories
 - [[id:a18196a7-adf8-4d86-af49-bb4915c366ca][LS]] :: used to list file and directories
 - [[id:97b6c627-602e-4a30-837b-75555a7eae94][Man]] :: used to read manual pages for help with commands and tools
+- [[id:2f1ec3ca-08a0-44a2-8ba2-0b448f8434e9][PS]] :: used to view information about running processes on a system
 - [[id:c4903e5f-c4a9-4d0e-864b-01d7b392fdfa][Sudo]] :: allows non root users to assume the root user for the duration of their command
 - [[id:0bbbc442-1a15-42d7-bc9c-48c9baaf079d][Tmux]] :: allows you to split your terminal into panes or to keep your terminal session running in the background
 

@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       2f1ec3ca-08a0-44a2-8ba2-0b448f8434e9
+:END:
+#+title: PS
+#+created: [2022-06-26 Sun 10:48]
+#+last_modified: [2022-06-26 Sun 10:50:18]
+#+filetags: Linux Tool
+
+The ~ps~ command (short for process status) is a [[id:8f8d4797-dca7-4e7f-afcb-b12fa196d412][Linux]] command line tool for
+viewing information related with the processes running on a system.

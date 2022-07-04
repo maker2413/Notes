@@ -3,7 +3,32 @@
 :END:
 #+title: Lisp
 #+created: [2021-11-06 Sat 06:01]
-#+last_modified: [2021-11-06 Sat 06:04:10]
+#+last_modified: [2022-07-04 Mon 12:06:05]
 #+filetags: ProgrammingLanguage
 
-PARENTHESES
+The actual name ~lisp~ stands for "list processing" and that is exactly what
+lisp actual does. Everything in ~lisp~ is a list. The actual syntax of lisp is
+very simple and there are very few rules to remember. The syntax is made up of
+~S-expressions~. An S-expression is either an ~atom~ or a list. Atoms can be
+numbers like: 10, 3.14, 0, or symbols like ~t~ (true), ~+~, ~my-variable~. There
+is also a special kind of symbol called keywords, which are colon-prefixed
+symbols like ~:thing~ or ~:keyword~. Keywords evaluate to themselves: you can
+think of them like enums.
+
+[[id:b60776ea-0a30-4b2c-8f7c-61aaad423db6][Comments]] in lisp are dictated with the ~;~, however we have a few different ways
+to write comments per the lisp standard:
+- ~;;;;~ :: *Only* used to describe your program.
+- ~;;;~ :: A basic comment.
+- ~;;~ :: A comment that is indented with your coded.
+- ~;~ :: A comment that comes after a line of code.
+
+We also have multi line comments in lisp which are written like this:
+#+begin_src lisp
+  #||
+  Multline
+  ||#
+#+end_src
+
+[[id:2f7bedf9-adcd-4c8c-a26f-47282f8f4ad0][Variables]] in lisp can be named with many different characters. Some of these
+include: letters, numbers, ~+~, ~-~, ~_~, ~*~, ~=~, ~<~, ~>~, ~?~, ~!~. It is
+important to note though that we *can not* use whitespace in variable names.

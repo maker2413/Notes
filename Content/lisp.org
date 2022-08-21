@@ -3,7 +3,7 @@
 :END:
 #+title: Lisp
 #+created: [2021-11-06 Sat 06:01]
-#+last_modified: [2022-07-17 Sun 13:14:53]
+#+last_modified: [2022-08-21 Sun 14:06]
 #+filetags: ProgrammingLanguage
 
 The actual name ~lisp~ stands for "list processing" and that is exactly what
@@ -14,6 +14,55 @@ numbers like: 10, 3.14, 0, or symbols like ~t~ (true), ~+~, ~my-variable~. There
 is also a special kind of symbol called keywords, which are colon-prefixed
 symbols like ~:thing~ or ~:keyword~. Keywords evaluate to themselves: you can
 think of them like enums.
+
+Since everything in ~lisp~ is a just a list code is treated like data and data
+is treated like code. For this reason ~lisp~ can be a fun and interesting
+programming language to learn because it doesn't limit you or hold you back in
+anyway. A ~lisp~ language will actually give you so much freedom that you can
+override built in functions in the language and alter how they behave, because
+at the end of the day these built in functions are just a list of data. Learning
+~lisp~ can also be an amazing learning experience because it will change the way
+you think about code in any other programming language.
+
+If this interests you and you are wondering where to begin learning ~lisp~ one
+other important thing to note is that for a language to be a "lisp" it just has
+a few simple philosophies to follow. Also keeping in mind that since the
+language lets you change anything you want about the language itself there are
+in fact many many many different lisp languages. These languages can be
+referred to as "the lisp family of languages" and anyone of them can be a fine
+starting point. One of the most popular and arguably the most simple lisp
+language [[id:43d75a03-0ec5-4068-b1cd-e23a0bb51cab][Common Lisp]].
+
+One of the other big draws of lisp style programming is what lisp languages call
+the ~REPL~ or "read-eval-print loop". Depending on your implementation of lisp
+you installed the ~repl~ may behave slightly differently. In general the
+repl can almost be thought of like [[id:76fdcf18-4c3c-414a-b16e-4c9fa7f4ed72][Unix]] or [[id:61603883-fcea-49c9-9f48-3a68cdcf77a4][Dos]] shell prompt in that you can type
+expressions and cause things to happen. However, instead of reading and
+interpreting a line of shell commands, lisp read lisp expressions, evaluates
+them according to the rules of lisp, and prints the result. This causes an
+endless cycle of reading, evaluating, and printing; thus the name repl. If all
+of this sounds boring thats because this is just the top level view of what the
+repl is. Once you get deeper into it and start using it to load your existing
+codebase into ram you will see that it is a live environment built of the base
+version of your chosen lisp implementation that allows you to not only execute
+your code but interact with and alter it while your code is running or during a
+crash or bug.
+
+When a bug popped up on the [[https://en.wikipedia.org/wiki/Deep_Space_1][Deep Space 1]] NASA spacecraft 100 million miles away
+from Earth the team was able to diagnose and fix the running code using a lisp
+repl. One of the programmers said the following about the incident:
+  "Debugging a program running on a $100M piece of hardware that is 100 million
+  miles away is an interesting experience. Having a read-eval-print loop running
+  on the spacecraft proved invaluable in finding and fixing the problem."
+
+If you would like to view my notes on lisp lisp languages, here is the a
+lisp... errr I mean a list of different lisps I have notes on:
+- [[id:43d75a03-0ec5-4068-b1cd-e23a0bb51cab][Common Lisp]]
+- [[id:960b6e04-6c5a-413f-b0ca-ed89e06c3542][ELisp]] (Emacs Lisp)
+
+* Placeholder
+*Anything below here is placeholder notes for now because I am not sure where I
+want to put them.*
 
 [[id:b60776ea-0a30-4b2c-8f7c-61aaad423db6][Comments]] in lisp are dictated with the ~;~, however we have a few different ways
 to write comments per the lisp standard:
@@ -42,9 +91,6 @@ our inputs into the ~+~ function. Due to the fact that everything is in an
 expression in lisp it also important to know why this matters. Everything is an
 expression and everything will return a result.
 
-
 [[id:2f7bedf9-adcd-4c8c-a26f-47282f8f4ad0][Variables]] in lisp can be named with many different characters. Some of these
 include: letters, numbers, ~+~, ~-~, ~_~, ~*~, ~=~, ~<~, ~>~, ~?~, ~!~. It is
 important to note though that we *can not* use whitespace in variable names.
-
-* Macros

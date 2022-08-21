@@ -5,7 +5,7 @@ have written while studying and learning various topics in my education and
 studies. I want to make these notes public and usable by anyone wanting to learn
 to help others more easily learn the skills I have developed. I have also made
 great efforts to make these notes as easily viewable via my website:
-https://www.ethanp.dev.
+[[https://notes.ethancpost.com]].
 
 This entire repo and the website are currently under heavy development. I have
 recently taken up the effort of converting these notes to [[https://zettelkasten.de/posts/overview/][Zettelkasten]] note

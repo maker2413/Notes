@@ -3,8 +3,8 @@
 :END:
 #+title: ELisp
 #+created: [2021-11-06 Sat 05:31]
-#+last_modified: [2021-11-06 Sat 07:49:34]
-#+filetags: ProgrammingLanguage
+#+last_modified: [2022-08-19 Fri 17:46]
+#+filetags: Lisp ProgrammingLanguage
 
 ELisp, or Emacs Lisp, is the programming language used to configure and extend
 functionality in [[id:d18ed6e8-dbce-4822-9d3f-3de38246ba38][Emacs]]. ELisp is built off of [[id:85dcb828-5822-4d77-a826-e276d6c5e007][Lisp]] and shares much of the

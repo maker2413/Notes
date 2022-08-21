@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       61603883-fcea-49c9-9f48-3a68cdcf77a4
+:END:
+#+title: Dos
+#+created: [2022-08-21 Sun 13:53]
+#+last_modified: [2022-08-21 Sun 13:54]
+#+filetags: Microsoft Windows Tool
+
+The command prompt in windows.

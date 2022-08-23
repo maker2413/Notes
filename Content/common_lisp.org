@@ -3,8 +3,8 @@
 :END:
 #+title: Common Lisp
 #+created: [2022-08-19 Fri 17:44]
-#+last_modified: [2022-08-21 Sun 14:06]
-#+filetags: Lisp ProgrammingLanguage
+#+last_modified: [2022-08-23 Tue 00:27]
+#+filetags: CommonLisp Lisp ProgrammingLanguage
 
 Common lisp is a dialect of lisp and possible the most popular lisp in the lisp
 family of languages. It can be a great language to start learning a lisp style
@@ -27,8 +27,43 @@ Of these ~sbcl~ is probably the most popular and commonly used implementation
 and if you are just here to learn how to program with lisp may just be the
 quickest starting point for you.
 
-If this is your first ever experience with lisp and using a lisp repl I would
-definitely recommend watching something like the following video:
-https://www.youtube.com/watch?v=0DLdQ6yb7h8 to understand how to interact and
-code with lisp. This video is going over a plugin for [[id:d18ed6e8-dbce-4822-9d3f-3de38246ba38][Emacs]], however the
-concepts displayed of using a lisp repl are quite valuable.
+* Hello World
+We will start looking at a simple hello world program, not just because its a
+staple, but because it gives good insight into some of common lisp's syntax. So
+the most simple way to make a hello world "program" is to just write
+~"Hello World"~ because again everything in lisp returns a value. For a more
+in-depth example:
+#+begin_src lisp
+  (defun hello-world ()
+    (format t "hello world"))
+#+end_src
+
+With that defined we can now run our hello world function with: ~(hello-world)~
+which will print =hello world=. So as you may have guessed ~defun~ is how we
+define functions in lisp. ~defun~ its self is a function that accepts a function
+name as a its first argument and a list of a arguments for the function we are
+creating as its second argument. All arguments after that are considered the
+body of the function. We also used the ~format~ function for our hello world
+function. The ~format~ function is kind of a complicated function to describe,
+but our use case here isn't too hard to explain. the ~format~ function can have
+multiple arguments based to it but at a minimum it expects 2. The first argument
+is used to define where to print its output. In this case ~t~ is used which is
+shorthand for ~*standard-output*~. The second argument format expects a string
+to format. You can have just direct text or you can supplement in variables
+with a syntax similar to ~printf~ in C. For more information on ~format~ please
+check the syntax specification docs: [[http://www.lispworks.com/documentation/lw50/CLHS/Body/f_format.htm][format]].
+
+One more basic thing to learn is that obviously programming in the repl isn't
+exactly ideal for full blown development. With that said although I'm not going
+to cover various development workflows as I use emacs with the sly package
+installed and everyones perfect development environment is different, but you
+can at least save your code in a file and run ~(load <filename>)~ to load your
+program into the repl. It is most common to end your lisp files in =.lisp=, but
+you can technically go with what ever you want; some people use =.cl= for common
+lisp.
+
+* Variables
+In common lisp you use ~(defvar <variable_name> <initial_value>)~ to declare a
+variable and set and initial value for this variable. It is also important to
+note that to declare a global variable it is convention to use ~*~'s around your
+variable name to signify it as a global variable: ~(defvar \*global\* 5)~.

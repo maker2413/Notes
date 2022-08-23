@@ -3,7 +3,7 @@
 :END:
 #+title: Lisp
 #+created: [2021-11-06 Sat 06:01]
-#+last_modified: [2022-08-21 Sun 14:06]
+#+last_modified: [2022-08-21 Sun 17:15]
 #+filetags: ProgrammingLanguage
 
 The actual name ~lisp~ stands for "list processing" and that is exactly what
@@ -55,7 +55,40 @@ repl. One of the programmers said the following about the incident:
   miles away is an interesting experience. Having a read-eval-print loop running
   on the spacecraft proved invaluable in finding and fixing the problem."
 
-If you would like to view my notes on lisp lisp languages, here is the a
+If you are sold on the idea of wanting to learn lisp style programming after
+reading this if, but for nothing else, to change the way you think about
+programming I'll now start to dive into some of the basics.
+
+Before continuing, if this is your first ever experience with lisp and using a
+lisp repl I would definitely recommend watching something like the following
+video: https://www.youtube.com/watch?v=0DLdQ6yb7h8 to understand how to interact
+and code with lisp. This video is going over a plugin for [[id:d18ed6e8-dbce-4822-9d3f-3de38246ba38][Emacs]], however the
+concepts displayed of using a lisp repl are quite valuable.
+
+* General Basics
+So even though lisp is a family of languages and they can differ slightly in
+their syntax some key points of the lisp standard reign true throughout the
+family.
+
+The first key thing to learn or get your head around is the fact that everything
+in lisp returns a value. if you open your preferred lisp repl and just type ~10~
+you will see the repl return 10. Under the hood the repl is interpreting this 10
+as a lisp object ie: a list of 10: ~(10)~ and this list evaluates to =10=. Now
+lets see lisp handles math equations. If you type the following in your repl:
+~(+ 6 8)~ you will see the output: =14=.
+
+Anything we put into parenthesis is a list and generally in lisp lists are
+evaluated by treating the first element in the lisp as the name of a function
+and the rest of the elements as expressions. In out case ~+~ was the name of a
+function that does addition with the expressions passed to it. This function
+performs its task and then returns ~(14)~ and that list returns =14=. For a
+deeper example lets look how we can do multiple expression calls. Type the
+following: ~(/ (* 4 7) 2)~ and you will see it return =14=. In this example the
+~/~ function was called with the inputs of: ~(* 4 7)~ and ~(2)~. We then run the
+~*~ function with the inputs: ~(4)~ and ~(7)~. This returns: ~(28)~ which then
+gets pass up our original function call which returns a value of: ~(14)~.
+
+Form here on you may want to view my notes on lisp languages, here is the a
 lisp... errr I mean a list of different lisps I have notes on:
 - [[id:43d75a03-0ec5-4068-b1cd-e23a0bb51cab][Common Lisp]]
 - [[id:960b6e04-6c5a-413f-b0ca-ed89e06c3542][ELisp]] (Emacs Lisp)

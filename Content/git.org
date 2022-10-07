@@ -3,7 +3,7 @@
 :END:
 #+title: Git
 #+created: [2021-11-26 Fri 15:45]
-#+last_modified: [2021-11-26 Fri 16:06:49]
+#+last_modified: [2022-10-06 Thu 21:40]
 #+filetags: Tool
 
 Git is a version control software originally started by Linux Toralds (The
@@ -12,3 +12,9 @@ software like [[https://www.nongnu.org/cvs/][CVS]] or [[https://subversion.apach
 clones down the entire contents of the repository to their machine and push up
 changes that they make locally, only requiring the user to connect to the server
 to save their work.
+
+* Subtree Commands
+  - ~git remote add -f <repoAlias> <repoURL> [--squash]~
+  - ~git subtree add --prefix <subtreePath> <repoAlias> <branch> [--squash]~
+  - ~git subtree push --prefix <subtreePath> <repoAlias> <branch>~
+  - ~git subtree pull --prefix <subtreePath> <repoAlias> <branch>~

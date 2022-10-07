@@ -1,2 +1,0 @@
-#+TITLE: Regex
-#+PROPERTY: header-args :exports both

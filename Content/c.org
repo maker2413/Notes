@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       a8cd1fe3-5197-44a1-a67d-e876e444cd85
+:END:
+#+title: C
+#+created: [2022-10-06 Thu 21:54]
+#+last_modified: [2022-10-06 Thu 21:59]
+#+filetags: ProgrammingLanguage
+
+C (pronounced like the letter c) is a general-purpose computer [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming
+language]]. It was created in the 1970s by Dennis Ritchie, and remains very widely
+used and influential.

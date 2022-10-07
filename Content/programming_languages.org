@@ -3,7 +3,7 @@
 :END:
 #+title: Programming Languages
 #+created: [2021-10-15 Fri 22:35]
-#+last_modified: [2021-12-06 Mon 00:52:31]
+#+last_modified: [2022-10-06 Thu 22:01]
 #+filetags: Reference
 
 Programming is the act of giving a set of instructions to a computer to
@@ -19,9 +19,12 @@ just a series of symbols that serve as a bridge that allow humans to translate
 our thoughts into instructions that computers can understand.
 
 Here are some of the programming languages I have covered so far:
+- [[id:a8cd1fe3-5197-44a1-a67d-e876e444cd85][C]]
 - [[id:e10c886e-46bd-4a00-bd25-5167caede214][CSS]]
+- [[id:037f18dd-1b13-4cfe-a44e-ae410426f90e][Go]]
 - [[id:d0e74ec8-41c6-4fc8-a2db-4691f32f7e9b][HTML]]
 - [[id:960b6e04-6c5a-413f-b0ca-ed89e06c3542][ELisp]]
 - [[id:a29e994c-1920-4ea6-8cfa-946c82e25429][JavaScript]]
+- [[id:b805c0d0-895d-4806-a223-6a9c99cf29fb][Jsonnet]]
 - [[id:85dcb828-5822-4d77-a826-e276d6c5e007][Lisp]]
 - [[id:0817633b-da6b-4889-ab18-267d6cb9ef60][TypeScript]]

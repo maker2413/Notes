@@ -3,7 +3,7 @@
 :END:
 #+title: JavaScript
 #+created: [2021-10-15 Fri 22:36]
-#+last_modified: [2021-11-22 Mon 15:34:09]
+#+last_modified: [2022-10-06 Thu 21:53]
 #+filetags: ProgrammingLanguage JavaScript
 
 Javascript is a high-level, object-oriented, multi-paradigm programming
@@ -32,6 +32,7 @@ as any version of JavaScript after ES6: [[https://www.w3schools.com/js/js_versio
 This first page will cover the absolute basic Fundamentals of JavaScript. If you
 feel like you can skip this part feel free to jump to another section of the
 guide:
+
 * TODO Link to other topics
 
 * JavaScript Fundamentals
@@ -257,10 +258,20 @@ guide:
       // Prints: ['John', 'Jacob', 'Jingle']
     #+end_src
 
-* TODO What's next
+* What's next
   Well now we have covered the absolute basics of JavaScript and many basic
   topics of programming as a whole. Lets now finally dive into some of the meat
   of the JavaScript programming language. Here are some of the topics I have
   covered, if JavaScript is completely new to you I would suggest going through
   them in the order listed:
   - [[id:8d2ac1dc-17ab-4fc5-8792-11042f900f42][DOM and Events]]
+
+* Other tips
+  Here are just some other random tips about JavaScript:
+
+** Strict mode
+   Strict mode is a feature in JavaScript that will cause more errors and fail
+   our program when we do things wrong whereas without it JavaScript will silently
+   fail and continue running our program. Using strict mode will force us to
+   write more secure JavaScript applications. To use strict mode add
+   ~'use strict';~ to the beginning of your program.

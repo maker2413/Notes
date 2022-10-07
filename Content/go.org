@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       037f18dd-1b13-4cfe-a44e-ae410426f90e
+:END:
+#+title: Go
+#+created: [2022-10-06 Thu 21:54]
+#+last_modified: [2022-10-06 Thu 22:02]
+#+filetags: ProgrammingLanguage Golang
+
+Go is a statically typed, compiled [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]] designed at Google by
+Robert Griesemer, Rob Pike, and Ken Thompson. It is syntactically similar to [[id:a8cd1fe3-5197-44a1-a67d-e876e444cd85][C]],
+but with memory safety, garbage collection, and structural typing.

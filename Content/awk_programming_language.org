@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       b425ccb1-19d1-4a83-816c-09bf5f4bdf07
+:END:
+#+title: AWK Programming Language
+#+created: [2022-10-15 Sat 10:44]
+#+last_modified: [2022-10-15 Sat 10:45]
+#+filetags: ProgrammingLanguage Linux Tool AWK
+
+AWK

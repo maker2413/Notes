@@ -1,56 +1,6 @@
 #+TITLE: Awk
 #+PROPERTY: header-args
 
-Awk is a text manipulation tool that allows us to grab certain columns from
-text. Lets run ~ps~ for example and see what output we get:
-#+BEGIN_SRC sh :results output
-  ps -t pts/0
-#+END_SRC
-
-:     PID TTY          TIME CMD
-:    5675 pts/0    00:00:00 fish
-:    6298 pts/0    00:00:00 emacs
-
-Now lets pipe that same command into ~awk~ and see if we can grab just the first
-column:
-#+begin_src sh :results output
-  ps -t pts/0 | awk '{print $1}'
-#+end_src
-
-: PID
-: 5675
-: 6298
-
-If we needed to grab the second column we can do the following:
-#+begin_src sh :results output
-  ps -t pts/0 | awk '{print $2}'
-#+end_src
-
-: TTY
-: pts/0
-: pts/0
-
-If we needed to grab multiple columns we can of course specify more than one:
-#+begin_src sh :results output
-  ps -t pts/0 | awk '{print $1 $4}'
-#+end_src
-
-: PIDCMD
-: 5675fish
-: 6298emacs
-We will cover how to make this look better in the separators section of this
-chapter.
-
-If it is worth noting ~$0~ will print the full output:
-#+begin_src sh :results output
-  ps -t pts/0 | awk '{print $0}'
-  # We can also achieve this with: awk '{print}'
-#+end_src
-
-:     PID TTY          TIME CMD
-:    5675 pts/0    00:00:00 fish
-:    6298 pts/0    00:00:00 emacs
-
 * Separators
   By default ~awk~ treats empty space as a field separator for columns but you
   can specify any character you like. Lets play around with the contents of our

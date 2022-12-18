@@ -3,7 +3,7 @@
 :END:
 #+title: Go
 #+created: [2022-10-06 Thu 21:54]
-#+last_modified: [2022-10-06 Thu 22:12]
+#+last_modified: [2022-12-18 Sun 08:15]
 #+filetags: ProgrammingLanguage Golang
 
 Go is a statically typed, compiled [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]] designed at Google by
@@ -12,7 +12,7 @@ but with memory safety, garbage collection, and structural typing.
 
 Before we dive into how Go works I want to point out some useful
 resources. First off I personally think [[https://quii.gitbook.io/learn-go-with-tests/][this]] is the best guide for learning
-Go. I also wanted to take the time to link to [[https//go.dev][go.dev]] the homepage of Go and
+Go. I also wanted to take the time to link to [[https://go.dev][go.dev]] the homepage of Go and
 specifically the [[https://go.dev/play][Playground]] where you can access a live Go environment where you
 can look at example, write, and run Go programs.
 

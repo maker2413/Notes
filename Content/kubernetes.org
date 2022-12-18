@@ -3,8 +3,8 @@
 :END:
 #+title: Kubernetes
 #+created: [2022-02-05 Sat 14:36]
-#+last_modified: [2022-02-05 Sat 14:42:55]
-#+filetags: Kubernetes Tool
+#+last_modified: [2022-11-15 Tue 22:11]
+#+filetags: Kubernetes Tool Linux
 
 Kubernetes on a high level is a cluster of servers, virtual machines, or
 instances that manage and orchestrate containers to provide as close to 100% up

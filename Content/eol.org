@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       00fc5ea3-da95-40b4-9884-1d966c88d006
+:END:
+#+title: EOL
+#+created: [2023-04-04 Tue 20:53]
+#+last_modified: [2023-04-04 Tue 20:56]
+#+filetags: Concept
+
+EOL, or End of Life, is a term used to describe a product which has reached the
+end of its life and will no longer be recieving updates. This indicates that the
+product may no longer be useful and is potentially unsafe to use as it is no
+longer getting security updates.

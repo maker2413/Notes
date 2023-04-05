@@ -1,0 +1,97 @@
+:PROPERTIES:
+:ID:       523160d7-c44e-4126-a606-8e8ff64936cc
+:END:
+#+title: Python
+#+created: [2023-04-04 Tue 20:46]
+#+last_modified: [2023-04-04 Tue 21:54]
+#+filetags: ProgrammingLanguage Python
+
+Python is a high-level, general-purpose [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]]. Its design
+philosophy emphasizes code readability with the use of significant
+indentation. Python was created by Guido van Rossum in the early 90s. It is now
+one of the most popular languages in existence.
+
+Being that the language puts so much emphasis on readability it is
+considered to be a very easy language to initially learn, but can still be
+complex to master. *Note* This guide is going to cover Python 3 specifically,
+although other versions of Python are quite similar, they are past [[id:00fc5ea3-da95-40b4-9884-1d966c88d006][EOL]].
+
+* Python Fundamentals
+  This section is going to cover the basic fundamentals of Python. If you are
+  fairly versed in other programming languages you can probably skip this
+  section.
+
+** Comments
+   [[id:b60776ea-0a30-4b2c-8f7c-61aaad423db6][Comments]] in Python use the ~#~ to dictate single line comments in and three
+   ~"~'s to indicate multi line comments. Multi line comments are often used for
+   documentation:
+   #+begin_src python
+     # This is a single line comments
+
+     """ This however is a multiline comment where I may take the time to describe
+         what this program will do or how to use it.
+     """
+   #+end_src
+
+** Data Types
+   Like many other programming languages python supports many of the common
+   [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data types]], but unlike many other programming languages Python does not
+   require you to define a data type for a variable before assigning them value
+   or using them:
+   #+begin_src python
+     a = 5
+     b = "hello"
+     c = 'w'
+     d = 4.3
+   #+end_src
+
+   Boolean values in python are treated as =1= and =0= and can be used as such:
+   #+begin_src python
+     # Note the capitalization
+     True  # => True
+     False # => False
+
+     # Since they are treated as 1 and 0 we can do the following:
+     True + True # => 2
+     True * 9    # => 9
+     False - 6   # => -6
+   #+end_src
+
+** Operators
+   Python has all of the common operators you may expect in a programming
+   language. Some of these include:
+   #+begin_src python
+     # Standard math operations
+     1 + 3   # => 4
+     9 - 2   # => 7
+     14 * 2  # => 28
+     40 / 5  # => 8.0
+
+     # The result of division is always a float
+     10.0 / 3 # => 3.3333333333333335
+
+     # Exponentiation (x**y, x to the yth power)
+     2**4 # => 16
+
+     # You can also force precedence with parentheses
+     1 + 3 * 2   # => 7
+     (1 + 3) * 2 # => 8
+
+     # Modulo operation (remainder)
+     7 % 3  # => 1
+     -7 % 3 # => 2
+
+     # Python gives us a not operator for negation
+     not True  # => False
+     not False # => True
+
+     # Python also give us logic operators like or and and
+     True and False # => False
+     True or False  # => True
+
+     # Comparison operators look for the numerical value of True and False
+     0 == False  # => True
+     2 > True    # => True
+     2 == True   # => False
+     -5 != False # => True
+   #+end_src

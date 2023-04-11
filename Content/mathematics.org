@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       36a1bacc-e7f2-4737-881d-b243a291d8df
+:END:
+#+title: Mathematics
+#+created: [2023-04-10 Mon 21:18]
+#+last_modified: [2023-04-10 Mon 21:22]
+#+filetags: Math Mathematics
+
+Mathematics is an area of knowledge that includes the topics of numbers,
+formulas and related structures, shapes, and the spaces in which they are
+contained. More importantly a general understanding of math and a decent skill
+of crafting formulas is almost a most if you want to get into many topics in
+computing.
+
+Here are some of the notes I have on some areas of Math:
+- [[id:ae43a2af-8778-4311-b570-d79f764976a0][Algebra]]
+- [[id:e15a65f3-75ef-4e57-91ab-49a4c6c5694b][Geometry]]
+- [[id:606c5657-c0f5-4bce-9a24-54c08274a6fa][Calculus]]
+
+*Many of these are still a work in progress*

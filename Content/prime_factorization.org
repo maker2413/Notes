@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:       b25c0b37-8ca1-44bb-a3cc-bb0a15f85680
+:END:
+#+title: Prime Factorization
+#+created: [2023-04-11 Tue 15:21]
+#+last_modified: [2023-04-11 Tue 18:25]
+#+filetags: Math Mathematics Concept PrimeFactoriaztion PrimeFactors
+
+Prime Factorization is a further restricted version of [[id:4273b62e-2f6c-4e10-b5fc-aafbcb960a0b][integer factorization]]
+wherein we are trying to factor our given number down to [[id:aa358af6-0bcf-4d5f-95c3-69c4104ee6b1][prime numbers]].
+
+Lets look at an example. For this example lets see what the prime factors of
+=12= are. It is best to start working from the smallest prime number, which in
+this case is =2=: ~12 / 2 = 6~. Being that =6= is not a prime number we would
+then see if we can go further: ~6 / 2 = 3~. Since =3= is a prime number our
+prime number factorization would look like: ~12 = 2 x 2 x 3~ or ~12 = 2^2 x 3~.
+
+Now lets look at a slightly more involved example. Lets see what the prime
+factorization of =147= is. Since =147= is an odd number we know that we can't
+divide by =2=, but since the digits of =147= add up to a number that is
+divisible by =3= we know that we can divide by =3=: ~1 + 4 + 7 = 12~. That is a
+little trick you can do to see if a number is divisible by =3= without having to
+bust out a calculator. So lets divide by =3=: ~147 / 3 = 49~. Again since =49=
+is not a prime number we shall try to factor that: ~49 / 7 = 7~. That means the
+prime factorization of =147= is: ~147 = 3 * 7^2~.
+
+Prime factorization is a good concept to at least understand as it makes up the
+backbone of [[id:fee27ed4-10aa-4d36-bc00-12673fcb116a][cryptography]].

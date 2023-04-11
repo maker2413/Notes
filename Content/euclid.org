@@ -1,0 +1,40 @@
+:PROPERTIES:
+:ID:       6f15d202-7913-4c86-8b5d-a23ec74e20f9
+:END:
+#+title: Euclid
+#+created: [2023-04-11 Tue 14:59]
+#+last_modified: [2023-04-11 Tue 15:13]
+#+filetags: Math Mathematics Euclid
+
+Euclid was an ancient Greek mathematician active as a geometer and logician.
+Considered the "father of geometry", he is chiefly known for the Elements
+[[id:461bf74c-c071-466e-a51f-42d64d5b2f1e][treatise]], which established the foundations of geometry that largely dominated
+the field until the early 19th century. His system, now referred to as Euclidean
+geometry, involved new innovations in combination with a synthesis of theories
+from earlier Greek mathematicians. With Archimedes and Apollonius of Perga,
+Euclid is generally considered among the greatest mathematicians of antiquity,
+and one of the most influential in the history of mathematics.
+
+Euclid's Elements is a mathematical [[id:461bf74c-c071-466e-a51f-42d64d5b2f1e][treatise]] consisting of 13 books written
+around c. 300 BC. It is a collection of definitions, postulates, propositions
+(theorems and constructions), and mathematical proofs of the propositions. The
+books cover plane and solid Euclidean geometry, elementary number theory, and
+incommensurable lines. Elements is the oldest extant large-scale deductive
+treatment of mathematics. It has proven instrumental in the development of logic
+and modern science, and its logical rigor was not surpassed until the 19th
+century.
+
+Euclid's Elements has been referred to as the most successful and influential
+textbook ever written. It was one of the very earliest mathematical works to be
+printed after the invention of the printing press and has been estimated to be
+second only to the Bible in the number of editions published since the first
+printing in 1482, the number reaching well over one thousand. For centuries,
+when the quadrivium was included in the curriculum of all university students,
+knowledge of at least part of Euclid's Elements was required of all
+students. Not until the 20th century, by which time its content was universally
+taught through other school textbooks, did it cease to be considered something
+all educated people had read.
+
+* External Links
+  - https://en.wikipedia.org/wiki/Euclid
+  - https://en.wikipedia.org/wiki/Euclid%27s_Elements

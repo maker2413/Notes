@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       039513fc-8340-4d9b-b3e9-1be26f3f211c
+:END:
+#+title: Euclidean Algorithm
+#+created: [2023-04-11 Tue 14:57]
+#+last_modified: [2023-04-11 Tue 18:25]
+#+filetags: Math Mathematics EuclideanAlgorithm Euclid
+
+In mathematics, the Euclidean algorithm or Euclid's algorithm, is an efficient
+method for computing the [[id:b10f13f9-4db7-4eba-bf9e-e6715740dab5][gcd]] of two numbers, the largest number that divides
+them both without a remainder. It is named after the ancient Greek mathematician
+[[id:6f15d202-7913-4c86-8b5d-a23ec74e20f9][Euclid]], who first described it in 300 BC.

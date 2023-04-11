@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       461bf74c-c071-466e-a51f-42d64d5b2f1e
+:END:
+#+title: Treatise
+#+created: [2023-04-11 Tue 15:02]
+#+last_modified: [2023-04-11 Tue 15:13]
+#+filetags: Concept Treatise
+
+A treatise is a formal and systematic written discourse on some subject,
+generally longer and treating it in greater depth than an essay, and more
+concerned with investigating or exposing the principles of the subject and its
+conclusions.
+
+* External Links
+  - https://en.wikipedia.org/wiki/Treatise

@@ -1,0 +1,35 @@
+:PROPERTIES:
+:ID:       b10f13f9-4db7-4eba-bf9e-e6715740dab5
+:END:
+#+title: Greatest Common Divisor
+#+created: [2023-04-11 Tue 14:58]
+#+last_modified: [2023-04-11 Tue 15:22]
+#+filetags: Math Mathematics Concept GreatestCommonDivisor GCD GreatestCommonFactor GCF
+
+In mathematics, the greatest common divisor (GCD) of two or more integers, which
+are not all zero, is the largest positive integer that divides each of the
+integers. For two integers x, y, the greatest common divisor of x and y is
+denoted gcd(x,y). For example, the GCD of 8 and 12 is 4, that is, gcd(8,12)=4.
+
+In the name "greatest common divisor", the adjective "greatest" may be replaced
+by "highest", and the word "divisor" may be replaced by "factor", so that other
+names include highest common factor (hcf), etc. Historically, other names for
+the same concept have included greatest common measure.
+
+* Example
+  The number 54 can be expressed as a product of two integers in several
+  different ways:
+    ~54 x 1 = 27 × 2 = 18 × 3 = 9 × 6~.
+
+  Thus the complete list of divisors of 54 is: ~1,2,3,6,9,18,27,54~. Similarly,
+  the divisors of 24 are: ~1,2,3,4,6,8,12,24~. The numbers that these two lists
+  have in common are the common divisors of 54 and 24, that is:
+  ~1,2,3,6~. Of these, the greatest is ~6~, so it is the greatest common
+  divisor: ~gcd(54,24)=6~.
+
+  Computing all divisors of the two numbers in this way is usually not efficient,
+  especially for large numbers that have many divisors. Much more efficient
+  methods exist, such as, [[id:039513fc-8340-4d9b-b3e9-1be26f3f211c][Euclid's Algorithm]] or [[id:b25c0b37-8ca1-44bb-a3cc-bb0a15f85680][Prime Factorization]]
+
+* External Links
+  - https://en.wikipedia.org/wiki/Greatest_common_divisor

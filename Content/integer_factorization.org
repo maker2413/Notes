@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       4273b62e-2f6c-4e10-b5fc-aafbcb960a0b
+:END:
+#+title: Integer Factorization
+#+created: [2023-04-11 Tue 15:29]
+#+last_modified: [2023-04-11 Tue 15:51]
+#+filetags: Math Mathematics Concept IntegerFactorization Factors
+
+Integer Factorization is the concept for breaking down a positive integer, or
+number, into a product of smaller integers. For instance the number =4= can be
+broken down and described as: =1 x 4=, =2 x 2=, and =4 x 1=.

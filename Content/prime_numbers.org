@@ -1,0 +1,37 @@
+:PROPERTIES:
+:ID:       aa358af6-0bcf-4d5f-95c3-69c4104ee6b1
+:END:
+#+title: Prime Numbers
+#+created: [2023-04-11 Tue 15:32]
+#+last_modified: [2023-04-11 Tue 18:16]
+#+filetags: Math Mathematics Concept PrimeNumbers Primes
+
+A prime number is a number that is greater than 1 and that is not a product of
+two smaller numbers. A number greater than 1 that is not a prime number is
+called a composite number.
+
+For an example =5= is a prime number because the only way of writing it with
+[[id:4273b62e-2f6c-4e10-b5fc-aafbcb960a0b][integer factorization]] we get: =1 x 5= or =5 x 1=, which involves only =5=
+itself. On the contrary =4= is not a prime number because we can factor it as:
+=1 x 4=, =2 x 2=, and =4 x 1=.
+
+Finding prime numbers manually is not only tedious, but can also be considered
+impossible once we get to larger numbers such as the current largest known prime
+number which has 24,862,048 digits. Being that numbers are infinite the list of
+prime numbers is also infinite, as demonstrated by [[id:6f15d202-7913-4c86-8b5d-a23ec74e20f9][Euclid]] in 300 BC. For this
+reason there are many formulas for finding prime numbers such as
+[[id:b25c0b37-8ca1-44bb-a3cc-bb0a15f85680][prime factorization]].
+
+Because I often have to reference this here are the first 100 prime numbers:
+|        |   1 |   2 |   3 |   4 |   5 |   6 |   7 |   8 |   9 |  10 |
+|--------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----|
+|   1-10 |   2 |   3 |   5 |   7 |  11 |  13 |  17 |  19 |  23 |  29 |
+|  11-20 |  31 |  37 |  41 |  43 |  47 |  53 |  59 |  61 |  67 |  71 |
+|  21-30 |  73 |  79 |  83 |  89 |  97 | 101 | 103 | 107 | 109 | 113 |
+|  31-40 | 127 | 131 | 137 | 139 | 149 | 151 | 157 | 163 | 167 | 173 |
+|  41-50 | 179 | 181 | 191 | 193 | 197 | 199 | 211 | 223 | 227 | 229 |
+|  51-60 | 233 | 239 | 241 | 251 | 257 | 263 | 269 | 271 | 277 | 281 |
+|  61-70 | 283 | 293 | 307 | 311 | 313 | 317 | 331 | 337 | 347 | 349 |
+|  71-80 | 353 | 359 | 367 | 373 | 379 | 383 | 389 | 397 | 401 | 409 |
+|  81-90 | 419 | 421 | 431 | 433 | 439 | 443 | 449 | 457 | 461 | 463 |
+| 91-100 | 467 | 479 | 487 | 491 | 499 | 503 | 509 | 521 | 523 | 541 |

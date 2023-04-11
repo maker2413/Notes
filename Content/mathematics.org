@@ -3,8 +3,8 @@
 :END:
 #+title: Mathematics
 #+created: [2023-04-10 Mon 21:18]
-#+last_modified: [2023-04-10 Mon 21:22]
-#+filetags: Math Mathematics
+#+last_modified: [2023-04-11 Tue 18:42]
+#+filetags: Math Mathematics Reference
 
 Mathematics is an area of knowledge that includes the topics of numbers,
 formulas and related structures, shapes, and the spaces in which they are
@@ -16,5 +16,14 @@ Here are some of the notes I have on some areas of Math:
 - [[id:ae43a2af-8778-4311-b570-d79f764976a0][Algebra]]
 - [[id:e15a65f3-75ef-4e57-91ab-49a4c6c5694b][Geometry]]
 - [[id:606c5657-c0f5-4bce-9a24-54c08274a6fa][Calculus]]
+
+Here are also some notes I have on some math concepts:
+- [[id:4273b62e-2f6c-4e10-b5fc-aafbcb960a0b][Integer Factorization]]
+- [[id:b25c0b37-8ca1-44bb-a3cc-bb0a15f85680][Prime Factorization]]
+- [[id:aa358af6-0bcf-4d5f-95c3-69c4104ee6b1][Prime Numbers]]
+- [[id:b10f13f9-4db7-4eba-bf9e-e6715740dab5][Greatest Common Divisor]]
+
+Finally here are some notes I have on Mathematicians:
+- [[id:6f15d202-7913-4c86-8b5d-a23ec74e20f9][Euclid]]
 
 *Many of these are still a work in progress*

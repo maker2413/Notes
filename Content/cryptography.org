@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       fee27ed4-10aa-4d36-bc00-12673fcb116a
+:END:
+#+title: Cryptography
+#+created: [2023-04-11 Tue 18:23]
+#+last_modified: [2023-04-11 Tue 18:25]
+#+filetags: Concept Cryptography
+
+Cryptography is the practice and study of techniques for secure communication.

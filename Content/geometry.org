@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       e15a65f3-75ef-4e57-91ab-49a4c6c5694b
+:END:
+#+title: Geometry
+#+created: [2023-04-10 Mon 21:17]
+#+last_modified: [2023-04-10 Mon 21:21]
+#+filetags: Math Mathematics Geometry

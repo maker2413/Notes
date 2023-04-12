@@ -3,7 +3,7 @@
 :END:
 #+title: Mathematics
 #+created: [2023-04-10 Mon 21:18]
-#+last_modified: [2023-04-11 Tue 18:42]
+#+last_modified: [2023-04-11 Tue 20:32]
 #+filetags: Math Mathematics Reference
 
 Mathematics is an area of knowledge that includes the topics of numbers,
@@ -14,8 +14,8 @@ computing.
 
 Here are some of the notes I have on some areas of Math:
 - [[id:ae43a2af-8778-4311-b570-d79f764976a0][Algebra]]
-- [[id:e15a65f3-75ef-4e57-91ab-49a4c6c5694b][Geometry]]
 - [[id:606c5657-c0f5-4bce-9a24-54c08274a6fa][Calculus]]
+- [[id:e15a65f3-75ef-4e57-91ab-49a4c6c5694b][Geometry]]
 
 Here are also some notes I have on some math concepts:
 - [[id:4273b62e-2f6c-4e10-b5fc-aafbcb960a0b][Integer Factorization]]

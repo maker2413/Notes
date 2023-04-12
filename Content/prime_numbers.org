@@ -3,7 +3,7 @@
 :END:
 #+title: Prime Numbers
 #+created: [2023-04-11 Tue 15:32]
-#+last_modified: [2023-04-11 Tue 18:16]
+#+last_modified: [2023-04-11 Tue 20:32]
 #+filetags: Math Mathematics Concept PrimeNumbers Primes
 
 A prime number is a number that is greater than 1 and that is not a product of
@@ -23,6 +23,7 @@ reason there are many formulas for finding prime numbers such as
 [[id:b25c0b37-8ca1-44bb-a3cc-bb0a15f85680][prime factorization]].
 
 Because I often have to reference this here are the first 100 prime numbers:
+#+ATTR_HTML: :border 2 :rules all :frame border
 |        |   1 |   2 |   3 |   4 |   5 |   6 |   7 |   8 |   9 |  10 |
 |--------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----|
 |   1-10 |   2 |   3 |   5 |   7 |  11 |  13 |  17 |  19 |  23 |  29 |

@@ -73,6 +73,7 @@
          :html-head-include-default-style nil
          :html-head-include-scripts nil
          :html-postamble ,maker/footer
+         :html-table-use-header-tags-for-first-column t
          :html-validation-link nil
          :publishing-directory ,output-dir
          :publishing-function org-html-publish-to-html

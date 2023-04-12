@@ -3,10 +3,44 @@
 :END:
 #+title: Euclidean Algorithm
 #+created: [2023-04-11 Tue 14:57]
-#+last_modified: [2023-04-11 Tue 18:25]
+#+last_modified: [2023-04-11 Tue 22:24]
 #+filetags: Math Mathematics EuclideanAlgorithm Euclid
 
 In mathematics, the Euclidean algorithm or Euclid's algorithm, is an efficient
 method for computing the [[id:b10f13f9-4db7-4eba-bf9e-e6715740dab5][gcd]] of two numbers, the largest number that divides
 them both without a remainder. It is named after the ancient Greek mathematician
 [[id:6f15d202-7913-4c86-8b5d-a23ec74e20f9][Euclid]], who first described it in 300 BC.
+
+Lets start by going through an example and then we will cover the rules of the
+algorithm. Lets try to find the [[id:b10f13f9-4db7-4eba-bf9e-e6715740dab5][gcd]] of =210= and =45=. We start by dividing
+=210= by =45=: ~210 / 45 = 4 R30~. This gives us a remainder of =30= so we will
+divide =45= by =30=: ~45 / 30 = 1 R15~. This gives us a remainder of =15= so we
+will divide =30= by =15=: ~30 / 15 = 2~. Since we have no remainder left so the
+gcd of =210= and =45= is =15=.
+
+Lets now work through the formal description of the Euclidean algorithm:
+- Input :: Two positive integers, a and b
+- Output :: The gcd of a and b
+- Internal computation :: steps:
+  1. If a<b, exchange a and b.
+  2. Divide a by b and get the remainder, r. If r=0, report b as the GCD.
+  3. Replace a with b and replace b with r in step 2 and repeat step 2.
+
+Now lets look at a [[id:3a36e090-746d-4bf9-b4df-15295c7b6e05][pseudocode]] example of this algorithm:
+#+begin_example
+  a = input1
+  b = input2
+
+  if a < b
+    a = input2
+    b = input1
+
+  while b != 0:
+    r = a % b
+
+    a = b
+    b = r
+
+  print "gcd is:"
+  print a
+#+end_example

@@ -3,7 +3,7 @@
 :END:
 #+title: Python
 #+created: [2023-04-04 Tue 20:46]
-#+last_modified: [2023-04-04 Tue 21:54]
+#+last_modified: [2023-04-11 Tue 22:27]
 #+filetags: ProgrammingLanguage Python
 
 Python is a high-level, general-purpose [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]]. Its design
@@ -19,7 +19,8 @@ although other versions of Python are quite similar, they are past [[id:00fc5ea3
 * Python Fundamentals
   This section is going to cover the basic fundamentals of Python. If you are
   fairly versed in other programming languages you can probably skip this
-  section.
+  section. Python does not use ~;~ to terminate its statements like other
+  programming languages.
 
 ** Comments
    [[id:b60776ea-0a30-4b2c-8f7c-61aaad423db6][Comments]] in Python use the ~#~ to dictate single line comments in and three
@@ -58,7 +59,7 @@ although other versions of Python are quite similar, they are past [[id:00fc5ea3
    #+end_src
 
 ** Operators
-   Python has all of the common operators you may expect in a programming
+   Python has all of the common [[id:df70107c-3adf-4c58-987d-cf74be9e149f][operators]] you may expect in a programming
    language. Some of these include:
    #+begin_src python
      # Standard math operations

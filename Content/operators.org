@@ -3,7 +3,7 @@
 :END:
 #+title: Operators
 #+created: [2021-10-17 Sun 15:30]
-#+last_modified: [2021-10-31 Sun 01:14:33]
+#+last_modified: [2023-04-11 Tue 22:27]
 #+filetags: ProgrammingLanguage Basics
 
 Operators are constructs that are defined within programming languages which
@@ -23,6 +23,7 @@ predefine the function.
    In computer programming we often need to manipulate data doing mathematical
    calculations, or to put it more simple we use arithmetic operators to alter
    data. Here are the basic forms of arithmetic operators:
+   #+ATTR_HTML: :border 2 :rules all :frame border
    | Operator | Description                              | Example | Output |
    |----------+------------------------------------------+---------+--------|
    | ~+~      | Adds to opperands                        | 5 + 2   |      7 |
@@ -66,6 +67,7 @@ predefine the function.
    based on the contents of our values. Comparison operators behind the scenes
    give an output of a boolean [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data type]]. Here are the most basic forms of
    comparison operators:
+   #+ATTR_HTML: :border 2 :rules all :frame border
    | Operator | Description                                | Example  | Output |
    |----------+--------------------------------------------+----------+--------|
    | ~==~     | Checks if the values are equal             | (5 == 2) | false  |
@@ -132,6 +134,7 @@ predefine the function.
    operators also come into play when we only want to execute our [[id:43a52c85-bd75-4092-be1c-fd10fefaf672][conditionals]]
    when our condition *isn't* true, this is the NOT logical operator. Lets look
    at some examples of logical operators:
+   #+ATTR_HTML: :border 2 :rules all :frame border
    | Operator   | Description                       | Example                   | Output |
    |------------+-----------------------------------+---------------------------+--------|
    | ~&&~       | Checks if both opperands are true | (5 > 2)&&(5 == 2)         | false  |

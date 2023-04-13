@@ -17,6 +17,24 @@ iframe {
   overflow-y: hidden;
 }
 
+header {
+  background-color: white;
+  border-bottom: 2px solid black;
+}
+
+.status {
+  background-color: white;
+  border-top: 2px solid black;
+}
+
+.navigation {
+  padding-bottom: 2px;
+}
+
+.search-box {
+  display: inline;
+}
+
 .notes-container {
   display: flex;
   flex: 1;

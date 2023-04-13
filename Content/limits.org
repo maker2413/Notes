@@ -3,13 +3,13 @@
 :END:
 #+title: Limits
 #+created: [2023-04-12 Wed 20:19]
-#+last_modified: [2023-04-12 Wed 20:52]
+#+last_modified: [2023-04-12 Wed 20:57]
 #+filetags: Math Mathematics Calculus Limits
 
 The idea behind limits is to calculate what a problem will become as it
-approaches a limit like for instance infinity or an indeterminate
-answer. Sometimes we can't work something out directly, but we can see what it
-should be as we closer to our answer.
+approaches a limit. For example an instance of this would infinity or an
+indeterminate answer. Sometimes we can't work something out directly, but we can
+see what it should be as we get closer to our answer.
 
 Let's take a look at the following example:
 \begin{equation}
@@ -24,6 +24,7 @@ For this example let's work it out for x=1:
 In this case 0/0 is indeterminate and can't be calculated so in a case like this
 we would use limits to determine what the answer should be. We do this by see
 what the ~x=1~ is as it approaches our answer:
+#+ATTR_HTML: :border 2 :rules all :frame border
 |       x | (x^2 - 1)/(x - 1) |
 |---------+-------------------|
 |     0.5 |           1.50000 |

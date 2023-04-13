@@ -4,11 +4,11 @@ This is my Notes repo. This repo contains a collection of all of the notes I
 have written while studying and learning various topics in my education and
 studies. I want to make these notes public and usable by anyone wanting to learn
 to help others more easily learn the skills I have developed. I have also made
-great efforts to make these notes as easily viewable via my website:
+great efforts to make these notes as easily viewable as possible via my website:
 [[https://notes.ethancpost.com]].
 
-This entire repo and the website are currently under heavy development. I have
-recently taken up the effort of converting these notes to [[https://zettelkasten.de/posts/overview/][Zettelkasten]] note
+This entire repo and the website are currently under continual development. I
+have recently taken up the effort of converting these notes to [[https://zettelkasten.de/posts/overview/][Zettelkasten]] note
 taking format to link common ideas together and hopefully some day build a
 "brain map" of all the concepts in this repo. More information on how this repo
 is written and how my website is built can be found here: [[https://www.ethanp.dev/how_this_website_is_made.html][How It's Made]].

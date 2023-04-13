@@ -3,7 +3,7 @@
 :END:
 #+title: Limits
 #+created: [2023-04-12 Wed 20:19]
-#+last_modified: [2023-04-12 Wed 20:23]
+#+last_modified: [2023-04-12 Wed 20:52]
 #+filetags: Math Mathematics Calculus Limits
 
 The idea behind limits is to calculate what a problem will become as it
@@ -16,4 +16,33 @@ Let's take a look at the following example:
 \frac{x^2 - 1}{x - 1}
 \end{equation}
 
-For this example let's work it out
+For this example let's work it out for x=1:
+\begin{equation}
+\frac{1^2 - 1}{1 - 1} = \frac{1 - 1}{1 - 1} = \frac{0}{0}
+\end{equation}
+
+In this case 0/0 is indeterminate and can't be calculated so in a case like this
+we would use limits to determine what the answer should be. We do this by see
+what the ~x=1~ is as it approaches our answer:
+|       x | (x^2 - 1)/(x - 1) |
+|---------+-------------------|
+|     0.5 |           1.50000 |
+|     0.9 |           1.90000 |
+|    0.99 |           1.99000 |
+|   0.999 |           1.99900 |
+|  0.9999 |           1.99990 |
+| 0.99999 |           1.99999 |
+
+With this we can see that as x gets closer and closer to =1= our answer gets
+close to =2=. Now this puts us in a predicament as we know that ~x=1~ is
+unanswerable as it is indeterminate, but we can clearly see the answer is going
+to be =2=. In this case mathematicians would say:
+"The limit of ~(x^2 - 1)/(x - 1)~ as ~x~ approaches =1= is *2*."
+
+This would be written as:
+\begin{equation}
+\lim_{x\to1} \frac{x^2 - 1}{x - 1} = 2
+\end{equation}
+
+* External Links
+  - https://www.mathsisfun.com/calculus/limits.html

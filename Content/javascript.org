@@ -3,7 +3,7 @@
 :END:
 #+title: JavaScript
 #+created: [2021-10-15 Fri 22:36]
-#+last_modified: [2022-10-06 Thu 21:53]
+#+last_modified: [2023-04-12 Wed 20:28]
 #+filetags: ProgrammingLanguage JavaScript
 
 Javascript is a high-level, object-oriented, multi-paradigm programming
@@ -117,8 +117,8 @@ guide:
    In JavaScript [[id:df70107c-3adf-4c58-987d-cf74be9e149f][operators]] are treated just like they are in most other
    languages and JavaScript also suppports the ~++~ and ~--~ operators.
 
-   Operators allow us to change or work with values to put it simply. Lets at an
-   example of some simple arithmetic operators:
+   Operators allow us to change or work with values to put it simply. Let's look
+   at an example of some simple arithmetic operators:
    #+begin_src javascript
      const now = 2037;
      const ageJonas = now - 1991;
@@ -136,7 +136,7 @@ guide:
      // Prints: Jonas Cuomo
    #+end_src
 
-   Now lets look at some assignment operators:
+   Now let's look at some assignment operators:
    #+begin_src javascript
      let x = 10 + 5; // 15
      x += 10; // 25
@@ -145,7 +145,7 @@ guide:
      x --; // 100
    #+end_src
 
-   Lets also show some comparison operators:
+   Let's also show some comparison operators:
    #+begin_src javascript
      console.log(ageJonas > ageSarah);
      // Prints: true
@@ -166,7 +166,7 @@ guide:
    for our functions as JavaScript is a dynamic type language. In JavaScript we
    also don't have to define a [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data type]] for any arguments we assign to our
    functions. It is important to note that we define functions with the
-   ~function~ keyword in JavaScript. Lets look at some examples of functions in
+   ~function~ keyword in JavaScript. Let's look at some examples of functions in
    JavaScript:
    #+begin_src javascript
      function fullName (first, last) {
@@ -193,7 +193,7 @@ guide:
     "expression" function. An expression function is very similar in concept and
     even follows all the same rules mentioned above, however we assign the
     function definition to a variable and then call the function by the variable
-    name. This sounds confusing so lets look at an example:
+    name. This sounds confusing so let's look at an example:
     #+begin_src javascript
       const fullName = function (first, last) {
         console.log(first, last);
@@ -219,7 +219,7 @@ guide:
     JavaScript also has a form of functions called "arrow" functions. Arrow
     functions behave just like expression functions, but are much easier and
     quicker to write. We wirte arrow functions with: ~=>~ and with arrow
-    functions a return statement is assumed. Lets take a look at how we would
+    functions a return statement is assumed. Let's take a look at how we would
     write our above examples as an arrow function:
     #+begin_src javascript
       const fullName = (first, last) => first + last;
@@ -233,7 +233,7 @@ guide:
 
 *** TODO Arrays
     Arrays in JavaScript follow a fairly standard syntax to most dynamic
-    programming languages. Lets look at an example:
+    programming languages. Let's look at an example:
     #+begin_src javascript
       // Literal syntax:
       const friends = ['John', 'Jacob', 'Jingle'];
@@ -260,7 +260,7 @@ guide:
 
 * What's next
   Well now we have covered the absolute basics of JavaScript and many basic
-  topics of programming as a whole. Lets now finally dive into some of the meat
+  topics of programming as a whole. Let's now finally dive into some of the meat
   of the JavaScript programming language. Here are some of the topics I have
   covered, if JavaScript is completely new to you I would suggest going through
   them in the order listed:

@@ -3,7 +3,7 @@
 :END:
 #+title: Variables
 #+created: [2021-10-17 Sun 11:38]
-#+last_modified: [2021-10-31 Sun 16:48:41]
+#+last_modified: [2023-04-12 Wed 20:27]
 #+filetags: ProgrammingLanguage Basics
 
 In programming when you want to store a value for future use in your program you
@@ -15,7 +15,7 @@ that point in memory when we need it.
   Most programming languages follow one of two syntax. Some programming
   langauges require you to define the [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data type]] of your variable while other
   programming languages can dynamically determine what [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data type]] your variable
-  is and won't require you to define it. First lets look at some examples of how
+  is and won't require you to define it. First let's look at some examples of how
   to declare variables in languages that require you to define the [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data type]] of
   the variable:
   - C:
@@ -37,7 +37,7 @@ that point in memory when we need it.
       char lastInitial = 'P';
     #+end_src
 
-  Now lets looks at some examples of programming languages that dynamically set
+  Now let's looks at some examples of programming languages that dynamically set
   the [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data type]] of variables:
   - Bash:
     #+begin_src bash
@@ -59,10 +59,10 @@ that point in memory when we need it.
     #+end_src
 
 * Using Variables
-  Now that we have learned how to create variables lets actually use them in our
+  Now that we have learned how to create variables let's actually use them in our
   programs. In most programming languages you can access the value of a variable
   by either calling it's name outright or by using a ~$~ in front of the
-  variable name. Lets see some examples:
+  variable name. Let's see some examples:
   - Bash:
     #+begin_src bash
       x=5;

@@ -3,13 +3,13 @@
 :END:
 #+title: AWK
 #+created: [2022-06-26 Sun 10:22]
-#+last_modified: [2022-10-15 Sat 10:51]
+#+last_modified: [2023-04-12 Wed 20:28]
 #+filetags: Linux Tool AWK
 
 The ~awk~ command is a text manipulation tool, named after its developers:
 Alfred Aho, Peter Weinberger, and Brian Kernighan, ~awk~ allows us to grab
 certain columns from text. Awk is typically used to extract certain information
-from text. Lets look at a quick example of what ~awk~ does. Lets start by
+from text. Let's look at a quick example of what ~awk~ does. Let's start by
 getting the output of the [[id:2f1ec3ca-08a0-44a2-8ba2-0b448f8434e9][PS]] command:
 #+begin_src bash :results output :exports both
   ps -t pts/0
@@ -20,7 +20,7 @@ getting the output of the [[id:2f1ec3ca-08a0-44a2-8ba2-0b448f8434e9][PS]] comman
 :  3607 pts/0    00:00:00 fish
 : 15698 pts/0    00:00:01 emacs
 
-Now lets try to pipe that command into ~awk~ and see if we grab just the first
+Now let's try to pipe that command into ~awk~ and see if we grab just the first
 column of test (the PID column):
 #+begin_src bash :results output :exports both
   ps -t pts/0 | awk '{print $1}'
@@ -51,7 +51,7 @@ dive into the syntax of ~awk~ that instead of always piping text into ~awk~ you
 can also just specify which file you want awk to run against like this:
 ~awk '{action}' <file>~.
 
-So lets dive into what this command is actually stating. Awk is a very powerful
+So let's dive into what this command is actually stating. Awk is a very powerful
 tool whose syntax can be described as a data driven [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]]. The
 basic syntax of any ~awk~ command is as follows: ~awk '<pattern> {<action>}'~.
 Being that ~awk~ is in fact its own feature rich scripting language we can also
@@ -62,7 +62,7 @@ Going forward this guide will cover useful ways to use awk at the command line,
 but for a detailed guide on awk's syntax please refer to my other guide:
 - [[id:b425ccb1-19d1-4a83-816c-09bf5f4bdf07][AWK Programming Language]]
 
-With that out of the way lets dive into what I mean when I say pattern:
+With that out of the way let's dive into what I mean when I say pattern:
 
 In ~awk~ when we say "pattern" we mean we want to find a pattern of text to
 match against to run our command. Awk does have a couple of special use case

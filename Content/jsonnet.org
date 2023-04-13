@@ -3,7 +3,7 @@
 :END:
 #+title: Jsonnet
 #+created: [2022-03-13 Sun 18:03]
-#+last_modified: [2022-03-14 Mon 23:47:06]
+#+last_modified: [2023-04-12 Wed 20:25]
 #+filetags: ProgrammingLanguage TemplatingLanguage
 
 Jsonnet is a [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]] or rather a [[id:71fa1fd6-35fd-43d6-b18c-b40c2621ca15][templating language]] for [[id:91b8e015-8303-49da-a14b-94745d3cd699][json]]
@@ -15,7 +15,7 @@ other [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming languages]] at the 
 
 * Syntax
   Any [[id:91b8e015-8303-49da-a14b-94745d3cd699][json]] document is a valid jsonnet program, so let's focus on what jsonnet
-  adds to [[id:91b8e015-8303-49da-a14b-94745d3cd699][json]]. Lets start by going over some of the new syntax added by
+  adds to [[id:91b8e015-8303-49da-a14b-94745d3cd699][json]]. Let's start by going over some of the new syntax added by
   jsonnet:
   - Fields that happen to be valid identifiers have no quotes
   - Trailing commas at the end of arrays and objects
@@ -26,7 +26,7 @@ other [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming languages]] at the 
   - Text blocks, ~|||~, allow verbatim text across multiple lines.
   - You can also define single line verbatim strings with ~@~
 
-  Now lets look at an example from [[https://jsonnet.org/learning/tutorial.html][jsonnet.org]]:
+  Now let's look at an example from [[https://jsonnet.org/learning/tutorial.html][jsonnet.org]]:
   #+begin_src jsonnet
     // single line comment
 

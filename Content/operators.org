@@ -3,7 +3,7 @@
 :END:
 #+title: Operators
 #+created: [2021-10-17 Sun 15:30]
-#+last_modified: [2023-04-11 Tue 22:27]
+#+last_modified: [2023-04-12 Wed 20:24]
 #+filetags: ProgrammingLanguage Basics
 
 Operators are constructs that are defined within programming languages which
@@ -132,7 +132,7 @@ predefine the function.
    Suppose we want to check for more than one condition in our [[id:43a52c85-bd75-4092-be1c-fd10fefaf672][conditionals]].
    That is where logical operators come into play in our program. Logical
    operators also come into play when we only want to execute our [[id:43a52c85-bd75-4092-be1c-fd10fefaf672][conditionals]]
-   when our condition *isn't* true, this is the NOT logical operator. Lets look
+   when our condition *isn't* true, this is the NOT logical operator. Let's look
    at some examples of logical operators:
    #+ATTR_HTML: :border 2 :rules all :frame border
    | Operator   | Description                       | Example                   | Output |
@@ -142,7 +142,7 @@ predefine the function.
    | ~!~        | Negates logic of condition        | !(5 == 2)                 | true   |
 
    Almost all programming languages support these logical operators and will
-   almost always use the same syntax. Lets take a look at an example of these
+   almost always use the same syntax. Let's take a look at an example of these
    logical operators in C, we will be using [[id:43a52c85-bd75-4092-be1c-fd10fefaf672][conditionals]] in this example so if
    you are unfamiliar with the concept check out that guide:
    #+begin_src c

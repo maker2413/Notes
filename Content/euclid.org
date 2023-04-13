@@ -3,8 +3,8 @@
 :END:
 #+title: Euclid
 #+created: [2023-04-11 Tue 14:59]
-#+last_modified: [2023-04-11 Tue 15:13]
-#+filetags: Math Mathematics Euclid
+#+last_modified: [2023-04-12 Wed 19:30]
+#+filetags: Person Math Mathematics Euclid
 
 Euclid was an ancient Greek mathematician active as a geometer and logician.
 Considered the "father of geometry", he is chiefly known for the Elements

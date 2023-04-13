@@ -3,7 +3,7 @@
 :END:
 #+title: Tmux
 #+created: [2022-02-11 Fri 20:31]
-#+last_modified: [2022-02-12 Sat 04:29:54]
+#+last_modified: [2023-04-12 Wed 20:28]
 #+filetags: Linux Tool
 
 The ~tmux~ tool is a terminal application that allows you to split your terminal
@@ -46,7 +46,7 @@ slate. To switch between your windows type ~C-b p~ to go to your previous window
 or ~C-b n~ to go to your next window. You can also type ~C-b <number>~ to switch
 to a specific window.
 
-Now that you have knowledge of the basics of tmux usage lets dive into session
+Now that you have knowledge of the basics of tmux usage let's dive into session
 management with tmux. To detach from your current session of tmux and keep it
 running in the background simply type ~C-b d~ or ~C-b D~ to have tmux prompt you
 asking which session you want to detach. A detached session of tmux will

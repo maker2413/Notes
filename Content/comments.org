@@ -3,7 +3,7 @@
 :END:
 #+title: Comments
 #+created: [2021-10-16 Sat 00:04]
-#+last_modified: [2021-10-16 Sat 19:47:13]
+#+last_modified: [2023-04-12 Wed 20:25]
 #+filetags: ProgrammingLanguage Basics
 
 Comments are lines in your code that will get ignored when compiling or running
@@ -40,7 +40,7 @@ is. Here are are a couple of examples of comments from some various languages:
   comments so unfortunately you may have to comment out each line however most
   languages that use the ~//~ syntax for their single line comments will use
   ~/*~ for the beginning of their block of comments and ~*/~ for the end of
-  their comment block. Lets see some examples of this:
+  their comment block. Let's see some examples of this:
   - C:
     #+begin_src c
       /*

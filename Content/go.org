@@ -3,7 +3,7 @@
 :END:
 #+title: Go
 #+created: [2022-10-06 Thu 21:54]
-#+last_modified: [2022-12-18 Sun 08:15]
+#+last_modified: [2023-04-12 Wed 20:24]
 #+filetags: ProgrammingLanguage Golang
 
 Go is a statically typed, compiled [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]] designed at Google by
@@ -16,4 +16,4 @@ Go. I also wanted to take the time to link to [[https://go.dev][go.dev]] the hom
 specifically the [[https://go.dev/play][Playground]] where you can access a live Go environment where you
 can look at example, write, and run Go programs.
 
-With that out of the way lets go over some go concepts.
+With that out of the way let's go over some go concepts.

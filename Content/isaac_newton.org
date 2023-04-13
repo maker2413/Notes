@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       991ce7f2-258c-4358-a505-07f998122011
+:END:
+#+title: Isaac Newton
+#+created: [2023-04-12 Wed 19:29]
+#+last_modified: [2023-04-12 Wed 19:31]
+#+filetags: Person Math Mathematics IsaacNewton
+
+Sir Isaac Newton FRS was an English mathematician, physicist, astronomer,
+alchemist, theologian, and author who was described in his time as a natural
+philosopher. He was a key figure in the Scientific Revolution and the
+Enlightenment that followed. His pioneering book Philosophiæ Naturalis Principia
+Mathematica (Mathematical Principles of Natural Philosophy), first published in
+1687, consolidated many previous results and established classical
+mechanics. Newton also made seminal contributions to optics, and shares credit
+with German mathematician Gottfried Wilhelm Leibniz for developing infinitesimal
+calculus.
+
+* External Links
+  - https://en.wikipedia.org/wiki/Isaac_Newton

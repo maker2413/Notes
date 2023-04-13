@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       27e13170-644c-4528-98ac-a88b60a0e46f
+:END:
+#+title: Integral Calculus
+#+created: [2023-04-12 Wed 18:45]
+#+last_modified: [2023-04-12 Wed 18:45]
+#+filetags: Math Mathematics Calculus IntegralCalculus
+

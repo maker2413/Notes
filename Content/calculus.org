@@ -3,9 +3,21 @@
 :END:
 #+title: Calculus
 #+created: [2023-04-10 Mon 21:14]
-#+last_modified: [2023-04-10 Mon 21:21]
+#+last_modified: [2023-04-12 Wed 20:24]
 #+filetags: Math Mathematics Calculus
 
 Calculus is the [[id:36a1bacc-e7f2-4737-881d-b243a291d8df][mathematical]] study of continuous change, in the same way that
 [[id:e15a65f3-75ef-4e57-91ab-49a4c6c5694b][Geometry]] is the study of shape, and [[id:ae43a2af-8778-4311-b570-d79f764976a0][Algebra]] is the study of generalizations of
-arithmetic operations.
+arithmetic operations. The word Calculus comes from Latin meaning "small stone",
+because it is like understanding something by looking at small pieces. Calculus
+was developed over many centuries in many different parts of the world, not just
+western Europe but also ancient Greece, the Middle East, India, China, and
+Japan. It is often attributed to [[id:991ce7f2-258c-4358-a505-07f998122011][Sir Isaac Newton]] and Gottfried Leibniz who
+independently developed much of its foundations.
+
+Calculus has two main branches, [[id:028e1f37-d380-45d3-b266-698a48114366][differential calculus]] and [[id:27e13170-644c-4528-98ac-a88b60a0e46f][integral calculus]]. In
+short [[id:028e1f37-d380-45d3-b266-698a48114366][differential calculus]] cuts something into small pieces to find how it
+changes and [[id:27e13170-644c-4528-98ac-a88b60a0e46f][integral calculus]] joins (integrates) the small pieces together to
+find how much there is.
+
+One core concept of Calculus that is present in both of its branches is [[id:e2cf1141-da2f-49f4-a836-68bd2c3c11f1][limits]].

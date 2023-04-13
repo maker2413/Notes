@@ -3,7 +3,7 @@
 :END:
 #+title: TypeScript Annotations
 #+created: [2021-12-06 Mon 21:46]
-#+last_modified: [2021-12-06 Mon 23:33:20]
+#+last_modified: [2023-04-12 Wed 20:26]
 #+filetags: ProgrammingLanguage TypeScript
 
 In [[id:0817633b-da6b-4889-ab18-267d6cb9ef60][TypeScript]] there are two ways to defines types. We can manually define types
@@ -15,7 +15,7 @@ defined by the developer manually. Where as type inference is when [[id:0817633b
 tries to figure out what type of value a variable refers to. Type inference is
 guessed by [[id:0817633b-da6b-4889-ab18-267d6cb9ef60][TypeScript]].
 
-Lets look at the difference in how these types are defined:
+Let's look at the difference in how these types are defined:
 #+begin_src typescript
   let apples: number = 5;
   // The colon and 'number' are our type annotation
@@ -25,7 +25,7 @@ Lets look at the difference in how these types are defined:
   // is and example of inference.
 #+end_src
 
-Lets also look at how we annotate different values in our code:
+Let's also look at how we annotate different values in our code:
 #+begin_src typescript
   // Primitive types
   let speed: string = 'fast';
@@ -61,7 +61,7 @@ Lets also look at how we annotate different values in our code:
   // void means we aren't expecting to return anything
 #+end_src
 
-Lets talk quickly about how type inference works. When we type
+Let's talk quickly about how type inference works. When we type
 ~const color = 'red';~ for instance type inference will determine that we want a
 string. This happens because we initialized our variable when we declared it.
 When we type ~const color~ we are declaring a variable and ~'red'~ is our

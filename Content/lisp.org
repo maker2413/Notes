@@ -3,7 +3,7 @@
 :END:
 #+title: Lisp
 #+created: [2021-11-06 Sat 06:01]
-#+last_modified: [2022-08-21 Sun 17:15]
+#+last_modified: [2023-04-12 Wed 20:24]
 #+filetags: ProgrammingLanguage
 
 The actual name ~lisp~ stands for "list processing" and that is exactly what
@@ -74,7 +74,7 @@ The first key thing to learn or get your head around is the fact that everything
 in lisp returns a value. if you open your preferred lisp repl and just type ~10~
 you will see the repl return 10. Under the hood the repl is interpreting this 10
 as a lisp object ie: a list of 10: ~(10)~ and this list evaluates to =10=. Now
-lets see lisp handles math equations. If you type the following in your repl:
+let's see lisp handles math equations. If you type the following in your repl:
 ~(+ 6 8)~ you will see the output: =14=.
 
 Anything we put into parenthesis is a list and generally in lisp lists are
@@ -82,7 +82,7 @@ evaluated by treating the first element in the lisp as the name of a function
 and the rest of the elements as expressions. In out case ~+~ was the name of a
 function that does addition with the expressions passed to it. This function
 performs its task and then returns ~(14)~ and that list returns =14=. For a
-deeper example lets look how we can do multiple expression calls. Type the
+deeper example let's look how we can do multiple expression calls. Type the
 following: ~(/ (* 4 7) 2)~ and you will see it return =14=. In this example the
 ~/~ function was called with the inputs of: ~(* 4 7)~ and ~(2)~. We then run the
 ~*~ function with the inputs: ~(4)~ and ~(7)~. This returns: ~(28)~ which then

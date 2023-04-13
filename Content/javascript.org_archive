@@ -14,7 +14,7 @@ Archived entries from file /home/epost/Notes/ProgrammingLanguages/javascript.org
   :ARCHIVE_ITAGS: ProgrammingLanguage JavaScript
   :END:
   Arrays in JavaScript follow a fairly standard syntax to most dynamic
-  programming languages. Lets look at an example:
+  programming languages. Let's look at an example:
   #+begin_src javascript
     // Literal syntax:
     const friends = ['John', 'Jacob', 'Jingle'];

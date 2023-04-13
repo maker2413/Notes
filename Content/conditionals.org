@@ -3,7 +3,7 @@
 :END:
 #+title: Conditionals
 #+created: [2021-10-26 Tue 18:45]
-#+last_modified: [2021-10-31 Sun 16:49:38]
+#+last_modified: [2023-04-12 Wed 20:29]
 #+filetags: ProgrammingLanguage Basics
 
 In programming languages, conditionals (also known as conditional statements,
@@ -20,7 +20,7 @@ false.
   programming language has some form of ~if~ statement. We use ~if~ statements
   to execute a block of code "if" a definded condition is true for our program.
   Most programming languages use the almost same syntax for ~if~ statements,
-  lets look at some examples:
+  let's look at some examples:
   - Bash:
     #+begin_src bash
       if [[ $NUM -gt 10 ]]
@@ -51,7 +51,7 @@ false.
     the condition of our ~if~ statement. Most programming languages also support
     an ~elseif~ statement. An ~elseif~ statement is essentially followup if
     statements we want to check for before falling back on our ~else~
-    statement. Lets add some ~elseif~ and ~else~ statements to our examples
+    statement. Let's add some ~elseif~ and ~else~ statements to our examples
     above:
   - Bash:
     #+begin_src bash

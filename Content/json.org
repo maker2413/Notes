@@ -3,7 +3,7 @@
 :END:
 #+title: Json
 #+created: [2022-03-11 Fri 03:53]
-#+last_modified: [2022-03-13 Sun 21:41:26]
+#+last_modified: [2023-04-12 Wed 20:28]
 #+filetags: Tool
 
 Json is a very popular [[id:7d97f527-f387-44c0-86c9-4dbbe0ab28e0][markup language]] and although it isn't my favorite it is
@@ -29,7 +29,7 @@ and is very commonly encountered when working with [[id:91ceb802-e5d7-498e-b04c-
 
 * Structure
   Json's simplicity is part of its appeal. It's easy to write, easy to read, and
-  easy to translate between the [[id:9fcbd1ea-5bc4-4d0b-a69f-c84d43281f24][data structures]] of most languages. Lets take a
+  easy to translate between the [[id:9fcbd1ea-5bc4-4d0b-a69f-c84d43281f24][data structures]] of most languages. Let's take a
   look at what makes up a json object, the [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data types]] that json supports, and
   other specifics with the syntax of this [[id:7d97f527-f387-44c0-86c9-4dbbe0ab28e0][markup language]].
 
@@ -77,7 +77,7 @@ and is very commonly encountered when working with [[id:91ceb802-e5d7-498e-b04c-
   from to tabular to even more complex.
 
 * Json Data Types
-  Now that we have seen the structure of json, lets look into what [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data types]]
+  Now that we have seen the structure of json, let's look into what [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data types]]
   are supported. We have seen some of them in the above example and there are
   only a couple more to cover. Here is the complete list of json [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data types]]:
   - string :: Literal text that's enclosed with quotes.

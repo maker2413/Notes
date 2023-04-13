@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       e2cf1141-da2f-49f4-a836-68bd2c3c11f1
+:END:
+#+title: Limits
+#+created: [2023-04-12 Wed 20:19]
+#+last_modified: [2023-04-12 Wed 20:23]
+#+filetags: Math Mathematics Calculus Limits
+
+The idea behind limits is to calculate what a problem will become as it
+approaches a limit like for instance infinity or an indeterminate
+answer. Sometimes we can't work something out directly, but we can see what it
+should be as we closer to our answer.
+
+Let's take a look at the following example:
+\begin{equation}
+\frac{x^2 - 1}{x - 1}
+\end{equation}
+
+For this example let's work it out

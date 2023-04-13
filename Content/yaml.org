@@ -3,7 +3,7 @@
 :END:
 #+title: Yaml
 #+created: [2022-02-24 Thu 19:40]
-#+last_modified: [2022-03-11 Fri 15:18:41]
+#+last_modified: [2023-04-12 Wed 20:29]
 #+filetags: Tool
 
 At its conception ~yaml~ was given its name based the following acronym:
@@ -33,7 +33,7 @@ from configuration files to Internet messaging to object persistence to data
 auditing."
 
 * How to yaml
-  Lets stop talking and to the basics. Lets start by taking a look at an example
+  Let's stop talking and to the basics. Let's start by taking a look at an example
   yaml file:
   #+begin_src yaml
     ---
@@ -116,7 +116,7 @@ auditing."
 * Comments
   In yaml comments are denoted with a pound sign: ~#~. Comments can appear at
   the end of a line or at the beginning specifying the entire line as a
-  comment. Lets look at an example:
+  comment. Let's look at an example:
   #+begin_src yaml
     ---
     # This is a comment
@@ -128,7 +128,7 @@ auditing."
   get into.
 
 * Yaml Datatypes
-  We briefly covered it up above but lets go over the specifics of what
+  We briefly covered it up above but let's go over the specifics of what
   [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data types]] yaml supports:
 
 ** Key/Value Pairs and Dictionaries
@@ -142,7 +142,7 @@ auditing."
 ** Numeric Types
    Yaml recognizes many common numeric types and even some not so common numeric
    types. The first of these numeric types are Integer types. We have seen some
-   examples above but lets look at what Integer types are supported:
+   examples above but let's look at what Integer types are supported:
    #+begin_src yaml
      ---
      foo: 231234

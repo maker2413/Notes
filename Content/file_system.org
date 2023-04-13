@@ -3,7 +3,7 @@
 :END:
 #+title: File System
 #+created: [2022-02-06 Sun 12:20]
-#+last_modified: [2022-02-06 Sun 18:15:57]
+#+last_modified: [2023-04-12 Wed 20:24]
 #+filetags: Linux Concept OperatingSystem
 
 - Home directory is where each users personal files gets stored. The home
@@ -14,7 +14,7 @@
   that additional hard drive in Windows. In Linux we don't have drive letters,
   we only have one root and in the root folder you will see folders like "mnt"
   and "media". These are folders where our additional hard drives, cd drives, or
-  flash drives get mounted. Lets go over the directory structure of root now:
+  flash drives get mounted. Let's go over the directory structure of root now:
   - *bin*:
     The bin folder contains most of our basic executable programs or "binaries",
     which is where bin gets its name, lives. If you look in the bin directory

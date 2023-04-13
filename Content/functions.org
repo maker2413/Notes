@@ -3,7 +3,7 @@
 :END:
 #+title: Functions
 #+created: [2021-10-19 Tue 20:34]
-#+last_modified: [2021-10-24 Sun 15:28:48]
+#+last_modified: [2023-04-12 Wed 20:23]
 #+filetags: ProgrammingLanguage Basics
 
 In programming a function (also known as a subroutine) is a sequence of
@@ -25,7 +25,7 @@ allow you to:
   will return after it finishes executing or the programming language allows you
   to define functions dynamically and will handle the information returned from
   the funciton for you. Most programming languages will also have you define if
-  any [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data types]] get passed into your function for the function to use. Lets see
+  any [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data types]] get passed into your function for the function to use. Let's see
   some exmaples of creating functions, we will first go over some languages that
   require you to define the [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data type]] the function will return:
   - C:
@@ -43,7 +43,7 @@ allow you to:
       }
     #+end_src
 
-  Now lets looks at some examples of programming languages that let you
+  Now let's looks at some examples of programming languages that let you
   dynamically create functions:
   - Bash:
     #+begin_src bash
@@ -65,7 +65,7 @@ allow you to:
   programming languages a function has to be defined before it can be called so
   the function should be placed above the line where you are calling it in the
   file. Some programming languages don't require you to define the input data
-  for the function and will allow you to dynamically pass in arguments. Lets
+  for the function and will allow you to dynamically pass in arguments. Let's
   look at how to call the functions we defined above:
   - C:
     #+begin_src c
@@ -99,7 +99,7 @@ allow you to:
     #+end_src
 
   Bash is one of those languages that doesn't require you to define the input
-  arguments for your function. Lets see how to call the bash function we defined
+  arguments for your function. Let's see how to call the bash function we defined
   above:
   - Bash:
     #+begin_src bash

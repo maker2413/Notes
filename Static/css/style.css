@@ -26,6 +26,13 @@ header {
 
 .postamble {
   border-top: 2px solid black;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  background-color: white;
+  position: absolute;
+  text-indent: 6px;
+  width: 621px;
+  bottom: 0;
 }
 
 .navigation > * {
@@ -44,6 +51,7 @@ header {
 .notes {
   max-width: 100%;
   flex-grow: 1;
+  position: relative;
 }
 
 .note {

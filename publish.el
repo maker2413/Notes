@@ -110,7 +110,7 @@
         ;;  :recursive t)
         ("static"
          :base-directory ,static-dir
-         :base-extension "css\\|js\\|html"
+         :base-extension "css\\|js\\|html\\|txt"
          :publishing-directory ,output-dir
          :publishing-function org-publish-attachment
          :recursive t)

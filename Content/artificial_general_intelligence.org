@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       ac393485-89e5-42bd-b926-2eebcc1b9b57
+:END:
+#+title: Artificial General Intelligence
+#+created: [2023-04-13 Thu 22:40]
+#+last_modified: [2023-04-13 Thu 22:48]
+#+filetags: AI ArtificialIntelligence AGI ArtificialGeneralIntelligence
+
+An artificial general intelligence (AGI) is a hypothetical intelligent agent
+which can understand or learn any intellectual task that human beings or other
+animals can. AGI has also been defined alternatively as an autonomous system
+that surpasses human capabilities at the majority of economically valuable
+work. Developing AGI is a primary goal of some [[id:1685a9c2-92ca-4d13-9438-c343769474de][artificial intelligence]] research
+and for several [[id:1685a9c2-92ca-4d13-9438-c343769474de][AI]] companies such as OpenAI, DeepMind, and Anthropic, as well as
+a common topic in science fiction and futures studies.
+
+* External Links
+  - https://en.wikipedia.org/wiki/Artificial_general_intelligence

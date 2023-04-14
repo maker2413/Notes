@@ -1,0 +1,32 @@
+:PROPERTIES:
+:ID:       ee2e1560-29ac-4760-8387-e84ecb97dcd8
+:END:
+#+title: Machine Learning
+#+created: [2023-04-13 Thu 22:53]
+#+last_modified: [2023-04-13 Thu 22:59]
+#+filetags: AI ArtificialIntelligence ML MachineLearning
+
+Machine learning (ML) is a field devoted to understanding and building methods
+that let machines "learn" – that is, methods that leverage data to improve
+computer performance on some set of tasks. It is seen as a broad subfield of
+artificial intelligence.
+
+Machine learning algorithms build a model based on sample data, known as
+training data, in order to make predictions or decisions without being
+explicitly programmed to do so. Machine learning algorithms are used in a wide
+variety of applications, such as in medicine, email filtering, speech
+recognition, agriculture, and computer vision, where it is difficult or
+unfeasible to develop conventional algorithms to perform the needed tasks.
+
+A subset of machine learning is closely related to computational statistics,
+which focuses on making predictions using computers, but not all machine
+learning is statistical learning. The study of mathematical optimization
+delivers methods, theory and application domains to the field of machine
+learning. Data mining is a related field of study, focusing on exploratory data
+analysis through unsupervised learning.
+
+Some implementations of machine learning use data and [[id:054e88d7-a63b-4422-a2de-ed2c120f312c][neural networks]] in a way
+that mimics the working of a biological brain.
+
+* External Links
+  - https://en.wikipedia.org/wiki/Machine_learning

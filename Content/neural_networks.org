@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       054e88d7-a63b-4422-a2de-ed2c120f312c
+:END:
+#+title: Neural Networks
+#+created: [2023-04-13 Thu 22:59]
+#+last_modified: [2023-04-13 Thu 22:59]
+#+filetags: AI ArtificialIntelligence NeuralNetworks
+
+A neural network can refer to either a neural circuit of biological neurons
+(sometimes also called a biological neural network), or a network of artificial
+neurons or nodes (in the case of an artificial neural network). Artificial
+neural networks are used for solving artificial intelligence (AI) problems; they
+model connections of biological neurons as weights between nodes. A positive
+weight reflects an excitatory connection, while negative values mean inhibitory
+connections. All inputs are modified by a weight and summed. This activity is
+referred to as a linear combination. Finally, an activation function controls
+the amplitude of the output. For example, an acceptable range of output is
+usually between 0 and 1, or it could be −1 and 1.
+
+These artificial networks may be used for predictive modeling, adaptive control
+and applications where they can be trained via a dataset. Self-learning
+resulting from experience can occur within networks, which can derive
+conclusions from a complex and seemingly unrelated set of information.
+
+* External Links
+  - https://en.wikipedia.org/wiki/Neural_network

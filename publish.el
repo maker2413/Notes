@@ -44,6 +44,21 @@
 (setq static-dir (concat base-dir "/Static"))
 (setq images-output-dir (concat output-dir "/images"))
 
+;; org-collect-keyword-value allows me to grab information from a files keywords
+(defun org-collect-keyword-value (key)
+  "Get value of org property KEY of current buffer."
+  (setq key-value (nth 1 (car (org-collect-keywords (list key)))))
+  (when key-value
+      (substring key-value
+                 1
+                 (- (length key-value) 1))))
+
+;; buffer-file-shortname allows me to grab just the file name of the current buffer
+(defun buffer-file-shortname ()
+  "Get the filename of the current buffer without the full path"
+  (nth (- (length (split-string (buffer-file-name) "/")) 1)
+       (split-string (buffer-file-name) "/")))
+
 ;; Set html header information
 (setq maker/header "<link rel='stylesheet' type='text/css' href='/css/style.css'/>
 <link rel='stylesheet' type='text/css' href='https://unpkg.com/tippy.js@6/themes/light.css'/>
@@ -55,8 +70,13 @@
 ")
 
 ;; Set html footer information
-(setq maker/footer "This page was last updated: %C. <a href='https://github.com/maker2413/Notes/'>Source</a>
-")
+(defun maker/footer ()
+  (concat "This page was last updated: "
+          (or (org-collect-keyword-value "last_modified") "not defined")
+          ". "
+          (concat "<a href='https://github.com/maker2413/Notes/blob/master/Content/"
+                  (buffer-file-shortname)
+                  "'>Source</a>")))
 
 ;; Add roam files to list of files to search IDs for
 (setq org-id-extra-files (org-roam-list-files))
@@ -72,7 +92,6 @@
          :html-head-extra ,maker/header
          :html-head-include-default-style nil
          :html-head-include-scripts nil
-         :html-postamble ,maker/footer
          :html-table-use-header-tags-for-first-column t
          :html-validation-link nil
          :publishing-directory ,output-dir
@@ -161,11 +180,13 @@
                       "")))))
              contents
              (format "</%s>\n" (nth 1 (assq 'content (plist-get info :html-divs))))
-             "</div>\n"
-             "</div>\n"
-             "</div>\n"
+             "<div class='postamble'>\n"
              ;; Postamble.
-             (org-html--build-pre/postamble 'postamble info)
+             (maker/footer)
+             "</div>\n"
+             "</div>\n"
+             "</div>\n"
+             "</div>\n"
              "</body>\n"
              "</html>\n"
              )))

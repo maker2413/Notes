@@ -101,13 +101,6 @@
          :with-author nil
          :with-toc nil)
         ;; static is used for the static assets in "Static"
-        ;; ("css-js"
-        ;;  :base-directory ,base-dir
-        ;;  :base-extension "css\\|js"
-        ;;  :exclude "Website/.*"
-        ;;  :publishing-directory ,output-dir
-        ;;  :publishing-function org-publish-attachment
-        ;;  :recursive t)
         ("static"
          :base-directory ,static-dir
          :base-extension "css\\|js\\|html\\|txt"

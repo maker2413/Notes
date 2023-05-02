@@ -3,7 +3,7 @@
 :END:
 #+title: Neural Networks
 #+created: [2023-04-13 Thu 22:59]
-#+last_modified: [2023-04-13 Thu 22:59]
+#+last_modified: [2023-04-19 Wed 21:14]
 #+filetags: AI ArtificialIntelligence NeuralNetworks
 
 A neural network can refer to either a neural circuit of biological neurons
@@ -21,6 +21,9 @@ These artificial networks may be used for predictive modeling, adaptive control
 and applications where they can be trained via a dataset. Self-learning
 resulting from experience can occur within networks, which can derive
 conclusions from a complex and seemingly unrelated set of information.
+
+A great resource for learning neural networks on a deeper level is the
+[[https://www.youtube.com/watch?v=VMj-3S1tku0&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ][Neural Networks: Zero to Hero]] playlist on YouTube.
 
 * External Links
   - https://en.wikipedia.org/wiki/Neural_network

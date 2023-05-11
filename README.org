@@ -11,7 +11,7 @@ This entire repo and the website are currently under continual development. I
 have recently taken up the effort of converting these notes to [[https://zettelkasten.de/posts/overview/][Zettelkasten]] note
 taking format to link common ideas together and hopefully some day build a
 "brain map" of all the concepts in this repo. More information on how this repo
-is written and how my website is built can be found here: [[https://www.ethanp.dev/how_this_website_is_made.html][How It's Made]].
+is written and how my website is built can be found here: [[https://notes.ethancpost.com/how_this_website_is_made.html][How It's Made]].
 
 *Disclaimer*
 Since these are personal notes any content in this repo or the website is

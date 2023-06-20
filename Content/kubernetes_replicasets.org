@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       bd7528e0-64d4-40f9-9295-71b820be5186
+:END:
+#+title: Kubernetes Replicasets
+#+created: [2023-06-20 Tue 17:11]
+#+last_modified: [2023-06-20 Tue 17:12]
+#+filetags: Kubernetes Concept
+

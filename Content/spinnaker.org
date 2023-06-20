@@ -3,18 +3,18 @@
 :END:
 #+title: Spinnaker
 #+created: [2022-10-06 Thu 21:44]
-#+last_modified: [2022-10-06 Thu 21:44]
+#+last_modified: [2023-06-20 Tue 16:34]
 #+filetags: Tool Kubernetes CI/CD
 
-Spinnaker is a Continuous Deployment tool. The thing that makes Spinnaker
-different than most deployment tools is that Spinnaker has multi cloud support.
-Multi cloud support on its own isn't that unique of a concept but Spinnaker
-takes a very interesting approach to how it handles multi cloud. With Spinnaker
-you configure and connect your environment(s) from a multitude of supported
-[[https://spinnaker.io/setup/install/providers][providers]]. From there Spinnaker will treat them equal and give you the ability
-to define automated pipelines to deploy to certain environments or spread out
-the load amongst multiple. For any aditional documentation not described in this
-README you can consult the [[https://spinnaker.io/concepts][Spinnaker docs]].
+Spinnaker is a Continuous Deployment tool designed for [[id:c98976a7-563e-4f21-a436-f71201e24af4][Kubernetes]]. The thing
+that makes Spinnaker different than most deployment tools is that Spinnaker has
+multi cloud support. Multi cloud support on its own isn't that unique of a
+concept but Spinnaker takes a very interesting approach to how it handles multi
+cloud. With Spinnaker you configure and connect your environment(s) from a
+multitude of supported [[https://spinnaker.io/setup/install/providers][providers]]. From there Spinnaker will treat them equal and
+give you the ability to define automated pipelines to deploy to certain
+environments or spread out the load amongst multiple. For any additional
+documentation not described in this README you can consult the [[https://spinnaker.io/concepts][Spinnaker docs]].
 
 * Spinnaker Architecture
   Spinnaker is composed of a number of independent microservices. These

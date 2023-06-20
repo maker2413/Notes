@@ -3,8 +3,8 @@
 :END:
 #+title: Btrfs
 #+created: [2022-07-04 Mon 19:00]
-#+last_modified: [2022-07-04 Mon 19:03:08]
+#+last_modified: [2023-06-20 Tue 16:35]
 #+filetags: Linux Partitioning
 
 ~btrfs~ (pronounced as "better F S" or "butter F S") is a computer storage
-format that combines a file system based on the copy-on-write principle.
+format that combines a [[id:ea6dfc82-bd00-4abe-a67d-652145adf9f5][file system]] based on the copy-on-write principle.

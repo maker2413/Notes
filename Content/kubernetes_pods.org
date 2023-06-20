@@ -3,7 +3,7 @@
 :END:
 #+title: Kubernetes Pods
 #+created: [2023-06-20 Tue 14:56]
-#+last_modified: [2023-06-20 Tue 15:12]
+#+last_modified: [2023-06-20 Tue 17:15]
 #+filetags: Kubernetes Concept
 
 In Kubernetes Containers are not managed individually, but instead they are part

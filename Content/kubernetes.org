@@ -3,7 +3,7 @@
 :END:
 #+title: Kubernetes
 #+created: [2022-02-05 Sat 14:36]
-#+last_modified: [2023-06-20 Tue 15:12]
+#+last_modified: [2023-06-20 Tue 17:33]
 #+filetags: Kubernetes Tool Linux
 
 Kubernetes on a high level is a cluster of servers, virtual machines, or
@@ -17,7 +17,10 @@ the Kubernetes website: [[https://kubernetes.io/docs/concepts/overview/what-is-k
 
 This guide aims to cover everything I have learned about Kubernetes and will be
 broken out into sections. Here are the sections I have so far:
-- [[id:f9c8143d-15dd-478a-9490-c32288ab0471][Nodes]] :: This will go over the concept of Kubernetes nodes.
-- [[id:26364aaa-416e-46e5-ab00-fa94fe74f24c][Components]] :: This will go over the various components of Kubernetes and describe what they do.
-- [[id:72262b9e-6080-47ca-85eb-c22b651e7d92][Namespaces]] :: This will go over the definition and usage of a namespace.
-- [[id:7cbfd889-bd22-4dd3-a1e3-45ee56d93b4c][Pods]] :: This will go over the definition and usage of a Pod.
+- [[id:f9c8143d-15dd-478a-9490-c32288ab0471][Nodes]] :: The servers of Kubernetes.
+- [[id:26364aaa-416e-46e5-ab00-fa94fe74f24c][Components]] :: The various components of Kubernetes.
+- [[id:bd4386a6-191a-437a-8114-e69c3f74c407][Operators]] :: Sometimes called Controllers, these manage orchestration.
+- [[id:7d58f850-096d-40c6-8b0f-64b92acba2b8][Namespaces]] :: The segregation concept of Kubernetes.
+- [[id:7cbfd889-bd22-4dd3-a1e3-45ee56d93b4c][Pods]] :: Pods house containers.
+- [[id:42abcbf0-bb4d-4e70-9f90-31bf190842ec][Deployments]] :: Manages [[id:bd7528e0-64d4-40f9-9295-71b820be5186][Replicasets]].
+- [[id:bd7528e0-64d4-40f9-9295-71b820be5186][Replicasets]] :: Manages Pods.

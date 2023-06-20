@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       42abcbf0-bb4d-4e70-9f90-31bf190842ec
+:END:
+#+title: Kubernetes Deployments
+#+created: [2023-06-20 Tue 17:10]
+#+last_modified: [2023-06-20 Tue 17:12]
+#+filetags: Kubernetes Concept
+

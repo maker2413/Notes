@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       bd4386a6-191a-437a-8114-e69c3f74c407
+:ROAM_ALIASES: "Kubernetes Controllers"
+:END:
+#+title: Kubernetes Operators
+#+created: [2023-06-20 Tue 17:05]
+#+last_modified: [2023-06-20 Tue 17:13]
+#+filetags: Kubernetes Concept
+
+A Kubernetes Operator, sometimes called a controller, manages orchestration
+through a series of watch-loops. Each controller interrogates the [[id:26364aaa-416e-46e5-ab00-fa94fe74f24c][kube-apiserver]]
+for a particular object state, then modifying the object until the declared
+state matches the current state. These controllers are compiled into the
+[[id:26364aaa-416e-46e5-ab00-fa94fe74f24c][kube-controller-manager]], but others can be added using custom resource
+definitions. The default operator for containers is called a [[id:42abcbf0-bb4d-4e70-9f90-31bf190842ec][Deployment]]. A
+[[id:42abcbf0-bb4d-4e70-9f90-31bf190842ec][Deployment]] does not directly work with pods, but instead manages [[id:bd7528e0-64d4-40f9-9295-71b820be5186][Replicasets]].

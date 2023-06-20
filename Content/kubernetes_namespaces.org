@@ -1,9 +1,9 @@
 :PROPERTIES:
-:ID:       72262b9e-6080-47ca-85eb-c22b651e7d92
+:ID:       7d58f850-096d-40c6-8b0f-64b92acba2b8
 :END:
-#+title: Kubernetes Namespace
+#+title: Kubernetes Namespaces
 #+created: [2023-06-20 Tue 15:11]
-#+last_modified: [2023-06-20 Tue 15:14]
+#+last_modified: [2023-06-20 Tue 17:32]
 #+filetags: Kubernetes Concept
 
 Kubernetes uses namespaces to keep objects distinct from each other, for

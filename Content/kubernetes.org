@@ -3,16 +3,21 @@
 :END:
 #+title: Kubernetes
 #+created: [2022-02-05 Sat 14:36]
-#+last_modified: [2022-11-15 Tue 22:11]
+#+last_modified: [2023-06-20 Tue 15:12]
 #+filetags: Kubernetes Tool Linux
 
 Kubernetes on a high level is a cluster of servers, virtual machines, or
 instances that manage and orchestrate containers to provide as close to 100% up
 time as possible. The word Kubernetes comes from Greek and roughly translates to
 helmsman. This name was chosen because you can think of Kubernetes as the
-captain of your ships (containers). More on the history of Kubernetes can be
-found on the Kubernetes website: [[https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/][here]].
+captain of your ships (containers). Kubernetes was originally developed by a
+team at [[id:d2ff01f9-43ad-4e7c-a4a3-afdac05a0609][Google]] and is built off of concepts founded from an in house container
+management system called Borg. More on the history of Kubernetes can be found on
+the Kubernetes website: [[https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/][here]].
 
 This guide aims to cover everything I have learned about Kubernetes and will be
-broken out into chapters. Here are the chapters I have so far:
-- [[id:26364aaa-416e-46e5-ab00-fa94fe74f24c][Components]] :: This chapter will go over the various components of Kubernetes and describe what they do.
+broken out into sections. Here are the sections I have so far:
+- [[id:f9c8143d-15dd-478a-9490-c32288ab0471][Nodes]] :: This will go over the concept of Kubernetes nodes.
+- [[id:26364aaa-416e-46e5-ab00-fa94fe74f24c][Components]] :: This will go over the various components of Kubernetes and describe what they do.
+- [[id:72262b9e-6080-47ca-85eb-c22b651e7d92][Namespaces]] :: This will go over the definition and usage of a namespace.
+- [[id:7cbfd889-bd22-4dd3-a1e3-45ee56d93b4c][Pods]] :: This will go over the definition and usage of a Pod.

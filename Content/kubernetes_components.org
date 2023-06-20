@@ -3,14 +3,41 @@
 :END:
 #+title: Kubernetes Components
 #+created: [2022-02-05 Sat 14:40]
-#+last_modified: [2022-02-05 Sat 14:42:13]
+#+last_modified: [2023-06-20 Tue 14:54]
 #+filetags: Kubernetes Concept
 
 Kubernetes is made up of multiple components that work together to make the
-Kubernetes ecosystem. Some of these components only run on the master node and
-some run on your other nodes. We will cover the master node or control plane
-components first. You can find more information on the Kubernetes componenets:
-[[https://kubernetes.io/docs/concepts/overview/components/][here]].
+Kubernetes ecosystem. Some of these components only run on the control plane
+[[id:f9c8143d-15dd-478a-9490-c32288ab0471][node]] and some run on all your [[id:f9c8143d-15dd-478a-9490-c32288ab0471][nodes]] including your worker [[id:f9c8143d-15dd-478a-9490-c32288ab0471][nodes]]. These
+components communicate between each other using [[id:91ceb802-e5d7-498e-b04c-2d77c0af9d76][APIs]]. This [[id:91ceb802-e5d7-498e-b04c-2d77c0af9d76][API]] based
+communication scheme allows for non-[[id:8f8d4797-dca7-4e7f-afcb-b12fa196d412][Linux]] worker nodes and containers. Support
+for [[id:9020d898-7f38-4d9d-a928-562566e8a2e6][Windows]] Server 2019 was graduated to /Stable/ with the 1.14 release, however
+the only [[id:8f8d4797-dca7-4e7f-afcb-b12fa196d412][Linux]] can be used for the control plane [[id:f9c8143d-15dd-478a-9490-c32288ab0471][node]]. We will cover the master
+node or control plane components first. You can find more information on the
+Kubernetes components: [[https://kubernetes.io/docs/concepts/overview/components/][here]].
+
+* Node Components
+  Node components run on every [[id:f9c8143d-15dd-478a-9490-c32288ab0471][node]], maintaining running Pods and providing the
+  Kubernetes runtime environment. Here are the node components:
+  - kubelet
+    The kubelet component interacts with the kube-apiserver, which runs on the
+    control plane [[id:f9c8143d-15dd-478a-9490-c32288ab0471][node]], to pass [[id:91ceb802-e5d7-498e-b04c-2d77c0af9d76][API]] calls back and forth between each of the
+    nodes. These [[id:91ceb802-e5d7-498e-b04c-2d77c0af9d76][API]] calls are used to run containers, manage any resources
+    necessary, and works with the container engine to manage them on the local
+    [[id:f9c8143d-15dd-478a-9490-c32288ab0471][node]].
+  - kube-proxy
+    The kube-proxy component is a network proxy that runs on each [[id:f9c8143d-15dd-478a-9490-c32288ab0471][node]] in your
+    cluster, implementing part of the Kubernetes Service concept. The kube-proxy
+    maintains network rules on [[id:f9c8143d-15dd-478a-9490-c32288ab0471][nodes]]. These network rules allow network
+    communication to your Pods from network sessions inside or outside of your
+    cluster. The kube-proxy uses the operating system packet filtering layer if
+    there is one and it's available. Otherwise, kube-proxy forwards the traffic
+    itself.
+  - container runtime
+    The container runtime is the software that is responsible for running
+    containers. Kubernetes supports several container runtimes: [[id:945b2c5e-b0cb-42f4-b833-5a7b54446fe6][Docker]],
+    containerd, CRI-O, and any implementation of the Kubernetes CRI (Container
+    Runtime Interface).
 
 * Control plane components
   The control plane's components make global decisions about the cluster (for
@@ -21,8 +48,8 @@ components first. You can find more information on the Kubernetes componenets:
   plane components on the same machine, and do not run user containers on this
   machine
   - kube-apiserver
-    The api server is the component of the Kubernetes control plane that exposes
-    the Kubernetes api. The api server is the front end of the Kubernetes
+    The [[id:91ceb802-e5d7-498e-b04c-2d77c0af9d76][API]] server is the component of the Kubernetes control plane that exposes
+    the Kubernetes [[id:91ceb802-e5d7-498e-b04c-2d77c0af9d76][API]]. The [[id:91ceb802-e5d7-498e-b04c-2d77c0af9d76][API]] server is the front end of the Kubernetes
     control plane and is designed to scale horizontally. You can run several
     instances of the kube-apiserver and balance traffic between those instances.
   - etcd
@@ -33,7 +60,7 @@ components first. You can find more information on the Kubernetes componenets:
     [[https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/#backing-up-an-etcd-cluster][backing up etcd]].
   - kube-scheduler
     The kube-scheduler is the control plane component that watches for newly
-    created Pods with no assigned node, and selects a node for them to run on.
+    created Pods with no assigned [[id:f9c8143d-15dd-478a-9490-c32288ab0471][node]], and selects a [[id:f9c8143d-15dd-478a-9490-c32288ab0471][node]] for them to run on.
     Factors taken into account for scheduling decisions include: individual and
     collective resource requirements, hardware/software/policy constraints,
     affinity and anti-affinity specifications, data locality, inter-workload
@@ -43,14 +70,14 @@ components first. You can find more information on the Kubernetes componenets:
     controller processes. Logically, each controller is a separate process, but
     to reduce complexity, they are all compiled into a single binary and run in
     a single process. Some types of these controllers are:
-    - Node controller :: Responsible for noticing and responding when nodes go down.
+    - Node controller :: Responsible for noticing and responding when [[id:f9c8143d-15dd-478a-9490-c32288ab0471][node]] go down.
     - Job controller :: Wathes for job objects that represent one-off tasks, then creates Pods to run those tasks to completion.
     - Endpoints controller :: Populates the endpoints object (that is, joins Services and Pods).
-    - Service Account & Token controllers :: Create default accounts and api access tokens for new namespaces.
+    - Service Account & Token controllers :: Create default accounts and [[id:91ceb802-e5d7-498e-b04c-2d77c0af9d76][API]] access tokens for new namespaces.
   - cloud-controller-manager
     The cloud-controller-manager is the control plane component that embeds
     cloud-specific control logic. The cloud controller manager lets you link
-    your cluster into your cloud provider's api, and separates out the
+    your cluster into your cloud provider's [[id:91ceb802-e5d7-498e-b04c-2d77c0af9d76][API]], and separates out the
     components that interact with that cloud platform form components that
     interact with that cloud platform from components that only interact with
     your cluster. The cloud-controller-manager only runs controllers that are
@@ -62,31 +89,8 @@ components first. You can find more information on the Kubernetes componenets:
     horizontally (run more than one copy) to improve performance or to help
     tolerate failures. The following controllers can have cloud provider
     dependencies:
-    - Node controller :: For checking the cloud provider to determine if a node has been deleted in the cloud after it stops responding.
+    - Node controller :: For checking the cloud provider to determine if a [[id:f9c8143d-15dd-478a-9490-c32288ab0471][node]] has been deleted in the cloud after it stops responding.
     - Route controller :: For setting up routes in the underlying cloud infrastructure.
     - Service controller :: For creating, updating, and deleting cloud provider load balancers.
-
-* Node Components
-  Node components run on every node, maintaining running Pods and providing the
-  Kubernetes runtime environment. Here are the node components:
-  - kubelet
-    The kubelet component is an agent that runs on each node in the cluster. It
-    makes sure that containers are running in a Pod. The kubelet takes a set of
-    PodSpecs that are provided through various mechanisms and ensures that the
-    controller described in those PodSpecs are running healthy. The kubelet
-    doesn't manage controllers which were not created by Kubernetes.
-  - kube-proxy
-    The kube-proxy component is a network proxy that runs on each node in your
-    cluster, implementing part of the Kubernetes Service concept. The kube-proxy
-    maintains network rules on nodes. These network rules allow network
-    communication to your Pods from network sessions inside or outside of your
-    cluster. The kube-proxy uses the operating system packet filtering layer if
-    there is one and it's available. Otherwise, kube-proxy forwards the traffic
-    itself.
-  - container runtime
-    The container runtime is the software that is responsible for running
-    containers. Kubernetes supports several container runtimes: Docker,
-    containerd, CRI-O, and any implementation of the Kubernetes CRI (Container
-    Runtime Interface).
 
 * Addons

@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       3bd3ae4f-cd60-4a58-9e64-b857d8a0cda4
+:END:
+#+title: Microsoft
+#+created: [2023-06-20 Tue 11:14]
+#+last_modified: [2023-06-20 Tue 11:19]
+#+filetags: Company
+
+Microsoft is an American multinational tech company headquartered in Redmond
+Washington. Microsoft's best know product is the [[id:9020d898-7f38-4d9d-a928-562566e8a2e6][Windows]] operating system,
+however they have other products like:
+- Microsoft Office
+- Internet Explorer/Edge
+- Microsoft Surface
+
+They also are the owners and creators of the Xbox game consoles. Some of the
+companies Microsoft has bought up through the years include:
+- [[id:0c164614-cdac-4936-aca3-a6cb340883fa][GitHub]]
+- LinkedIn
+- Skype

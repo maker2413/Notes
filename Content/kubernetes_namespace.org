@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       72262b9e-6080-47ca-85eb-c22b651e7d92
+:END:
+#+title: Kubernetes Namespace
+#+created: [2023-06-20 Tue 15:11]
+#+last_modified: [2023-06-20 Tue 15:11]
+#+filetags: Kubernetes Concept
+

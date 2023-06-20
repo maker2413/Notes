@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       f8b76054-9a93-4ae1-a0d5-8e1c8d3f2c4a
+:END:
+#+title: Android
+#+created: [2023-06-20 Tue 11:25]
+#+last_modified: [2023-06-20 Tue 11:26]
+#+filetags: Operating System
+
+Android is a mobile operating system developed by [[id:d2ff01f9-43ad-4e7c-a4a3-afdac05a0609][Google]] and is currently the
+most used operating system world wide by users.

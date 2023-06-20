@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       f9c8143d-15dd-478a-9490-c32288ab0471
+:END:
+#+title: Kubernetes Nodes
+#+created: [2023-06-20 Tue 11:51]
+#+last_modified: [2023-06-20 Tue 15:13]
+#+filetags: Kubernetes Concept
+
+A Kubernetes cluster generally consists of a Control Plane node (formerly called
+a master node) and some amount of worker nodes (formerly called minions),
+although it is possible to only have a control plane node and no workers. The
+control plane node is used to manage all of the worker nodes and is the central
+point where commands are work loads are sent by the user(s) of the cluster.

@@ -3,10 +3,10 @@
 :END:
 #+title: GitHub
 #+created: [2021-11-26 Fri 15:43]
-#+last_modified: [2021-12-01 Wed 21:52:29]
+#+last_modified: [2023-06-20 Tue 11:15]
 #+filetags: Company Service
 
 GitHub is the most popular public [[id:dd5ad15d-458d-41de-b918-056542c0da6b][Git]] server on the web. It is commonly used to
 host some of the biggest open source projects in the world. It is owned by
-Microsoft as of 2018 which has caused some people to move away from GitHub,
+[[id:3bd3ae4f-cd60-4a58-9e64-b857d8a0cda4][Microsoft]] as of 2018 which has caused some people to move away from GitHub,
 opting for other services like [[id:0856b32b-1060-4fcb-9a42-5382b11deb47][GitLab]] or hosting their own.

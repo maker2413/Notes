@@ -1,0 +1,39 @@
+:PROPERTIES:
+:ID:       d2ff01f9-43ad-4e7c-a4a3-afdac05a0609
+:END:
+#+title: Google
+#+created: [2023-06-20 Tue 11:11]
+#+last_modified: [2023-06-20 Tue 11:29]
+#+filetags: Company
+
+Google is an American multinational tech company. It is owned by it's parent
+company Alphabet, which is considered one of the Big Five American information
+technology companies alongside Amazon, Apple, Meta, and [[id:3bd3ae4f-cd60-4a58-9e64-b857d8a0cda4][Microsoft]].
+
+Their biggest product is the [[https://google.com][Google Search]], however they have made many products
+to encompass all aspects of the tech world. Some of these include:
+- YouTube
+  - YouTube Music
+  - YouTube TV
+- Gmail
+- Google Maps
+- [[id:5e8d32f0-2c65-423a-8b57-e5f2039b2f3d][GCP]]
+- Google Chrome
+- [[id:f8b76054-9a93-4ae1-a0d5-8e1c8d3f2c4a][Android]]
+- Google Drive
+- Google Translate
+- Google Photos
+- Google Meet
+- Pixel
+  - Pixel Watch and Fitbit
+- Google Assistant
+- TensorFlow
+
+As well as many products that have since been discontinued like:
+- Stadia
+- Google Glass
+- Google+
+- Google Reader
+- Play Music
+- Nexus
+- Google Hangouts

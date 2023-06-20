@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       157e1446-4d10-4e84-adfa-299f584bb80f
+:END:
+#+title: Graphs
+#+created: [2023-06-20 Tue 15:33]
+#+last_modified: [2023-06-20 Tue 15:36]
+#+filetags: Programming Concept
+
+In computer Science a graph is an abstract [[id:9fcbd1ea-5bc4-4d0b-a69f-c84d43281f24][data structure]] that is meant to
+implement concepts from [[https://en.wikipedia.org/wiki/Graph_theory][Graph Theory]] in Mathematics.

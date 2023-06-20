@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       306754e5-85ee-432f-8231-5af3394a0ccd
+:END:
+#+title: Linked Lists
+#+created: [2023-06-20 Tue 15:33]
+#+last_modified: [2023-06-20 Tue 15:35]
+#+filetags: Programming Concept
+
+In Computer Science a linked list is a linear collection of elements whose order
+is not given by their physical placement in memory, but instead each element
+points to the next.

@@ -3,11 +3,14 @@
 :END:
 #+title: Data Structures
 #+created: [2021-10-31 Sun 20:17]
-#+last_modified: [2021-11-03 Wed 19:07:56]
+#+last_modified: [2023-06-20 Tue 15:37]
 #+filetags: ProgrammingLanguage Basics
 
 In computer programming a data structure is a method of storing and organizing
 data so that it can be managed and efficiently used.
 
-* TODO Describe Data Structures
+* Describe Data Structures
   - [[id:6f7860bc-25cd-4712-aeeb-1bef8cc5f62e][Arrays]]
+  - [[id:306754e5-85ee-432f-8231-5af3394a0ccd][Linked Lists]]
+  - [[id:157e1446-4d10-4e84-adfa-299f584bb80f][Graphs]]
+  - [[id:359c079e-d06e-414d-8520-3209fba280e3][Trees]]

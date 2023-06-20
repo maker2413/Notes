@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       359c079e-d06e-414d-8520-3209fba280e3
+:END:
+#+title: Trees
+#+created: [2023-06-20 Tue 15:34]
+#+last_modified: [2023-06-20 Tue 15:38]
+#+filetags: Programming Concept
+
+In computer science a tree is a widely used [[id:9fcbd1ea-5bc4-4d0b-a69f-c84d43281f24][data structure]] that represents a
+hierarchical tree structure with a set of connected nodes.

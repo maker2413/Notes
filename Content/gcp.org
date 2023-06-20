@@ -3,8 +3,8 @@
 :END:
 #+title: GCP
 #+created: [2023-06-20 Tue 11:24]
-#+last_modified: [2023-06-20 Tue 11:25]
-#+filetags: Tool
+#+last_modified: [2023-06-20 Tue 15:18]
+#+filetags: Service Tool
 
 GCP or [[id:d2ff01f9-43ad-4e7c-a4a3-afdac05a0609][Google]] Cloud Platform is the cloud computing service that Google
-provides. It competes in many ways with [[id:851dcf29-21c6-4027-884a-5cd5886c800a][AWS]] or [[id:3bd3ae4f-cd60-4a58-9e64-b857d8a0cda4][Microsoft]] Azure.
+provides. It competes in many ways with [[id:f53e00a8-3d5b-44f6-ae31-c5b507f2d87b][AWS]] or [[id:3bd3ae4f-cd60-4a58-9e64-b857d8a0cda4][Microsoft]] Azure.

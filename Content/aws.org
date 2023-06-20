@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       f53e00a8-3d5b-44f6-ae31-c5b507f2d87b
+:END:
+#+title: AWS
+#+created: [2023-06-20 Tue 15:18]
+#+last_modified: [2023-06-20 Tue 15:22]
+#+filetags: Service Tool
+
+AWS (Amazon Web Services) is the cloud platform created and owned by [[id:79ff9d78-56f2-48c1-9655-bcdc3e18d0e1][Amazon]].

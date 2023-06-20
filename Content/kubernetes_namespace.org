@@ -3,6 +3,9 @@
 :END:
 #+title: Kubernetes Namespace
 #+created: [2023-06-20 Tue 15:11]
-#+last_modified: [2023-06-20 Tue 15:11]
+#+last_modified: [2023-06-20 Tue 15:14]
 #+filetags: Kubernetes Concept
 
+Kubernetes uses namespaces to keep objects distinct from each other, for
+resource control and multi-tenant considerations. Some objects are
+cluster-scoped, while others are scoped to a single namespace at a time.

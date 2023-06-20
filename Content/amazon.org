@@ -1,0 +1,33 @@
+:PROPERTIES:
+:ID:       79ff9d78-56f2-48c1-9655-bcdc3e18d0e1
+:END:
+#+title: Amazon
+#+created: [2023-06-20 Tue 15:17]
+#+last_modified: [2023-06-20 Tue 15:27]
+#+filetags: Company
+
+Amazon is an American multinational tech company that focuses on e-commerce,
+cloud computing, online advertising, digital streaming, and
+[[id:1685a9c2-92ca-4d13-9438-c343769474de][artificial intelligence]]. Amazon was initially an online marketplace for books,
+however it has expanded into a multitude of product categories. Some of these
+products include:
+- [[id:f53e00a8-3d5b-44f6-ae31-c5b507f2d87b][AWS]] (Amazon Web Services)
+- Zoox (Autonomous vehicles)
+- Kuiper Systems (Satelite internet)
+- Amazon Lab126 (Computer Hardware R&D)
+- Amazon Prime Video
+- Amazon Music
+- Audible
+- Amazon Publishing
+- Amazon Studios
+- Kindle e-readers
+- Echo devices
+- Fire tablets
+- Fire TVs
+
+Amazon has also acquired many companies such as:
+- Ring
+- Twitch
+- IMDb
+- Whole Foods Market
+- [[https://en.wikipedia.org/wiki/Metro-Goldwyn-Mayer][Metro-Goldwyn-Mayer]]

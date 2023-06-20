@@ -3,7 +3,7 @@
 :END:
 #+title: Programming Languages
 #+created: [2021-10-15 Fri 22:35]
-#+last_modified: [2023-04-04 Tue 20:47]
+#+last_modified: [2023-06-20 Tue 16:15]
 #+filetags: Reference
 
 Programming is the act of giving a set of instructions to a computer to
@@ -24,8 +24,10 @@ Here are some of the programming languages I have covered so far:
 - [[id:037f18dd-1b13-4cfe-a44e-ae410426f90e][Go]]
 - [[id:d0e74ec8-41c6-4fc8-a2db-4691f32f7e9b][HTML]]
 - [[id:960b6e04-6c5a-413f-b0ca-ed89e06c3542][ELisp]]
+- [[id:5bc2d8e7-49ca-4926-963a-672139c10ad7][Guile]]
 - [[id:a29e994c-1920-4ea6-8cfa-946c82e25429][JavaScript]]
 - [[id:b805c0d0-895d-4806-a223-6a9c99cf29fb][Jsonnet]]
 - [[id:85dcb828-5822-4d77-a826-e276d6c5e007][Lisp]]
 - [[id:523160d7-c44e-4126-a606-8e8ff64936cc][Python]]
+- [[id:4884f54a-4570-407b-a85b-bb971b2bfc73][Scheme]]
 - [[id:0817633b-da6b-4889-ab18-267d6cb9ef60][TypeScript]]

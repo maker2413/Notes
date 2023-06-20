@@ -3,7 +3,28 @@
 :END:
 #+title: GNU
 #+created: [2022-03-25 Fri 23:46]
-#+last_modified: [2022-03-25 Fri 23:47:37]
+#+last_modified: [2023-06-20 Tue 16:29]
 #+filetags: Company Concept
 
-GNU.
+GNU is an extensive collection of free software which can be used as an
+operating system or can be used in parts with other operating systems. The GNU
+project founded by [[id:7cfc02a4-f06b-4443-b125-1d56ffc826df][Richard Stallman]] has produced many free and open source tools
+that greatly impact the world as we know it today. My personal favorite of these
+tools is [[id:d18ed6e8-dbce-4822-9d3f-3de38246ba38][Emacs]], but some of the other ones of note are:
+- bash :: The default shell on many linux distros.
+- [[id:43d75a03-0ec5-4068-b1cd-e23a0bb51cab][clisp]] :: [[id:43d75a03-0ec5-4068-b1cd-e23a0bb51cab][common lisp]], the most popular variant of [[id:85dcb828-5822-4d77-a826-e276d6c5e007][lisp]].
+- [[id:d18ed6e8-dbce-4822-9d3f-3de38246ba38][emacs]] :: What more could be said.
+- [[id:b249fdbb-95e9-4464-8055-1bdd1a5b7d96][fdisk]] :: Disk partitioning tool.
+- gcc :: C compiler.
+- [[id:577ca9a3-f41b-417a-bf7e-6f36a8b6f9e8][grep]] :: A regex parser.
+- [[id:64bc07ad-9723-49d3-a972-54d2fe1f780b][grub]] :: The most popular open source boot loader.
+- [[id:5bc2d8e7-49ca-4926-963a-672139c10ad7][guile]] :: A variant of [[id:4884f54a-4570-407b-a85b-bb971b2bfc73][scheme]] ([[id:85dcb828-5822-4d77-a826-e276d6c5e007][lisp]] programming language).
+- [[id:8fcfbfd3-3c36-4edc-8ed4-a258c906b76b][less]] :: A file pager.
+- [[id:35af67ba-3148-4c36-a5bb-a9ada2182664][make]] :: Software building and executing.
+- nano :: A simple text editor.
+- [[id:9d24ecd9-8f00-4133-969e-d7938d04a1b2][sed]] :: Text stream editor.
+- [[id:6f86b678-5aac-4bba-8723-c988766e1078][Stow]] :: Config file manager.
+- [[id:80fc653b-eb7e-400e-95c4-677adc8425cd][which]] :: Show execution path of a command.
+
+These are only some of my personal highlights of software from the GNU
+project. To see the full list please look: [[https://www.gnu.org/software/software.html][here]].

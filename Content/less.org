@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       8fcfbfd3-3c36-4edc-8ed4-a258c906b76b
+:END:
+#+title: Less
+#+created: [2023-06-20 Tue 16:23]
+#+last_modified: [2023-06-20 Tue 16:24]
+#+filetags: Linux GNU Tool
+
+The less command line tool allows you to page through files and output piped
+into it.

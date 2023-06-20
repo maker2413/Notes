@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       35af67ba-3148-4c36-a5bb-a9ada2182664
+:END:
+#+title: Make
+#+created: [2023-06-20 Tue 16:16]
+#+last_modified: [2023-06-20 Tue 16:17]
+#+filetags: GNU Tool
+
+Make is a tool that allows you to define steps to build or execute your code.

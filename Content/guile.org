@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       5bc2d8e7-49ca-4926-963a-672139c10ad7
+:END:
+#+title: Guile
+#+created: [2023-06-20 Tue 16:13]
+#+last_modified: [2023-06-20 Tue 16:14]
+#+filetags: Lisp Scheme ProgrammingLanguage
+
+Guile is a variant of [[id:4884f54a-4570-407b-a85b-bb971b2bfc73][Scheme]], which is also part of the [[id:85dcb828-5822-4d77-a826-e276d6c5e007][lisp]] family of
+programming languages.

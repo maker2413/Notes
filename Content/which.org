@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       80fc653b-eb7e-400e-95c4-677adc8425cd
+:END:
+#+title: Which
+#+created: [2023-06-20 Tue 16:18]
+#+last_modified: [2023-06-20 Tue 16:19]
+#+filetags: Linux GNU Tool
+
+The Which tool allows you to see where a program is being executed from on the
+hard drive.

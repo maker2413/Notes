@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       9d24ecd9-8f00-4133-969e-d7938d04a1b2
+:END:
+#+title: Sed
+#+created: [2023-06-20 Tue 16:17]
+#+last_modified: [2023-06-20 Tue 16:18]
+#+filetags: Linux GNU Tool
+
+The Sed tool is used to parse and edit text in a file or text that is piped
+directly into it.

@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       4884f54a-4570-407b-a85b-bb971b2bfc73
+:END:
+#+title: Scheme
+#+created: [2023-06-20 Tue 16:13]
+#+last_modified: [2023-06-20 Tue 16:14]
+#+filetags: Lisp ProgrammingLanguage
+
+Scheme is a programming language that is part of the [[id:85dcb828-5822-4d77-a826-e276d6c5e007][Lisp]] family of programming
+languages.

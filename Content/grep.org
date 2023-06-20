@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       577ca9a3-f41b-417a-bf7e-6f36a8b6f9e8
+:END:
+#+title: Grep
+#+created: [2023-06-20 Tue 16:06]
+#+last_modified: [2023-06-20 Tue 16:09]
+#+filetags: Linux Tool
+
+Grep is a [[id:a727bbf9-2eb7-4a09-94ba-d955f6ec7c0a][regex]] searching tool.

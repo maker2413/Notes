@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       7cfc02a4-f06b-4443-b125-1d56ffc826df
+:END:
+#+title: Richard Stallman
+#+created: [2023-06-20 Tue 16:02]
+#+last_modified: [2023-06-20 Tue 16:02]
+#+filetags: Person
+
+Richard

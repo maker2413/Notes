@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       b249fdbb-95e9-4464-8055-1bdd1a5b7d96
+:END:
+#+title: Fdisk
+#+created: [2023-06-20 Tue 16:11]
+#+last_modified: [2023-06-20 Tue 16:11]
+#+filetags: Linux Tool
+
+The fdisk tool is used to partition hard drives.

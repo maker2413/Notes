@@ -3,11 +3,11 @@
 :END:
 #+title: Kubernetes Pods
 #+created: [2023-06-20 Tue 14:56]
-#+last_modified: [2023-06-20 Tue 17:15]
+#+last_modified: [2023-06-20 Tue 17:37]
 #+filetags: Kubernetes Concept
 
 In Kubernetes Containers are not managed individually, but instead they are part
 of a larger object called a Pod. A Pod in Kubernetes consists of one or more
 containers which share an IP address, access to storage, and
-[[id:72262b9e-6080-47ca-85eb-c22b651e7d92][namespace]]. Typically, one container in a Pod runs an application, while the
+[[id:7d58f850-096d-40c6-8b0f-64b92acba2b8][namespace]]. Typically, one container in a Pod runs an application, while the
 other containers support the primary application.

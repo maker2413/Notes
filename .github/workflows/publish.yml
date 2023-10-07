@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Publish Org Files
         uses: maker2413/OrgRoamPublish@b02740c59f6ae58c3a18cdcfeacded7149941438

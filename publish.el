@@ -66,7 +66,7 @@
 <script src='https://unpkg.com/tippy.js@6'></script>
 <script src='/js/script.js'></script>
 <script src='/js/URI.js'></script>
-<link rel='shortcut icon' type='image/png' href='./images/me.png'/>\n
+<link rel='shortcut icon' type='image/png' href='./images/favicon.png'/>\n
 ")
 
 ;; Set html footer information

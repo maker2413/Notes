@@ -9,8 +9,6 @@ on:
 env:
   AWS_DEFAULT_REGION: us-west-2
   BUCKET_NAME: notes.ethanp.dev
-  DOCKER_IMAGE: maker2413/orgroampublish
-  DOCKER_TAG: latest
 
 jobs:
   publish:

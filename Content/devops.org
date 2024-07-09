@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       f95e3523-9d90-4089-8d18-05277c908406
+:END:
+#+title: DevOps
+#+created: [2024-07-07 Sun 11:35]
+#+last_modified: [2024-07-07 Sun 11:37]
+#+filetags: Reference
+
+DevOps or "Development Operations" is a career path in the computer field that
+aims to bridge the gap between Software Development and Deployments. A DevOps
+engineer will generally build out systems that automate and streamline the
+building, deployment, and maintenance of a production system.

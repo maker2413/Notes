@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       d2745875-4229-496c-8117-0060bca50cf4
+:END:
+#+title: MLOps
+#+created: [2024-07-07 Sun 11:33]
+#+last_modified: [2024-07-07 Sun 13:04]
+#+filetags: AI ArtificialIntelligence Reference
+
+MLOps is a newer career path in the computer field that aims to deploy and
+maintain machine learning models in a reliable and efficient way. MLOps stands
+for "Machine Learning Operations" and is sort of an offshoot of [[id:f95e3523-9d90-4089-8d18-05277c908406][DevOps]] and as
+such it can be easier for a [[id:f95e3523-9d90-4089-8d18-05277c908406][DevOps engineer]] to get into MLOps than it can be for
+an [[id:ee2e1560-29ac-4760-8387-e84ecb97dcd8][ML engineer]].
+
+Some of the different things that an MLOps engineer would do in a production
+setting would be:
+- Data collection and preparation
+- Model development and training
+- ML service deployment
+- Continuous feedback and monitoring

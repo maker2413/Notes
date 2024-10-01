@@ -3,7 +3,7 @@
 :END:
 #+title: Go
 #+created: [2022-10-06 Thu 21:54]
-#+last_modified: [2023-04-12 Wed 20:24]
+#+last_modified: [2024-09-30 Mon 20:12]
 #+filetags: ProgrammingLanguage Golang
 
 Go is a statically typed, compiled [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]] designed at Google by
@@ -14,6 +14,58 @@ Before we dive into how Go works I want to point out some useful
 resources. First off I personally think [[https://quii.gitbook.io/learn-go-with-tests/][this]] is the best guide for learning
 Go. I also wanted to take the time to link to [[https://go.dev][go.dev]] the homepage of Go and
 specifically the [[https://go.dev/play][Playground]] where you can access a live Go environment where you
-can look at example, write, and run Go programs.
+can look at examples, write, and run Go programs.
 
 With that out of the way let's go over some go concepts.
+
+When you write a program in Go, you will always have a ~main~ package defined
+with a ~main~ ~func~ inside of it. Packages are ways of grouping up related Go
+code together.
+
+The ~func~ keyword defines a function with a name and a body.
+
+Packages can be imported with ~import~ followed by your package name:
+#+begin_src go
+  package main
+
+  import "fmt"
+
+  func Hello() string {
+          return "Hello, world!"
+  }
+
+  func main() {
+          fmt.Println(Hello())
+  }
+#+end_src
+
+Golang also has amazing package management in my opinion. To initialize a
+project run: ~go mod init <project>~. This will create a =go.mod= file which will
+keep track of the packages your projects depends on as well as the version of
+Golang your project was built on.
+
+To install packages after initializing simply run: ~go get <package>~.
+
+Golang also has an amazing unit testing tool built into the cli. To write unit
+test for you code simply creat a file that ends in =_test.go=. Within this file
+you can define any test functions by starting the name of your function with
+=Test=. A test function takes one argument only: =t *testing.T=. To use the
+=*testing.T= type you need to import the ="testing"= library. With all of those
+rules out of the way a simple test file for our hello world program may look
+like this:
+#+begin_src go
+  package test
+
+  import "testing"
+
+  func TestHello(t *testing.T) {
+          got := Hello()
+          want := "Hello, world!"
+
+          if got != want {
+                  t.Errorf("got %q want %q", got, want)
+          }
+  }
+#+end_src
+
+After a test file has been created simply run: ~go test~ to run your unit tests.

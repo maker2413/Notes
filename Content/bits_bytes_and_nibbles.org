@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       b2325dd1-6482-416c-aa59-997f72b639fb
+:END:
+#+title: Bits, Bytes, and Nibbles
+#+created: [2024-10-31 Thu 18:03]
+#+last_modified: [2024-10-31 Thu 18:15]
+#+filetags: Concept
+
+You may have heard of bits or bytes before and you had no idea what that
+meant. Well bit, bytes, and the lesser known nibble are all used as measurements
+for the length of a [[id:c7cc03ef-ed81-4f63-b5f8-ed0b4963aa9b][Binary]] number.
+
+Here is a quick table that shows what each one represents:
+| Length | Name   |  Example |
+|--------+--------+----------|
+|      1 | Bit    |        0 |
+|      4 | Nibble |     1001 |
+|      8 | Byte   | 11010110 |

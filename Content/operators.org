@@ -3,7 +3,7 @@
 :END:
 #+title: Operators
 #+created: [2021-10-17 Sun 15:30]
-#+last_modified: [2023-04-12 Wed 20:24]
+#+last_modified: [2024-10-31 Thu 18:29]
 #+filetags: ProgrammingLanguage Basics
 
 Operators are constructs that are defined within programming languages which
@@ -18,6 +18,23 @@ predefine the function.
 
   These basic operators should be available to some extent in any programming
   language.
+
+** Assignment Operators
+   Assignment operators are used to assign values to variables. The left operand
+   is variable, and the right is a value. Here are some of the standard
+   assignment operators and their symbols:
+   | Symbol | Operation                    | Explanation                                         |
+   |--------+------------------------------+-----------------------------------------------------|
+   | ~=~    | Assignment (a = b)           | This operator assigns the right operand to the left |
+   | ~+=~   | Add and assign (a += b)      | This operator adds assigns the right operand        |
+   | ~-=~   | Subtract and assign (a -= b) | This operator subtracts and assigns                 |
+   | ~*=~   | Multiply and assign (a /= b) | This operator multiplies and assigns                |
+   | ~/=~   | Divide and assign (a /= b)   | This operator divides and assigns                   |
+   | ~%=~   | Modulus and assign (a %= b)  | This operator performs modulus and assigns          |
+
+   Not all of the listed assignment operators exist in every programming
+   language, but most at least have ~+=~ and ~-=~, while all have some form of
+   basic assignment.
 
 ** Arithmetic Operators
    In computer programming we often need to manipulate data doing mathematical
@@ -164,6 +181,6 @@ predefine the function.
 
 * TODO Advanced Examples
   Some of the more advanced examples of operators are:
-  - Assignment operators: (~=~, ~:=~, etc ...)
+  - [[https://www.techtarget.com/whatis/definition/operator][Bitwise Operators]]
   - Field access in record or object: (~.~)
   - Scope resolution operator: (~::~, ~.~, etc ...)

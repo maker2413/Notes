@@ -3,7 +3,7 @@
 :END:
 #+title: Binary
 #+created: [2021-11-23 Tue 12:33]
-#+last_modified: [2021-11-23 Tue 12:39:07]
+#+last_modified: [2024-10-31 Thu 18:02]
 #+filetags: Concept
 
 Binary is a numbering scheme consisting of 2 digits (0 and 1). This can also be
@@ -13,3 +13,23 @@ is just one of an infinite amount of numbering systems. Computers work with a
 base 2 numbering system because down at component level computers interpret base
 2 as 0 being no electricity in a component and 1 as being electricity in a
 component.
+
+Counting in Binary is done by the following:
+| Base 10 | Binary |
+|---------+--------|
+|       0 |      0 |
+|       1 |      1 |
+|       2 |     10 |
+|       3 |     11 |
+|       4 |    100 |
+|       5 |    101 |
+|       6 |    110 |
+|       7 |    111 |
+|       8 |   1000 |
+|       9 |   1001 |
+|      10 |   1010 |
+|      11 |   1011 |
+|      12 |   1100 |
+|      13 |   1101 |
+|      14 |   1110 |
+|      15 |   1111 |

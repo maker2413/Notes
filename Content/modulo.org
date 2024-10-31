@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       b8a8b756-e901-416e-abe0-5f68f5159c91
+:END:
+#+title:  Modulo
+#+created: [2024-10-31 Thu 17:39]
+#+last_modified: [2024-10-31 Thu 18:31]
+#+filetags: ProgrammingLanguage Basics
+
+Modulo is a [[id:36a1bacc-e7f2-4737-881d-b243a291d8df][mathematical]] [[id:df70107c-3adf-4c58-987d-cf74be9e149f][operator]] commonly found in computing. The modulo
+operator will return the remainder of a division operation.
+
+For instance if wanted to know what the remainder of 17 and 7 was we could do
+something like this:
+#+name: modulo
+#+begin_src python :results output :exports both
+  print(17 % 7)
+#+end_src
+
+In this case would get a remainder of:
+#+RESULTS: modulo
+: 3
+
+Now for that example I used [[id:523160d7-c44e-4126-a606-8e8ff64936cc][Python]], but almost any programming language has a
+modulo [[id:df70107c-3adf-4c58-987d-cf74be9e149f][operator]].

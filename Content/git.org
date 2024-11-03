@@ -3,15 +3,91 @@
 :END:
 #+title: Git
 #+created: [2021-11-26 Fri 15:45]
-#+last_modified: [2022-10-06 Thu 21:40]
+#+last_modified: [2024-11-03 Sun 16:05]
 #+filetags: Tool
 
 Git is a version control software originally started by Linux Toralds (The
-creator of Linux). It was designed as an alternative other version control
+creator of Linux). It was designed as an alternative to other version control
 software like [[https://www.nongnu.org/cvs/][CVS]] or [[https://subversion.apache.org/][SVN]]. It differs from its competitors in that each user
 clones down the entire contents of the repository to their machine and push up
 changes that they make locally, only requiring the user to connect to the server
 to save their work.
+
+If you are trying to learn git I recommend the git tutorial:
+https://git-scm.com/docs/gittutorial.
+
+I'm not going to give too in depth of a tutorial, but I will explain some basic
+operations that are common with ~git~ and explain my way through them.
+
+* Cloning down a repository
+  As you can read above what makes ~git~ different from some of the other
+  version control software out there ~git~ has a concept of a remote repository
+  of code and that users clone down a copy of the code. For an example let's
+  look at how you would clone down the [[https://github.com/maker2413/notes][repository]] that these notes are generated
+  from:
+  #+begin_src bash
+    git clone https://github.com/maker2413/Notes.git
+  #+end_src
+
+  This will clone down a copy of this repository to your computer in your
+  current working directory. I do however want to take a moment to mention ssh
+  keys with regards to git because I think is a vast superior way to interact
+  with remote repositories. A great guide on generating an ssh key can be found
+  here:
+  https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key.
+
+  Once you have an ssh key created you will just need to add the public key to
+  the remote git server, which in this case of this repo is [[id:0c164614-cdac-4936-aca3-a6cb340883fa][GitHub]].
+
+* Creating a commit
+  When you have made changes to a repo and you would like to push your changes
+  up to the git server you need to first make a commit. To make a commit first
+  you should run:
+  #+name: status
+  #+begin_src bash :results verbatim
+    git status
+  #+end_src
+
+  In my case if I run this right now I get the following:
+  #+RESULTS: status
+  #+begin_example
+  On branch master
+  Your branch is up to date with 'origin/master'.
+
+  Changes not staged for commit:
+    (use "git add <file>..." to update what will be committed)
+    (use "git restore <file>..." to discard changes in working directory)
+          modified:   git.org
+
+  no changes added to commit (use "git add" and/or "git commit -a")
+  #+end_example
+
+  You can even see in that output that ~git~ is trying to tell us what to do
+  next. We want to do ~git add~ on any files we want to include in the
+  commit. Note you can add all changes ~git add *~, but I would break that
+  habbit if you have it or never do that to begin with as adding all files and
+  blindly committing can lead to unintentionally pushing up confidential
+  information.
+
+  After you add the files you want to commit you can simply run ~git commit~ to
+  create a commit. You should be dropped into the default text editor on your
+  system to add a commit message. You can also write your commit message with
+  the ~-m~ flag, skipping over the editor step.
+  #+begin_src bash
+    git add git.org
+    git commit -m "adding more context and examples to git doc"
+  #+end_src
+
+* Pushing and pulling
+  Once you have one or more commits and you would like to push them up to the
+  remote git server you can simply run ~git push~. It is wise, however to
+  pull down any new changes that may be out on the remote. This can easily
+  happen if you are collaborating with others. To pull down changes simply run:
+  ~git pull~.
+  #+begin_src bash
+    git pull
+    git push
+  #+end_src
 
 * Subtree Commands
   - ~git remote add -f <repoAlias> <repoURL> [--squash]~

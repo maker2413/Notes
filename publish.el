@@ -25,6 +25,9 @@
 ;; Don't create backup files (those ending with ~) during the publish process.
 (setq make-backup-files nil)
 
+;; Don't prompt for evaluating emacs-lisp code blocks
+(setq org-confirm-babel-evaluate nil)
+
 ;; Configure Packages
 (setq-default indent-tabs-mode nil)
 (setq tab-width 2)

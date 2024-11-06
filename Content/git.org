@@ -3,7 +3,7 @@
 :END:
 #+title: Git
 #+created: [2021-11-26 Fri 15:45]
-#+last_modified: [2024-11-03 Sun 16:05]
+#+last_modified: [2024-11-03 Sun 16:25]
 #+filetags: Tool
 
 Git is a version control software originally started by Linux Toralds (The
@@ -37,7 +37,25 @@ operations that are common with ~git~ and explain my way through them.
   https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key.
 
   Once you have an ssh key created you will just need to add the public key to
-  the remote git server, which in this case of this repo is [[id:0c164614-cdac-4936-aca3-a6cb340883fa][GitHub]].
+  the remote git server, which in this case of this repo is [[id:0c164614-cdac-4936-aca3-a6cb340883fa][GitHub]], however
+  [[id:0856b32b-1060-4fcb-9a42-5382b11deb47][GitLab]] is also a popular public remote.
+
+* Git config
+  With the ~git~ cli you can configure almost any feature you could want to
+  configure. Something cool about git configuration is that you can have both a
+  global configuration, normally found in ~$HOME/.git/~, and you can have a git
+  config local to a repo.
+
+  Running ~git config <option> <value>~ will set it locally, while using:
+  ~git config --global <option> <value>~ will set it globally. I'm not going to
+  get into everything you can configure for git, but I am going to point out one
+  of the config options to set early on.
+  #+begin_src bash
+    git config --global user.name "John Doe"
+    git config --global user.email "johndoe@example.com"
+  #+end_src
+
+  You can see the list of config options with: ~git config --global --list~.
 
 * Creating a commit
   When you have made changes to a repo and you would like to push your changes
@@ -94,3 +112,6 @@ operations that are common with ~git~ and explain my way through them.
   - ~git subtree add --prefix <subtreePath> <repoAlias> <branch> [--squash]~
   - ~git subtree push --prefix <subtreePath> <repoAlias> <branch>~
   - ~git subtree pull --prefix <subtreePath> <repoAlias> <branch>~
+
+* 3 way merge
+  https://blog.git-init.com/the-magic-of-3-way-merge/

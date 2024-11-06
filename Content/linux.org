@@ -3,7 +3,7 @@
 :END:
 #+title: Linux
 #+created: [2021-11-08 Mon 19:49]
-#+last_modified: [2023-06-20 Tue 16:25]
+#+last_modified: [2024-11-06 Wed 14:15]
 #+filetags: OperatingSystem
 
 Linux is an open source and free operating system and if even you have never
@@ -24,6 +24,7 @@ check out some of the following guides:
 - [[id:4baa1bc5-814d-4dae-9272-11f19b3ffbff][AWK]] :: Used to grab columns of text from text.
 - [[id:2be8b689-98da-4e62-82d9-1e0cf4b050e3][CD]] :: Used to change directories.
 - [[id:76e95672-9ba3-4691-8149-86b65fe39533][CP]] :: Used to copy files or directories.
+- [[id:32d46d24-3d37-461b-b6e9-437e78269c21][Cut]] :: Used to remove a section from each line provided.
 - [[id:b249fdbb-95e9-4464-8055-1bdd1a5b7d96][Fdisk]] :: Used to partition hard drives.
 - [[id:577ca9a3-f41b-417a-bf7e-6f36a8b6f9e8][Grep]] :: Used to parse files and output.
 - [[id:8fcfbfd3-3c36-4edc-8ed4-a258c906b76b][Less]] :: Used to page through files and output.
@@ -33,10 +34,11 @@ check out some of the following guides:
 - [[id:9d24ecd9-8f00-4133-969e-d7938d04a1b2][Sed]] :: Used to edit text in a file or a stream of text piped in.
 - [[id:c4903e5f-c4a9-4d0e-864b-01d7b392fdfa][Sudo]] :: Allows non root users to assume the root user for the duration of their command.
 - [[id:0bbbc442-1a15-42d7-bc9c-48c9baaf079d][Tmux]] :: Allows you to split your terminal into panes or to keep your terminal session running in the background.
+- [[id:6d3609fc-b64f-488e-a62b-91e9006193e1][Tr]] :: Allows you transform characters provided.
 - [[id:80fc653b-eb7e-400e-95c4-677adc8425cd][Which]] :: Shows the execution path of a command.
 
 * Concepts
-- [[id:ea6dfc82-bd00-4abe-a67d-652145adf9f5][File System]]
+- [[id:ea6dfc82-bd00-4abe-a67d-652145adf9f5][File System]] :: The basic layout of a Linux filesystem.
 
 * Software
 - [[id:64bc07ad-9723-49d3-a972-54d2fe1f780b][Grub]] :: Most popular open source boot loader.

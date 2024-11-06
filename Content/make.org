@@ -3,7 +3,7 @@
 :END:
 #+title: Make
 #+created: [2023-06-20 Tue 16:16]
-#+last_modified: [2023-06-20 Tue 16:17]
+#+last_modified: [2024-11-06 Wed 15:10]
 #+filetags: GNU Tool
 
-Make is a tool that allows you to define steps to build or execute your code.
+~make~ is a tool that allows you to define steps to build or execute your code.

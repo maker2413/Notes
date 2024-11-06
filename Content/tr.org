@@ -1,5 +1,10 @@
-#+TITLE: Tr
-#+PROPERTY: header-args :exports both
+:PROPERTIES:
+:ID:       6d3609fc-b64f-488e-a62b-91e9006193e1
+:END:
+#+title: Tr
+#+created: [2024-11-06 Wed 14:14]
+#+last_modified: [2024-11-06 Wed 14:16]
+#+filetags: Linux GNU Tool
 
 ~tr~ stands for translate and is a linux command line tool that allows us to
 transform characters in text provided to ~tr~, either from files or from the

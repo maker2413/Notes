@@ -1,2 +1,0 @@
-#+TITLE: Basics
-#+PROPERTY: header-args

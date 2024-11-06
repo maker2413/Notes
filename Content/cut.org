@@ -1,5 +1,10 @@
-#+TITLE: Cut
-#+PROPERTY: header-args :exports both
+:PROPERTIES:
+:ID:       32d46d24-3d37-461b-b6e9-437e78269c21
+:END:
+#+title: Cut
+#+created: [2024-11-06 Wed 14:10]
+#+last_modified: [2024-11-06 Wed 14:11]
+#+filetags: Linux GNU Tool
 
 ~cut~ is a linux command line tool that allows us to remove a section from each
 line provided, whether that is a file or the output of another command. Lets see

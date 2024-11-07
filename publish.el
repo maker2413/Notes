@@ -113,7 +113,7 @@
         ;; images is used for the images directory
         ("images"
          :base-directory ,images-dir
-         :base-extension "png\\|svg"
+         :base-extension "jpg\\|png\\|svg"
          :publishing-directory ,images-output-dir
          :publishing-function org-publish-attachment
          :recursive t)

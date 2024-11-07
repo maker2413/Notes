@@ -1,19 +1,24 @@
-#+TITLE: SSL
-#+PROPERTY: header-args
+:PROPERTIES:
+:ID:       91d5c4b5-c050-441e-b0b8-d8fadf457858
+:END:
+#+title: SSL
+#+created: [2024-11-06 Wed 18:08]
+#+last_modified: [2024-11-06 Wed 18:09]
+#+filetags: Concept
 
 * Hashing
   Hashing is a technique used in computing to ditermine if a file has changed
   from an expected state.
 
   #+CAPTION: This is a diagram of how hashing is used
-  [[./Hashing.jpg]]
+  [[./images/SSL-Hashing.jpg]]
 
 * Asymmetric Keys
   Asymmetric keys are a set of keys used to safely send data without it being
   readable by unwanted parties.
 
   #+CAPTION: This is a diagram of how asymmetric keys are used
-  [[./Asymmetric.jpg]]
+  [[./images/SSL-Asymmetric.jpg]]
 
 * OpenSSL commands
   This guide will describe how to generate various ssl certs. We will be using

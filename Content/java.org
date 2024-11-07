@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       b7703af2-0af1-4e6d-b49a-356d9f9c462f
+:END:
+#+title: Java
+#+created: [2024-11-06 Wed 17:50]
+#+last_modified: [2024-11-06 Wed 17:53]
+#+filetags: ProgrammingLanguage Java
+
+Java is a class based, object oriented [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]] written by Oracle.
+
+I have most of my Java notes broken out into its own repo:
+[[http://www.github.com/maker2413/JavaNotes]]

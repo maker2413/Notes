@@ -350,7 +350,7 @@ command line life or to automate things with bash.
   of this in action:
   #+NAME: Translate
   #+begin_src sh :results output :exports both
-    echo "Hello there world! What a beautiful day!" | sed 'y/aieou/AEIOU/'
+    echo "Hello there world! What a beautiful day!" | sed 'y/aeiou/AEIOU/'
   #+end_src
 
   #+RESULTS: Translate

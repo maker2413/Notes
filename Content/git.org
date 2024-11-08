@@ -3,7 +3,7 @@
 :END:
 #+title: Git
 #+created: [2021-11-26 Fri 15:45]
-#+last_modified: [2024-11-03 Sun 16:25]
+#+last_modified: [2024-11-07 Thu 16:56]
 #+filetags: Tool
 
 Git is a version control software originally started by Linux Toralds (The
@@ -115,3 +115,6 @@ operations that are common with ~git~ and explain my way through them.
 
 * 3 way merge
   https://blog.git-init.com/the-magic-of-3-way-merge/
+
+* Other helpful pages
+  If you still want to learn more consult the [[https://education.github.com/git-cheat-sheet-education.pdf][git cheat sheet]].

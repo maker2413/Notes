@@ -3,7 +3,7 @@
 :END:
 #+title: Gradient Descent
 #+created: [2024-11-09 Sat 20:35]
-#+last_modified: [2024-11-09 Sat 20:38]
+#+last_modified: [2024-11-09 Sat 20:41]
 #+filetags: Math Mathematics Calculus
 
 Gradient descent is most common taught during [[id:606c5657-c0f5-4bce-9a24-54c08274a6fa][Calculus]] in school.
@@ -11,9 +11,26 @@ Gradient descent is most common taught during [[id:606c5657-c0f5-4bce-9a24-54c08
 Gradient descent is an algorithm that numerically estimates where a function
 outputs its lowest values. That means it finds local minima, but not by setting:
 \begin{equation}
-\[\nabla f = 0\]
+\nabla f = 0
 \end{equation}
 
 Instead of finding minima by manipulating symbols, gradient descent approximates
 the solution with numbers. Furthermore, all it needs in order to run is a
 function's numerical output, no formula required.
+
+This distinction is worth emphasizing because it's what makes gradient descent
+useful. If we had a simple formula like:
+\begin{equation}
+\[f(x) = x^2 - 4x\], then we could easily solve 
+\end{equation}
+\begin{equation}
+\[\nabla f = 0\] to find that 
+\end{equation}
+\begin{equation}
+\[x = 2\] minimizes 
+\end{equation}
+\begin{equation}
+\[f(x)\]. Or we could use gradient descent to get a numerical approximation, something like 
+\end{equation}
+\[x \approx 1.99999967\].
+Both strategies arrive at the same answer.

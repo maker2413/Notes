@@ -3,7 +3,7 @@
 :END:
 #+title: Gradient Descent
 #+created: [2024-11-09 Sat 20:35]
-#+last_modified: [2024-11-09 Sat 20:41]
+#+last_modified: [2024-11-09 Sat 20:44]
 #+filetags: Math Mathematics Calculus
 
 Gradient descent is most common taught during [[id:606c5657-c0f5-4bce-9a24-54c08274a6fa][Calculus]] in school.
@@ -20,17 +20,23 @@ function's numerical output, no formula required.
 
 This distinction is worth emphasizing because it's what makes gradient descent
 useful. If we had a simple formula like:
-\begin{equation}
-\[f(x) = x^2 - 4x\], then we could easily solve 
-\end{equation}
-\begin{equation}
-\[\nabla f = 0\] to find that 
-\end{equation}
-\begin{equation}
-\[x = 2\] minimizes 
-\end{equation}
-\begin{equation}
-\[f(x)\]. Or we could use gradient descent to get a numerical approximation, something like 
-\end{equation}
-\[x \approx 1.99999967\].
+\[f(x) = x^2 - 4x\]
+
+then we could easily solve:
+\[\nabla f = 0\]
+
+to find that:
+\[x = 2\]
+
+minimizes:
+\[f(x)\]
+
+Or we could use gradient descent to get a numerical approximation, something
+like:
+\[x \approx 1.99999967\]
+
 Both strategies arrive at the same answer.
+
+This is just a simple example however and gradient descent becomes a lot more
+useful when we are working with complex formulas. To learn more about gradient
+descent visit: [[https://www.khanacademy.org/math/multivariable-calculus/applications-of-multivariable-derivatives/optimizing-multivariable-functions/a/what-is-gradient-descent][Khan Academy]].

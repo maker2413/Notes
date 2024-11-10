@@ -3,8 +3,10 @@
 :END:
 #+title: Limits
 #+created: [2023-04-12 Wed 20:19]
-#+last_modified: [2023-04-12 Wed 21:48]
+#+last_modified: [2024-11-09 Sat 20:35]
 #+filetags: Math Mathematics Calculus Limits
+
+Limits are often taught during [[id:606c5657-c0f5-4bce-9a24-54c08274a6fa][Calculus]] in school.
 
 The idea behind limits is to calculate what a problem will become as it
 approaches a an unanswerable point. For example an instance of this would

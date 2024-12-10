@@ -3,7 +3,7 @@
 :END:
 #+title: Go
 #+created: [2022-10-06 Thu 21:54]
-#+last_modified: [2024-10-31 Thu 19:38]
+#+last_modified: [2024-12-09 Mon 21:32]
 #+filetags: ProgrammingLanguage Golang
 
 Go is a statically typed, compiled [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]] designed at Google by
@@ -68,7 +68,17 @@ like this:
   }
 #+end_src
 
-After a test file has been created simply run: ~go test~ to run your unit tests.
+After a test file has been created simply run: ~go test~ to run your unit
+tests. Go's built in testing also allows us to see how much of our code is
+currently being covered by our tests. To do this type ~go test -cover~ this will
+give us a percentage of our code base that is currently being covered by our
+tests. If we wanted to see which percentage in particular is covered we can run:
+~go test -coverprofile=<filename>~ to our test coverage results to a file. To
+use this file we can run: ~go tool cover -html=<filename>~ this will open our
+default web browser with a page showing which lines specifically of our code
+base are being covered by our tests! The green lines signify what our test cases
+are covering and the red lines represent lines of code that may not be covered
+by our tests.
 
 One other quality of life thing that the go cli has is the built-in
 documentation for not only the default packages, but for packages you import. To

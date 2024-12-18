@@ -3,7 +3,7 @@
 :END:
 #+title: Go
 #+created: [2022-10-06 Thu 21:54]
-#+last_modified: [2024-12-09 Mon 21:32]
+#+last_modified: [2024-12-17 Tue 17:41]
 #+filetags: ProgrammingLanguage Golang
 
 Go is a statically typed, compiled [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]] designed at Google by
@@ -87,3 +87,6 @@ that if you navigate to ~localhost:8000/pkg~ you will see all the packages
 installed in your code base. *NOTE*: if you are using a version of Go later than
 1.14 this is no longer installed by default, but can be installed with:
 ~go install golang.org/x/tools/cmd/godoc@latest~.
+
+For a deeper dive on GoLang I actually currently have a full repository just for
+my Go notes: [[https://github.com/maker2413/GoNotes]].

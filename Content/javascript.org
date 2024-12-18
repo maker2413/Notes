@@ -3,7 +3,7 @@
 :END:
 #+title: JavaScript
 #+created: [2021-10-15 Fri 22:36]
-#+last_modified: [2023-04-12 Wed 20:28]
+#+last_modified: [2024-12-17 Tue 17:57]
 #+filetags: ProgrammingLanguage JavaScript
 
 Javascript is a high-level, object-oriented, multi-paradigm programming
@@ -32,8 +32,6 @@ as any version of JavaScript after ES6: [[https://www.w3schools.com/js/js_versio
 This first page will cover the absolute basic Fundamentals of JavaScript. If you
 feel like you can skip this part feel free to jump to another section of the
 guide:
-
-* TODO Link to other topics
 
 * JavaScript Fundamentals
   This is section is going to cover the basic fundamentals of JavaScript. If you
@@ -227,11 +225,11 @@ guide:
       console.log(fullName('Jonas', 'Cuomo'));
     #+end_src
 
-** TODO Data Structures
+** Data Structures
    In JavaScript we have many [[id:9fcbd1ea-5bc4-4d0b-a69f-c84d43281f24][data structures]] available to us to use in our
    programs. The simplest of these are [[id:6f7860bc-25cd-4712-aeeb-1bef8cc5f62e][arrays]].
 
-*** TODO Arrays
+*** Arrays
     Arrays in JavaScript follow a fairly standard syntax to most dynamic
     programming languages. Let's look at an example:
     #+begin_src javascript
@@ -258,6 +256,67 @@ guide:
       // Prints: ['John', 'Jacob', 'Jingle']
     #+end_src
 
+* If/else Statements
+  If and else statements in JavaScript follow a similar syntax to most
+  programming languages. JavaScript also has the basic [[id:df70107c-3adf-4c58-987d-cf74be9e149f][Comparison Operators]] that
+  most programming languages have:
+  #+begin_src javascript
+    let x = 5
+    let y = 2
+
+    if (x > y) {
+      console.log("x is larger than y")
+    } else if (x < y) {
+      console.log("y is larger than x")
+    } else {
+      console.log("x and y are equal")
+    }
+  #+end_src
+
+* Switch statement
+  JavaScript, like many modern programming languages has support for a switch
+  statement. The syntax is also similar to many modern programming languages,
+  but JavaScript does have the added capability of being able to stack cases
+  together so that two cases can both execute the same code. The other thing
+  that makes JavaScript a little unique is that after we finish a block of code
+  in a case we have to =break= from that case, otherwise our code will continue
+  on and execute the code in the next case. Let's look at a quick example of all
+  of this:
+  #+begin_src javascript
+    const bestBeatle = 'John';
+
+    switch (bestBeatle) {
+    case 'John':
+      console.log("Well of course!");
+      break
+    case 'Paul':
+    case 'George':
+      console.log("Paul and George are definitely great!");
+      break
+    default:
+      console.log("Ringo isn't bad...");
+    }.
+  #+end_src
+
+* Ternary operator
+  JavaScript has another operator called ternary. The ternary operator can
+  almost be thought of an inline if/else statement, or at least that is how I
+  like to think about it. The ternary operator is written by having some type of
+  expression that evaluates to either true or false, followed by a =?=, followed
+  by code that you would want to run "if true" and code you would want to run
+  "if false":
+  #+begin_src javascript
+    const age = 23;
+
+    age >= 21 ? console.log('I like to drink wine') : console.log("I like to drink water");
+
+    const drink = age >= 21 ? 'wine' : 'water';
+
+    console.log(drink);
+
+    console.log(`I like to drink ${age >= 21 ? 'wine': 'water'}.`);
+  #+end_src
+
 * What's next
   Well now we have covered the absolute basics of JavaScript and many basic
   topics of programming as a whole. Let's now finally dive into some of the meat
@@ -275,3 +334,8 @@ guide:
    fail and continue running our program. Using strict mode will force us to
    write more secure JavaScript applications. To use strict mode add
    ~'use strict';~ to the beginning of your program.
+
+* Other material
+  If you are interested in a deeper dive into JavaScript I actually have a
+  separate repository on GitHub just for JavaScript:
+  [[https://github.com/maker2413/JavaScriptNotes]].

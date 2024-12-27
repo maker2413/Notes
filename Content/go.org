@@ -3,7 +3,7 @@
 :END:
 #+title: Go
 #+created: [2022-10-06 Thu 21:54]
-#+last_modified: [2024-12-22 Sun 09:22]
+#+last_modified: [2024-12-22 Sun 12:34]
 #+filetags: ProgrammingLanguage Golang
 
 Go is a statically typed, compiled [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]] designed at Google by
@@ -95,3 +95,5 @@ my Go notes: [[https://github.com/maker2413/GoNotes]].
   [[https://www.ardanlabs.com/blog/2013/11/label-breaks-in-go.html][break labels]] in Go are similar to ~goto~ in other programming languages. It
   gives you a place to jump to with the ~break~ command. This can be useful to
   ~break~ out of nested loops.
+
+  [[https://www.geeksforgeeks.org/how-to-use-ellipsis-in-golang/][ellipsis]] allows you to specify ~n~ number of inputs for a function, even =0=!

@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       c99d3f2f-e8ce-4fde-8385-3113d83fde7a
+:END:
+#+title: gRPC
+#+created: [2025-01-09 Thu 13:19]
+#+last_modified: [2025-01-09 Thu 13:31]
+#+filetags: Tool Programming
+
+gRPC is an open-source framework for implementing APIs that uses HTTP/2. It is a
+cross-platform high performance [[id:c45b29f6-947b-4a48-b97b-5b75723a2e5f][remote procedure call]] framework. gRPC differs
+from RPC in a number of ways, but the most important of these is that gRPC
+supports many different programming languages and allows the sender or the
+receiver to be written in an entirely different language than the other if
+needed. This is accomplished by communicating using [[id:ba99b177-ac32-47e8-a51d-71b9a88a8d4f][Protobuf]] data.
+
+There are also two tools that have been developed to automatically generate [[id:037f18dd-1b13-4cfe-a44e-ae410426f90e][Go]]
+code to write and read protobufs called [[https://pkg.go.dev/github.com/golang/protobuf/protoc-gen-go][protoc-gen-go]] and
+[[https://pkg.go.dev/google.golang.org/grpc/cmd/protoc-gen-go-grpc][protoc-gen-go-grpc]]. These can be installed with the following:
+#+begin_src shell
+  go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+  go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
+#+end_src

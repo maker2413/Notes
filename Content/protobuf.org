@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       ba99b177-ac32-47e8-a51d-71b9a88a8d4f
+:END:
+#+title: Protobuf
+#+created: [2025-01-09 Thu 13:27]
+#+last_modified: [2025-01-09 Thu 13:27]
+#+filetags: Concept
+
+Protobuf is a free, open-source, cross-platform data format for serializing
+structured data.

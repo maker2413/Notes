@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       c45b29f6-947b-4a48-b97b-5b75723a2e5f
+:END:
+#+title: RPC
+#+created: [2025-01-09 Thu 13:21]
+#+last_modified: [2025-01-09 Thu 13:28]
+#+filetags: Tool Programming
+
+RPC or remote procedure call is an open-source framework.

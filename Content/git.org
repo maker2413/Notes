@@ -3,7 +3,7 @@
 :END:
 #+title: Git
 #+created: [2021-11-26 Fri 15:45]
-#+last_modified: [2024-11-07 Thu 16:56]
+#+last_modified: [2025-01-06 Mon 09:26]
 #+filetags: Tool
 
 Git is a version control software originally started by Linux Toralds (The
@@ -118,3 +118,84 @@ operations that are common with ~git~ and explain my way through them.
 
 * Other helpful pages
   If you still want to learn more consult the [[https://education.github.com/git-cheat-sheet-education.pdf][git cheat sheet]].
+
+#+begin_src shell
+  cd webflyx/
+  git cat-file -p 7f7
+  bash
+  gc -m "B: add titles.md"
+  git cat-file -p 2e4d
+  git cat-file -p 3771
+  git cat-file -p 6669
+  mkdir quotes
+  gc -m "C: add quotes"
+  git config --add webflyx.ceo "ThePrimeagen"
+  git config --add webflyx.cto "TheLaneagen"
+  git config --add webflyx.valuation "mid"
+  git config --get webflyx.valuation
+  git config --unset webflyx.cto
+  git config --get webflyx.cto
+  git config --unset webflyx
+  git config --add webflyx.ceo "Warren"
+  git config --add webflyx.ceo "Carson"
+  git config --add webflyx.ceo "Sarah"
+  git config --unset-all webflyx.ceo
+  git config --remove-section webflyx
+  git config --list --local
+  git config --unset --global init.defaultbranch
+  git config --set --global init.defaultbranch=main
+  git config --add --global init.defaultbranch=main
+  git config --global init.defaultbranch=main
+  git config --global init.defaultbranch "main"
+  git config --list --global
+  git branch -m master main
+  git branch -c add_classics
+  git branch add_classics
+  git switch add_classics
+  git checkout add_classics
+  gc -m "D: add classics.csv"
+  git log --decorate=short
+  git log --decorate=no
+  git log --decorate=full
+  git log --decorate=full --oneline
+  ll .git/refs/heads/
+  gc -m "E: updated contents.md"
+  git log --oneline --graph --all
+  git merge add_classics
+  git log --oneline --decorate --graph --parents
+  git branch -d add_classics
+  git checkout -b update_titles
+  git branch
+  gc -m "G: updated titles.md"
+  gcm
+  git checkout main
+  git merge update_titles
+  git branch -d update_titles
+  git switch -c update_dune 37489d4
+  git log --oneline -n 1
+  gc -m "H: added quote to dune.md"
+  gc -m "I: Added another quote to dune.md"
+  gp
+  git rebase main
+  echo "* The Internship" > titles.md
+  gd .
+  ga .
+  gc -m "J: The intern made an update"
+  git log --oneline
+  git reset --soft 12bed7e
+  git reset --hard 12bed7e
+  gs
+  cd ..
+  mkdir webflyx-local
+  cd webflyx-local/
+  git init
+  git remote add origin ../webflyx
+  git remote -v
+  git fetch
+  find .git/objects/
+  git log
+  git log origin/update_dune
+  git log origin/update_dune --oneline
+  git merge origin/main main
+  git merge origin/main
+#+end_src

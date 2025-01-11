@@ -1,0 +1,38 @@
+:PROPERTIES:
+:ID:       da5e7a56-878c-405c-a918-57cfaed33452
+:END:
+#+title: Minikube
+#+created: [2025-01-11 Sat 10:17]
+#+last_modified: [2025-01-11 Sat 11:51]
+#+filetags: Tool Kubernetes
+
+[[https://minikube.sigs.k8s.io/docs/][minikube]] quickly sets up a local [[id:c98976a7-563e-4f21-a436-f71201e24af4][Kubernetes]] cluster on [[id:07f0aa2f-7962-45ef-8c22-460db1671ff3][MacOS]] [[id:8f8d4797-dca7-4e7f-afcb-b12fa196d412][Linux]], or
+[[id:9020d898-7f38-4d9d-a928-562566e8a2e6][Windows]]. After installing minikube one can simple create a local kubernetes
+cluster and begin interacting with it as if it were a production grade cluster
+with the safety that anything they break will only effect their local
+environment and can be easily recreated.
+
+* Basic Usage
+  minikube has a relatively simple set of commands, most of which can be easily
+  learned from the built in help menus, but here are a few that important to
+  know:
+  - ~minikube start~: Starts your minikube cluster or creates a new one if one
+    doesn't exist.
+    - ~minikube start --node=<num>~: By appending ~--node~ you can specify how
+      many nodes your kubernetes cluster should have.
+  - ~minikube status~: Prints the current status of the cluster if one currently
+    exists.
+  - ~minikube stop~: Will stop your running cluster.
+  - ~minikube delete~: Will delete your minikube cluster.
+
+* Other Commands
+  Here are some other helpful commands to know when working with minikube:
+  - ~minikube dashboard~: Access the Kubernetes dashboard running within the
+    minikube cluster. This will also install the dashboard if it is not already
+    present.
+  - ~minikube addons~: Manages minikube addons.
+    - ~enable <name>~: Enables the addon specified. Installs it if it is not
+      already present on cluster
+    - ~disable <name>~: Disables the addon specified.
+    - ~list~: Lists all available minikube addons as well as their current
+      status.

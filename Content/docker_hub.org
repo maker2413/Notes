@@ -3,7 +3,7 @@
 :END:
 #+title: Docker Hub
 #+created: [2021-11-23 Tue 13:12]
-#+last_modified: [2021-12-01 Wed 21:52:07]
-#+filetags: Service
+#+last_modified: [2025-01-11 Sat 10:32]
+#+filetags: Service Docker
 
 Docker Hub is the public [[id:74055a6c-068b-4913-9672-e6f548b9ba56][Docker Image]] repository.

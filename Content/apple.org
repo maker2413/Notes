@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       43ec28ef-6102-4e5a-89e2-1ac96ffc3a2a
+:END:
+#+title: Apple
+#+created: [2025-01-11 Sat 10:20]
+#+last_modified: [2025-01-11 Sat 10:23]
+#+filetags: Company
+
+Apple is an American multinational tech company headquartered in Cupertino
+California. Apple is best known for it electronics, software, and services.

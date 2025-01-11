@@ -1,0 +1,33 @@
+:PROPERTIES:
+:ID:       f77c5ba7-1a3d-4b20-b382-f6c7e525e6ee
+:END:
+#+title: Docker Swarm
+#+created: [2025-01-11 Sat 10:29]
+#+last_modified: [2025-01-11 Sat 10:36]
+#+filetags: Tool Docker
+
+Swarm mode is an advanced feature for managing a cluster of Docker daemons.
+
+I don't have a ton of experience with Docker Swarm currently so I'm really just
+going to give some of the basic commands and I highly recommend you look at the
+documentation for any further questions: https://docs.docker.com/engine/swarm/
+
+To create a swarm cluster you can run: ~docker swarm init~. This command will
+give you instructions to connect other nodes to this cluster. By default the
+node that you init a cluster on will be promoted to a manager node.
+
+Deployment to a swarm cluster are detailed in a stack file:
+https://docs.docker.com/guides/swarm-deploy/#describe-apps-using-stack-files
+
+To deploy a stack file to your cluster you can run:
+~docker stack deploy -c <stackfile> <application_name>~.
+
+To see running services in a swarm cluster you can run: ~docker service ls~.
+
+To take down a deployment stack you can run:
+~docker stack rm <application_name>~.
+
+To remove a node from a cluster you can run: ~docker swarm leave~. If the node
+is a manger node you will have to append ~--force~ to the leave command. If the
+node is the last node in the cluster leaving the swarm will also delete the
+cluster.

@@ -3,7 +3,7 @@
 :END:
 #+title: Docker Images
 #+created: [2021-11-23 Tue 13:10]
-#+last_modified: [2021-11-23 Tue 13:11:34]
-#+filetags: Tool
+#+last_modified: [2025-01-11 Sat 10:33]
+#+filetags: Tool Docker
 
 Docker Images are images that can be used to run [[id:f353679b-d43d-4a15-84af-6234afaf243c][Docker Containers]].

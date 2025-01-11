@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       07f0aa2f-7962-45ef-8c22-460db1671ff3
+:END:
+#+title: MacOS
+#+created: [2025-01-11 Sat 10:19]
+#+last_modified: [2025-01-11 Sat 10:21]
+#+filetags: OperatingSystem
+
+MacOS, originally called Mac OS X, previously shortened as OS X, is a [[id:76fdcf18-4c3c-414a-b16e-4c9fa7f4ed72][Unix-based]]
+operating system developed and marketed by [[id:43ec28ef-6102-4e5a-89e2-1ac96ffc3a2a][Apple]] since 2001.

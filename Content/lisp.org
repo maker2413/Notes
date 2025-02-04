@@ -3,7 +3,7 @@
 :END:
 #+title: Lisp
 #+created: [2021-11-06 Sat 06:01]
-#+last_modified: [2023-04-12 Wed 20:24]
+#+last_modified: [2025-02-04 Tue 15:48]
 #+filetags: ProgrammingLanguage
 
 The actual name ~lisp~ stands for "list processing" and that is exactly what
@@ -112,12 +112,12 @@ We also have multi line comments in lisp which are written like this:
 #+end_src
 
 The first big take away you need to get your head around when you learn lisp is
-that lisp uses prefix notation whereas most languages use infix notation. What
+that lisp uses [[id:04e043a3-930b-43e0-af9b-89b084ae39fa][prefix notation]] whereas most languages use [[id:0be39013-3f74-4359-8444-82455fe44d75][infix notation]]. What
 that means is this:
 - ~1 + 2;~ :: how most languages would add 1 and 2
 - ~(+ 1 2)~ :: how lisp would add 1 and 2
 
-The reason lisp uses prefix notation is due to the second big take away you need
+The reason lisp uses [[id:04e043a3-930b-43e0-af9b-89b084ae39fa][prefix notation]] is due to the second big take away you need
 to get your head around when you learn lisp. In lisp everything is an expression
 and in the case of our above example ~+~ is a function call and ~1~ and ~2~ are
 our inputs into the ~+~ function. Due to the fact that everything is in an

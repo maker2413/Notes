@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       04e043a3-930b-43e0-af9b-89b084ae39fa
+:END:
+#+title: Prefix Notation
+#+created: [2025-02-04 Tue 15:44]
+#+last_modified: [2025-02-04 Tue 15:46]
+#+filetags: Concept
+
+Prefix notation or as it is sometimes referred, Polish Notation, is a
+[[id:36a1bacc-e7f2-4737-881d-b243a291d8df][mathematical]] notation in which [[id:df70107c-3adf-4c58-987d-cf74be9e149f][operators]] *precede* operands. A simple example of
+this is adding two to two, which would result in ~4~:
+#+begin_example
+  + 2 2
+#+end_example
+
+* See Also:
+  - [[id:0be39013-3f74-4359-8444-82455fe44d75][Infix Notation]]
+  - [[id:6784a069-de13-47b9-9792-675c13e5fdca][Postfix Notation]]

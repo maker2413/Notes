@@ -3,8 +3,8 @@
 :END:
 #+title: CSS
 #+created: [2021-11-22 Mon 23:10]
-#+last_modified: [2021-11-23 Tue 14:36:16]
-#+filetags: ProgrammingLanguage
+#+last_modified: [2025-02-04 Tue 16:09]
+#+filetags: Tool MarkupLanguage ProgrammingLanguage
 
 CSS is styling language that allows you to make your websites "pretty".
 

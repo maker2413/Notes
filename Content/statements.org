@@ -1,0 +1,39 @@
+:PROPERTIES:
+:ID:       1cf21d86-3f1b-49ea-87ec-1a2a270d2b59
+:END:
+#+title: Statements
+#+created: [2025-02-04 Tue 16:34]
+#+last_modified: [2025-02-04 Tue 16:46]
+#+filetags: Concept Programming
+
+In [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming]] a statement is the syntactic unit of an
+[[id:65243545-0a66-4896-a6ce-1524ea4c316c][imperative programming lanugage]] that expresses some action to be carried out. A
+program written in such a language is formed by a sequence of one or more
+statements.
+
+* Simple statements
+  Simple statements are complete in themselves; these include assignments,
+  subroutine calls, and a few statements which may significantly affect the
+  program flow of control (e.g. ~goto~, ~return~, ~stop~/~halt~). Some examples
+  include (The following examples loosely follow [[id:a8cd1fe3-5197-44a1-a67d-e876e444cd85][C]] syntax):
+  - assignment: ~variable = expression~
+  - call: ~subroutine name(parameters)~
+  - assertion: ~assert(relational expression)~
+  - goto: ~goto label~
+  - return: ~return value~
+  - stop/halt/exit: ~exit (expression)~
+
+* Compound statements
+  Compound statements may contain sequences of statements, nestable to any
+  reasonable depth, and generally involve tests to decide whether or not to obey
+  or repeat these contained statements.
+
+  Many compound statements are loop commands or choice commands. Some examples
+  include (The following examples loosely follow [[id:a8cd1fe3-5197-44a1-a67d-e876e444cd85][C]] syntax):
+  - count-controlled loop: ~for (index = 1; index <= limit; index += 1) <statement>~
+  - condition-controlled loop (test at start): ~while (test) <statement>~
+  - condition-controlled loop (test at end): ~do <statement> while (test)~
+  - if statement: ~if (test) <statement>~
+  - if statement (two-way choice): ~if (test) <statement> else <statement>~
+  - case/switch statement: ~switch (c) {case 'a': <statement>; break; case 'b': quit(); break;}~
+  - exception handling: ~try {protected code} catch (exception specification) {exception handler}~

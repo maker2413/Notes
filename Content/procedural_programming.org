@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       1b12b1b7-7003-42ce-934e-3ffdd50217cd
+:END:
+#+title: Procedural Programming
+#+created: [2025-02-04 Tue 17:00]
+#+last_modified: [2025-02-04 Tue 17:12]
+#+filetags: Concept Programming ProgrammingParadigm
+
+Procedural programming is a [[id:5bf321c2-18e7-4893-9223-3eb54d411de1][programming paradigm]], classified as
+[[id:65243545-0a66-4896-a6ce-1524ea4c316c][imperative programming]]. Procedural programming involves implementing the
+behavior of a computer program as [[id:0835ea0d-ca22-4d0c-97fb-9454087c6c78][procedures]] that call each other. The resulting
+program is a series of steps that form a hierarchy of calls to its constituent
+procedures.
+
+The first major procedural programming languages appeared in 1957-1964
+including:
+- [[id:1a372674-ba49-47f4-80bf-2481bb1fd528][Fortran]]

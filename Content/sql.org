@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       3315fe3a-8d5a-419b-939f-f70c1c6c1887
+:END:
+#+title: SQL
+#+created: [2025-02-04 Tue 17:48]
+#+last_modified: [2025-02-04 Tue 17:52]
+#+filetags: Programming ProgrammingLanguage
+
+Structed Query Language (SQL) is a domain-specific language used to manage data,
+especially in a relational database management system. SQL is considered a
+fourth generation [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]].

@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       1d980013-4a8b-4249-90f0-1ba4f327adba
+:END:
+#+title: Declarative Programming
+#+created: [2025-02-04 Tue 16:48]
+#+last_modified: [2025-02-04 Tue 18:11]
+#+filetags: Concept Programming ProgrammingParadigm
+
+Declarative programming is a [[id:5bf321c2-18e7-4893-9223-3eb54d411de1][programming paradigm]] that emphasizes a style of
+building the structure of elements of computer programs that expresses the logic
+of a computation without describing its control flow.
+
+Many languages that apply this style attempt to minimize or eliminate side
+effects by describing *what* the program must accomplish in terms of problem
+domain, rather than describing *how* to accomplish it as a sequence of the
+programming language primitives. This is in contrast to [[id:65243545-0a66-4896-a6ce-1524ea4c316c][imperative programming]],
+which implements algorithms in explicit steps.
+
+The main branches of declarative programming include:
+- [[id:1eacdca5-f35d-4a9b-90ed-56f260b4c723][Functional Programming]]
+- [[id:e3de8a82-7b93-497d-ad61-ab4a55864834][Logic Programming]]
+- [[id:d32a4d32-c243-4a00-b420-51e70177b582][Reactive Programming]]

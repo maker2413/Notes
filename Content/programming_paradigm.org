@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       5bf321c2-18e7-4893-9223-3eb54d411de1
+:END:
+#+title: Programming Paradigm
+#+created: [2025-02-04 Tue 16:05]
+#+last_modified: [2025-02-04 Tue 18:09]
+#+filetags: Reference Concept Programming ProgrammingParadigm
+
+A programming paradigm is a high-level way to describe and structure the
+concepts of programming that make up a [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]]. Any
+[[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]] can be classified as supporting one or more paradigms
+
+Some common programming paradigms include:
+- [[id:65243545-0a66-4896-a6ce-1524ea4c316c][Imperative Programming]]
+  - [[id:1b12b1b7-7003-42ce-934e-3ffdd50217cd][Procedural Programming]]
+  - [[id:ae9096c3-0fcc-4686-9918-a1f7949af73c][Object Oriented Programming]]
+- [[id:1d980013-4a8b-4249-90f0-1ba4f327adba][Declarative Programming]]
+  - [[id:1eacdca5-f35d-4a9b-90ed-56f260b4c723][Functional Programming]]
+  - [[id:e3de8a82-7b93-497d-ad61-ab4a55864834][Logic Programming]]
+  - [[id:d32a4d32-c243-4a00-b420-51e70177b582][Reactive Programming]]

@@ -3,8 +3,8 @@
 :END:
 #+title: Json
 #+created: [2022-03-11 Fri 03:53]
-#+last_modified: [2023-04-12 Wed 20:28]
-#+filetags: Tool
+#+last_modified: [2025-02-04 Tue 16:09]
+#+filetags: Tool MarkupLanguage
 
 Json is a very popular [[id:7d97f527-f387-44c0-86c9-4dbbe0ab28e0][markup language]] and although it isn't my favorite it is
 important to at least understand the basics in case you ever encounter it. Json

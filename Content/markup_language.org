@@ -3,7 +3,7 @@
 :END:
 #+title: Markup Language
 #+created: [2021-11-22 Mon 22:05]
-#+last_modified: [2022-03-13 Sun 21:40:28]
+#+last_modified: [2025-02-04 Tue 16:10]
 #+filetags: Concept
 
 A markup language is a system for annotating a document in a way that is
@@ -42,6 +42,8 @@ The most popular and commonly used markup language for documenting code is
 up documentation.
 
 Here is a list of some of the markup languages I have covered:
+- [[id:d0e74ec8-41c6-4fc8-a2db-4691f32f7e9b][HTML]]
+- [[id:e10c886e-46bd-4a00-bd25-5167caede214][CSS]]
 - [[id:a262fb74-7247-415e-82e7-89a75538fa6b][Markdown]]
 - [[id:91b8e015-8303-49da-a14b-94745d3cd699][Json]]
 - [[id:3336e7d9-ec1f-4d21-be4b-ae4a7cba7c8f][Org]]

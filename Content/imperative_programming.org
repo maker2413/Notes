@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       65243545-0a66-4896-a6ce-1524ea4c316c
+:END:
+#+title: Imperative Programming
+#+created: [2025-02-04 Tue 16:31]
+#+last_modified: [2025-02-04 Tue 17:01]
+#+filetags: Concept Programming ProgrammingParadigm
+
+Imperative programming is a [[id:5bf321c2-18e7-4893-9223-3eb54d411de1][programming paradigm]] that uses [[id:1cf21d86-3f1b-49ea-87ec-1a2a270d2b59][statements]] that
+change a program's state. Imperative programming focuses on describing *how* a
+program operates step by step, rather than on high-level descriptions of its
+expected results.
+
+The term imperative programming is often used in contrast to
+[[id:1d980013-4a8b-4249-90f0-1ba4f327adba][declarative programming]], which focuses on *what* the program should accomplish
+without specifying the details of *how* the program should achieve the result.
+
+The two main branches of imperative programming are:
+- [[id:1b12b1b7-7003-42ce-934e-3ffdd50217cd][Procedural Programming]]
+- [[id:ae9096c3-0fcc-4686-9918-a1f7949af73c][Object Oriented Programming]]

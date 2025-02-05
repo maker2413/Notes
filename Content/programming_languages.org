@@ -3,14 +3,14 @@
 :END:
 #+title: Programming Languages
 #+created: [2021-10-15 Fri 22:35]
-#+last_modified: [2023-06-20 Tue 16:15]
+#+last_modified: [2025-02-04 Tue 18:03]
 #+filetags: Reference
 
 Programming is the act of giving a set of instructions to a computer to
 execute. If you think of it like cooking using a recipe you can think of
 yourself as the computer and the recipe's author would be the programmer. The
 recipe book would be code and the language of the book would be the programming
-language. The most complex the recipe the more complex the final result will
+language. The more complex the recipe the more complex the final result will
 be.
 
 Computers think in [[id:c7cc03ef-ed81-4f63-b5f8-ed0b4963aa9b][binary]] and programming languages allow us to translate the 1s
@@ -18,16 +18,83 @@ and 0s into something that is more human readable. A programming language is
 just a series of symbols that serve as a bridge that allow humans to translate
 our thoughts into instructions that computers can understand.
 
-Here are some of the programming languages I have covered so far:
+The concepts that make up how these programming languages operator and differ
+from each other can be describe as [[id:5bf321c2-18e7-4893-9223-3eb54d411de1][programming paradigms]].
+
+Programming languages have evolved significantly over time, moving from
+fundamental machine specific code to complex languages that are simpler to write
+and understand. Nowadays there are considered to be 5 generations of these
+programming languages and they can be described as such:
+
+* First Generation Languages:
+  First generation languages often known as machine languages, are the simplest
+  type of computer language there is. To interface directly with a computer's
+  hardware, these languages use [[id:c7cc03ef-ed81-4f63-b5f8-ed0b4963aa9b][binary]] code. Because machine languages are
+  designed to be particular to the architecture of the hardware, 1GL
+  applications are machine-specific and will only execute on the hardware for
+  which they were originally developed.
+
+* Second Generation Languages:
+  Second generation languages, known as assembly languages, introduced
+  human-readable notations, such as mnemonics, that are easier to understand
+  than [[id:c7cc03ef-ed81-4f63-b5f8-ed0b4963aa9b][binary]] code. These languages still require conversion to machine code
+  through an assembler before execution. [[id:9f1b4c32-09c4-446b-b625-01067cf673d1][Assembly]] language is used primarily for
+  writing operating systems and device drivers due to its close interaction with
+  hardware.
+
+* Third Generation Languages:
+  Third generation languages, also known as [[id:1b12b1b7-7003-42ce-934e-3ffdd50217cd][procedural languages]], are high-level
+  programming languages designed to be more user-friendly by utilizing syntax
+  similar to human language. Some well-known examples of third generation
+  programming languages include:
+  - [[id:a8cd1fe3-5197-44a1-a67d-e876e444cd85][C]]
+  - [[id:71a0dda0-83ad-403c-a022-aac8a057ce1d][C++]]
+  - [[id:1a372674-ba49-47f4-80bf-2481bb1fd528][Fortran]]
+  - [[id:b7703af2-0af1-4e6d-b49a-356d9f9c462f][Java]]
+  - [[id:de998add-4c2b-4d6e-aab7-6ada0c614537][Pascal]]
+
+* Fourth Generation Languages:
+  Fourth-generation languages (4GL) are created to simplify programming by using
+  syntax that is more similar to everyday human language. These languages allow
+  users to focus on specifying what tasks need to be done, without needing to
+  worry about the specific implementation details. They are widely used for
+  tasks such as database handling, generating reports, and building graphical
+  user interfaces (GUIs). Some well-known examples include:
+  - [[id:3315fe3a-8d5a-419b-939f-f70c1c6c1887][SQL]]
+  - [[id:523160d7-c44e-4126-a606-8e8ff64936cc][Python]]
+  - [[id:aed9fc24-c04e-453e-98ed-5d3a95c7f020][Perl]]
+  - [[id:f7a15076-1d92-463e-9b08-cfaa30566c32][Ruby]]
+  - [[id:749cfb33-8c9e-488c-a458-ee4a0209f11c][MATLAB]]
+
+* Fifth Generation Languages:
+  Fifth-generation languages (5GL) represent the latest stage in programming
+  evolution and focus on visual programming and artificial intelligence. These
+  languages use visual tools and constraint-based logic to create
+  programs. Instead of writing step-by-step instructions, the programmer defines
+  goals, and the system generates the code to achieve them. Some examples of
+  fifth-generation languages include:
+  - Prolog
+  - OPS5
+  - Mercury
+
+Here are some of the programming languages I have covered so far organized by
+generation:
+- [[id:9f1b4c32-09c4-446b-b625-01067cf673d1][Assembly]]
 - [[id:a8cd1fe3-5197-44a1-a67d-e876e444cd85][C]]
-- [[id:e10c886e-46bd-4a00-bd25-5167caede214][CSS]]
-- [[id:037f18dd-1b13-4cfe-a44e-ae410426f90e][Go]]
-- [[id:d0e74ec8-41c6-4fc8-a2db-4691f32f7e9b][HTML]]
+- [[id:71a0dda0-83ad-403c-a022-aac8a057ce1d][C++]]
 - [[id:960b6e04-6c5a-413f-b0ca-ed89e06c3542][ELisp]]
+- [[id:1a372674-ba49-47f4-80bf-2481bb1fd528][Fortran]]
+- [[id:037f18dd-1b13-4cfe-a44e-ae410426f90e][Go]]
 - [[id:5bc2d8e7-49ca-4926-963a-672139c10ad7][Guile]]
+- [[id:b7703af2-0af1-4e6d-b49a-356d9f9c462f][Java]]
 - [[id:a29e994c-1920-4ea6-8cfa-946c82e25429][JavaScript]]
 - [[id:b805c0d0-895d-4806-a223-6a9c99cf29fb][Jsonnet]]
 - [[id:85dcb828-5822-4d77-a826-e276d6c5e007][Lisp]]
+- [[id:749cfb33-8c9e-488c-a458-ee4a0209f11c][MATLAB]]
+- [[id:de998add-4c2b-4d6e-aab7-6ada0c614537][Pascal]]
+- [[id:aed9fc24-c04e-453e-98ed-5d3a95c7f020][Perl]]
 - [[id:523160d7-c44e-4126-a606-8e8ff64936cc][Python]]
+- [[id:f7a15076-1d92-463e-9b08-cfaa30566c32][Ruby]]
 - [[id:4884f54a-4570-407b-a85b-bb971b2bfc73][Scheme]]
+- [[id:3315fe3a-8d5a-419b-939f-f70c1c6c1887][SQL]]
 - [[id:0817633b-da6b-4889-ab18-267d6cb9ef60][TypeScript]]

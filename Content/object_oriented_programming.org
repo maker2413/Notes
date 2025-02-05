@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       ae9096c3-0fcc-4686-9918-a1f7949af73c
+:END:
+#+title: Object Oriented Programming
+#+created: [2025-02-04 Tue 17:01]
+#+last_modified: [2025-02-04 Tue 17:05]
+#+filetags: Concept Programming Programming Paradigm
+
+Object Oriented programming is a [[id:5bf321c2-18e7-4893-9223-3eb54d411de1][programming paradigm]], classified as
+[[id:65243545-0a66-4896-a6ce-1524ea4c316c][imperative programming]]. Object oriented programming is based on the concepts of
+objects, which contain data and code.

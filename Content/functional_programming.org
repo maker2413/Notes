@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       1eacdca5-f35d-4a9b-90ed-56f260b4c723
+:END:
+#+title: Functional Programming
+#+created: [2025-02-04 Tue 16:00]
+#+last_modified: [2025-02-04 Tue 16:05]
+#+filetags: Concept Programming
+
+Functional programming is a [[id:5bf321c2-18e7-4893-9223-3eb54d411de1][programming paradigm]].

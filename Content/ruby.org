@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       f7a15076-1d92-463e-9b08-cfaa30566c32
+:END:
+#+title: Ruby
+#+created: [2025-02-04 Tue 17:49]
+#+last_modified: [2025-02-04 Tue 17:57]
+#+filetags: Programming ProgrammingLanguage
+
+Ruby is an intrepreted, high-level, general-purpose [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]]. Ruby
+is considered to be a fourth generation [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]]. It was designed
+with an emphasis on programming productivity and simplicity.

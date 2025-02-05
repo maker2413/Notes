@@ -3,8 +3,8 @@
 :END:
 #+title: XML
 #+created: [2021-11-29 Mon 06:10]
-#+last_modified: [2021-11-29 Mon 06:11:53]
-#+filetags: Tool
+#+last_modified: [2025-02-04 Tue 16:09]
+#+filetags: Tool MarkupLanguage
 
 XML stands for =Extensible Markup Language=. XML is a markup language that
 defines a set of rules for encoding documents in a format that is both

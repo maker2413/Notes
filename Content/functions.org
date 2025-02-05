@@ -3,8 +3,8 @@
 :END:
 #+title: Functions
 #+created: [2021-10-19 Tue 20:34]
-#+last_modified: [2023-04-12 Wed 20:23]
-#+filetags: ProgrammingLanguage Basics
+#+last_modified: [2025-02-04 Tue 17:05]
+#+filetags: Concepts Programming ProgrammingLanguage Basics Procedures
 
 In programming a function (also known as a subroutine) is a sequence of
 instructions that performs a specific task. To put that in simpler English:

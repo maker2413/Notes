@@ -3,9 +3,9 @@
 :END:
 #+title: C
 #+created: [2022-10-06 Thu 21:54]
-#+last_modified: [2022-10-06 Thu 21:59]
+#+last_modified: [2025-02-04 Tue 17:38]
 #+filetags: ProgrammingLanguage
 
-C (pronounced like the letter c) is a general-purpose computer [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming
-language]]. It was created in the 1970s by Dennis Ritchie, and remains very widely
-used and influential.
+C (pronounced like the letter c) is a general-purpose computer
+[[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]]. It was created in the 1970s by Dennis Ritchie, and remains
+very widely used and influential. C is a third generation [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]].

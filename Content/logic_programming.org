@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       e3de8a82-7b93-497d-ad61-ab4a55864834
+:END:
+#+title: Logic Programming
+#+created: [2025-02-04 Tue 18:08]
+#+last_modified: [2025-02-04 Tue 18:08]
+#+filetags: Concept Programming
+
+Logic programming is a [[id:5bf321c2-18e7-4893-9223-3eb54d411de1][programming paradigm]].

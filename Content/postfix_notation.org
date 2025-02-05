@@ -3,8 +3,8 @@
 :END:
 #+title: Postfix Notation
 #+created: [2025-02-04 Tue 15:44]
-#+last_modified: [2025-02-04 Tue 15:47]
-#+filetags: Concept
+#+last_modified: [2025-02-04 Tue 15:55]
+#+filetags: Concept Math Mathematics Programming ProgrammingLanguage
 
 Postfix notation or as it is sometimes referred, Reverse Polish Notation, is a
 [[id:36a1bacc-e7f2-4737-881d-b243a291d8df][mathematical]] notation in which [[id:df70107c-3adf-4c58-987d-cf74be9e149f][operators]] *follow* operands. A simple example of

@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       9f1b4c32-09c4-446b-b625-01067cf673d1
+:END:
+#+title: Assembly
+#+created: [2025-02-04 Tue 17:22]
+#+last_modified: [2025-02-04 Tue 17:23]
+#+filetags: Assembly Programming ProgrammingLanguage
+
+Assembly language, assembly, and commonly abbreviated as ASM or asm, is any
+low-level programming language with a very strong correspondence between the
+instructions in the language and the architecture's machine code instructions.
+
+Assembly is consider a second generation [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]].

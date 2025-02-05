@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       aed9fc24-c04e-453e-98ed-5d3a95c7f020
+:END:
+#+title: Perl
+#+created: [2025-02-04 Tue 17:48]
+#+last_modified: [2025-02-04 Tue 17:55]
+#+filetags: Programming ProgrammingLanguage
+
+Perl is a high-level, general purpose, interpreted, dynamic
+[[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]]. Perl is considered to be a fourth generation
+[[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]]. Although Perl is not officially an acronym, there are
+various backronyms in use, including:
+"Practial Extraction and Reporting Language".

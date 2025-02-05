@@ -3,8 +3,8 @@
 :END:
 #+title: Yaml
 #+created: [2022-02-24 Thu 19:40]
-#+last_modified: [2023-04-12 Wed 20:29]
-#+filetags: Tool
+#+last_modified: [2025-02-04 Tue 16:09]
+#+filetags: Tool MarkupLanguage
 
 At its conception ~yaml~ was given its name based the following acronym:
 - Y :: Yet

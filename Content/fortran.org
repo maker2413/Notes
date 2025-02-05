@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       1a372674-ba49-47f4-80bf-2481bb1fd528
+:END:
+#+title: Fortran
+#+created: [2025-02-04 Tue 17:11]
+#+last_modified: [2025-02-04 Tue 17:50]
+#+filetags: Programming ProgrammingLanguage
+
+Fortran is a third generation [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]]. Fortran is an
+[[id:65243545-0a66-4896-a6ce-1524ea4c316c][imperative programming]] language that is especially suited to numeric computation
+and scientific computing.

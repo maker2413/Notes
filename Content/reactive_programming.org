@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       d32a4d32-c243-4a00-b420-51e70177b582
+:END:
+#+title: Reactive Programming
+#+created: [2025-02-04 Tue 18:08]
+#+last_modified: [2025-02-04 Tue 18:09]
+#+filetags: Concept Programming
+
+Reactive programming is a [[id:5bf321c2-18e7-4893-9223-3eb54d411de1][programming paradigm]].

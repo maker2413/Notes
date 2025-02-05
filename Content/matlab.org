@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       749cfb33-8c9e-488c-a458-ee4a0209f11c
+:END:
+#+title: MATLAB
+#+created: [2025-02-04 Tue 17:49]
+#+last_modified: [2025-02-04 Tue 17:59]
+#+filetags: Programming ProgrammingLanguage
+
+MATLAB (an abbreviation of MATrix LABoratory) is a proprietary multi-paradigm
+[[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]] and numeric computing environment develop by
+MathWorks. MATLAB is considered to be a fourth generation [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]].
+
+MATLAB allows matrix manipulations, plotting of functions and data,
+implementation of algorithms, creation of user interfaces, and interfacing with
+programs written in other languages.

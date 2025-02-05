@@ -4,8 +4,8 @@
 :END:
 #+title: Org
 #+created: [2021-11-29 Mon 7:35]
-#+last_modified: [2024-11-06 Wed 03:06]
-#+filetags: Tool
+#+last_modified: [2025-02-04 Tue 16:09]
+#+filetags: Tool MarkupLanguage
 
 Org, sometimes referred to as org mode, is the built in [[id:7d97f527-f387-44c0-86c9-4dbbe0ab28e0][markup language]] in
 [[id:d18ed6e8-dbce-4822-9d3f-3de38246ba38][Emacs]], but it is so much more than just a [[id:7d97f527-f387-44c0-86c9-4dbbe0ab28e0][markup language]].

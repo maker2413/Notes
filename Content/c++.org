@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       71a0dda0-83ad-403c-a022-aac8a057ce1d
+:END:
+#+title: C++
+#+created: [2025-02-04 Tue 17:34]
+#+last_modified: [2025-02-04 Tue 17:43]
+#+filetags: CPP Programming ProgrammingLanguage
+
+C++ (pronounced like the letter C plus plus), sometimes abbreviated as *CPP* is
+a high level general-purpose computer [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]]. It was created in
+the 1985 by Bjarne Stroustrup. C++ is a third generation [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]].

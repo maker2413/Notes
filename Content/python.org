@@ -3,13 +3,14 @@
 :END:
 #+title: Python
 #+created: [2023-04-04 Tue 20:46]
-#+last_modified: [2023-04-11 Tue 22:27]
+#+last_modified: [2025-02-04 Tue 17:53]
 #+filetags: ProgrammingLanguage Python
 
 Python is a high-level, general-purpose [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]]. Its design
 philosophy emphasizes code readability with the use of significant
 indentation. Python was created by Guido van Rossum in the early 90s. It is now
-one of the most popular languages in existence.
+one of the most popular languages in existence. Python is considered to be a
+fourth generation [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]].
 
 Being that the language puts so much emphasis on readability it is
 considered to be a very easy language to initially learn, but can still be

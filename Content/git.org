@@ -3,10 +3,10 @@
 :END:
 #+title: Git
 #+created: [2021-11-26 Fri 15:45]
-#+last_modified: [2025-01-11 Sat 10:49]
+#+last_modified: [2025-02-18 Tue 23:53]
 #+filetags: Tool
 
-Git is a version control software originally started by Linux Toralds (The
+Git is a version control software originally started by Linus Torvalds (The
 creator of Linux). It was designed as an alternative to other version control
 software like [[https://www.nongnu.org/cvs/][CVS]] or [[https://subversion.apache.org/][SVN]]. It differs from its competitors in that each user
 clones down the entire contents of the repository to their machine and push up

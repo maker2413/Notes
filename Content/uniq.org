@@ -3,6 +3,40 @@
 :END:
 #+title: Uniq
 #+created: [2025-02-20 Thu 02:22]
-#+last_modified: [2025-02-20 Thu 02:22]
-#+filetags: Linux Tool
+#+last_modified: [2025-02-20 Thu 02:51]
+#+filetags: Linux Tool Uniq
 
+The ~uniq~ command in [[id:8f8d4797-dca7-4e7f-afcb-b12fa196d412][Linux]] is a command line utility that removes repeated
+lines in a file or supplied text. In other words the ~uniq~ tool helps detect
+and delete adjacent duplicate lines of text.
+
+For example this command:
+#+NAME: shells
+#+begin_src shell :results output :exports both
+  awk -F "/" '/^\// {print $NF}' /etc/shells | sort
+#+end_src
+
+Will output:
+#+RESULTS: shells
+#+begin_example
+bash
+bash
+fish
+fish
+git-shell
+sh
+sh
+#+end_example
+
+If we take that same command and pipe it into ~uniq~:
+#+NAME: shells2
+#+begin_src shell :results output :exports both
+  awk -F "/" '/^\// {print $NF}' /etc/shells | sort | uniq
+#+end_src
+
+We get:
+#+RESULTS: shells2
+: bash
+: fish
+: git-shell
+: sh

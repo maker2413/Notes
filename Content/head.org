@@ -3,6 +3,30 @@
 :END:
 #+title: Head
 #+created: [2025-02-20 Thu 02:32]
-#+last_modified: [2025-02-20 Thu 02:32]
-#+filetags: Linux Tool
+#+last_modified: [2025-02-20 Thu 02:46]
+#+filetags: Linux Tool Head
 
+The ~head~ tool is a [[id:8f8d4797-dca7-4e7f-afcb-b12fa196d412][Linux]] command line tool that, as the name implies, outputs
+the top N number of lines of given input text. By default ~head~ will output the
+first 10 lines of the specified file or provided text. If more than 10 lines are
+desired a number can be specified with the ~-n~ flag. ~head~ is also the
+counterpart to [[id:0a57a36a-d4e2-44a8-bc04-8d017c8390aa][Tail]].
+
+For example:
+#+NAME: passwd
+#+begin_src shell
+  head /etc/passwd
+#+end_src
+
+Will give us the first 10 lines of ~/etc/passwd~:
+#+RESULTS: passwd
+| root:x:0:0::/root:/usr/bin/bash               |          |                               |
+| bin:x:1:1::/:/usr/bin/nologin                 |          |                               |
+| daemon:x:2:2::/:/usr/bin/nologin              |          |                               |
+| mail:x:8:12::/var/spool/mail:/usr/bin/nologin |          |                               |
+| ftp:x:14:11::/srv/ftp:/usr/bin/nologin        |          |                               |
+| http:x:33:33::/srv/http:/usr/bin/nologin      |          |                               |
+| nobody:x:65534:65534:Kernel                   | Overflow | User:/:/usr/bin/nologin       |
+| dbus:x:81:81:System                           | Message  | Bus:/:/usr/bin/nologin        |
+| systemd-coredump:x:980:980:systemd            | Core     | Dumper:/:/usr/bin/nologin     |
+| systemd-network:x:979:979:systemd             | Network  | Management:/:/usr/bin/nologin |

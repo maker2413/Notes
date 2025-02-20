@@ -3,7 +3,7 @@
 :END:
 #+title: AWK Programming Language
 #+created: [2022-10-15 Sat 10:44]
-#+last_modified: [2025-02-20 Thu 02:33]
+#+last_modified: [2025-02-20 Thu 02:36]
 #+filetags: ProgrammingLanguage Linux Tool AWK
 
 The awk [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]] is a scripting language that is executed by the [[id:4baa1bc5-814d-4dae-9272-11f19b3ffbff][awk]]
@@ -16,7 +16,7 @@ will go over some of the features of the programming language.
   can specify any character you like. Let's play around with the contents of our
   passwd file:
   #+NAME: passwd
-  #+begin_src sh :results output
+  #+begin_src sh :results output :exports both
     cat /etc/passwd
   #+end_src
 
@@ -65,7 +65,7 @@ will go over some of the features of the programming language.
   Here we can see the file is clearly split into columns, however this time
   columns are separated by =:=. Let's pass this into ~awk~ now:
   #+NAME: passwd2
-  #+begin_src sh :results output
+  #+begin_src sh :results output :exports both
     # -F is used to specify our field separator
     cat /etc/passwd | awk -F ":" '{print $1}'
   #+end_src
@@ -119,7 +119,7 @@ will go over some of the features of the programming language.
   formatted pretty? With ~awk~ we not only specify which field separator we want
   to look for in our input but we can specify an output field separator:
   #+NAME: passwd3
-  #+begin_src sh :results output
+  #+begin_src sh :results output :exports both
     # You will notice this time that we aren't piping the output of cat into awk
     # but rather just telling awk which file we want to run this on. This is just
     # another way to use awk and I wanted to show it off.
@@ -175,7 +175,7 @@ will go over some of the features of the programming language.
   For our next challenge let's say we wanted to know each of the shells installed
   on our system. We can just view whats in ~/etc/shells~:
   #+NAME: shells
-  #+begin_src sh :results output
+  #+begin_src sh :results output :exports both
     cat /etc/shells
   #+end_src
 
@@ -196,7 +196,7 @@ will go over some of the features of the programming language.
   This will work but what if we wanted just the name of the shells themselves.
   With ~awk~ we can print just the last column of our supplied text with ~$NF~:
   #+NAME: shells2
-  #+begin_src sh :results output
+  #+begin_src sh :results output :exports both
     awk -F "/" '{print $NF}' /etc/shells
   #+end_src
 
@@ -226,7 +226,7 @@ will go over some of the features of the programming language.
   want to grab for our shells file. We can specify any search pattern we want to
   look for inside of ~/ /~:
   #+NAME: shells3
-  #+begin_src sh :results output
+  #+begin_src sh :results output :exports both
     # awk uses regex inside of the '/ /' to define what it is searching for.
     # For more information on regex see my regex guide.
     awk -F "/" '/^\// {print $NF}' /etc/shells
@@ -247,7 +247,7 @@ will go over some of the features of the programming language.
   with a ~/~. Now lets just pipe the output of our ~awk~ command into [[id:9b51a3e1-57e2-44f7-82ce-fc4df3c97c9c][sort]] so they are sorted
   alphabetically, and lets pipe that into [[id:2b3be31b-f903-41e2-87ca-1a258bdc3be6][uniq]] to remove the duplicate shells:
   #+NAME: shells4
-  #+begin_src sh :results output
+  #+begin_src sh :results output :exports both
     awk -F "/" '/^\// {print $NF}' /etc/shells | sort | uniq
   #+end_src
 
@@ -259,7 +259,7 @@ will go over some of the features of the programming language.
 
   This time lets search our bashrc for any lines starting a =a= or a =b=:
   #+NAME: bashrc
-  #+begin_src sh :results output
+  #+begin_src sh :results output :exports both
     awk '$1 ~ /^[a,b]/ {print $0}' ~/.bashrc
   #+end_src
 
@@ -273,7 +273,7 @@ will go over some of the features of the programming language.
   be picking on the shells file again. Lets say we only wanted to print lines
   that are over 12 characters long:
   #+NAME: script_length
-  #+begin_src sh :results output
+  #+begin_src sh :results output :exports both
     awk 'length($0) > 12' /etc/shells
   #+end_src
 
@@ -286,7 +286,7 @@ will go over some of the features of the programming language.
 
   We also have if statements available to us:
   #+NAME: script_if
-  #+begin_src sh :results output
+  #+begin_src sh :results output :exports both
     # ps -ef prints all of the resources running on our machine
     ps -ef | awk '{ if($NF == "/usr/bin/fish") print $0 }'
   #+end_src
@@ -299,7 +299,7 @@ will go over some of the features of the programming language.
 
   We also have for loops available to us:
   #+NAME: script_loop
-  #+begin_src sh :results output
+  #+begin_src sh :results output :exports both
     awk 'BEGIN{for(i=1; i<=10; i++) print "The square of", i, "is", i*i;}'
   #+end_src
 
@@ -329,7 +329,7 @@ will go over some of the features of the programming language.
   number of the output, or even a specific range of line numbers. Lets try this
   on the ~df~ command:
   #+NAME: linenumber
-  #+begin_src sh :results output
+  #+begin_src sh :results output :exports both
     df | awk 'NR==7, NR==11 {print NR, $0}'
   #+end_src
 
@@ -345,7 +345,7 @@ will go over some of the features of the programming language.
   itself. Of course if we didn't want to print the line number we could just
   drop ~NR~ from our print statement:
   #+NAME: linenumber2
-  #+begin_src sh :results output
+  #+begin_src sh :results output :exports both
     df | awk 'NR==7, NR==11 {print $0}'
   #+end_src
 
@@ -359,7 +359,7 @@ will go over some of the features of the programming language.
   We can also use ~NR~ to get a line count of a file, lets pick on =/etc/shells=
   again:
   #+NAME: LineCount
-  #+begin_src sh :results output :exports both
+  #+begin_src sh :results output :exports both :exports both
     awk 'END {print NR}' /etc/shells
   #+end_src
 

@@ -3,6 +3,43 @@
 :END:
 #+title: Sort
 #+created: [2025-02-20 Thu 02:22]
-#+last_modified: [2025-02-20 Thu 02:22]
-#+filetags: Linux Tool
+#+last_modified: [2025-02-20 Thu 02:55]
+#+filetags: Linux Tool Sort
 
+The ~sort~ tool is a [[id:8f8d4797-dca7-4e7f-afcb-b12fa196d412][Linux]] command line tool that, as the name implies, sorts
+supplied text.
+
+For example this command:
+#+NAME: shells
+#+begin_src shell :results output :export both
+  awk -F "/" '/^\// {print $NF}' /etc/shells
+#+end_src
+
+#+RESULTS: shells
+#+begin_example
+sh
+bash
+sh
+bash
+git-shell
+fish
+fish
+#+end_example
+
+If we take that same command and pipe it into ~sort~:
+#+NAME: shells2
+#+begin_src shell :results output :exports both
+  awk -F "/" '/^\// {print $NF}' /etc/shells | sort
+#+end_src
+
+We get:
+#+RESULTS: shells2
+#+begin_example
+bash
+bash
+fish
+fish
+git-shell
+sh
+sh
+#+end_example

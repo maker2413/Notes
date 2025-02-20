@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       ac5f3621-bfb3-45d5-a1c7-a061f534e4f7
+:END:
+#+title: Head
+#+created: [2025-02-20 Thu 02:32]
+#+last_modified: [2025-02-20 Thu 02:32]
+#+filetags: Linux Tool
+

@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       9b51a3e1-57e2-44f7-82ce-fc4df3c97c9c
+:END:
+#+title: Sort
+#+created: [2025-02-20 Thu 02:22]
+#+last_modified: [2025-02-20 Thu 02:22]
+#+filetags: Linux Tool
+

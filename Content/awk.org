@@ -1,9 +1,10 @@
 :PROPERTIES:
 :ID:       4baa1bc5-814d-4dae-9272-11f19b3ffbff
+:ROAM_ALIASES: Awk
 :END:
 #+title: AWK
 #+created: [2022-06-26 Sun 10:22]
-#+last_modified: [2023-04-12 Wed 20:28]
+#+last_modified: [2025-02-20 Thu 02:02]
 #+filetags: Linux Tool AWK
 
 The ~awk~ command is a text manipulation tool, named after its developers:

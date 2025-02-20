@@ -3,7 +3,381 @@
 :END:
 #+title: AWK Programming Language
 #+created: [2022-10-15 Sat 10:44]
-#+last_modified: [2022-10-15 Sat 10:45]
+#+last_modified: [2025-02-20 Thu 02:33]
 #+filetags: ProgrammingLanguage Linux Tool AWK
 
-AWK
+The awk [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]] is a scripting language that is executed by the [[id:4baa1bc5-814d-4dae-9272-11f19b3ffbff][awk]]
+command line tool. The basics of awk can be found in that other guide. This page
+will go over some of the features of the programming language.
+
+
+* Separators
+  By default ~awk~ treats empty space as a field separator for columns but you
+  can specify any character you like. Let's play around with the contents of our
+  passwd file:
+  #+NAME: passwd
+  #+begin_src sh :results output
+    cat /etc/passwd
+  #+end_src
+
+  #+RESULTS: passwd
+  #+begin_example
+  root:x:0:0::/root:/usr/bin/bash
+  bin:x:1:1::/:/usr/bin/nologin
+  daemon:x:2:2::/:/usr/bin/nologin
+  mail:x:8:12::/var/spool/mail:/usr/bin/nologin
+  ftp:x:14:11::/srv/ftp:/usr/bin/nologin
+  http:x:33:33::/srv/http:/usr/bin/nologin
+  nobody:x:65534:65534:Kernel Overflow User:/:/usr/bin/nologin
+  dbus:x:81:81:System Message Bus:/:/usr/bin/nologin
+  systemd-coredump:x:980:980:systemd Core Dumper:/:/usr/bin/nologin
+  systemd-network:x:979:979:systemd Network Management:/:/usr/bin/nologin
+  systemd-oom:x:978:978:systemd Userspace OOM Killer:/:/usr/bin/nologin
+  systemd-journal-remote:x:977:977:systemd Journal Remote:/:/usr/bin/nologin
+  systemd-resolve:x:976:976:systemd Resolver:/:/usr/bin/nologin
+  systemd-timesync:x:975:975:systemd Time Synchronization:/:/usr/bin/nologin
+  tss:x:974:974:tss user for tpm2:/:/usr/bin/nologin
+  uuidd:x:68:68::/:/usr/bin/nologin
+  polkitd:x:102:102:User for polkitd:/:/usr/bin/nologin
+  avahi:x:973:973:Avahi mDNS/DNS-SD daemon:/:/usr/bin/nologin
+  git:x:972:972:git daemon user:/:/usr/bin/git-shell
+  brltty:x:970:970:Braille Device Daemon:/var/lib/brltty:/usr/bin/nologin
+  colord:x:969:969:Color management daemon:/var/lib/colord:/usr/bin/nologin
+  flatpak:x:968:968:Flatpak system helper:/:/usr/bin/nologin
+  gdm:x:120:120:Gnome Display Manager:/var/lib/gdm:/usr/bin/nologin
+  geoclue:x:967:967:Geoinformation service:/var/lib/geoclue:/usr/bin/nologin
+  gnome-remote-desktop:x:966:966:GNOME Remote Desktop:/var/lib/gnome-remote-desktop:/usr/bin/nologin
+  rtkit:x:133:133:RealtimeKit:/proc:/usr/bin/nologin
+  saned:x:965:965:SANE daemon user:/:/usr/bin/nologin
+  usbmux:x:140:140:usbmux user:/:/usr/bin/nologin
+  named:x:40:40:BIND DNS Server:/:/usr/bin/nologin
+  alpm:x:963:963:Arch Linux Package Management:/:/usr/bin/nologin
+  monero:x:962:962::/var/lib/monero:/usr/bin/nologin
+  unbound:x:961:961:unbound:/etc/unbound:/usr/bin/nologin
+  mysql:x:960:960:MariaDB:/var/lib/mysql:/usr/bin/nologin
+  gluster:x:959:959:GlusterFS daemons:/var/run/gluster:/usr/bin/nologin
+  qemu:x:958:958:QEMU user:/:/usr/bin/nologin
+  rpc:x:32:32:Rpcbind Daemon:/var/lib/rpcbind:/usr/bin/nologin
+  libvirt-qemu:x:956:956:Libvirt QEMU user:/:/usr/bin/nologin
+  dnsmasq:x:955:955:dnsmasq daemon:/:/usr/bin/nologin
+  #+end_example
+
+  Here we can see the file is clearly split into columns, however this time
+  columns are separated by =:=. Let's pass this into ~awk~ now:
+  #+NAME: passwd2
+  #+begin_src sh :results output
+    # -F is used to specify our field separator
+    cat /etc/passwd | awk -F ":" '{print $1}'
+  #+end_src
+
+  #+RESULTS: passwd2
+  #+begin_example
+  root
+  bin
+  daemon
+  mail
+  ftp
+  http
+  nobody
+  dbus
+  systemd-coredump
+  systemd-network
+  systemd-oom
+  systemd-journal-remote
+  systemd-resolve
+  systemd-timesync
+  tss
+  uuidd
+  polkitd
+  avahi
+  git
+  brltty
+  colord
+  flatpak
+  gdm
+  geoclue
+  gnome-remote-desktop
+  rtkit
+  saned
+  usbmux
+  named
+  alpm
+  monero
+  unbound
+  mysql
+  gluster
+  qemu
+  rpc
+  libvirt-qemu
+  dnsmasq
+  #+end_example
+
+  This will give us a list of all the users on our system. Let's say now that we
+  wanted to not only grab all the users on our system but we wanted to know each
+  user's home directory and default shell. We can simply grab all of those
+  columns with ~awk~ like we have before but what if we wanted our output to be
+  formatted pretty? With ~awk~ we not only specify which field separator we want
+  to look for in our input but we can specify an output field separator:
+  #+NAME: passwd3
+  #+begin_src sh :results output
+    # You will notice this time that we aren't piping the output of cat into awk
+    # but rather just telling awk which file we want to run this on. This is just
+    # another way to use awk and I wanted to show it off.
+    awk 'BEGIN{FS=":"; OFS="-"} {print $1, $6, $7}' /etc/passwd
+  #+end_src
+
+  #+RESULTS: passwd3
+  #+begin_example
+  root-/root-/usr/bin/bash
+  bin-/-/usr/bin/nologin
+  daemon-/-/usr/bin/nologin
+  mail-/var/spool/mail-/usr/bin/nologin
+  ftp-/srv/ftp-/usr/bin/nologin
+  http-/srv/http-/usr/bin/nologin
+  nobody-/-/usr/bin/nologin
+  dbus-/-/usr/bin/nologin
+  systemd-coredump-/-/usr/bin/nologin
+  systemd-network-/-/usr/bin/nologin
+  systemd-oom-/-/usr/bin/nologin
+  systemd-journal-remote-/-/usr/bin/nologin
+  systemd-resolve-/-/usr/bin/nologin
+  systemd-timesync-/-/usr/bin/nologin
+  tss-/-/usr/bin/nologin
+  uuidd-/-/usr/bin/nologin
+  polkitd-/-/usr/bin/nologin
+  avahi-/-/usr/bin/nologin
+  git-/-/usr/bin/git-shell
+  brltty-/var/lib/brltty-/usr/bin/nologin
+  colord-/var/lib/colord-/usr/bin/nologin
+  flatpak-/-/usr/bin/nologin
+  gdm-/var/lib/gdm-/usr/bin/nologin
+  geoclue-/var/lib/geoclue-/usr/bin/nologin
+  gnome-remote-desktop-/var/lib/gnome-remote-desktop-/usr/bin/nologin
+  rtkit-/proc-/usr/bin/nologin
+  saned-/-/usr/bin/nologin
+  usbmux-/-/usr/bin/nologin
+  named-/-/usr/bin/nologin
+  alpm-/-/usr/bin/nologin
+  monero-/var/lib/monero-/usr/bin/nologin
+  unbound-/etc/unbound-/usr/bin/nologin
+  mysql-/var/lib/mysql-/usr/bin/nologin
+  gluster-/var/run/gluster-/usr/bin/nologin
+  qemu-/-/usr/bin/nologin
+  rpc-/var/lib/rpcbind-/usr/bin/nologin
+  libvirt-qemu-/-/usr/bin/nologin
+  dnsmasq-/-/usr/bin/nologin
+  #+end_example
+
+  You will see that now we have the three fields we wanted and they are being
+  separated by a =-= like we specified in our command.
+
+* String parsing
+  For our next challenge let's say we wanted to know each of the shells installed
+  on our system. We can just view whats in ~/etc/shells~:
+  #+NAME: shells
+  #+begin_src sh :results output
+    cat /etc/shells
+  #+end_src
+
+  #+RESULTS: shells
+  #+begin_example
+  # Pathnames of valid login shells.
+  # See shells(5) for details.
+
+  /bin/sh
+  /bin/bash
+  /usr/bin/sh
+  /usr/bin/bash
+  /usr/bin/git-shell
+  /usr/bin/fish
+  /bin/fish
+  #+end_example
+
+  This will work but what if we wanted just the name of the shells themselves.
+  With ~awk~ we can print just the last column of our supplied text with ~$NF~:
+  #+NAME: shells2
+  #+begin_src sh :results output
+    awk -F "/" '{print $NF}' /etc/shells
+  #+end_src
+
+  #+RESULTS: shells2
+  #+begin_example
+  # Pathnames of valid login shells.
+  # See shells(5) for details.
+
+  sh
+  bash
+  sh
+  bash
+  git-shell
+  fish
+  fish
+  #+end_example
+
+  This is almost what we wanted but you will see that the first few lines of the
+  shells file also stuck around since it didn't use our ~/~ separator. Let's
+  talk about how we can tell ~awk~ exactly what kind of text we want to look for
+  from our file. Inside of our single quotes in our awk command we can do more
+  than just specify what we want to print. In fact anything inside our single
+  quotes is actually our ~awk~ script if you want to think about it that
+  way. Earlier in the separators section you saw that we told ~awk~ what we
+  wanted our input and output field separators to be; this was done inside the
+  single quotes of our ~awk~ command. Now let's tell ~awk~ what type of line we
+  want to grab for our shells file. We can specify any search pattern we want to
+  look for inside of ~/ /~:
+  #+NAME: shells3
+  #+begin_src sh :results output
+    # awk uses regex inside of the '/ /' to define what it is searching for.
+    # For more information on regex see my regex guide.
+    awk -F "/" '/^\// {print $NF}' /etc/shells
+  #+end_src
+
+  #+RESULTS: shells3
+  #+begin_example
+  sh
+  bash
+  sh
+  bash
+  git-shell
+  fish
+  fish
+  #+end_example
+
+  We used regex to define that we only wanted to look for lines that started
+  with a ~/~. Now lets just pipe the output of our ~awk~ command into [[id:9b51a3e1-57e2-44f7-82ce-fc4df3c97c9c][sort]] so they are sorted
+  alphabetically, and lets pipe that into [[id:2b3be31b-f903-41e2-87ca-1a258bdc3be6][uniq]] to remove the duplicate shells:
+  #+NAME: shells4
+  #+begin_src sh :results output
+    awk -F "/" '/^\// {print $NF}' /etc/shells | sort | uniq
+  #+end_src
+
+  #+RESULTS: shells4
+  : bash
+  : fish
+  : git-shell
+  : sh
+
+  This time lets search our bashrc for any lines starting a =a= or a =b=:
+  #+NAME: bashrc
+  #+begin_src sh :results output
+    awk '$1 ~ /^[a,b]/ {print $0}' ~/.bashrc
+  #+end_src
+
+  #+RESULTS: bashrc
+  : alias ls='ls --color=auto'
+  : alias grep='grep --color=auto'
+
+* Scripting
+  One of the things that makes ~awk~ so powerful is that it in itself is a
+  scripting language. What do I mean by that? Lets think of an example, we will
+  be picking on the shells file again. Lets say we only wanted to print lines
+  that are over 12 characters long:
+  #+NAME: script_length
+  #+begin_src sh :results output
+    awk 'length($0) > 12' /etc/shells
+  #+end_src
+
+  #+RESULTS: script_length
+  : # Pathnames of valid login shells.
+  : # See shells(5) for details.
+  : /usr/bin/bash
+  : /usr/bin/git-shell
+  : /usr/bin/fish
+
+  We also have if statements available to us:
+  #+NAME: script_if
+  #+begin_src sh :results output
+    # ps -ef prints all of the resources running on our machine
+    ps -ef | awk '{ if($NF == "/usr/bin/fish") print $0 }'
+  #+end_src
+
+  #+RESULTS: script_if
+  : epost       4820    4730  0 Feb14 pts/0    00:00:02 /usr/bin/fish
+
+  We used a simple if statement to see if the last column (~$NF~) was equal to
+  ~/bin/fish~ and if so we printed the whole line (~$0~).
+
+  We also have for loops available to us:
+  #+NAME: script_loop
+  #+begin_src sh :results output
+    awk 'BEGIN{for(i=1; i<=10; i++) print "The square of", i, "is", i*i;}'
+  #+end_src
+
+  #+RESULTS: script_loop
+  #+begin_example
+  The square of 1 is 1
+  The square of 2 is 4
+  The square of 3 is 9
+  The square of 4 is 16
+  The square of 5 is 25
+  The square of 6 is 36
+  The square of 7 is 49
+  The square of 8 is 64
+  The square of 9 is 81
+  The square of 10 is 100
+  #+end_example
+
+  Our for loop is layed out just like it is in any other language; We specify
+  our incrementing variable and initialize it, we set our stopping point, and we
+  set our incrementing amount. You may have also noticed that we can do
+  arithmetic in our ~awk~ script which is another powerful aspect of ~awk~
+  scripting.
+
+* Line numbers
+  A feature of ~awk~ worth noting is the line number specifier. Say we had a big
+  block of output from a command and we only wanted to see a specific line
+  number of the output, or even a specific range of line numbers. Lets try this
+  on the ~df~ command:
+  #+NAME: linenumber
+  #+begin_src sh :results output
+    df | awk 'NR==7, NR==11 {print NR, $0}'
+  #+end_src
+
+  #+RESULTS: linenumber
+  : 7 tmpfs                1024         0       1024   0% /run/credentials/systemd-journald.service
+  : 8 tmpfs            32465572     49004   32416568   1% /tmp
+  : 9 /dev/nvme0n1p2 1952463960 918893540 1033148156  48% /.snapshots
+  : 10 /dev/nvme0n1p2 1952463960 918893540 1033148156  48% /var/cache/pacman/pkg
+  : 11 /dev/nvme0n1p2 1952463960 918893540 1033148156  48% /var/log
+
+  ~NR~ is what we use in ~awk~ to signify line number. Above you can see we were
+  able to grab lines 7-11 using ~NR~ and print both the line number and the line
+  itself. Of course if we didn't want to print the line number we could just
+  drop ~NR~ from our print statement:
+  #+NAME: linenumber2
+  #+begin_src sh :results output
+    df | awk 'NR==7, NR==11 {print $0}'
+  #+end_src
+
+  #+RESULTS: linenumber2
+  : tmpfs                1024         0       1024   0% /run/credentials/systemd-journald.service
+  : tmpfs            32465572     49016   32416556   1% /tmp
+  : /dev/nvme0n1p2 1952463960 918893572 1033148124  48% /.snapshots
+  : /dev/nvme0n1p2 1952463960 918893572 1033148124  48% /var/cache/pacman/pkg
+  : /dev/nvme0n1p2 1952463960 918893572 1033148124  48% /var/log
+
+  We can also use ~NR~ to get a line count of a file, lets pick on =/etc/shells=
+  again:
+  #+NAME: LineCount
+  #+begin_src sh :results output :exports both
+    awk 'END {print NR}' /etc/shells
+  #+end_src
+
+  #+RESULTS: LineCount
+  : 13
+
+  We can also use the line number feature of ~awk~ to replace the linux tool
+  [[id:ac5f3621-bfb3-45d5-a1c7-a061f534e4f7][head]]:
+  #+NAME: Head
+  #+begin_src sh :results output :exports both
+    awk 'NR < 6' /etc/shells
+  #+end_src
+
+  #+RESULTS: Head
+  : # Pathnames of valid login shells.
+  : # See shells(5) for details.
+  : 
+  : /bin/sh
+  : /bin/bash
+
+  We can see that we grabbed the first 6 lines of our shells file.

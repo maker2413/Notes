@@ -100,7 +100,3 @@ img {
   max-height: 100%;
   transition: transform .5s;
 }
-
-img:hover {
-  transform: scale(1.8);
-}

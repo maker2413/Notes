@@ -3,7 +3,9 @@
 :END:
 #+title: GitHub Actions
 #+created: [2021-11-23 Tue 12:48]
-#+last_modified: [2021-11-26 Fri 15:58:47]
+#+last_modified: [2025-02-19 Wed 23:57]
 #+filetags: Tool
 
 GitHub actions are the builtin [[id:7cf81101-13b0-4093-85cb-89e9d82e61cc][CI/CD]] tool on [[id:0c164614-cdac-4936-aca3-a6cb340883fa][GitHub]].
+
+They are built out using [[id:21e203d3-2839-41ab-abbc-eb876b6426ca][Yaml]].

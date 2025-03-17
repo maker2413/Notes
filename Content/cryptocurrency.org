@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       49b3662c-2a25-4d96-a274-dd84f9a7b951
+:END:
+#+title: Cryptocurrency
+#+created: [2025-03-19 Wed 01:25]
+#+last_modified: [2025-03-19 Wed 01:26]
+#+filetags: Concept
+
+A cryptocurrency is a digital asset designed to work as a medium of exchange
+that uses strong [[id:fee27ed4-10aa-4d36-bc00-12673fcb116a][cryptography]] to secure financial transactions, control the
+creation of additional units, and also verify the transfer of assets.
+
+In the past few years, the slang term “crypto” has been hijacked. It used to
+mean [[id:fee27ed4-10aa-4d36-bc00-12673fcb116a][cryptography]] or [[id:f7143f7f-92d0-4be3-8a74-1830d2023c23][cryptanalysis]] but has recently come to be understood as
+cryptocurrency.

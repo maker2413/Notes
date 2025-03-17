@@ -3,7 +3,12 @@
 :END:
 #+title: Cryptography
 #+created: [2023-04-11 Tue 18:23]
-#+last_modified: [2023-04-11 Tue 18:25]
-#+filetags: Concept Cryptography
+#+last_modified: [2025-03-19 Wed 01:24]
+#+filetags: Concept Cryptography Cryptology Cryptanalysis
 
-Cryptography is the practice and study of techniques for secure communication.
+Cryptography is the practice and study of techniques for secure communication in
+the presence of third parties called adversaries.
+
+People often lazily use Cryptography in place of the word cryptology, but in
+reality, cryptography focuses only on creating secure cryptosystems. For
+example, the design of RSA would have been cryptography work.

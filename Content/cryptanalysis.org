@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       f7143f7f-92d0-4be3-8a74-1830d2023c23
+:END:
+#+title: Cryptanalysis
+#+created: [2025-03-19 Wed 01:22]
+#+last_modified: [2025-03-19 Wed 01:24]
+#+filetags: Concept Cryptography Cryptology Cryptanalysis
+
+You use Cryptanalysis to breach cryptographic security systems and gain access
+to the contents of encrypted messages, even if the cryptographic key is unknown.
+
+Cryptanalysis is the inverse of cryptography. It's the study of how to break
+secret codes, not make them. Having a solid understanding of cryptanalysis is
+fundamental in cryptography, however, as one must know their enemy.

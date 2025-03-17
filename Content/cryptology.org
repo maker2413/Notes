@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       7eeea563-d831-4639-88cd-542feaffbacf
+:END:
+#+title: Cryptology
+#+created: [2025-03-19 Wed 01:21]
+#+last_modified: [2025-03-19 Wed 01:24]
+#+filetags: Concept Cryptography Cryptology Cryptanalysis
+
+Cryptology is the scientific study of [[id:fee27ed4-10aa-4d36-bc00-12673fcb116a][cryptography]] and [[id:f7143f7f-92d0-4be3-8a74-1830d2023c23][cryptanalysis]].
+
+Cryptology is the science of secret messages. Therefore, anything that has to do
+with making or breaking codes falls into cryptology’s domain.

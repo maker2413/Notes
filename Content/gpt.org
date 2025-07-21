@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       4c75f9c5-58a7-4073-81d5-c55754d85c32
+:END:
+#+title: GPT
+#+created: [2025-07-04 Fri 10:34]
+#+last_modified: [2025-07-04 Fri 10:36]
+#+filetags: AI ArtificialIntelligence
+
+GPT stands for Generative Pretrained Transformers.

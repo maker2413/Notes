@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       a3edc696-f1e0-4db8-8235-3590eba5f966
+:END:
+#+title: LLM
+#+created: [2025-07-04 Fri 10:38]
+#+last_modified: [2025-07-04 Fri 10:38]
+#+filetags: AI ArtificialIntelligence
+
+LLM stands for large language model.

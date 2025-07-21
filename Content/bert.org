@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       d86a36e4-5f87-4d77-8f9a-19ba4c5a2a32
+:END:
+#+title: BERT
+#+created: [2025-07-04 Fri 10:35]
+#+last_modified: [2025-07-04 Fri 10:36]
+#+filetags: AI ArtificialIntelligence
+
+BERT stands for Bidirectional Encoder Representations from Transformers.

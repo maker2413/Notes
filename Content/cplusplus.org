@@ -3,7 +3,7 @@
 :END:
 #+title: C++
 #+created: [2025-02-04 Tue 17:34]
-#+last_modified: [2025-02-04 Tue 17:43]
+#+last_modified: [2025-06-18 Wed 17:09]
 #+filetags: CPP Programming ProgrammingLanguage
 
 C++ (pronounced like the letter C plus plus), sometimes abbreviated as *CPP* is

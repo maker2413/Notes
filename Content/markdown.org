@@ -3,7 +3,7 @@
 :END:
 #+title: Markdown
 #+created: [2021-11-22 Mon 22:04]
-#+last_modified: [2025-12-20 Sat 10:26]
+#+last_modified: [2025-12-20 Sat 13:55]
 #+filetags: Tool
 
 Markdown is a [[id:7d97f527-f387-44c0-86c9-4dbbe0ab28e0][markup language]] and quite possibly the most common one for
@@ -49,3 +49,274 @@ they are specific to a certain parser.
     This is an h2
     -------------
   #+end_src
+
+* Simple text styles
+  Text can be easily styled as italic or bold using markdown:
+  #+begin_src markdown
+    ,*This text is in italics.*
+    _And so is this text._
+
+    ,**This text is in bold.**
+    __And so is this text.__
+
+    ,***This text is in both.***
+    ,**_As is this!_**
+    ,*__And this!__*
+  #+end_src
+
+  In GitHub Flavored Markdown, which is used to render markdown files on GitHub,
+  we also have strikethrough:
+  #+begin_src markdown
+    ~~This text is rendered with strikethrough.~~
+  #+end_src
+
+* Paragraphs
+  Paragraphs are one or multiple adjacent lines of text separated by one or
+  multiple blank lines:
+  #+begin_src markdown
+    This is a paragraph. I'm typing in a paragraph isn't this fun?
+
+    Now I'm in paragraph 2.
+    I'm still in paragraph 2 too!
+
+
+    I'm in paragraph three!
+  #+end_src
+
+  Should you ever want to insert an HTML ~<br />~ tag, you can end a paragraph
+  with two or more spaces and then begin a new paragraph:
+  #+begin_src markdown
+    I end with two spaces (highlight me to see them).
+
+    There's a <br /> above me!
+  #+end_src
+
+  Block quotes are easy and done with the ~>~ character:
+  #+begin_src markdown
+    > This is a block quote. You can either
+    > manually wrap your lines and put a `>` before every line or you can let your lines get really long and wrap on their own.
+    > It doesn't make a difference so long as they start with a `>`.
+
+    > You can also use more than one level
+    >> of indentation?
+    > How neat is that?
+  #+end_src
+
+* Lists
+  Unordered lists can be made using asterisks, pluses, or hyphens:
+  #+begin_src markdown
+    ,* Item
+    ,* Item
+    ,* Another item
+
+    or
+
+    + Item
+    + Item
+    + One more item
+
+    or
+
+    - Item
+    - Item
+    - One last item
+  #+end_src
+
+  Ordered lists are done with a number followed by a period:
+  #+begin_src markdown
+    1. Item one
+    2. Item two
+    3. Item three
+  #+end_src
+
+  You don't even have to label the items correctly and Markdown will still
+  render the numbers in order, but this may not be a good idea:
+  #+begin_src markdown
+    1. Item one
+    1. Item two
+    1. Item three
+  #+end_src
+  (this renders the same as the above example).
+
+  You can also use sublists:
+  #+begin_src markdown
+    1. Item one
+    2. Item two
+    3. Item three
+        ,* Sub-item
+        ,* Sub-item
+    4. Item four
+  #+end_src
+
+  There are even task lists. This creates HTML checkboxes:
+  #+begin_src markdown
+    Boxes below without the 'x' are unchecked HTML checkboxes.
+    - [ ] First task to complete.
+    - [ ] Second task that needs done
+    This checkbox below will be a checked HTML checkbox.
+    - [x] This task has been completed
+  #+end_src
+
+* Code Blocks
+  You can indicate a code block (which uses the ~<code>~ element) by indenting a
+  line with four spaces or a tab.
+  #+begin_src markdown
+        This is code
+        So is this
+  #+end_src
+
+  You can also re-tab (or add an additional four spaces) for indentation inside
+  your code:
+  #+begin_src markdown
+        my_array.each do |item|
+          puts item
+        end
+  #+end_src
+
+  Inline code can be created using the backtick character ~`~:
+  #+begin_src markdown
+    John didn't even know what the `go_to()` function did!
+  #+end_src
+
+  In GitHub Flavored Markdown, you can use a special syntax for code:
+  #+begin_src markdown
+    ```ruby
+    def foobar
+      puts "Hello world!"
+    end
+    ```
+  #+end_src
+  The above text doesn't require indenting, plus GitHub will use syntax
+  highlighting of the language you specify after the opening ~```~.
+
+* Horizontal Rule
+  Horizontal rules (~<hr/>~) are easily added with three or more asterisks or
+  hyphens, with or without spaces:
+  #+begin_src markdown
+    ,***
+    ---
+    - - -
+    ,****************
+  #+end_src
+
+* Links
+  One of the best things about markdown is how easy it is to make links. Put the
+  text to display in hard brackets ~[]~ followed by the url in parenthesis ~()~:
+  #+begin_src markdown
+    [Click me!](http://test.com/)
+  #+end_src
+
+  You can also add a link title using quotes inside the parenthesis:
+  #+begin_src markdown
+    [Click me!](http://test.com/ "Link to Test.com")
+  #+end_src
+
+  Relative paths work too:
+  #+begin_src markdown
+    [Go to music](/music/).
+  #+end_src
+
+  Markdown also supports reference style links:
+  #+begin_src markdown
+    [Click this link][link1] for more info about it!
+    [Also check out this link][foobar] if you want to.
+
+    [link1]: http://test.com/ "Cool!"
+    [foobar]: http://foobar.biz/ "Alright!"
+  #+end_src
+
+  The title can also be in single quotes or in parenthesis, or omitted
+  entirely. The references can be anywhere in your document and the reference
+  IDs can be anything so long as they are unique.
+
+  There is also "implicit naming" which lets you use the link text as the id:
+  #+begin_src markdown
+    [This][] is a link.
+
+    [This]: http://thisisalink.com/
+  #+end_src
+  But it's not that commonly used.
+
+* Table of contents
+  Some Markdown flavors even make use of the combination of lists, links, and
+  headings in order to create tables of contents. In this case, heading titles
+  in lowercase are prepended with hash (~#~) and are used as link ids. Should
+  the heading have multiple words, they will be connected with a hyphen (~-~),
+  that also replaces some special characters. (Some other special characters are
+  omitted though):
+  #+begin_src markdown
+    - [Heading](#heading)
+    - [Another heading](#another-heading)
+    - [Chapter](#chapter)
+      - [Subchapter <h3 />](#subchapter-h3-)
+  #+end_src
+  Nonetheless, this is a feature that might not be working in all Markdown
+  implementations the same way.
+
+* Images
+  Images are done the same way as links, but with an exclamation point in front!
+  #+begin_src markdown
+    ![This is the alt-attribute for my image](http://imgur.com/myimage.jpg "An optional title")
+  #+end_src
+
+  Reference style works as expected:
+  #+begin_src markdown
+    ![This is the alt-attribute.][myimage]
+
+    [myimage]: relative/urls/cool/image.jpg "if you need a title, it's here"
+  #+end_src
+
+* Miscellany
+  Here are some other more niche features of Markdown:
+
+** Auto-links:
+   #+begin_src markdown
+     <http://testwebsite.com/> is equivalent to
+     [http://testwebsite.com/](http://testwebsite.com/)
+   #+end_src
+
+** Auto-links for emails
+   #+begin_src markdown
+     <foo@bar.com>
+   #+end_src
+
+** Escaping characters
+   #+begin_src markdown
+     I want to type *this text surrounded by asterisks* but I don't want it to be
+     in italics, so I do this: \*this text surrounded by asterisks\*.
+   #+end_src
+
+** Keyboard keys
+   In GitHub flavored Markdown, you can use a ~<kbd>~ tag to represent keyboard
+   keys.
+   #+begin_src markdown
+     Your computer crashed? Try sending a
+     <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd>
+   #+end_src
+
+** Tables
+   Tables are only available in GitHub Flavored Markdown and are slightly
+   cumbersome, but if you really want it:
+   #+begin_src markdown
+     | Col1         | Col2     | Col3          |
+     | :----------- | :------: | ------------: |
+     | Left-aligned | Centered | Right-aligned |
+     | blah         | blah     | blah          |
+   #+end_src
+
+   or, for the same results:
+   #+begin_src markdown
+     Col 1 | Col2 | Col3
+     :-- | :-: | --:
+     Ugh this is so ugly | make it | stop
+   #+end_src
+
+* Markdownlint
+  In order to simplify work with Markdown and to unify its coding style,
+  ~Markdownlint~ has been created. Available as a [[https://github.com/markdownlint/markdownlint][separate tool]] as well as a
+  plugin for some IDEs, it can be used to ensure validity and readability of
+  Markdown.
+
+* Credit
+  Most of these notes were pulled from [[https://learnxinyminutes.com/markdown/][learnxinyminutes]] so please go read more
+  of their content.

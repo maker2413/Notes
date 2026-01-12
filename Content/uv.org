@@ -1,0 +1,39 @@
+:PROPERTIES:
+:ID:       57c63107-2076-49d4-82fb-8c8ddda87394
+:END:
+#+title: UV
+#+created: [2025-07-22 Tue 10:25]
+#+last_modified: [2025-07-22 Tue 11:01]
+#+filetags: Tool Python Pip
+
+[[https://github.com/astral-sh/uv][uv]] is the tool to answer all of your prayers when it comes to python,
+package management in python, and virtual environment creation and management
+with regards to python.
+
+To create a new python project simply run:
+#+begin_src shell
+  uv init <project name>
+#+end_src
+
+This will create a new directory of the name you specified or add files to the
+directory if it already exists. In this directory will be a =pyproject.toml=, a
+=uv.lock=, a =.python-version=, and a =main.py=.
+
+To add packages to this project simply run:
+#+begin_src shell
+  uv add <package>
+#+end_src
+
+This will add the package to your virtual environment as well as add it to your
+=uv.lock= and =pyproject.toml=. The =uv.lock= is a drop in replacement for pip's
+=requirements.txt= standard.
+
+To run a project that uses ~uv~ you can simply run:
+#+begin_src shell
+  uv run <python file>
+#+end_src
+
+It is also important to note that if a virtual environment isn't already created
+running ~uv run~ will also create and use the newly created virtual
+environment. The run command will also download all dependencies required for
+the project as specified in the =pyproject.toml=.

@@ -3,7 +3,7 @@
 :END:
 #+title: TypeScript
 #+created: [2021-12-05 Sun 23:57]
-#+last_modified: [2021-12-06 Mon 21:53:32]
+#+last_modified: [2026-03-02 Mon 15:37]
 #+filetags: ProgrammingLanguage TypeScript
 
 TypeScript is a progamming language that is based on [[id:a29e994c-1920-4ea6-8cfa-946c82e25429][JavaScript]]. In fact
@@ -29,3 +29,7 @@ topics in order, however if you are here for information on a specific topic
 feel free to skip around:
 - [[id:aa46db0b-e3fc-4c85-8ab8-66aaedf1bef2][TypeScript Type System]]
 - [[id:1ecd0b78-8533-45ab-9c07-6d03f866eb9a][TypeScript Annotations]]
+
+* Misc
+  For a deeper dive on TypeScript I actually currently have a full repository
+  just for my TypeScript notes: [[https://github.com/maker2413/TypeScriptNotes]].

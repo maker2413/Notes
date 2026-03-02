@@ -3,7 +3,7 @@
 :END:
 #+title: Python
 #+created: [2023-04-04 Tue 20:46]
-#+last_modified: [2025-02-04 Tue 17:53]
+#+last_modified: [2026-03-02 Mon 15:37]
 #+filetags: ProgrammingLanguage Python
 
 Python is a high-level, general-purpose [[id:94903e09-f03d-4b20-b2eb-1da7618282ee][programming language]]. Its design
@@ -97,3 +97,7 @@ although other versions of Python are quite similar, they are past [[id:00fc5ea3
      2 == True   # => False
      -5 != False # => True
    #+end_src
+
+* Misc
+  For a deeper dive on Python I actually currently have a full repository just
+  for my Python notes: [[https://github.com/maker2413/PythonNotes]].

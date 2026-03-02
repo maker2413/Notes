@@ -3,7 +3,7 @@
 :END:
 #+title: Lisp
 #+created: [2021-11-06 Sat 06:01]
-#+last_modified: [2025-02-04 Tue 15:48]
+#+last_modified: [2026-03-02 Mon 15:38]
 #+filetags: ProgrammingLanguage
 
 The actual name ~lisp~ stands for "list processing" and that is exactly what
@@ -127,3 +127,7 @@ expression and everything will return a result.
 [[id:2f7bedf9-adcd-4c8c-a26f-47282f8f4ad0][Variables]] in lisp can be named with many different characters. Some of these
 include: letters, numbers, ~+~, ~-~, ~_~, ~*~, ~=~, ~<~, ~>~, ~?~, ~!~. It is
 important to note though that we *can not* use whitespace in variable names.
+
+* Misc
+  For a deeper dive on Lisp I actually currently have a full repository just
+  for my Lisp notes: [[https://github.com/maker2413/LispNotes]].

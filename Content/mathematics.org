@@ -3,7 +3,7 @@
 :END:
 #+title: Mathematics
 #+created: [2023-04-10 Mon 21:18]
-#+last_modified: [2023-04-11 Tue 20:32]
+#+last_modified: [2026-03-02 Mon 15:39]
 #+filetags: Math Mathematics Reference
 
 Mathematics is an area of knowledge that includes the topics of numbers,
@@ -27,3 +27,7 @@ Finally here are some notes I have on Mathematicians:
 - [[id:6f15d202-7913-4c86-8b5d-a23ec74e20f9][Euclid]]
 
 *Many of these are still a work in progress*
+
+* Misc
+  For a deeper dive on Mathematics I actually currently have a full repository
+  just for my Math notes: [[https://github.com/maker2413/MathNotes]].

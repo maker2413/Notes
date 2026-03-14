@@ -4,3 +4,6 @@
 [submodule "DeepDives/KubernetesNotes"]
 	path = DeepDives/KubernetesNotes
 	url = https://github.com/maker2413/KubernetesNotes.git
+[submodule "DeepDives/BackstageNotes"]
+	path = DeepDives/BackstageNotes
+	url = https://github.com/maker2413/BackstageNotes.git

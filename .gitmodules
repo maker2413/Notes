@@ -1,0 +1,3 @@
+[submodule "DeepDives/GoNotes"]
+	path = DeepDives/GoNotes
+	url = https://github.com/maker2413/GoNotes.git

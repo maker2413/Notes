@@ -1,3 +1,6 @@
 [submodule "DeepDives/GoNotes"]
 	path = DeepDives/GoNotes
 	url = https://github.com/maker2413/GoNotes.git
+[submodule "DeepDives/KubernetesNotes"]
+	path = DeepDives/KubernetesNotes
+	url = https://github.com/maker2413/KubernetesNotes.git

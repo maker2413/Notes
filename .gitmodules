@@ -7,3 +7,6 @@
 [submodule "DeepDives/BackstageNotes"]
 	path = DeepDives/BackstageNotes
 	url = https://github.com/maker2413/BackstageNotes.git
+[submodule "DeepDives/SQLNotes"]
+	path = DeepDives/SQLNotes
+	url = https://github.com/maker2413/SQLNotes.git

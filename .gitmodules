@@ -10,3 +10,6 @@
 [submodule "DeepDives/SQLNotes"]
 	path = DeepDives/SQLNotes
 	url = https://github.com/maker2413/SQLNotes.git
+[submodule "DeepDives/MathNotes"]
+	path = DeepDives/MathNotes
+	url = https://github.com/maker2413/MathNotes.git

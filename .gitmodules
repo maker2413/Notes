@@ -13,3 +13,6 @@
 [submodule "DeepDives/MathNotes"]
 	path = DeepDives/MathNotes
 	url = https://github.com/maker2413/MathNotes.git
+[submodule "DeepDives/JuliaNotes"]
+	path = DeepDives/JuliaNotes
+	url = https://github.com/maker2413/JuliaNotes.git

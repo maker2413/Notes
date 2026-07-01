@@ -1,21 +1,21 @@
 [submodule "DeepDives/GoNotes"]
-	path = DeepDives/GoNotes
+	path = Notebooks/Go
 	url = https://github.com/maker2413/GoNotes.git
 [submodule "DeepDives/KubernetesNotes"]
-	path = DeepDives/KubernetesNotes
+	path = Notebooks/Kubernetes
 	url = https://github.com/maker2413/KubernetesNotes.git
 [submodule "DeepDives/BackstageNotes"]
-	path = DeepDives/BackstageNotes
+	path = Notebooks/Backstage
 	url = https://github.com/maker2413/BackstageNotes.git
 [submodule "DeepDives/SQLNotes"]
-	path = DeepDives/SQLNotes
+	path = Notebooks/SQL
 	url = https://github.com/maker2413/SQLNotes.git
 [submodule "DeepDives/MathNotes"]
-	path = DeepDives/MathNotes
+	path = Notebooks/Math
 	url = https://github.com/maker2413/MathNotes.git
 [submodule "DeepDives/JuliaNotes"]
-	path = DeepDives/JuliaNotes
+	path = Notebooks/Julia
 	url = https://github.com/maker2413/JuliaNotes.git
 [submodule "DeepDives/NeuralNetworks"]
-	path = DeepDives/NeuralNetworks
+	path = Notebooks/NeuralNetworks
 	url = https://github.com/maker2413/NeuralNetworkNotes

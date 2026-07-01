@@ -16,3 +16,6 @@
 [submodule "DeepDives/JuliaNotes"]
 	path = DeepDives/JuliaNotes
 	url = https://github.com/maker2413/JuliaNotes.git
+[submodule "DeepDives/NeuralNetworks"]
+	path = DeepDives/NeuralNetworks
+	url = https://github.com/maker2413/NeuralNetworkNotes
